@@ -15,3 +15,29 @@ This dataset is not real veterinary data. It is used only for initial experiment
 ## Planned First Experiment
 
 The first experiment will check whether age in months can be used to predict dog weight using linear regression.
+## Course Topic Flow
+
+The first stage of the project follows the course topic: **Linear Regression, Regularization and Testing**.
+
+```mermaid
+flowchart TD
+    A["Course Topic: Linear Regression, Regularization and Testing"] --> B["Problem Statement and Motivation"]
+    B --> C["Prototype Cane Corso Growth Dataset"]
+    C --> D["Initial Data Exploration"]
+
+    D --> E["Simple Linear Regression"]
+    E --> F["Model Testing: MAE, RMSE, R2 Score"]
+
+    E --> G["Polynomial Regression"]
+    E --> H["Multi-Dimensional Linear Regression"]
+    H --> I["Regularization: Ridge and Lasso"]
+
+    E --> J["RANSAC Robust Regression"]
+
+    F --> K["Final Model Comparison"]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+
+    K --> L["Result Interpretation and Limitations"]
