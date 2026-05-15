@@ -57,3 +57,27 @@ Current real data preparation files:
 The full raw dataset is not included in the repository. It should be downloaded manually and kept locally in `data/raw/`.
 
 A smaller processed sample will later be created in `data/processed/` and used for future notebook experiments.
+
+## Real Processed Dataset
+
+The project now includes a small processed sample created from a real public dog growth dataset.
+
+Processed sample:
+
+`data/processed/dog_growth_public_sample.csv`
+
+The sample contains:
+
+- 10,000 rows
+- 12 columns
+- age and weight-related information
+- body condition information
+- source label: `real_public_processed_sample`
+
+The processed file was created with:
+
+`src/create_public_sample.py`
+
+The original raw dataset ZIP is not included in the repository. It remains local only in `data/raw/` because it is a large external dataset.
+
+This keeps the repository lightweight while still allowing future experiments to use real public dog growth data.
