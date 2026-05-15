@@ -1,10 +1,27 @@
-﻿# Course Topic Mapping
+# Course Topic Mapping
 
-This document maps the current project work to the course topic:
+This document maps each completed course topic to the corresponding project files and notebook sections.
 
-**Linear Regression, Regularization and Testing**
+The goal is to show that the project follows the course material step by step and applies it to a practical dog growth analysis context.
 
-The goal is to show that the notebook follows the course material step by step and applies it to a practical example: Cane Corso growth analysis.
+## Project Stages
+
+```text
+01 Regression
+02 Real Data Preparation
+03 Classification
+04 Unsupervised Learning / Clustering - planned
+```
+
+---
+
+# Course Topic Mapping: Linear Regression, Regularization and Testing
+
+Notebook:
+
+```text
+notebooks/01_linear_regression_growth_prediction.ipynb
+```
 
 ## Topic Coverage
 
@@ -16,20 +33,18 @@ Covered in:
 - notebook introduction
 - problem statement section
 
-The project defines a simple regression problem: predicting dog weight from growth-related features.
+The project defines a regression problem: predicting dog weight from growth-related features.
 
 ### 2. Ordinary Least Squares / Simple Linear Regression
 
 Covered in:
 
-- `First Linear Regression Model` section in the notebook
+- `First Linear Regression Model` section
 
 The first model uses:
 
 - input: `age_months`
 - target: `weight_kg`
-
-This is the baseline regression model.
 
 ### 3. Simulated / Prototype Example
 
@@ -38,7 +53,7 @@ Covered in:
 - `data/prototype/cane_corso_growth_sample.csv`
 - `DATA_SOURCES.md`
 
-The dataset is clearly marked as prototype data and is used only for learning and first experiments.
+The prototype dataset is clearly marked as educational sample data.
 
 ### 4. Implementation on Data
 
@@ -49,13 +64,11 @@ Covered in:
 - regression model training
 - prediction results
 
-The notebook loads the dataset, explores it, trains models, and evaluates the results.
-
 ### 5. Polynomial Regression
 
 Covered in:
 
-- `Polynomial Regression` section in the notebook
+- `Polynomial Regression` section
 
 This experiment tests a non-linear extension of linear regression.
 
@@ -63,20 +76,15 @@ This experiment tests a non-linear extension of linear regression.
 
 Covered in:
 
-- `Multi-Dimensional Linear Regression` section in the notebook
+- `Multi-Dimensional Linear Regression` section
 
-This model uses multiple features:
-
-- `age_months`
-- `height_cm`
-- `sex`
-- `activity_level`
+This model uses multiple features such as age, height, sex, and activity level.
 
 ### 7. Regularization
 
 Covered in:
 
-- `Regularization: Ridge and Lasso Regression` section in the notebook
+- `Regularization: Ridge and Lasso Regression` section
 
 The notebook compares:
 
@@ -87,7 +95,7 @@ The notebook compares:
 
 Covered in:
 
-- `RANSAC Robust Regression` section in the notebook
+- `RANSAC Robust Regression` section
 
 The notebook adds an artificial outlier and compares normal linear regression with RANSAC regression.
 
@@ -105,31 +113,67 @@ The notebook uses:
 - RMSE
 - R2 Score
 
-### 10. Final Comparison
+### 10. Final Regression Comparison
 
 Covered in:
 
-- `Final Model Comparison` section in the notebook
+- `Final Model Comparison` section
 
-The tested models are compared in one table.
+The tested regression models are compared in one table.
 
-## Current Status
+Status:
 
-The first course topic is covered as a first project stage.
+```text
+Linear Regression, Regularization and Testing ✅
+```
 
-The project is not finished yet. Future course topics will be added step by step in separate notebook sections and commits.
+---
+
+# Real Data Foundation
+
+Files:
+
+```text
+docs/real_data_source_notes.md
+docs/real_data_download_instructions.md
+docs/data_preparation_plan.md
+notebooks/02_real_data_preparation.ipynb
+src/create_public_sample.py
+src/create_classification_sample.py
+```
+
+Processed samples:
+
+```text
+data/processed/dog_growth_public_sample.csv
+data/processed/dog_growth_classification_sample.csv
+```
+
+The raw dataset is kept local only in `data/raw/` and is not committed to GitHub.
+
+Status:
+
+```text
+Real Data Foundation ✅
+```
 
 ---
 
 # Course Topic Mapping: Classification
 
-This section maps the second course topic to the project work.
+Notebook:
 
-Course topic:
+```text
+notebooks/03_classification_growth_status.ipynb
+```
 
-**Classification**
+The notebook follows the Classification lecture step by step and applies it to the balanced processed dog growth classification sample.
 
-The goal is to show that the notebook `notebooks/03_classification_growth_status.ipynb` follows the classification lecture step by step and applies it to the real processed dog growth dataset.
+Classification sample:
+
+```text
+data/processed/dog_growth_classification_sample.csv
+```
 
 ## Topic Coverage
 
@@ -137,7 +181,6 @@ The goal is to show that the notebook `notebooks/03_classification_growth_status
 
 Covered in:
 
-- `notebooks/03_classification_growth_status.ipynb`
 - notebook introduction
 - problem statement section
 
@@ -157,16 +200,21 @@ Covered in:
 
 - `Create Classification Target` section
 
-The target column is:
+Target column:
 
-- `growth_status`
+```text
+growth_status
+```
 
-The binary numeric target is:
+Binary numeric target:
 
 - `0` = `normal_growth`
 - `1` = `needs_attention`
 
-This is created from body condition score information.
+The balanced classification sample contains:
+
+- 5,000 `normal_growth` records
+- 5,000 `needs_attention` records
 
 ### 3. Logistic Regression
 
@@ -174,7 +222,7 @@ Covered in:
 
 - `Logistic Regression Classifier` section
 
-The model uses the processed real dog growth sample and predicts whether a record belongs to `normal_growth` or `needs_attention`.
+The model predicts whether a record belongs to `normal_growth` or `needs_attention`.
 
 ### 4. Classification Evaluation
 
@@ -202,15 +250,11 @@ The notebook uses:
 - ROC curve
 - AUC score
 
-This evaluates the binary classifier at different probability thresholds.
-
 ### 6. Decision Tree Classifier
 
 Covered in:
 
 - `Decision Tree Classifier` section
-
-The notebook trains a Decision Tree model and compares it with Logistic Regression.
 
 The section also includes feature importance.
 
@@ -220,12 +264,10 @@ Covered in:
 
 - `Ensemble Models: Random Forest and AdaBoost` section
 
-The notebook tests:
+Models tested:
 
 - Random Forest Classifier
 - AdaBoost Classifier
-
-These models are used to compare ensemble methods with simpler classifiers.
 
 ### 8. Support Vector Machine
 
@@ -241,14 +283,6 @@ Covered in:
 
 - `Final Classification Model Comparison` section
 
-The tested models are compared using:
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- AUC
-
 Models compared:
 
 - Logistic Regression
@@ -257,16 +291,43 @@ Models compared:
 - AdaBoost
 - Support Vector Machine
 
-## Current Status
+Metrics compared:
 
-The Classification topic is covered as the second main project stage.
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- AUC
 
-The project now includes:
+Status:
 
-- one regression notebook
-- one real data preparation notebook
-- one classification notebook
-- a prototype dataset
-- a processed real public dog growth sample
+```text
+Classification ✅
+```
 
-Future course topics will be added in the same way: topic by topic, notebook by notebook, and commit by commit.
+---
+
+# Planned Course Topic Mapping: Unsupervised Learning, Clustering
+
+Planned notebook:
+
+```text
+notebooks/04_unsupervised_clustering_growth_patterns.ipynb
+```
+
+Planned topic coverage:
+
+- Unsupervised Learning problem statement, intuition, and challenges
+- K-Means clustering
+- K-Means++ motivation
+- comparison of different K values
+- Hierarchical Clustering
+- comparison between K-Means and Hierarchical Clustering
+- DBSCAN
+- final clustering comparison
+
+Status:
+
+```text
+Unsupervised Learning, Clustering ⏳
+```

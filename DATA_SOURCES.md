@@ -1,10 +1,18 @@
-﻿# Data Sources
+# Data Sources
 
-## Prototype Dataset
+This file documents the datasets used in the project and explains how prototype, raw, and processed data are separated.
 
-The file data/prototype/cane_corso_growth_sample.csv contains a small prototype dataset created for the first machine learning experiments in this project.
+## 1. Prototype Dataset
 
-The dataset includes sample Cane Corso growth measurements such as:
+File:
+
+```text
+data/prototype/cane_corso_growth_sample.csv
+```
+
+This is a small educational dataset created for the first machine learning experiments.
+
+It includes sample Cane Corso growth measurements such as:
 
 - dog id
 - dog name
@@ -17,92 +25,83 @@ The dataset includes sample Cane Corso growth measurements such as:
 
 This dataset is not real veterinary data. It is used only for learning, testing, and early regression experiments.
 
-## Purpose
+## 2. Real Public Dataset Source
 
-The purpose of this first dataset is to practice simple linear regression by checking whether age in months can be used to predict dog weight.
-
-Later in the project, real public data sources may be added and documented separately.
-
----
-
-## Real Public Dataset Source
-
-The project will also use a real public dog growth dataset as a future data foundation.
+The project uses a real public dog growth dataset as the foundation for later experiments.
 
 Dataset title:
 
+```text
 Growth standard charts for monitoring bodyweight in dogs of different sizes - SUPPORTING DATA
+```
 
 Source:
 
+```text
 University of Liverpool DataCat: The Research Data Catalogue
+```
 
 Dataset DOI:
 
+```text
 https://doi.org/10.17638/datacat.liverpool.ac.uk/377
+```
 
 Related publication:
 
+```text
 Growth standard charts for monitoring bodyweight in dogs of different sizes
+```
 
-## Why this source is relevant
+The source dataset is relevant because it contains dog age and bodyweight information and is connected to public research on dog growth standards.
 
-This source is relevant because it is connected to dog growth, age, and bodyweight data.
+## 3. Raw Data Rule
 
-The current prototype dataset is useful for learning the course methods step by step, but a real public dataset will make the project stronger and more realistic.
+The full raw dataset is not committed directly to GitHub.
 
-## Data Usage Plan
+Reasons:
 
-The full raw dataset will not be committed directly to GitHub as a normal project file because it is large.
+- it is a large external dataset
+- the repository should stay lightweight
+- the raw data source should remain clearly documented
+- only project-specific processed samples should be committed
 
-The project will use this source in a careful way:
+Raw data is expected locally in:
 
-1. document the public data source
-2. keep source and download notes
-3. create a smaller processed sample for experiments
-4. clearly separate prototype data from real public data
-
-## Current Data Layers
-
-Current prototype dataset:
-
-data/prototype/cane_corso_growth_sample.csv
-
-Planned real data folder:
-
+```text
 data/raw/
+```
 
-Planned processed data folder:
+The repository keeps only:
 
-data/processed/
+```text
+data/raw/source_notes.md
+```
 
----
+The original raw ZIP and original raw metadata files are ignored by Git.
 
+## 4. General Processed Real Public Sample
 
----
+File:
 
-## Processed Real Public Sample
-
-A processed sample has been created from the real public dog growth dataset.
-
-Processed file:
-
+```text
 data/processed/dog_growth_public_sample.csv
+```
 
 Sample size:
 
 - 10,000 rows
 - 12 columns
 
-The sample was created using:
+Created by:
 
+```text
 src/create_public_sample.py
+```
 
-## Processing Summary
+This script reads the large raw CSV from the local ZIP archive in chunks and creates a smaller processed sample.
 
-The script reads the large raw CSV from the local ZIP archive in chunks.
-
-It keeps only useful project columns related to:
+The processed sample keeps project-useful columns related to:
 
 - breed identifier
 - dog identifier
@@ -114,13 +113,77 @@ It keeps only useful project columns related to:
 - healthy pet diagnosis flag
 - average adult breed weight
 
-The processed sample also adds:
+It also adds:
 
-- visit_age_months
-- source_type
+- `visit_age_months`
+- `source_type`
 
-## Important Note
+Source label:
 
-The processed sample is committed to GitHub because it is small and usable for notebook experiments.
+```text
+real_public_processed_sample
+```
 
-The original raw dataset ZIP remains local only and is not committed to GitHub.
+This sample is committed to GitHub because it is small and usable for notebook experiments.
+
+## 5. Classification-Focused Processed Sample
+
+File:
+
+```text
+data/processed/dog_growth_classification_sample.csv
+```
+
+Sample size:
+
+- 10,000 rows
+- 15 columns
+
+Created by:
+
+```text
+src/create_classification_sample.py
+```
+
+This sample was created specifically for the Classification topic.
+
+It keeps rows with usable body condition score information and creates the classification target:
+
+```text
+growth_status
+```
+
+Target classes:
+
+- `normal_growth`
+- `needs_attention`
+
+Binary target:
+
+- `0` = `normal_growth`
+- `1` = `needs_attention`
+
+Class balance:
+
+- 5,000 `normal_growth` records
+- 5,000 `needs_attention` records
+
+Source label:
+
+```text
+real_public_classification_sample
+```
+
+This balanced sample is used in:
+
+```text
+notebooks/03_classification_growth_status.ipynb
+```
+
+## 6. Data Ethics and Limitations
+
+The project does not attempt to identify clients, owners, animals, or clinics.
+
+The data is used only for educational machine learning experiments.
+
+The project does not provide veterinary diagnosis. Model outputs should be interpreted as learning exercises, not medical conclusions.

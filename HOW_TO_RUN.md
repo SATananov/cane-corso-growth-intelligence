@@ -23,13 +23,6 @@ On Windows PowerShell:
 .venv\Scripts\Activate
 ```
 
-If PowerShell blocks activation, run this only for the current terminal session:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-.venv\Scripts\Activate
-```
-
 ## 4. Install dependencies
 
 ```bash
@@ -40,7 +33,7 @@ pip install -r requirements.txt
 
 The project currently contains three main notebooks.
 
-### Regression topic
+### Regression Topic
 
 ```text
 notebooks/01_linear_regression_growth_prediction.ipynb
@@ -55,7 +48,7 @@ This notebook covers:
 - RANSAC Robust Regression
 - Regression model comparison
 
-### Real data preparation
+### Real Data Preparation
 
 ```text
 notebooks/02_real_data_preparation.ipynb
@@ -65,7 +58,7 @@ This notebook prepares the project for working with the real public dog growth d
 
 The full raw dataset is not committed to GitHub.
 
-### Classification topic
+### Classification Topic
 
 ```text
 notebooks/03_classification_growth_status.ipynb
@@ -104,6 +97,12 @@ data/processed/dog_growth_public_sample.csv
 
 This is a smaller processed sample created from the real public dog growth dataset.
 
+It contains:
+
+- 10,000 rows
+- 12 columns
+- source label: `real_public_processed_sample`
+
 ### Classification-focused processed sample
 
 ```text
@@ -116,6 +115,7 @@ This sample is balanced for the Classification topic and contains:
 - 15 columns
 - 5,000 `normal_growth` records
 - 5,000 `needs_attention` records
+- source label: `real_public_classification_sample`
 
 ## 7. Source scripts
 
@@ -134,26 +134,7 @@ data/raw/
 
 The raw dataset is intentionally ignored by Git and is not committed to GitHub.
 
-Only this source note is kept in the repository:
-
-```text
-data/raw/source_notes.md
-```
-
-## 8. Documentation files
-
-The project documents its data and course mapping in:
-
-```text
-DATA_SOURCES.md
-COURSE_TOPIC_MAPPING.md
-PROJECT_BRIEF.md
-docs/real_data_source_notes.md
-docs/real_data_download_instructions.md
-docs/data_preparation_plan.md
-```
-
-## 9. Current project stage
+## 8. Current project stage
 
 The project currently covers two completed course topics:
 
@@ -169,9 +150,3 @@ Unsupervised Learning, Clustering
 ```
 
 Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.
-
-## 10. Important note
-
-This project is an educational machine learning project.
-
-The models and labels are used for learning and analysis only. They do not provide veterinary diagnosis.

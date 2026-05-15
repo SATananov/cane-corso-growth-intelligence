@@ -1,83 +1,218 @@
-﻿# Cane Corso Growth Intelligence
+# Cane Corso Growth Intelligence
 
-This is a machine learning course project focused on growth analysis for Cane Corso and large-breed dogs.
+Cane Corso Growth Intelligence is a machine learning course project focused on dog growth analysis.
 
-The first goal is to start with a simple prototype dataset and apply the machine learning methods learned during the course step by step.
+The project uses the Cane Corso domain as a practical context, but the machine learning work follows the course topics step by step. Each stage is implemented in a separate notebook, documented, committed to GitHub, and kept reproducible.
 
-At the beginning, the project will focus on linear regression and basic model testing. Later, more methods may be added as they are covered in the course.
+This project does not provide veterinary diagnosis. All models and labels are used only for educational machine learning experiments.
 
-## Current Stage
+## Current Project Status
 
-The project currently contains a small prototype dataset with sample Cane Corso growth measurements.
+The project currently includes three completed stages:
 
-This dataset is not real veterinary data. It is used only for initial experiments and learning purposes.
+1. **Linear Regression, Regularization and Testing**
+2. **Real Data Foundation**
+3. **Classification**
 
-## Planned First Experiment
+The next planned course topic is:
 
-The first experiment will check whether age in months can be used to predict dog weight using linear regression.
+```text
+Unsupervised Learning, Clustering
+```
+
+## Project Structure
+
+```text
+cane-corso-growth-intelligence/
+├── data/
+│   ├── prototype/
+│   │   └── cane_corso_growth_sample.csv
+│   ├── raw/
+│   │   └── source_notes.md
+│   └── processed/
+│       ├── dog_growth_public_sample.csv
+│       └── dog_growth_classification_sample.csv
+├── docs/
+│   ├── real_data_source_notes.md
+│   ├── real_data_download_instructions.md
+│   └── data_preparation_plan.md
+├── notebooks/
+│   ├── 01_linear_regression_growth_prediction.ipynb
+│   ├── 02_real_data_preparation.ipynb
+│   └── 03_classification_growth_status.ipynb
+├── src/
+│   ├── create_public_sample.py
+│   └── create_classification_sample.py
+├── COURSE_TOPIC_MAPPING.md
+├── DATA_SOURCES.md
+├── HOW_TO_RUN.md
+├── PROJECT_BRIEF.md
+├── README.md
+└── requirements.txt
+```
+
 ## Course Topic Flow
-
-The first stage of the project follows the course topic: **Linear Regression, Regularization and Testing**.
 
 ```mermaid
 flowchart TD
-    A["Course Topic: Linear Regression, Regularization and Testing"] --> B["Problem Statement and Motivation"]
-    B --> C["Prototype Cane Corso Growth Dataset"]
-    C --> D["Initial Data Exploration"]
+    A["Machine Learning Course Project"] --> B["Topic 1: Linear Regression, Regularization and Testing"]
+    A --> C["Real Data Foundation"]
+    A --> D["Topic 2: Classification"]
+    A --> E["Next Topic: Unsupervised Learning, Clustering"]
 
-    D --> E["Simple Linear Regression"]
-    E --> F["Model Testing: MAE, RMSE, R2 Score"]
+    B --> B1["Simple Linear Regression"]
+    B --> B2["Polynomial Regression"]
+    B --> B3["Multi-Dimensional Regression"]
+    B --> B4["Ridge and Lasso"]
+    B --> B5["RANSAC"]
+    B --> B6["Regression Model Comparison"]
 
-    E --> G["Polynomial Regression"]
-    E --> H["Multi-Dimensional Linear Regression"]
-    H --> I["Regularization: Ridge and Lasso"]
+    C --> C1["Public Dog Growth Dataset Source"]
+    C --> C2["Raw Data Kept Local"]
+    C --> C3["Processed Public Sample"]
+    C --> C4["Balanced Classification Sample"]
 
-    E --> J["RANSAC Robust Regression"]
+    D --> D1["Logistic Regression"]
+    D --> D2["Confusion Matrix and Metrics"]
+    D --> D3["ROC and AUC"]
+    D --> D4["Decision Tree"]
+    D --> D5["Random Forest and AdaBoost"]
+    D --> D6["Support Vector Machine"]
+    D --> D7["Classification Model Comparison"]
+```
 
-    F --> K["Final Model Comparison"]
-    G --> K
-    H --> K
-    I --> K
-    J --> K
+## Notebooks
 
-    K --> L["Result Interpretation and Limitations"]
-## Real Data Foundation
+### 1. Regression Topic
 
-After completing the first regression topic with prototype data, the project now includes a real data foundation stage.
+```text
+notebooks/01_linear_regression_growth_prediction.ipynb
+```
 
-The goal of this stage is to prepare the project for using a real public dog growth dataset without committing large raw files directly to GitHub.
+This notebook covers:
 
-Current real data preparation files:
+- regression problem statement and motivation
+- initial data exploration
+- simple linear regression
+- polynomial regression
+- multi-dimensional linear regression
+- Ridge and Lasso regularization
+- RANSAC robust regression
+- regression model testing and comparison
 
-- `docs/real_data_source_notes.md`
-- `docs/real_data_download_instructions.md`
-- `docs/data_preparation_plan.md`
-- `notebooks/02_real_data_preparation.ipynb`
+### 2. Real Data Preparation
 
-The full raw dataset is not included in the repository. It should be downloaded manually and kept locally in `data/raw/`.
+```text
+notebooks/02_real_data_preparation.ipynb
+```
 
-A smaller processed sample will later be created in `data/processed/` and used for future notebook experiments.
+This notebook prepares the project for working with a real public dog growth dataset.
 
-## Real Processed Dataset
+The full raw dataset is not committed to GitHub. It is kept locally in `data/raw/` only.
 
-The project now includes a small processed sample created from a real public dog growth dataset.
+### 3. Classification Topic
 
-Processed sample:
+```text
+notebooks/03_classification_growth_status.ipynb
+```
 
-`data/processed/dog_growth_public_sample.csv`
+This notebook covers:
 
-The sample contains:
+- classification problem statement and motivation
+- binary classification target: `growth_status`
+- Logistic Regression
+- confusion matrix
+- accuracy, precision, recall, and F1-score
+- ROC curve and AUC
+- Decision Tree Classifier
+- Random Forest
+- AdaBoost
+- Support Vector Machine
+- final classification model comparison
+
+## Data Layers
+
+### Prototype Dataset
+
+```text
+data/prototype/cane_corso_growth_sample.csv
+```
+
+This small educational dataset is used for the first regression experiments.
+
+### General Processed Real Public Sample
+
+```text
+data/processed/dog_growth_public_sample.csv
+```
+
+This file contains:
 
 - 10,000 rows
 - 12 columns
-- age and weight-related information
+- age and bodyweight information
 - body condition information
 - source label: `real_public_processed_sample`
 
-The processed file was created with:
+It was created with:
 
-`src/create_public_sample.py`
+```text
+src/create_public_sample.py
+```
 
-The original raw dataset ZIP is not included in the repository. It remains local only in `data/raw/` because it is a large external dataset.
+### Classification-Focused Processed Sample
 
-This keeps the repository lightweight while still allowing future experiments to use real public dog growth data.
+```text
+data/processed/dog_growth_classification_sample.csv
+```
+
+This balanced sample is used for the Classification topic.
+
+It contains:
+
+- 10,000 rows
+- 15 columns
+- 5,000 `normal_growth` records
+- 5,000 `needs_attention` records
+- binary target column: `growth_status_binary`
+- source label: `real_public_classification_sample`
+
+It was created with:
+
+```text
+src/create_classification_sample.py
+```
+
+## Raw Data Rule
+
+The original public dataset ZIP is large and is not committed to GitHub.
+
+Only the processed samples are committed. The raw files are kept locally in:
+
+```text
+data/raw/
+```
+
+The repository keeps only:
+
+```text
+data/raw/source_notes.md
+```
+
+## Current Learning Progress
+
+Completed course stages:
+
+```text
+Linear Regression, Regularization and Testing ✅
+Real Data Foundation ✅
+Classification ✅
+```
+
+Next planned stage:
+
+```text
+Unsupervised Learning, Clustering ⏳
+```
+
+Future topics will be added topic by topic, notebook by notebook, and commit by commit.

@@ -1,44 +1,188 @@
-﻿# Project Brief
+# Project Brief
 
 ## Working Title
 
 Cane Corso Growth Intelligence
 
-## Problem
+## Project Idea
 
-Many owners of large-breed dogs want to understand whether their dog is growing in an expected way.
+Cane Corso Growth Intelligence is a machine learning course project focused on dog growth analysis.
 
-For Cane Corso owners, this is especially important because the breed grows fast during the first months and can become a large and powerful dog. Weight and age can give useful information, but they should be interpreted carefully.
+The project uses the Cane Corso domain as a practical and personally meaningful context, while the technical implementation follows the course topics step by step.
 
-## First Machine Learning Goal
+The project is not a veterinary product and does not provide diagnosis. It is an educational machine learning project.
 
-The first goal of this project is to test a simple question:
+## Main Problem
 
-Can age in months be used to predict dog weight?
+Large-breed dogs grow quickly during the first months of life. Owners often want to understand growth patterns, weight development, and whether a record may need additional review.
 
-This will be the first regression experiment in the project.
+Machine learning can be used to explore these questions in different ways:
 
-## Why Linear Regression
+- regression predicts numerical values
+- classification predicts known categories
+- clustering can later discover unknown groups
 
-Linear regression is a good starting point because it is simple, easy to explain, and useful for understanding the relationship between one input variable and one target variable.
+## Completed Stage 1: Regression
 
-In this first version:
+Course topic:
 
-- input variable: age in months
-- target variable: weight in kilograms
+```text
+Linear Regression, Regularization and Testing
+```
 
-## Dataset
+Notebook:
 
-The project currently uses a small prototype dataset stored in:
+```text
+notebooks/01_linear_regression_growth_prediction.ipynb
+```
 
+This stage started with a prototype Cane Corso dataset and applied:
+
+- problem statement and motivation
+- simple linear regression
+- polynomial regression
+- multi-dimensional linear regression
+- Ridge and Lasso regularization
+- RANSAC robust regression
+- MAE, MSE, RMSE, and R2 model testing
+- final regression model comparison
+
+The first regression task was:
+
+```text
+Can age and growth-related features be used to predict dog weight?
+```
+
+## Completed Stage 2: Real Data Foundation
+
+The project now includes real processed public dog growth data.
+
+Raw data is kept local only and is not committed to GitHub.
+
+Processed samples committed to the project:
+
+```text
+data/processed/dog_growth_public_sample.csv
+data/processed/dog_growth_classification_sample.csv
+```
+
+Scripts:
+
+```text
+src/create_public_sample.py
+src/create_classification_sample.py
+```
+
+The real data foundation makes the project stronger because later notebooks can work with realistic public data instead of only a prototype dataset.
+
+## Completed Stage 3: Classification
+
+Course topic:
+
+```text
+Classification
+```
+
+Notebook:
+
+```text
+notebooks/03_classification_growth_status.ipynb
+```
+
+This stage uses the balanced classification-focused processed sample.
+
+Classification target:
+
+```text
+growth_status
+```
+
+Target classes:
+
+- `normal_growth`
+- `needs_attention`
+
+Binary target:
+
+- `0` = `normal_growth`
+- `1` = `needs_attention`
+
+Models and evaluation covered:
+
+- Logistic Regression
+- Confusion Matrix
+- Accuracy, Precision, Recall, F1-score
+- ROC Curve and AUC
+- Decision Tree Classifier
+- Random Forest
+- AdaBoost
+- Support Vector Machine
+- final classification model comparison
+
+## Next Planned Stage
+
+Next course topic:
+
+```text
+Unsupervised Learning, Clustering
+```
+
+Planned notebook:
+
+```text
+notebooks/04_unsupervised_clustering_growth_patterns.ipynb
+```
+
+Planned goal:
+
+```text
+Discover growth-pattern groups in real dog growth data using unsupervised clustering methods.
+```
+
+This stage will likely include:
+
+- unsupervised learning problem statement
+- clustering feature preparation
+- K-Means clustering
+- comparison of different K values
+- Hierarchical Clustering
+- DBSCAN
+- final clustering comparison
+
+## Current Data Layers
+
+Prototype dataset:
+
+```text
 data/prototype/cane_corso_growth_sample.csv
+```
 
-This dataset is not real veterinary data. It is used only for learning and early testing.
+General processed real public sample:
+
+```text
+data/processed/dog_growth_public_sample.csv
+```
+
+Classification-focused processed sample:
+
+```text
+data/processed/dog_growth_classification_sample.csv
+```
+
+Raw data folder:
+
+```text
+data/raw/
+```
+
+Only `data/raw/source_notes.md` is committed. Large raw external files remain local and are ignored by Git.
 
 ## Limitations
 
-The first model will be simple and will not represent a complete real-world solution.
+The project is educational.
 
-Dog growth depends on many factors, such as sex, genetics, nutrition, activity, health, and environment.
+The machine learning models should not be used for veterinary diagnosis or health decisions.
 
-The project does not provide veterinary diagnosis.
+Dog growth depends on many factors, including sex, genetics, nutrition, activity, health, environment, and breed-specific differences.
+
+The project focuses on applying course concepts correctly and documenting each stage clearly.
