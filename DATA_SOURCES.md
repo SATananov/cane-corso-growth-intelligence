@@ -78,3 +78,49 @@ data/processed/
 
 ---
 
+
+---
+
+## Processed Real Public Sample
+
+A processed sample has been created from the real public dog growth dataset.
+
+Processed file:
+
+data/processed/dog_growth_public_sample.csv
+
+Sample size:
+
+- 10,000 rows
+- 12 columns
+
+The sample was created using:
+
+src/create_public_sample.py
+
+## Processing Summary
+
+The script reads the large raw CSV from the local ZIP archive in chunks.
+
+It keeps only useful project columns related to:
+
+- breed identifier
+- dog identifier
+- gender
+- age at visit
+- bodyweight
+- body condition information
+- preventive care visit flag
+- healthy pet diagnosis flag
+- average adult breed weight
+
+The processed sample also adds:
+
+- visit_age_months
+- source_type
+
+## Important Note
+
+The processed sample is committed to GitHub because it is small and usable for notebook experiments.
+
+The original raw dataset ZIP remains local only and is not committed to GitHub.
