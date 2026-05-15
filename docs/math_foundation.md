@@ -655,3 +655,164 @@ It is not a medical or veterinary conclusion.
 ```
 
 This rule applies to regression, classification, and future clustering experiments.
+
+---
+
+## Coordinate Systems and Feature Space
+
+Machine learning models do not only work with tables. Internally, each row can be understood as a point in a coordinate system.
+
+Each selected feature becomes one coordinate.
+
+This is important because regression, classification, support vector machines, and clustering all use geometry in different ways.
+
+### 2D Coordinate System
+
+In the simplest regression experiment, the project uses two variables:
+
+| Axis | Feature | Meaning |
+|---|---|---|
+| x-axis | `age_months` / `visit_age_months` | Dog age |
+| y-axis | `weight_kg` | Dog bodyweight |
+
+A single measurement can be represented as:
+
+```text
+point = (age_months, weight_kg)
+```
+
+Example:
+
+```text
+point = (4, 20)
+```
+
+This means that the dog measurement is located at 4 months on the x-axis and 20 kg on the y-axis.
+
+This is why scatter plots are useful. They show how points are positioned in a coordinate system and whether there is a visible relationship between the variables.
+
+### Multi-Dimensional Feature Space
+
+When more than two features are used, the data is no longer only 2D.
+
+A dataset row becomes a vector:
+
+```text
+x = (x1, x2, x3, ..., xn)
+```
+
+In the classification notebook, one record can be represented with features such as:
+
+| Coordinate | Feature |
+|---|---|
+| x1 | `visit_age_months` |
+| x2 | `weight_kg` |
+| x3 | `average_adult_breed_weight_kg` |
+| x4 | encoded `gender` |
+| x5 | encoded `preventive_care_visit` |
+| x6 | encoded `healthy_pet_diagnosis` |
+
+So each dog growth record becomes one point in a multi-dimensional feature space.
+
+The model does not understand the dog directly. It works with this numeric representation.
+
+### Distance Between Points
+
+Many machine learning methods use distance.
+
+For two points in 2D:
+
+```text
+A = (x1, x2)
+B = (y1, y2)
+```
+
+The Euclidean distance is:
+
+```text
+distance(A, B) = sqrt((x1 - y1)^2 + (x2 - y2)^2)
+```
+
+For more dimensions:
+
+```text
+distance(A, B) = sqrt((x1 - y1)^2 + (x2 - y2)^2 + ... + (xn - yn)^2)
+```
+
+This idea will be especially important in the next topic: **Unsupervised Learning and Clustering**.
+
+### Decision Boundaries
+
+Classification models try to separate classes in feature space.
+
+In this project, the classes are:
+
+```text
+normal_growth
+needs_attention
+```
+
+A classifier tries to find a boundary between these classes.
+
+| Model | Coordinate-space interpretation |
+|---|---|
+| Logistic Regression | Finds a linear decision boundary |
+| Decision Tree | Splits the feature space into rectangular regions |
+| Random Forest | Combines many tree-based feature-space splits |
+| AdaBoost | Combines weak decision boundaries into a stronger classifier |
+| SVM | Finds a boundary with maximum margin |
+| RBF SVM | Creates a non-linear boundary using the kernel trick |
+
+### Clustering and Coordinates
+
+Clustering does not use a target label.
+
+Instead, it groups nearby points.
+
+For the future clustering notebook, records may be grouped by features such as:
+
+```text
+visit_age_months
+weight_kg
+average_adult_breed_weight_kg
+body condition information
+```
+
+The main idea is:
+
+```text
+points that are close to each other may belong to the same cluster
+```
+
+This is why scaling will be important. If one feature has much larger numeric values than another, it can dominate the distance calculation.
+
+### Coordinate System Flow
+
+```mermaid
+flowchart TD
+    A["Dataset row"] --> B["Selected features"]
+    B --> C["Point in feature space"]
+
+    C --> D["Regression"]
+    C --> E["Classification"]
+    C --> F["Clustering"]
+
+    D --> D1["Predict numeric value"]
+    E --> E1["Find decision boundary"]
+    F --> F1["Group nearby points"]
+
+    D1 --> G["Example: predict weight"]
+    E1 --> H["Example: normal_growth vs needs_attention"]
+    F1 --> I["Example: discover growth-pattern groups"]
+```
+
+### Project Interpretation
+
+Coordinate systems help explain how dog growth records become mathematical objects.
+
+The project starts with real-world observations, but the models operate on numeric features, vectors, distances, and decision boundaries.
+
+That is why feature selection, scaling, encoding, and distance are important parts of the machine learning process.
+
+These explanations are educational and do not turn the models into veterinary diagnostic tools.
+
