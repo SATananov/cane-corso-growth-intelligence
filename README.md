@@ -41,3 +41,19 @@ flowchart TD
     J --> K
 
     K --> L["Result Interpretation and Limitations"]
+## Real Data Foundation
+
+After completing the first regression topic with prototype data, the project now includes a real data foundation stage.
+
+The goal of this stage is to prepare the project for using a real public dog growth dataset without committing large raw files directly to GitHub.
+
+Current real data preparation files:
+
+- `docs/real_data_source_notes.md`
+- `docs/real_data_download_instructions.md`
+- `docs/data_preparation_plan.md`
+- `notebooks/02_real_data_preparation.ipynb`
+
+The full raw dataset is not included in the repository. It should be downloaded manually and kept locally in `data/raw/`.
+
+A smaller processed sample will later be created in `data/processed/` and used for future notebook experiments.
