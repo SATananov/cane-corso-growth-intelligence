@@ -6,3 +6,13 @@ venv/
 *.pyc
 *.log
 .DS_Store
+
+# Raw external datasets
+data/raw/*.zip
+data/raw/*.csv
+data/raw/*.xlsx
+data/raw/*.parquet
+
+# Keep raw data notes, but do not commit downloaded raw datasets
+!data/raw/source_notes.md
+!data/raw/.gitkeep
