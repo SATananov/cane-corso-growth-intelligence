@@ -77,7 +77,27 @@ This notebook covers:
 - Support Vector Machine
 - Final classification model comparison
 
-## 6. Project data
+
+## 6. Read the mathematical foundation
+
+The project includes a mathematical explanation of the main formulas used in the notebooks:
+
+```text
+docs/math_foundation.md
+```
+
+This document covers:
+
+- regression equations and error metrics
+- Ridge and Lasso regularization
+- Logistic Regression and the sigmoid function
+- confusion matrix metrics
+- ROC/AUC
+- Decision Tree impurity measures
+- Random Forest, AdaBoost, and SVM intuition
+- planned clustering mathematics
+
+## 7. Project data
 
 The project contains prototype data and processed real public data samples.
 
@@ -117,7 +137,7 @@ This sample is balanced for the Classification topic and contains:
 - 5,000 `needs_attention` records
 - source label: `real_public_classification_sample`
 
-## 7. Source scripts
+## 8. Source scripts
 
 The project includes scripts used to create processed samples from the local raw dataset.
 
@@ -134,7 +154,7 @@ data/raw/
 
 The raw dataset is intentionally ignored by Git and is not committed to GitHub.
 
-## 8. Current project stage
+## 9. Current project stage
 
 The project currently covers two completed course topics:
 

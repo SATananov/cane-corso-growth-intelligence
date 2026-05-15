@@ -177,6 +177,29 @@ data/raw/
 
 Only `data/raw/source_notes.md` is committed. Large raw external files remain local and are ignored by Git.
 
+
+## Mathematical Foundation
+
+The project includes a dedicated mathematical foundation document:
+
+```text
+docs/math_foundation.md
+```
+
+This document explains the formulas and model ideas used in the completed notebooks, including:
+
+- regression equations
+- Ordinary Least Squares
+- MAE, MSE, RMSE, and R2 Score
+- Ridge and Lasso regularization
+- Logistic Regression and sigmoid probability
+- confusion matrix metrics
+- ROC/AUC
+- Decision Tree impurity measures
+- Random Forest, AdaBoost, and SVM intuition
+
+This helps show that the project is not only code execution, but also an understanding of the mathematical ideas behind each machine learning method.
+
 ## Limitations
 
 The project is educational.

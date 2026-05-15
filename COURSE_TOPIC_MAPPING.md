@@ -13,6 +13,17 @@ The goal is to show that the project follows the course material step by step an
 04 Unsupervised Learning / Clustering - planned
 ```
 
+
+## Mathematical Foundation Document
+
+The project includes a separate mathematical explanation file:
+
+```text
+docs/math_foundation.md
+```
+
+This file connects the code implementation to the formulas behind regression, classification, evaluation metrics, regularization, decision trees, ensemble methods, SVM, and planned clustering.
+
 ---
 
 # Course Topic Mapping: Linear Regression, Regularization and Testing
@@ -21,6 +32,12 @@ Notebook:
 
 ```text
 notebooks/01_linear_regression_growth_prediction.ipynb
+```
+
+Mathematical explanation:
+
+```text
+docs/math_foundation.md
 ```
 
 ## Topic Coverage
@@ -165,6 +182,12 @@ Notebook:
 
 ```text
 notebooks/03_classification_growth_status.ipynb
+```
+
+Mathematical explanation:
+
+```text
+docs/math_foundation.md
 ```
 
 The notebook follows the Classification lecture step by step and applies it to the balanced processed dog growth classification sample.
@@ -313,6 +336,12 @@ Planned notebook:
 
 ```text
 notebooks/04_unsupervised_clustering_growth_patterns.ipynb
+```
+
+Mathematical planning:
+
+```text
+docs/math_foundation.md
 ```
 
 Planned topic coverage:

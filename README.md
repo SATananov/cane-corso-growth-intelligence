@@ -35,7 +35,8 @@ cane-corso-growth-intelligence/
 ├── docs/
 │   ├── real_data_source_notes.md
 │   ├── real_data_download_instructions.md
-│   └── data_preparation_plan.md
+│   ├── data_preparation_plan.md
+│   └── math_foundation.md
 ├── notebooks/
 │   ├── 01_linear_regression_growth_prediction.ipynb
 │   ├── 02_real_data_preparation.ipynb
@@ -182,6 +183,31 @@ It was created with:
 ```text
 src/create_classification_sample.py
 ```
+
+
+## Mathematical Foundation
+
+The project includes a mathematical foundation document:
+
+```text
+docs/math_foundation.md
+```
+
+This document explains the main formulas behind the completed stages:
+
+- Linear Regression and Ordinary Least Squares
+- Polynomial and Multi-Dimensional Regression
+- MAE, MSE, RMSE, and R2 Score
+- Ridge and Lasso Regularization
+- RANSAC Robust Regression
+- Logistic Regression and the Sigmoid Function
+- Confusion Matrix, Accuracy, Precision, Recall, and F1-score
+- ROC Curve and AUC
+- Decision Trees, Gini, Entropy, and Information Gain
+- Random Forest, AdaBoost, and Support Vector Machine
+- planned clustering mathematics for the next topic
+
+The goal is to show that the project is not only using machine learning libraries, but also explains the mathematical ideas behind the models.
 
 ## Raw Data Rule
 
