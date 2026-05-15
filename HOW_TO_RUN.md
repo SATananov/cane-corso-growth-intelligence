@@ -1,41 +1,177 @@
-﻿# How to Run the Project
+# How to Run the Project
 
 This file explains how to run the project locally.
 
 ## 1. Clone the repository
 
+```bash
 git clone https://github.com/SATananov/cane-corso-growth-intelligence.git
-
 cd cane-corso-growth-intelligence
+```
 
 ## 2. Create a virtual environment
 
+```bash
 python -m venv .venv
+```
 
 ## 3. Activate the virtual environment
 
 On Windows PowerShell:
 
+```powershell
 .venv\Scripts\Activate
+```
+
+If PowerShell blocks activation, run this only for the current terminal session:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.venv\Scripts\Activate
+```
 
 ## 4. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-## 5. Open the notebook
+## 5. Open the notebooks
 
-Open the following file in VSCode or Jupyter Notebook:
+The project currently contains three main notebooks.
 
+### Regression topic
+
+```text
 notebooks/01_linear_regression_growth_prediction.ipynb
+```
 
-## Current Project Stage
+This notebook covers:
 
-The project currently contains:
+- Linear Regression
+- Polynomial Regression
+- Multi-Dimensional Linear Regression
+- Ridge and Lasso Regularization
+- RANSAC Robust Regression
+- Regression model comparison
 
-- a prototype Cane Corso growth dataset
-- initial data exploration
-- a first linear regression model
-- basic model evaluation
-- interpretation of the first regression results
+### Real data preparation
 
-This is the first stage of the project and it follows the current course topic: Linear Regression, Regularization and Testing.
+```text
+notebooks/02_real_data_preparation.ipynb
+```
+
+This notebook prepares the project for working with the real public dog growth dataset.
+
+The full raw dataset is not committed to GitHub.
+
+### Classification topic
+
+```text
+notebooks/03_classification_growth_status.ipynb
+```
+
+This notebook covers:
+
+- Classification problem statement
+- Logistic Regression
+- Confusion Matrix
+- Accuracy, Precision, Recall, F1-score
+- ROC Curve and AUC
+- Decision Tree Classifier
+- Random Forest
+- AdaBoost
+- Support Vector Machine
+- Final classification model comparison
+
+## 6. Project data
+
+The project contains prototype data and processed real public data samples.
+
+### Prototype dataset
+
+```text
+data/prototype/cane_corso_growth_sample.csv
+```
+
+This dataset is used for the first regression experiments.
+
+### General processed real sample
+
+```text
+data/processed/dog_growth_public_sample.csv
+```
+
+This is a smaller processed sample created from the real public dog growth dataset.
+
+### Classification-focused processed sample
+
+```text
+data/processed/dog_growth_classification_sample.csv
+```
+
+This sample is balanced for the Classification topic and contains:
+
+- 10,000 rows
+- 15 columns
+- 5,000 `normal_growth` records
+- 5,000 `needs_attention` records
+
+## 7. Source scripts
+
+The project includes scripts used to create processed samples from the local raw dataset.
+
+```text
+src/create_public_sample.py
+src/create_classification_sample.py
+```
+
+The raw dataset ZIP must be downloaded manually and kept locally in:
+
+```text
+data/raw/
+```
+
+The raw dataset is intentionally ignored by Git and is not committed to GitHub.
+
+Only this source note is kept in the repository:
+
+```text
+data/raw/source_notes.md
+```
+
+## 8. Documentation files
+
+The project documents its data and course mapping in:
+
+```text
+DATA_SOURCES.md
+COURSE_TOPIC_MAPPING.md
+PROJECT_BRIEF.md
+docs/real_data_source_notes.md
+docs/real_data_download_instructions.md
+docs/data_preparation_plan.md
+```
+
+## 9. Current project stage
+
+The project currently covers two completed course topics:
+
+1. Linear Regression, Regularization and Testing
+2. Classification
+
+It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset.
+
+The next planned course topic is:
+
+```text
+Unsupervised Learning, Clustering
+```
+
+Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.
+
+## 10. Important note
+
+This project is an educational machine learning project.
+
+The models and labels are used for learning and analysis only. They do not provide veterinary diagnosis.
