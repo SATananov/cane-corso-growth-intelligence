@@ -6,7 +6,97 @@ The goal is not to provide a full university-level proof of every algorithm. The
 
 The project remains an educational machine learning project. It does not provide veterinary diagnosis.
 
+
 ---
+
+## Quick Mathematical Map
+
+This project currently uses three main machine learning directions:
+
+```mermaid
+flowchart TD
+    A["Cane Corso Growth Intelligence"] --> B["Regression"]
+    A --> C["Classification"]
+    A --> D["Next: Clustering"]
+
+    B --> B1["Linear Regression"]
+    B --> B2["Polynomial Regression"]
+    B --> B3["Ridge and Lasso"]
+    B --> B4["RANSAC"]
+    B --> BM["MAE, MSE, RMSE, R2"]
+
+    C --> C1["Logistic Regression"]
+    C --> C2["Decision Tree"]
+    C --> C3["Random Forest"]
+    C --> C4["AdaBoost"]
+    C --> C5["SVM"]
+    C --> CM["Confusion Matrix, Precision, Recall, F1, ROC, AUC"]
+
+    D --> D1["K-Means"]
+    D --> D2["Hierarchical Clustering"]
+    D --> D3["DBSCAN"]
+    D --> DM["Elbow Method, Silhouette Score, Noise Points"]
+```
+
+The diagram shows the project structure: regression predicts a number, classification predicts a known class, and clustering will discover unknown groups.
+
+---
+
+## Formula Reference Table
+
+| Area | Formula | Meaning | Used in project |
+|---|---|---|---|
+| Simple Linear Regression | `y_hat = beta_0 + beta_1 * x` | Predicts one numeric value from one feature. | `01_linear_regression_growth_prediction.ipynb` |
+| Multi-Dimensional Regression | `y_hat = beta_0 + beta_1*x_1 + ... + beta_n*x_n` | Predicts a numeric value using multiple features. | Regression notebook, multi-feature experiment |
+| Matrix Regression Form | `y_hat = X * beta` | Compact way to write regression for many rows and features. | Regression explanation |
+| Ordinary Least Squares | `min sum((y_i - y_hat_i)^2)` | Finds coefficients that minimize squared prediction errors. | Linear Regression baseline |
+| Polynomial Regression | `y_hat = beta_0 + beta_1*x + beta_2*x^2` | Allows a curved relationship instead of only a straight line. | Polynomial Regression section |
+| Ridge Regression | `min SSE + lambda * sum(beta_j^2)` | Adds L2 penalty to reduce large coefficients. | Ridge experiment |
+| Lasso Regression | `min SSE + lambda * sum(abs(beta_j))` | Adds L1 penalty and can shrink weak coefficients close to zero. | Lasso experiment |
+| RANSAC Inlier Rule | `abs(y_i - y_hat_i) <= threshold` | Treats points with small residuals as inliers and reduces outlier influence. | RANSAC robust regression |
+| Logistic Regression Score | `z = beta_0 + beta_1*x_1 + ... + beta_n*x_n` | Linear score before converting to probability. | Classification notebook |
+| Sigmoid Function | `p = 1 / (1 + e^(-z))` | Converts any score into a probability from 0 to 1. | Logistic Regression |
+| Binary Decision Rule | `p >= 0.5 -> 1, otherwise -> 0` | Converts probability into a class label. | `growth_status_binary` prediction |
+| SVM Boundary | `w^T * x + b = 0` | Separates classes with a decision boundary. | SVM classifier |
+| RBF Kernel | `K(x, x') = exp(-gamma * ||x - x'||^2)` | Allows SVM to model non-linear class boundaries. | SVM with RBF kernel |
+| K-Means Objective | `min sum(||x_i - mu_cluster(i)||^2)` | Groups points by minimizing distance to cluster centers. | Planned clustering notebook |
+
+---
+
+## Metrics Reference Table
+
+| Metric | Formula | Best interpretation | Used in project |
+|---|---|---|---|
+| Error | `error_i = y_i - y_hat_i` | Difference between real and predicted value. | Regression evaluation |
+| MAE | `(1 / n) * sum(abs(y_i - y_hat_i))` | Average absolute prediction error. Lower is better. | Regression comparison |
+| MSE | `(1 / n) * sum((y_i - y_hat_i)^2)` | Average squared prediction error. Penalizes large errors. | Regression comparison |
+| RMSE | `sqrt(MSE)` | Error in the same unit as the target, for example kg. Lower is better. | Regression comparison |
+| R2 Score | `1 - SSE / SST` | How much target variation is explained by the model. Higher is better. | Regression comparison |
+| Accuracy | `(TP + TN) / (TP + TN + FP + FN)` | Overall share of correct predictions. | Classification evaluation |
+| Precision | `TP / (TP + FP)` | Of predicted positive cases, how many were correct. | `needs_attention` evaluation |
+| Recall | `TP / (TP + FN)` | Of actual positive cases, how many the model found. | Important for `needs_attention` |
+| F1-score | `2 * Precision * Recall / (Precision + Recall)` | Balance between precision and recall. Higher is better. | Classification comparison |
+| True Positive Rate | `TP / (TP + FN)` | Same as recall. | ROC curve |
+| False Positive Rate | `FP / (FP + TN)` | Share of normal cases incorrectly flagged as positive. | ROC curve |
+| AUC | `Area under ROC curve` | Measures class separation across thresholds. Closer to 1 is better. | Classification comparison |
+| Gini Impurity | `1 - sum(p_k^2)` | Measures how mixed a decision tree node is. Lower is purer. | Decision Tree |
+| Entropy | `-sum(p_k * log2(p_k))` | Measures uncertainty in a node. Lower means less uncertainty. | Decision Tree |
+| Information Gain | `impurity(parent) - weighted impurity(children)` | Measures how useful a split is. Higher is better. | Decision Tree |
+
+---
+
+## Project Formula Flow
+
+| Course stage | Mathematical focus | Practical project output |
+|---|---|---|
+| Regression | Functions, coefficients, residuals, loss minimization | Predict and evaluate `weight_kg` |
+| Regularization | Penalty terms added to the regression objective | Compare Ridge and Lasso with Linear Regression |
+| Robust Regression | Inlier and outlier separation using residual thresholds | Compare RANSAC with normal regression |
+| Classification | Probability, thresholding, class labels | Predict `normal_growth` vs `needs_attention` |
+| Classification Evaluation | Confusion matrix and derived metrics | Compare Logistic Regression, Tree, Forest, AdaBoost, SVM |
+| Clustering | Distances, cluster centers, density, separation | Planned discovery of growth-pattern groups |
+
+These tables are intentionally concise. The detailed explanations below describe how each formula connects to the notebooks.
 
 ## 1. Regression
 
