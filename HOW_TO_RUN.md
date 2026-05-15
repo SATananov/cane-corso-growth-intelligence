@@ -170,3 +170,25 @@ Unsupervised Learning, Clustering
 ```
 
 Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.
+
+## 10. Read the geometric interpretation
+
+The project includes a geometric explanation of the models:
+
+```text
+docs/geometric_interpretation.md
+```
+
+This document connects the project to coordinate systems and feature space. It explains:
+
+- data records as points
+- regression as a line or curve
+- residuals as vertical errors
+- classification as a decision boundary
+- clustering as groups of nearby points
+
+The related figures are stored in:
+
+```text
+reports/figures/
+```

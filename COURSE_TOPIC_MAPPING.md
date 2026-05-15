@@ -360,3 +360,32 @@ Status:
 ```text
 Unsupervised Learning, Clustering ⏳
 ```
+
+---
+
+# Geometric Interpretation Support
+
+Supporting document:
+
+```text
+docs/geometric_interpretation.md
+```
+
+Supporting figures:
+
+```text
+reports/figures/regression_coordinate_system.png
+reports/figures/polynomial_curve_coordinate_system.png
+reports/figures/classification_feature_space_boundary.png
+reports/figures/clustering_feature_space_concept.png
+```
+
+This section supports the course topics by showing how the mathematical methods can be understood geometrically:
+
+- Regression learns a line or curve in a coordinate system.
+- Prediction error is the distance between the actual point and the model prediction.
+- Classification learns a decision boundary in feature space.
+- SVM uses margin-based geometry.
+- Clustering groups nearby points in feature space.
+
+This supports the mathematical understanding requirement without changing the notebooks or model outputs.

@@ -36,11 +36,18 @@ cane-corso-growth-intelligence/
 │   ├── real_data_source_notes.md
 │   ├── real_data_download_instructions.md
 │   ├── data_preparation_plan.md
-│   └── math_foundation.md
+│   ├── math_foundation.md
+│   └── geometric_interpretation.md
 ├── notebooks/
 │   ├── 01_linear_regression_growth_prediction.ipynb
 │   ├── 02_real_data_preparation.ipynb
 │   └── 03_classification_growth_status.ipynb
+├── reports/
+│   └── figures/
+│       ├── regression_coordinate_system.png
+│       ├── polynomial_curve_coordinate_system.png
+│       ├── classification_feature_space_boundary.png
+│       └── clustering_feature_space_concept.png
 ├── src/
 │   ├── create_public_sample.py
 │   └── create_classification_sample.py
@@ -208,6 +215,23 @@ This document explains the main formulas behind the completed stages:
 - planned clustering mathematics for the next topic
 
 The goal is to show that the project is not only using machine learning libraries, but also explains the mathematical ideas behind the models.
+
+
+## Geometric Interpretation
+
+The project also includes a visual geometric explanation of the models:
+
+```text
+docs/geometric_interpretation.md
+```
+
+This document explains how data records become points in a coordinate system, how regression learns lines or curves, how classification learns decision boundaries, and how clustering groups nearby points.
+
+The generated figures are stored in:
+
+```text
+reports/figures/
+```
 
 ## Raw Data Rule
 

@@ -209,3 +209,28 @@ The machine learning models should not be used for veterinary diagnosis or healt
 Dog growth depends on many factors, including sex, genetics, nutrition, activity, health, environment, and breed-specific differences.
 
 The project focuses on applying course concepts correctly and documenting each stage clearly.
+
+## Geometric Interpretation
+
+The project also includes a geometric explanation of the machine learning methods in:
+
+```text
+docs/geometric_interpretation.md
+```
+
+This document explains the models as coordinate-space objects:
+
+- data records as points
+- regression as a line or curve
+- residuals as distances from the model prediction
+- classification as a decision boundary
+- SVM as margin-based separation
+- clustering as groups of nearby points
+
+The related visual figures are stored in:
+
+```text
+reports/figures/
+```
+
+This supports the mathematical understanding of the project without changing the notebook experiments.

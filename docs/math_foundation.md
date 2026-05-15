@@ -816,3 +816,14 @@ That is why feature selection, scaling, encoding, and distance are important par
 
 These explanations are educational and do not turn the models into veterinary diagnostic tools.
 
+---
+
+## Geometric Interpretation Document
+
+The formulas in this document are supported by a visual geometric explanation in:
+
+```text
+docs/geometric_interpretation.md
+```
+
+That document shows how the same ideas appear as coordinate systems, lines, curves, decision boundaries, margins, residual distances, and clusters in feature space.
