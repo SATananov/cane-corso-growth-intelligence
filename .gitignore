@@ -16,3 +16,7 @@ data/raw/*.parquet
 # Keep raw data notes, but do not commit downloaded raw datasets
 !data/raw/source_notes.md
 !data/raw/.gitkeep
+
+# Raw external metadata files
+data/raw/*.txt
+!data/raw/source_notes.md
