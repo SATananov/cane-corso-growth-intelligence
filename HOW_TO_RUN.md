@@ -192,3 +192,19 @@ The related figures are stored in:
 ```text
 reports/figures/
 ```
+
+## Classification Exercise Notebook
+
+The project also includes a classification workflow exercise notebook:
+
+```text
+notebooks/03_1_classification_pipeline_exercise.ipynb
+```
+
+This notebook can be opened in VSCode or Jupyter after installing the dependencies. It uses:
+
+```text
+data/processed/dog_growth_classification_sample.csv
+```
+
+The notebook covers dummy baselines, pipelines, cross-validation, learning curves, engineered features, model comparison, permutation importance, error analysis, and ablation study.

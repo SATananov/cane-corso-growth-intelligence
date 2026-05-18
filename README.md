@@ -266,3 +266,23 @@ Unsupervised Learning, Clustering ⏳
 ```
 
 Future topics will be added topic by topic, notebook by notebook, and commit by commit.
+
+## Classification Pipeline Exercise
+
+The project now includes an additional classification exercise notebook:
+
+`notebooks/03_1_classification_pipeline_exercise.ipynb`
+
+This notebook adapts the course classification exercise workflow to the dog growth project. It focuses on reproducible machine-learning practice:
+
+- dummy baseline models
+- preprocessing pipelines
+- stratified cross-validation
+- learning curve analysis
+- growth-related feature engineering
+- model comparison
+- permutation importance
+- error analysis
+- ablation study
+
+The notebook uses the balanced processed classification sample and avoids target leakage by excluding body-condition columns from model features.

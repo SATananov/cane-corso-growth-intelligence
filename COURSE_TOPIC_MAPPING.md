@@ -389,3 +389,96 @@ This section supports the course topics by showing how the mathematical methods 
 - Clustering groups nearby points in feature space.
 
 This supports the mathematical understanding requirement without changing the notebooks or model outputs.
+
+---
+
+# Classification Exercise Mapping
+
+This section maps the classification exercise workflow to the project.
+
+Notebook:
+
+- `notebooks/03_1_classification_pipeline_exercise.ipynb`
+
+## Exercise Coverage
+
+### 1. Load and inspect the data
+
+Covered by the data loading and initial inspection sections.
+
+The notebook uses the balanced real processed classification sample.
+
+### 2. Dummy models
+
+Covered by the dummy baseline section.
+
+Models used:
+
+- `DummyClassifier(strategy="most_frequent")`
+- `DummyClassifier(strategy="stratified")`
+
+### 3. Data pipeline
+
+Covered by the preprocessing pipeline section.
+
+The notebook uses:
+
+- `ColumnTransformer`
+- numeric imputation and scaling
+- categorical imputation and one-hot encoding
+- Logistic Regression
+
+### 4. Learning curve
+
+Covered by the learning curve section.
+
+The notebook evaluates how F1-score changes with different training set sizes.
+
+### 5. Feature engineering
+
+Covered by the engineered growth features section.
+
+The notebook creates growth-related features such as:
+
+- `weight_to_adult_breed_weight_ratio`
+- `age_weight_ratio`
+- `growth_pressure_index`
+- `puppy_stage`
+- `adult_breed_weight_group`
+
+### 6. Different models
+
+Covered by the model comparison section.
+
+Models tested include:
+
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+
+### 7. Feature importances
+
+Covered by the permutation importance section.
+
+The notebook uses permutation importance instead of blindly relying on tree impurity importances.
+
+### 8. Error analysis
+
+Covered by the error analysis section.
+
+The notebook checks:
+
+- false positives
+- false negatives
+- error rate by puppy stage
+- confidently wrong predictions
+
+### 9. Ablation study
+
+Covered by the ablation study section.
+
+The notebook compares feature groups under the same evaluation protocol.
+
+## Purpose
+
+This exercise strengthens the Classification stage by adding reproducible workflow practices, not just additional models.

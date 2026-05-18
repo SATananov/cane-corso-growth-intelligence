@@ -234,3 +234,23 @@ reports/figures/
 ```
 
 This supports the mathematical understanding of the project without changing the notebook experiments.
+
+## Classification Exercise Extension
+
+The project now includes a classification pipeline exercise extension.
+
+This extension focuses on professional machine-learning workflow rather than only training a single model.
+
+It adds:
+
+- dummy baselines
+- preprocessing pipelines
+- cross-validation
+- learning curve analysis
+- feature engineering
+- model comparison
+- permutation importance
+- error analysis
+- ablation study
+
+This improves the project quality by showing that the classification task is evaluated through a reproducible experimental protocol.
