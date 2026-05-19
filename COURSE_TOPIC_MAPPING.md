@@ -1,32 +1,57 @@
 # Course Topic Mapping
 
-This document maps each completed course topic to the corresponding project files and notebook sections.
+This document maps the course lectures to the project files, notebooks and planned stages.
 
-The goal is to show that the project follows the course material step by step and applies it to a practical dog growth analysis context.
-
-## Project Stages
+The project is built lecture by lecture. The goal is not to create separate unrelated exercises, but to connect every topic into one coherent idea:
 
 ```text
-01 Regression
-02 Real Data Preparation
-03 Classification
-04 Unsupervised Learning / Clustering - planned
+Cane Corso Growth Intelligence = mathematical growth profiling + predictive monitoring + interpretable ML signals
 ```
-
-
-## Mathematical Foundation Document
-
-The project includes a separate mathematical explanation file:
-
-```text
-docs/math_foundation.md
-```
-
-This file connects the code implementation to the formulas behind regression, classification, evaluation metrics, regularization, decision trees, ensemble methods, SVM, and planned clustering.
 
 ---
 
-# Course Topic Mapping: Linear Regression, Regularization and Testing
+## Overall Coverage Status
+
+| Course topic | Status | Project role |
+|---|---:|---|
+| Linear Regression, Regularization and Testing | Completed | expected growth prediction and residual analysis |
+| Classification | Completed / extended | `normal_growth` vs `needs_attention` probability signal |
+| Unsupervised Learning, Clustering | Planned next | unknown growth-pattern groups |
+| Feature Engineering and Time Series | Partially started / planned | growth ratios, velocity, trajectory over time |
+| Dimensionality Reduction | Planned | 2D visualization of high-dimensional growth profiles |
+| MLflow | Planned | experiment tracking and model comparison |
+
+---
+
+## Concept and Mathematical Framing
+
+Files:
+
+```text
+PROJECT_BRIEF.md
+README.md
+docs/product_idea_and_mathematical_framing.md
+docs/model_learning_explanation.md
+notebooks/00_project_concept_and_mathematical_framing.ipynb
+```
+
+Purpose:
+
+- explain the project as a useful product idea, not only a homework task;
+- define the mathematical feature-vector view;
+- explain how the model learns from data;
+- clarify the public data source and limitations;
+- connect the project to an owner-friendly monitoring flow.
+
+Status:
+
+```text
+Project idea and mathematical framing ✅
+```
+
+---
+
+# Topic 1: Linear Regression, Regularization and Testing
 
 Notebook:
 
@@ -38,11 +63,12 @@ Mathematical explanation:
 
 ```text
 docs/math_foundation.md
+docs/geometric_interpretation.md
 ```
 
 ## Topic Coverage
 
-### 1. Regression - Problem Statement and Motivation
+### 1. Regression Problem Statement and Motivation
 
 Covered in:
 
@@ -50,7 +76,17 @@ Covered in:
 - notebook introduction
 - problem statement section
 
-The project defines a regression problem: predicting dog weight from growth-related features.
+The project defines a regression problem:
+
+```text
+predict dog weight from growth-related features
+```
+
+Stronger mathematical interpretation:
+
+```text
+learn an expected growth function y = f(x)
+```
 
 ### 2. Ordinary Least Squares / Simple Linear Regression
 
@@ -95,7 +131,7 @@ Covered in:
 
 - `Multi-Dimensional Linear Regression` section
 
-This model uses multiple features such as age, height, sex, and activity level.
+This model uses multiple features such as age, height, sex and activity level.
 
 ### 7. Regularization
 
@@ -108,7 +144,7 @@ The notebook compares:
 - Ridge Regression
 - Lasso Regression
 
-### 8. RANSAC - Robust Regression Model
+### 8. RANSAC Robust Regression
 
 Covered in:
 
@@ -130,13 +166,15 @@ The notebook uses:
 - RMSE
 - R2 Score
 
-### 10. Final Regression Comparison
+### 10. Mathematical Improvement Direction
 
-Covered in:
+The project should emphasize residual analysis:
 
-- `Final Model Comparison` section
+```text
+residual = real_weight - predicted_weight
+```
 
-The tested regression models are compared in one table.
+This connects model performance to error distribution, bias, outliers and expected growth deviation.
 
 Status:
 
@@ -151,6 +189,7 @@ Linear Regression, Regularization and Testing ✅
 Files:
 
 ```text
+DATA_SOURCES.md
 docs/real_data_source_notes.md
 docs/real_data_download_instructions.md
 docs/data_preparation_plan.md
@@ -166,7 +205,7 @@ data/processed/dog_growth_public_sample.csv
 data/processed/dog_growth_classification_sample.csv
 ```
 
-The raw dataset is kept local only in `data/raw/` and is not committed to GitHub.
+The raw dataset is kept local only in `data/raw/` and should not be committed to GitHub or included in the final clean ZIP.
 
 Status:
 
@@ -176,7 +215,7 @@ Real Data Foundation ✅
 
 ---
 
-# Course Topic Mapping: Classification
+# Topic 2: Classification
 
 Notebook:
 
@@ -188,9 +227,10 @@ Mathematical explanation:
 
 ```text
 docs/math_foundation.md
+docs/model_learning_explanation.md
 ```
 
-The notebook follows the Classification lecture step by step and applies it to the balanced processed dog growth classification sample.
+The notebook follows the Classification lecture and applies it to the balanced processed dog growth classification sample.
 
 Classification sample:
 
@@ -200,22 +240,27 @@ data/processed/dog_growth_classification_sample.csv
 
 ## Topic Coverage
 
-### 1. Classification - Problem Statement and Motivation
+### 1. Classification Problem Statement and Motivation
 
 Covered in:
 
 - notebook introduction
 - problem statement section
+- project brief
 
 The project changes from predicting a numerical value to predicting a class.
 
 Regression task:
 
-- predict `weight_kg`
+```text
+predict weight_kg
+```
 
 Classification task:
 
-- predict `growth_status`
+```text
+predict growth_status
+```
 
 ### 2. Binary Classification
 
@@ -223,88 +268,97 @@ Covered in:
 
 - `Create Classification Target` section
 
-Target column:
+Target labels:
 
 ```text
-growth_status
+normal_growth
+needs_attention
 ```
 
-Binary numeric target:
+Binary numeric labels:
 
-- `0` = `normal_growth`
-- `1` = `needs_attention`
-
-The balanced classification sample contains:
-
-- 5,000 `normal_growth` records
-- 5,000 `needs_attention` records
+```text
+0 = normal_growth
+1 = needs_attention
+```
 
 ### 3. Logistic Regression
 
 Covered in:
 
-- `Logistic Regression Classifier` section
+- Logistic Regression model section
 
-The model predicts whether a record belongs to `normal_growth` or `needs_attention`.
+Mathematical interpretation:
 
-### 4. Classification Evaluation
+```text
+p = 1 / (1 + e^(-z))
+z = beta_0 + beta_1*x_1 + ... + beta_n*x_n
+```
+
+The model outputs a probability:
+
+```text
+P(needs_attention | x)
+```
+
+### 4. Train/Test Split
 
 Covered in:
 
-- `Classification Evaluation` section
+- data split section
 
-The notebook uses:
+The project evaluates models on unseen test data.
 
-- Confusion Matrix
-- Accuracy
-- Precision
-- Recall
+### 5. Confusion Matrix and Metrics
+
+Covered in:
+
+- confusion matrix section
+- classification report section
+
+Metrics:
+
+- accuracy
+- precision
+- recall
 - F1-score
-- Classification Report
 
-### 5. ROC Curve and AUC
-
-Covered in:
-
-- `ROC Curve and AUC` section
-
-The notebook uses:
-
-- ROC curve
-- AUC score
-
-### 6. Decision Tree Classifier
+### 6. ROC Curve and AUC
 
 Covered in:
 
-- `Decision Tree Classifier` section
+- ROC/AUC section
 
-The section also includes feature importance.
+This evaluates probability separation across thresholds.
 
-### 7. Ensemble Models
-
-Covered in:
-
-- `Ensemble Models: Random Forest and AdaBoost` section
-
-Models tested:
-
-- Random Forest Classifier
-- AdaBoost Classifier
-
-### 8. Support Vector Machine
+### 7. Decision Tree
 
 Covered in:
 
-- `Support Vector Machine Classifier` section
+- Decision Tree section
 
-The notebook trains an SVM classifier with an RBF kernel and evaluates it with classification metrics and ROC/AUC.
+Adds interpretable rule-based classification.
 
-### 9. Final Classification Model Comparison
+### 8. Ensemble Models
 
 Covered in:
 
-- `Final Classification Model Comparison` section
+- Random Forest
+- AdaBoost
+
+### 9. Support Vector Machine
+
+Covered in:
+
+- SVM section
+
+The notebook trains an SVM classifier and evaluates it with classification metrics and ROC/AUC.
+
+### 10. Final Model Comparison
+
+Covered in:
+
+- final classification model comparison section
 
 Models compared:
 
@@ -330,7 +384,90 @@ Classification ✅
 
 ---
 
-# Planned Course Topic Mapping: Unsupervised Learning, Clustering
+# Classification Pipeline Exercise Extension
+
+Notebook:
+
+```text
+notebooks/03_1_classification_pipeline_exercise.ipynb
+```
+
+This extension strengthens the classification stage by adding workflow quality.
+
+## Exercise Coverage
+
+### 1. Dummy Baselines
+
+Covered by:
+
+- `DummyClassifier(strategy="most_frequent")`
+- `DummyClassifier(strategy="stratified")`
+
+### 2. Data Pipeline
+
+Covered by:
+
+- `ColumnTransformer`
+- numeric imputation
+- scaling
+- categorical imputation
+- one-hot encoding
+- Logistic Regression inside a pipeline
+
+### 3. Cross-Validation
+
+Covered by stratified cross-validation.
+
+### 4. Learning Curve
+
+Covered by the learning curve section.
+
+The notebook evaluates how F1-score changes with different training set sizes.
+
+### 5. Feature Engineering
+
+Covered by engineered growth features such as:
+
+- `weight_to_adult_breed_weight_ratio`
+- `age_weight_ratio`
+- `growth_pressure_index`
+- `puppy_stage`
+- `adult_breed_weight_group`
+
+### 6. Model Comparison
+
+Models tested include:
+
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+
+### 7. Feature Importances
+
+Covered by permutation importance.
+
+### 8. Error Analysis
+
+The notebook checks:
+
+- false positives
+- false negatives
+- error rate by puppy stage
+- confidently wrong predictions
+
+### 9. Ablation Study
+
+The notebook compares feature groups under the same evaluation protocol.
+
+Status:
+
+```text
+Classification Pipeline Extension ✅
+```
+
+---
+
+# Topic 3: Unsupervised Learning, Clustering
 
 Planned notebook:
 
@@ -338,27 +475,136 @@ Planned notebook:
 notebooks/04_unsupervised_clustering_growth_patterns.ipynb
 ```
 
-Mathematical planning:
+Planned mathematical role:
 
 ```text
-docs/math_foundation.md
+discover growth-pattern groups without using target labels
 ```
 
-Planned topic coverage:
+Planned coverage:
 
-- Unsupervised Learning problem statement, intuition, and challenges
-- K-Means clustering
+- unsupervised learning problem statement
+- feature scaling
+- K-Means
 - K-Means++ motivation
-- comparison of different K values
+- Elbow Method
+- Silhouette Score
 - Hierarchical Clustering
-- comparison between K-Means and Hierarchical Clustering
 - DBSCAN
-- final clustering comparison
+- cluster interpretation
+
+Planned product interpretation:
+
+```text
+This dog record resembles a steady-growth / fast-growth / slow-growth / irregular-growth group.
+```
 
 Status:
 
 ```text
 Unsupervised Learning, Clustering ⏳
+```
+
+---
+
+# Topic 4: Feature Engineering and Time Series
+
+Current status:
+
+```text
+Feature Engineering: partially covered
+Time Series: planned
+```
+
+Already covered in the classification exercise:
+
+- ratio features
+- growth-pressure features
+- puppy-stage grouping
+- categorical encoding
+
+Planned additions:
+
+- growth velocity
+- moving average
+- rolling deviation
+- ordered dog trajectory
+- trend over time
+
+Mathematical interpretation:
+
+```text
+growth_velocity = delta_weight / delta_time
+relative_deviation = (actual_weight - expected_weight) / expected_weight
+```
+
+Status:
+
+```text
+Feature Engineering ⚠️ / Time Series ⏳
+```
+
+---
+
+# Topic 5: Dimensionality Reduction
+
+Planned notebook or section:
+
+```text
+notebooks/05_dimensionality_reduction_growth_profiles.ipynb
+```
+
+Planned methods:
+
+- PCA
+- optional t-SNE / UMAP discussion if appropriate
+
+Mathematical role:
+
+```text
+project high-dimensional growth records into 2D for visualization
+```
+
+Product role:
+
+```text
+show a visual map of growth profiles and how records separate by status or cluster
+```
+
+Status:
+
+```text
+Dimensionality Reduction ⏳
+```
+
+---
+
+# Topic 6: MLflow
+
+Planned notebook or experiment folder:
+
+```text
+notebooks/06_mlflow_experiment_tracking.ipynb
+```
+
+Planned coverage:
+
+- experiment tracking
+- logged parameters
+- logged metrics
+- model comparison
+- reproducibility notes
+
+Product role:
+
+```text
+track which model version gives the best growth-monitoring signal
+```
+
+Status:
+
+```text
+MLflow ⏳
 ```
 
 ---
@@ -380,105 +626,27 @@ reports/figures/classification_feature_space_boundary.png
 reports/figures/clustering_feature_space_concept.png
 ```
 
-This section supports the course topics by showing how the mathematical methods can be understood geometrically:
+This section supports the course topics by showing how mathematical methods can be understood geometrically:
 
-- Regression learns a line or curve in a coordinate system.
-- Prediction error is the distance between the actual point and the model prediction.
-- Classification learns a decision boundary in feature space.
-- SVM uses margin-based geometry.
-- Clustering groups nearby points in feature space.
-
-This supports the mathematical understanding requirement without changing the notebooks or model outputs.
+- data records as points;
+- regression as a line or curve;
+- residuals as distances from prediction;
+- classification as a decision boundary;
+- SVM as margin-based separation;
+- clustering as groups of nearby points.
 
 ---
 
-# Classification Exercise Mapping
+## Final Course Strategy
 
-This section maps the classification exercise workflow to the project.
+The final project should tell one coherent story:
 
-Notebook:
-
-- `notebooks/03_1_classification_pipeline_exercise.ipynb`
-
-## Exercise Coverage
-
-### 1. Load and inspect the data
-
-Covered by the data loading and initial inspection sections.
-
-The notebook uses the balanced real processed classification sample.
-
-### 2. Dummy models
-
-Covered by the dummy baseline section.
-
-Models used:
-
-- `DummyClassifier(strategy="most_frequent")`
-- `DummyClassifier(strategy="stratified")`
-
-### 3. Data pipeline
-
-Covered by the preprocessing pipeline section.
-
-The notebook uses:
-
-- `ColumnTransformer`
-- numeric imputation and scaling
-- categorical imputation and one-hot encoding
-- Logistic Regression
-
-### 4. Learning curve
-
-Covered by the learning curve section.
-
-The notebook evaluates how F1-score changes with different training set sizes.
-
-### 5. Feature engineering
-
-Covered by the engineered growth features section.
-
-The notebook creates growth-related features such as:
-
-- `weight_to_adult_breed_weight_ratio`
-- `age_weight_ratio`
-- `growth_pressure_index`
-- `puppy_stage`
-- `adult_breed_weight_group`
-
-### 6. Different models
-
-Covered by the model comparison section.
-
-Models tested include:
-
-- Logistic Regression
-- Random Forest
-- Gradient Boosting
-
-### 7. Feature importances
-
-Covered by the permutation importance section.
-
-The notebook uses permutation importance instead of blindly relying on tree impurity importances.
-
-### 8. Error analysis
-
-Covered by the error analysis section.
-
-The notebook checks:
-
-- false positives
-- false negatives
-- error rate by puppy stage
-- confidently wrong predictions
-
-### 9. Ablation study
-
-Covered by the ablation study section.
-
-The notebook compares feature groups under the same evaluation protocol.
-
-## Purpose
-
-This exercise strengthens the Classification stage by adding reproducible workflow practices, not just additional models.
+```text
+Cane Corso growth is represented mathematically.
+Regression estimates expected development.
+Classification gives probability-based growth signals.
+Clustering discovers hidden growth profiles.
+Feature engineering and time series turn raw records into trajectory features.
+Dimensionality reduction visualizes the structure.
+MLflow tracks the experiments professionally.
+```

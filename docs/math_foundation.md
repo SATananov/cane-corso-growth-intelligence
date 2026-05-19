@@ -9,15 +9,130 @@ The project remains an educational machine learning project. It does not provide
 
 ---
 
+## Mathematical Growth Profiling View
+
+The stronger project idea is not only to predict one value. The project models dog growth as a mathematical profile.
+
+A single record can be represented as a feature vector:
+
+```text
+x = [age_months, weight_kg, height_cm, sex_encoded, body_ratio, growth_velocity, deviation_from_expected]
+```
+
+The same vector representation can support several course topics:
+
+| Course topic | Mathematical object | Project interpretation |
+|---|---|---|
+| Regression | `y = f(x)` | expected weight or growth curve |
+| Classification | `P(needs_attention | x)` | probability-based growth signal |
+| Clustering | `cluster_id = g(x)` | unknown growth-pattern group |
+| Time Series | ordered sequence of records | growth trajectory through time |
+| Dimensionality Reduction | projection of high-dimensional data | visual map of growth profiles |
+
+This connects the real-world problem to a formal machine-learning formulation.
+
+---
+
+## How Learning Happens in This Project
+
+The model learns by comparing predictions with known historical examples.
+
+For regression:
+
+```text
+y_hat = predicted_weight
+y = real_weight
+residual = y - y_hat
+```
+
+Training means choosing parameters that reduce the total prediction error:
+
+```text
+minimize sum((y_i - y_hat_i)^2)
+```
+
+For classification, the model learns a probability:
+
+```text
+P(needs_attention | x)
+```
+
+A threshold converts the probability into a label:
+
+```text
+if P(needs_attention | x) >= threshold -> needs_attention
+else -> normal_growth
+```
+
+This is why the project should discuss not only accuracy, but also precision, recall, F1-score, ROC/AUC and threshold behavior.
+
+The dedicated explanation is in:
+
+```text
+docs/model_learning_explanation.md
+```
+
+---
+
+## Useful Engineered Growth Features
+
+The project becomes more mathematical when it does not rely only on raw columns.
+
+Important growth features include:
+
+```text
+body_ratio = weight_kg / height_cm
+```
+
+```text
+growth_velocity = delta_weight / delta_time
+```
+
+```text
+deviation_from_expected = actual_weight - predicted_expected_weight
+```
+
+```text
+relative_deviation = deviation_from_expected / predicted_expected_weight
+```
+
+These features help translate the owner problem into measurable mathematical quantities.
+
+---
+
+## Uncertainty and Responsible Interpretation
+
+A useful growth-monitoring system should not present model outputs as absolute truth.
+
+A responsible prediction should be interpreted as:
+
+```text
+predicted value + error range + explanation + limitation
+```
+
+For example:
+
+```text
+Predicted weight: 32 kg
+Expected range: 29-35 kg
+Interpretation: close to expected range in this dataset
+```
+
+This is safer and mathematically more honest than a single deterministic statement.
+
+
+---
+
 ## Quick Mathematical Map
 
 This project currently uses three main machine learning directions:
 
 ```mermaid
 flowchart TD
-    A["Cane Corso Growth Intelligence"] --> B["Regression"]
-    A --> C["Classification"]
-    A --> D["Next: Clustering"]
+    A["Cane Corso Growth Intelligence"] --> P["Mathematical Growth Profile"]
+    P --> B["Regression"]
+    P --> C["Classification"]
+    P --> D["Next: Clustering"]
 
     B --> B1["Linear Regression"]
     B --> B2["Polynomial Regression"]
@@ -95,6 +210,9 @@ The diagram shows the project structure: regression predicts a number, classific
 | Classification | Probability, thresholding, class labels | Predict `normal_growth` vs `needs_attention` |
 | Classification Evaluation | Confusion matrix and derived metrics | Compare Logistic Regression, Tree, Forest, AdaBoost, SVM |
 | Clustering | Distances, cluster centers, density, separation | Planned discovery of growth-pattern groups |
+| Feature Engineering | Ratios, deviations, growth rates | Convert raw records into meaningful growth signals |
+| Time Series | Ordered observations and trends | Planned growth trajectory monitoring |
+| Dimensionality Reduction | Projection and variance | Planned visual map of high-dimensional growth profiles |
 
 These tables are intentionally concise. The detailed explanations below describe how each formula connects to the notebooks.
 

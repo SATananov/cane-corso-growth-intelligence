@@ -239,3 +239,35 @@ This geometric view helps explain why preprocessing matters.
 | Model comparison | compares different geometric assumptions |
 
 The main lesson is that machine learning models are not magic. They learn mathematical structures inside a feature space.
+
+---
+
+## 9. Growth Profile as a Trajectory
+
+The project can also be understood as a trajectory problem.
+
+A dog is not only one point. If the owner records measurements over time, the dog becomes an ordered sequence of points:
+
+```text
+trajectory = [(age_1, weight_1), (age_2, weight_2), ..., (age_n, weight_n)]
+```
+
+Geometrically, this creates a path through the age-weight coordinate system.
+
+This idea is important for the later Time Series topic because growth monitoring is more useful when it observes direction and change, not only one isolated record.
+
+Possible trajectory features include:
+
+```text
+growth_velocity = delta_weight / delta_time
+```
+
+```text
+deviation_from_expected = actual_weight - predicted_expected_weight
+```
+
+```text
+relative_deviation = deviation_from_expected / predicted_expected_weight
+```
+
+This makes the project more useful as an owner-friendly monitoring system because it can show whether the dog is staying close to an expected growth path over time.

@@ -1,91 +1,181 @@
-﻿# Data Preparation Plan
+# Data Preparation Plan
 
-This document describes how the project will move from prototype data to real public data.
+This document describes how the project separates prototype data, raw external data and processed public samples.
 
-## Current Situation
+---
 
-The project currently uses a small prototype dataset:
+## 1. Data Layers
 
+The project uses three data layers.
+
+### Prototype Data
+
+```text
 data/prototype/cane_corso_growth_sample.csv
+```
 
-This dataset is useful for learning and applying the first course topic step by step.
+A small educational dataset used for the first regression experiments.
 
-It is not real veterinary data.
+### Raw Public Data
 
-## Real Data Foundation
+```text
+data/raw/
+```
 
-The project will use a real public dog growth dataset as the next data foundation.
+The local folder where external source files can be placed manually.
 
-The real dataset will not be committed directly to GitHub in its full raw form.
+Raw files should not be committed to GitHub or included in the final clean ZIP.
 
-Instead, the project will document the source and create a smaller processed sample for experiments.
+### Processed Public Data
 
-## Preparation Steps
+```text
+data/processed/dog_growth_public_sample.csv
+data/processed/dog_growth_classification_sample.csv
+```
 
-### 1. Download the raw dataset locally
+Smaller samples created from the real public dog growth dataset for notebook experiments.
+
+---
+
+## 2. Preparation Steps
+
+### Step 1: Download the raw dataset locally
 
 The raw dataset should be downloaded manually and placed in:
 
+```text
 data/raw/
+```
 
-The original large file should stay local and should not be committed to GitHub.
+The original large file should stay local.
 
-### 2. Inspect the raw data
+### Step 2: Inspect the raw data
 
-The first step after downloading will be to inspect:
+Check:
 
-- available files
-- column names
-- number of rows
-- missing values
-- age-related columns
-- weight-related columns
-- possible category columns
+- available files;
+- column names;
+- number of rows;
+- missing values;
+- age-related columns;
+- weight-related columns;
+- body condition columns;
+- category columns.
 
-### 3. Select useful columns
+### Step 3: Select useful columns
 
-For this project, the most useful columns will likely be related to:
+Useful columns are related to:
 
-- dog age
-- body weight
-- sex
-- breed or breed size group
-- measurement date or time-related information, if available
+- dog age;
+- body weight;
+- sex;
+- breed or breed-size identifier;
+- body condition information;
+- adult breed weight information;
+- health-related flags if available.
 
-### 4. Clean the data
+### Step 4: Clean the data
 
-The cleaning process may include:
+Cleaning may include:
 
-- removing rows with missing age or weight values
-- converting units if needed
-- checking unrealistic values
-- filtering young dogs if needed
-- renaming columns for clarity
+- removing rows with missing age or weight;
+- converting age to months;
+- checking unrealistic values;
+- renaming columns for clarity;
+- keeping a consistent source label.
 
-### 5. Create a processed sample
+### Step 5: Create processed samples
 
-A smaller processed sample will be saved in:
+The project creates:
 
+```text
 data/processed/dog_growth_public_sample.csv
+```
 
-This file should be small enough to commit to GitHub.
+for general experiments and:
 
-### 6. Use the processed sample in notebooks
+```text
+data/processed/dog_growth_classification_sample.csv
+```
 
-The processed sample will be used in future notebook sections.
+for classification experiments.
 
-The prototype dataset will remain in the project as the first learning dataset.
+### Step 6: Use the processed samples in notebooks
 
-## Important Rule
+The processed samples are small enough for reproducible notebooks and GitHub.
+
+---
+
+## 3. Classification Target Preparation
+
+The classification stage creates:
+
+```text
+growth_status
+```
+
+with classes:
+
+```text
+normal_growth
+needs_attention
+```
+
+The labels are educational machine-learning labels based on available body-condition information. They are not veterinary diagnosis labels.
+
+---
+
+## 4. Future Feature Engineering
+
+Future notebooks can create features such as:
+
+```text
+body_ratio = weight_kg / height_cm
+```
+
+```text
+growth_velocity = delta_weight / delta_time
+```
+
+```text
+deviation_from_expected = actual_weight - predicted_expected_weight
+```
+
+```text
+relative_deviation = deviation_from_expected / predicted_expected_weight
+```
+
+These features will make the project more mathematical and useful because they represent growth as a process, not only as a static row.
+
+---
+
+## 5. Important Rule
 
 The project must always clearly distinguish between:
 
-- prototype educational data
-- raw public data
-- processed public data sample
+- prototype educational data;
+- raw external public data;
+- processed public data samples;
+- product interpretation for the Cane Corso domain.
 
-## Why this step matters
+This distinction protects the academic integrity of the project.
 
-Using real public data will make the project stronger and more realistic.
+---
 
-However, it must be done carefully, with clear documentation, source attribution, and responsible data handling.
+## 6. Why This Step Matters
+
+Using real public data makes the project stronger and more realistic.
+
+However, the project must be honest about the data source and must avoid unsafe claims.
+
+Correct statement:
+
+```text
+The project uses public dog growth data as a foundation for a Cane Corso-oriented growth intelligence concept.
+```
+
+Incorrect statement:
+
+```text
+The project uses private Cane Corso veterinary records.
+```

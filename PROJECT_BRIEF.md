@@ -1,26 +1,232 @@
 # Project Brief
 
-## Working Title
+## Project Title
 
-Cane Corso Growth Intelligence
+**Cane Corso Growth Intelligence**
 
-## Project Idea
+## Project Subtitle
 
-Cane Corso Growth Intelligence is a machine learning course project focused on dog growth analysis.
+**A Mathematical Growth Profiling System for Predictive Monitoring and Early Growth Pattern Detection**
 
-The project uses the Cane Corso domain as a practical and personally meaningful context, while the technical implementation follows the course topics step by step.
+---
 
-The project is not a veterinary product and does not provide diagnosis. It is an educational machine learning project.
+## Main Idea
 
-## Main Problem
+Cane Corso Growth Intelligence is a machine learning project that explores how simple dog growth records can be transformed into useful mathematical and visual insights.
 
-Large-breed dogs grow quickly during the first months of life. Owners often want to understand growth patterns, weight development, and whether a record may need additional review.
+The project starts from a practical everyday question:
 
-Machine learning can be used to explore these questions in different ways:
+```text
+How can an owner understand whether a growing Cane Corso is developing close to an expected pattern?
+```
 
-- regression predicts numerical values
-- classification predicts known categories
-- clustering can later discover unknown groups
+Instead of treating the project as only a weight-prediction exercise, the stronger idea is to build a **mathematical growth profile**. Each measurement becomes a data point. Each dog can be interpreted as a growth trajectory over time. Machine learning models are then used to estimate expected growth, classify growth signals, discover similar growth groups, and explain model behavior through metrics and visualizations.
+
+This makes the project both interesting and useful:
+
+- interesting, because it connects real-world growth monitoring with mathematical modeling;
+- useful, because the same idea can later become an owner-friendly growth monitor;
+- academically relevant, because it applies multiple machine-learning topics from the course in one coherent domain.
+
+---
+
+## Real-World Motivation
+
+Large-breed puppies grow quickly. Owners often track weight, age and body measurements, but raw numbers are difficult to interpret without context.
+
+A single record such as:
+
+```text
+age = 5 months, weight = 28 kg
+```
+
+does not answer the important questions:
+
+```text
+Is this close to expected development?
+Is the dog growing faster or slower than similar dogs?
+Is the trend stable over time?
+Does the record need closer attention?
+How confident is the model?
+```
+
+The project uses machine learning to convert these questions into measurable tasks.
+
+---
+
+## Product-Oriented Use Case
+
+A possible real user flow is:
+
+```text
+1. The owner enters age, weight, sex, height and optional growth information.
+2. The system creates a mathematical feature vector.
+3. Regression estimates expected weight or growth trend.
+4. Classification gives a probability-based growth signal.
+5. Clustering compares the record with similar growth patterns.
+6. Visualizations explain the result using charts, residuals and metrics.
+7. The owner sees a clear, non-medical monitoring signal.
+```
+
+The project should not be presented as a veterinary diagnostic system. The correct product framing is:
+
+```text
+owner-friendly growth monitoring assistant
+```
+
+not:
+
+```text
+medical diagnosis tool
+```
+
+---
+
+## Mathematical Problem Formulation
+
+Each growth record is represented as a vector:
+
+```text
+x = [age_months, weight_kg, height_cm, sex_encoded, body_ratio, growth_velocity, deviation_from_expected]
+```
+
+Depending on the lecture topic, the same data can be used for different tasks.
+
+### Regression
+
+Regression learns a function:
+
+```text
+y_weight = f(x)
+```
+
+The goal is to estimate a numerical target such as expected bodyweight.
+
+### Classification
+
+Classification learns a probability:
+
+```text
+P(needs_attention | x)
+```
+
+The model output is a probability-based signal, not a medical conclusion.
+
+### Clustering
+
+Clustering searches for hidden groups:
+
+```text
+cluster_id = g(x)
+```
+
+The goal is to discover unknown growth-pattern profiles without using predefined labels.
+
+### Time Series
+
+A dog can be represented as an ordered trajectory:
+
+```text
+trajectory = [(age_1, weight_1), (age_2, weight_2), ..., (age_n, weight_n)]
+```
+
+This allows later analysis of trend, velocity, moving averages and deviations over time.
+
+---
+
+## How the Model Learns
+
+The project must clearly explain that a machine-learning model learns from historical records.
+
+The process is:
+
+```text
+known examples -> prediction -> error -> parameter update -> evaluation on unseen data
+```
+
+For regression, the model compares predicted weight with real weight:
+
+```text
+residual_i = y_i - y_hat_i
+```
+
+Training means finding model parameters that reduce the total error, for example:
+
+```text
+minimize sum((y_i - y_hat_i)^2)
+```
+
+For classification, the model estimates a probability:
+
+```text
+p = P(needs_attention | x)
+```
+
+Then a threshold converts the probability into a class:
+
+```text
+if p >= threshold -> needs_attention
+else -> normal_growth
+```
+
+This allows threshold discussion, precision/recall trade-off, ROC/AUC analysis and responsible interpretation.
+
+A dedicated explanation is added in:
+
+```text
+docs/model_learning_explanation.md
+```
+
+---
+
+## Data Foundation
+
+The project uses two clearly separated data layers.
+
+### 1. Prototype Cane Corso Dataset
+
+```text
+data/prototype/cane_corso_growth_sample.csv
+```
+
+This is a small educational sample used at the beginning of the project.
+
+### 2. Real Public Dog Growth Dataset
+
+The stronger data foundation comes from a public research dataset:
+
+```text
+Growth standard charts for monitoring bodyweight in dogs of different sizes - SUPPORTING DATA
+```
+
+Source:
+
+```text
+University of Liverpool DataCat
+```
+
+Related publication:
+
+```text
+Growth standard charts for monitoring bodyweight in dogs of different sizes, PLOS ONE, 2017
+```
+
+Important clarification:
+
+```text
+The project does not claim to have private Cane Corso veterinary records.
+The Cane Corso domain is the practical product context.
+The real public dog growth dataset provides the broader data foundation.
+```
+
+Processed samples:
+
+```text
+data/processed/dog_growth_public_sample.csv
+data/processed/dog_growth_classification_sample.csv
+```
+
+---
 
 ## Completed Stage 1: Regression
 
@@ -36,34 +242,31 @@ Notebook:
 notebooks/01_linear_regression_growth_prediction.ipynb
 ```
 
-This stage started with a prototype Cane Corso dataset and applied:
+Covered methods:
 
-- problem statement and motivation
 - simple linear regression
 - polynomial regression
 - multi-dimensional linear regression
-- Ridge and Lasso regularization
+- Ridge regression
+- Lasso regression
 - RANSAC robust regression
-- MAE, MSE, RMSE, and R2 model testing
-- final regression model comparison
+- MAE, MSE, RMSE, R2
+- regression model comparison
 
-The first regression task was:
+The mathematical interpretation is:
 
 ```text
-Can age and growth-related features be used to predict dog weight?
+learn an expected growth function and analyze residual errors
 ```
+
+---
 
 ## Completed Stage 2: Real Data Foundation
 
-The project now includes real processed public dog growth data.
-
-Raw data is kept local only and is not committed to GitHub.
-
-Processed samples committed to the project:
+Notebook:
 
 ```text
-data/processed/dog_growth_public_sample.csv
-data/processed/dog_growth_classification_sample.csv
+notebooks/02_real_data_preparation.ipynb
 ```
 
 Scripts:
@@ -73,7 +276,9 @@ src/create_public_sample.py
 src/create_classification_sample.py
 ```
 
-The real data foundation makes the project stronger because later notebooks can work with realistic public data instead of only a prototype dataset.
+This stage moves the project from a small prototype sample toward processed real public dog growth data.
+
+---
 
 ## Completed Stage 3: Classification
 
@@ -89,39 +294,67 @@ Notebook:
 notebooks/03_classification_growth_status.ipynb
 ```
 
-This stage uses the balanced classification-focused processed sample.
-
 Classification target:
 
 ```text
 growth_status
 ```
 
-Target classes:
+Classes:
 
-- `normal_growth`
-- `needs_attention`
+```text
+normal_growth
+needs_attention
+```
 
-Binary target:
-
-- `0` = `normal_growth`
-- `1` = `needs_attention`
-
-Models and evaluation covered:
+Covered methods and evaluation:
 
 - Logistic Regression
-- Confusion Matrix
-- Accuracy, Precision, Recall, F1-score
-- ROC Curve and AUC
-- Decision Tree Classifier
+- Decision Tree
 - Random Forest
 - AdaBoost
 - Support Vector Machine
-- final classification model comparison
+- confusion matrix
+- accuracy, precision, recall, F1-score
+- ROC curve and AUC
+- model comparison
+
+The mathematical interpretation is:
+
+```text
+learn a decision boundary and estimate P(needs_attention | x)
+```
+
+---
+
+## Classification Pipeline Extension
+
+Notebook:
+
+```text
+notebooks/03_1_classification_pipeline_exercise.ipynb
+```
+
+This extension improves the project because it shows professional workflow:
+
+- dummy baselines
+- preprocessing pipeline
+- train/test split
+- stratified cross-validation
+- learning curve
+- feature engineering
+- model comparison
+- permutation importance
+- error analysis
+- ablation study
+
+This helps show that the project is not only model fitting, but also method validation.
+
+---
 
 ## Next Planned Stage
 
-Next course topic:
+Course topic:
 
 ```text
 Unsupervised Learning, Clustering
@@ -136,121 +369,56 @@ notebooks/04_unsupervised_clustering_growth_patterns.ipynb
 Planned goal:
 
 ```text
-Discover growth-pattern groups in real dog growth data using unsupervised clustering methods.
+Discover natural growth-pattern groups in the processed public dog growth data.
 ```
 
-This stage will likely include:
+Planned methods:
 
-- unsupervised learning problem statement
-- clustering feature preparation
-- K-Means clustering
-- comparison of different K values
+- K-Means
+- K-Means++
+- Elbow Method
+- Silhouette Score
 - Hierarchical Clustering
 - DBSCAN
-- final clustering comparison
+- cluster interpretation
 
-## Current Data Layers
+---
 
-Prototype dataset:
+## What Should Impress the Examiner
 
-```text
-data/prototype/cane_corso_growth_sample.csv
-```
+The project should emphasize these strengths:
 
-General processed real public sample:
+1. clear real-world problem formulation;
+2. correct mathematical translation into vectors, functions, probabilities and metrics;
+3. model learning explanation, not only library usage;
+4. residual analysis and error interpretation;
+5. probability and threshold discussion for classification;
+6. feature engineering based on growth logic;
+7. planned clustering and dimensionality reduction as mathematical structure discovery;
+8. responsible interpretation and clear limitations;
+9. reproducible notebooks and documented data sources.
 
-```text
-data/processed/dog_growth_public_sample.csv
-```
+---
 
-Classification-focused processed sample:
+## Limitations and Safety Boundary
 
-```text
-data/processed/dog_growth_classification_sample.csv
-```
+The project is educational and analytical.
 
-Raw data folder:
+It should not be used as:
 
-```text
-data/raw/
-```
+- veterinary diagnosis;
+- health decision system;
+- official breed verification;
+- pedigree or certification authority.
 
-Only `data/raw/source_notes.md` is committed. Large raw external files remain local and are ignored by Git.
-
-
-## Mathematical Foundation
-
-The project includes a dedicated mathematical foundation document:
+Correct interpretation:
 
 ```text
-docs/math_foundation.md
+The output is a machine-learning growth-monitoring signal that can support observation and learning.
 ```
 
-This document explains the formulas and model ideas used in the completed notebooks, including:
-
-- regression equations
-- Ordinary Least Squares
-- MAE, MSE, RMSE, and R2 Score
-- Ridge and Lasso regularization
-- Logistic Regression and sigmoid probability
-- confusion matrix metrics
-- ROC/AUC
-- Decision Tree impurity measures
-- Random Forest, AdaBoost, and SVM intuition
-
-This helps show that the project is not only code execution, but also an understanding of the mathematical ideas behind each machine learning method.
-
-## Limitations
-
-The project is educational.
-
-The machine learning models should not be used for veterinary diagnosis or health decisions.
-
-Dog growth depends on many factors, including sex, genetics, nutrition, activity, health, environment, and breed-specific differences.
-
-The project focuses on applying course concepts correctly and documenting each stage clearly.
-
-## Geometric Interpretation
-
-The project also includes a geometric explanation of the machine learning methods in:
+Incorrect interpretation:
 
 ```text
-docs/geometric_interpretation.md
+The output proves a medical condition or replaces expert judgment.
 ```
-
-This document explains the models as coordinate-space objects:
-
-- data records as points
-- regression as a line or curve
-- residuals as distances from the model prediction
-- classification as a decision boundary
-- SVM as margin-based separation
-- clustering as groups of nearby points
-
-The related visual figures are stored in:
-
-```text
-reports/figures/
-```
-
-This supports the mathematical understanding of the project without changing the notebook experiments.
-
-## Classification Exercise Extension
-
-The project now includes a classification pipeline exercise extension.
-
-This extension focuses on professional machine-learning workflow rather than only training a single model.
-
-It adds:
-
-- dummy baselines
-- preprocessing pipelines
-- cross-validation
-- learning curve analysis
-- feature engineering
-- model comparison
-- permutation importance
-- error analysis
-- ablation study
-
-This improves the project quality by showing that the classification task is evaluated through a reproducible experimental protocol.

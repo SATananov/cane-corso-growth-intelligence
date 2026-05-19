@@ -1,63 +1,106 @@
-﻿# Real Data Source Notes
+# Real Data Source Notes
 
-This document describes the planned real public dataset for the next project stage.
+This document describes the real public dataset used as the data foundation for the project.
+
+---
 
 ## Selected Dataset
 
 Dataset title:
 
+```text
 Growth standard charts for monitoring bodyweight in dogs of different sizes - SUPPORTING DATA
+```
 
 Source:
 
+```text
 University of Liverpool DataCat: The Research Data Catalogue
+```
 
 Dataset DOI:
 
+```text
 https://doi.org/10.17638/datacat.liverpool.ac.uk/377
+```
 
 Related publication:
 
+```text
 Growth standard charts for monitoring bodyweight in dogs of different sizes
 PLOS ONE, 2017
 https://doi.org/10.1371/journal.pone.0182064
+```
 
-## Why this dataset is useful
+---
 
-This dataset is relevant because the project is about dog growth analysis.
+## Why This Dataset Is Useful
 
-The dataset is connected to a study that developed evidence-based growth standards for dogs using bodyweight and age data from young dogs.
+The project is about dog growth analysis. The selected public dataset is useful because it contains dog age and bodyweight information and is connected to published research on growth standards.
 
-This makes it a stronger real-world source than a fully synthetic dataset.
+This makes the project stronger than a purely synthetic dataset.
 
-## Available files
+The project uses the Cane Corso domain as a practical product case, but the public dataset is a broader dog growth dataset, not a private Cane Corso-only dataset.
 
-The DataCat page lists:
+---
 
-- Final_Data_PLOS.zip
-- Salt_PuppyGrowthCharts_Readme.txt
+## Available Raw Files
 
-## License
+The DataCat source lists files such as:
+
+- `Final_Data_PLOS.zip`
+- `Salt_PuppyGrowthCharts_Readme.txt`
+
+The raw files are external source files and should remain local in:
+
+```text
+data/raw/
+```
+
+They should not be included in the final clean GitHub submission ZIP.
+
+---
+
+## License Note
 
 The DataCat page lists the available files under Creative Commons Attribution 4.0.
 
-## Important project decision
+The project should keep the source title, DOI and related publication in the documentation.
 
-The full raw ZIP file is large, so it should not be committed directly to GitHub as a normal repository file.
+---
 
-Instead, this project will:
+## Current Project Usage
 
-1. document the real data source
-2. keep download/source instructions
-3. create a smaller processed sample for notebook experiments
-4. clearly distinguish real public data from prototype data
+The project uses processed samples generated from the raw public dataset:
 
-## Current status
+```text
+data/processed/dog_growth_public_sample.csv
+data/processed/dog_growth_classification_sample.csv
+```
 
-The real dataset has not yet been added as a project data file.
+These processed samples are smaller, project-specific files that can be used in notebooks and committed to the repository.
 
-The current repository still uses:
+Scripts:
 
-data/prototype/cane_corso_growth_sample.csv
+```text
+src/create_public_sample.py
+src/create_classification_sample.py
+```
 
-The next step will be to update DATA_SOURCES.md and prepare a real data workflow.
+---
+
+## Important Honesty Rule
+
+The project should say:
+
+```text
+This project uses a real public dog growth dataset and applies it to the Cane Corso Growth Intelligence idea.
+```
+
+The project should not say:
+
+```text
+This project uses private real Cane Corso veterinary records.
+```
+
+This distinction keeps the project academically honest and professionally responsible.
