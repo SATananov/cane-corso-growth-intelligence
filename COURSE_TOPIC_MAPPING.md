@@ -10,6 +10,24 @@ Cane Corso Growth Intelligence = mathematical growth profiling + predictive moni
 
 ---
 
+## Notebook Mathematical Formulation Standard
+
+For every course topic notebook, the project uses the same mathematical structure:
+
+| Required part | Purpose |
+|---|---|
+| `Input vector X` | Defines the data representation used by the model |
+| `Target y` | Defines what is predicted or explains that no target exists for unsupervised learning |
+| `Model function f(x)` | Defines the mathematical mapping learned by the method |
+| `Loss function` | Defines what error/objective the method tries to reduce |
+| `Metrics` | Defines how the result is evaluated |
+| `Interpretation` | Translates model output into the growth-monitoring story |
+| `Limitations` | States assumptions, boundaries, and responsible use |
+
+This standard should appear in every new notebook from Step 04 onward.
+
+---
+
 ## Overall Coverage Status
 
 | Course topic | Status | Project role |

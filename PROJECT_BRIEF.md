@@ -422,3 +422,23 @@ Incorrect interpretation:
 ```text
 The output proves a medical condition or replaces expert judgment.
 ```
+
+
+## Notebook Mathematical Formulation Rule
+
+Every notebook in the project should include a clear mathematical formulation section before the main modelling work. The required structure is:
+
+```text
+Input vector X
+Target y
+Model function f(x)
+Loss function
+Metrics
+Interpretation
+Limitations
+```
+
+This turns each lecture from a code exercise into a mathematically explained modelling step. It also makes the project easier to defend, because every method is connected to a precise input, objective, evaluation metric, and responsible interpretation.
+
+---
+

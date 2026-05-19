@@ -71,6 +71,28 @@ real-world problem -> mathematical formulation -> data preparation -> model trai
 
 ---
 
+## Notebook Mathematical Formulation Standard
+
+Every notebook now follows the same mathematical section before the main implementation:
+
+```text
+Input vector X
+Target y
+Model function f(x)
+Loss function
+Metrics
+Interpretation
+Limitations
+```
+
+This keeps each lecture connected to the same mathematical growth-profile story and makes the project easier to defend. A reusable template is available in:
+
+```text
+docs/notebook_mathematical_formulation_template.md
+```
+
+---
+
 ## How the Model Learns
 
 The models learn from historical growth records.
@@ -282,6 +304,7 @@ flowchart TD
 | `PROJECT_BRIEF.md` | Main project story and scope |
 | `docs/product_idea_and_mathematical_framing.md` | Strong explanation of the useful and interesting idea |
 | `docs/model_learning_explanation.md` | How the models learn, step by step |
+| `docs/notebook_mathematical_formulation_template.md` | Standard mathematical structure for every new notebook |
 | `docs/math_foundation.md` | Mathematical formulas and model intuition |
 | `docs/geometric_interpretation.md` | Coordinate-space view of models and feature space |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
