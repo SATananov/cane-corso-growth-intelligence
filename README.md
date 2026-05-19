@@ -167,7 +167,21 @@ data/processed/dog_growth_public_sample.csv
 data/processed/dog_growth_classification_sample.csv
 ```
 
-Raw external files should stay local in `data/raw/` and should not be committed to GitHub.
+### Raw Dataset Archive Terminology
+
+The original public dataset is distributed by its source as a compressed archive file. In this project, that file is called the **raw dataset archive**:
+
+```text
+data/raw/Final_Data_PLOS.zip
+```
+
+This term refers only to the original public dataset distribution format. It does not mean that the notebooks depend on development patch files or clean project ZIP files. The raw archive is kept local and ignored by Git. The notebooks use the smaller processed CSV files stored in `data/processed/`.
+
+A detailed explanation is available in:
+
+```text
+docs/raw_dataset_archive_policy.md
+```
 
 ---
 
@@ -205,6 +219,7 @@ cane-corso-growth-intelligence/
 │   ├── model_learning_explanation.md
 │   ├── real_data_source_notes.md
 │   ├── real_data_download_instructions.md
+│   ├── raw_dataset_archive_policy.md
 │   ├── data_preparation_plan.md
 │   ├── math_foundation.md
 │   └── geometric_interpretation.md

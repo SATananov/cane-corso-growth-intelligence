@@ -4,7 +4,7 @@ import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
-RAW_ZIP_PATH = PROJECT_ROOT / "data" / "raw" / "Final_Data_PLOS.zip"
+RAW_ARCHIVE_PATH = PROJECT_ROOT / "data" / "raw" / "Final_Data_PLOS.zip"
 OUTPUT_PATH = PROJECT_ROOT / "data" / "processed" / "dog_growth_classification_sample.csv"
 
 TARGET_ROWS_PER_CLASS = 5000
@@ -37,10 +37,10 @@ def create_growth_status(row):
 
 
 def main():
-    if not RAW_ZIP_PATH.exists():
+    if not RAW_ARCHIVE_PATH.exists():
         raise FileNotFoundError(
-            f"Raw dataset ZIP not found: {RAW_ZIP_PATH}\n"
-            "Download it manually and place it in data/raw/ first."
+            f"Raw dataset archive not found: {RAW_ARCHIVE_PATH}\n"
+            "Download the original public dataset archive manually and place it in data/raw/ first."
         )
 
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -48,14 +48,14 @@ def main():
     normal_parts = []
     attention_parts = []
 
-    with zipfile.ZipFile(RAW_ZIP_PATH, "r") as zip_file:
+    with zipfile.ZipFile(RAW_ARCHIVE_PATH, "r") as zip_file:
         csv_files = [name for name in zip_file.namelist() if name.endswith(".csv")]
 
         if not csv_files:
-            raise FileNotFoundError("No CSV file found inside the ZIP archive.")
+            raise FileNotFoundError("No CSV file found inside the raw dataset archive.")
 
         csv_name = csv_files[0]
-        print(f"Reading CSV from ZIP: {csv_name}")
+        print(f"Reading CSV from raw dataset archive: {csv_name}")
 
         with zip_file.open(csv_name) as csv_file:
             for chunk_index, chunk in enumerate(

@@ -210,6 +210,7 @@ Files:
 DATA_SOURCES.md
 docs/real_data_source_notes.md
 docs/real_data_download_instructions.md
+docs/raw_dataset_archive_policy.md
 docs/data_preparation_plan.md
 notebooks/02_real_data_preparation.ipynb
 src/create_public_sample.py
@@ -223,7 +224,7 @@ data/processed/dog_growth_public_sample.csv
 data/processed/dog_growth_classification_sample.csv
 ```
 
-The raw dataset is kept local only in `data/raw/` and should not be committed to GitHub or included in the final clean ZIP.
+The original public dataset is kept local only as a raw dataset archive in `data/raw/` and should not be committed to GitHub or included in the final clean project submission. The notebooks use processed CSV samples from `data/processed/`.
 
 Status:
 

@@ -1,4 +1,4 @@
-﻿# Real Data Download Instructions
+# Real Data Download Instructions
 
 This document explains how the real public dog growth dataset should be handled in this project.
 
@@ -6,80 +6,108 @@ This document explains how the real public dog growth dataset should be handled 
 
 Dataset title:
 
+```text
 Growth standard charts for monitoring bodyweight in dogs of different sizes - SUPPORTING DATA
+```
 
 Source:
 
+```text
 University of Liverpool DataCat: The Research Data Catalogue
+```
 
 Dataset DOI:
 
+```text
 https://doi.org/10.17638/datacat.liverpool.ac.uk/377
+```
 
 Related paper:
 
+```text
 Growth standard charts for monitoring bodyweight in dogs of different sizes
+```
 
 PLOS ONE DOI:
 
+```text
 https://doi.org/10.1371/journal.pone.0182064
+```
 
-## Available files on the source page
+---
 
-The source page provides:
+## What the Dataset Archive Means
 
-- Final_Data_PLOS.zip
-- Salt_PuppyGrowthCharts_Readme.txt
+The source distributes the original dataset as a compressed archive file, commonly named:
 
-## Important repository rule
+```text
+Final_Data_PLOS.zip
+```
 
-The full raw ZIP file should not be committed directly to GitHub.
+In this project, that file is called the **raw dataset archive**.
 
-Reason:
+This is a data-source term. It means the original public data file is compressed before processing. It does not refer to project patch archives, clean checkpoint archives, or any development ZIP files used outside the analytical workflow.
 
-- it is a large external dataset
-- it should be treated as raw source data
-- the repository should stay lightweight and easy to clone
-- the project should document the source instead of hiding the origin of the data
+---
 
-## Recommended local workflow
+## Repository Rule
 
-1. Open the dataset source page.
-2. Download the original dataset file manually.
-3. Place it locally in:
+The raw dataset archive should not be committed directly to GitHub.
 
-data/raw/
+Reasons:
 
-4. Do not commit the original ZIP file to GitHub.
-5. Create a smaller processed sample for notebook experiments.
-6. Save the processed sample in:
+- the data belongs to an external public source;
+- the source should be documented and credited clearly;
+- the repository should remain lightweight;
+- the notebooks should rely on smaller processed samples;
+- the final project submission should not include large raw downloaded archives.
 
-data/processed/
+The expected local path is:
 
-## Planned project files
-
-Raw data location:
-
+```text
 data/raw/Final_Data_PLOS.zip
+```
 
-Processed sample location:
+The repository should include only lightweight notes in `data/raw/`, such as:
 
+```text
+data/raw/source_notes.md
+```
+
+---
+
+## How to Regenerate Processed Samples
+
+If the raw dataset archive is available locally, the processed samples can be regenerated with:
+
+```bash
+python src/create_public_sample.py
+python src/create_classification_sample.py
+```
+
+The scripts read the local raw dataset archive, select relevant columns, clean usable records, and create smaller CSV files in:
+
+```text
+data/processed/
+```
+
+The current processed samples used by the notebooks are:
+
+```text
 data/processed/dog_growth_public_sample.csv
+data/processed/dog_growth_classification_sample.csv
+```
 
-## Project usage
+---
 
-The current regression notebook uses a prototype dataset.
+## Practical Workflow
 
-The real public dataset will be introduced in a later notebook section or separate data preparation notebook.
+```text
+1. Download the original public dataset from the documented source.
+2. Keep the compressed raw dataset archive locally in data/raw/.
+3. Run the processing scripts if the processed samples need to be regenerated.
+4. Commit only the small processed CSV samples and documentation.
+5. Do not commit the original raw dataset archive.
+```
 
-The project must always clearly distinguish between:
-
-- prototype educational data
-- real public data
-- processed data derived from the public source
-
-## Ethical note
-
-The dataset source states that the study data are anonymised. The project will not attempt to identify clients, owners, animals, or clinics.
-
-The data will be used only for educational machine learning experiments.
+This keeps the project transparent, reproducible, and suitable for GitHub review.

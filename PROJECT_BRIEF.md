@@ -226,6 +226,8 @@ data/processed/dog_growth_public_sample.csv
 data/processed/dog_growth_classification_sample.csv
 ```
 
+The original public source distributes its full data as a compressed raw dataset archive. That archive is kept local and is not part of the committed project. The notebooks use the processed CSV samples above.
+
 ---
 
 ## Completed Stage 1: Regression

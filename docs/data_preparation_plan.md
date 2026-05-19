@@ -24,7 +24,7 @@ data/raw/
 
 The local folder where external source files can be placed manually.
 
-Raw files should not be committed to GitHub or included in the final clean ZIP.
+Raw files should not be committed to GitHub or included in the final clean project submission.
 
 ### Processed Public Data
 
@@ -39,13 +39,17 @@ Smaller samples created from the real public dog growth dataset for notebook exp
 
 ## 2. Preparation Steps
 
-### Step 1: Download the raw dataset locally
+### Step 1: Keep the raw dataset archive locally
 
-The raw dataset should be downloaded manually and placed in:
+The original public dataset is distributed as a compressed archive. In this project, that file is called the **raw dataset archive**.
+
+Expected local path:
 
 ```text
-data/raw/
+data/raw/Final_Data_PLOS.zip
 ```
+
+This is a normal dataset-distribution format, not a project patch or clean checkpoint archive.
 
 The original large file should stay local.
 

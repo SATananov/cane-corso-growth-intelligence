@@ -146,13 +146,19 @@ src/create_public_sample.py
 src/create_classification_sample.py
 ```
 
-The raw dataset ZIP must be downloaded manually and kept locally in:
+The original public dataset is distributed as a compressed archive. In this project, it is referred to as the **raw dataset archive** and should be kept locally in:
 
 ```text
-data/raw/
+data/raw/Final_Data_PLOS.zip
 ```
 
-The raw dataset is intentionally ignored by Git and is not committed to GitHub.
+The raw dataset archive is intentionally ignored by Git and is not committed to GitHub. The current notebooks use the smaller processed CSV files already stored in `data/processed/`.
+
+More detail is documented in:
+
+```text
+docs/raw_dataset_archive_policy.md
+```
 
 ## 9. Current project stage
 

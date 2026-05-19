@@ -72,31 +72,39 @@ The project does not claim that the public dataset is a private Cane Corso-only 
 
 ---
 
-## 3. Raw Data Rule
+## 3. Raw Dataset Archive Rule
 
-The full raw dataset should not be committed directly to GitHub.
+The full original dataset should not be committed directly to GitHub.
 
-Reasons:
+The public source distributes the original data as a compressed archive. In this project, that file is called the **raw dataset archive**:
 
-- it is an external dataset;
+```text
+data/raw/Final_Data_PLOS.zip
+```
+
+This term means only the original public dataset distribution file. It does not refer to project patch files, clean checkpoint archives, submission archives, or any temporary development ZIP files.
+
+Reasons for keeping the raw dataset archive local only:
+
+- it is an external public dataset;
 - the repository should stay lightweight;
 - the source should remain clearly attributed;
 - only project-specific processed samples should be committed;
-- the final clean ZIP should not contain large raw archives.
+- the final clean project submission should not contain large raw downloaded archives.
 
-Raw data is expected locally in:
-
-```text
-data/raw/
-```
-
-The repository should keep only lightweight source notes, such as:
+The repository should keep only lightweight source notes in `data/raw/`, such as:
 
 ```text
 data/raw/source_notes.md
 ```
 
-The original raw ZIP and original raw metadata files should remain local and ignored by Git.
+The raw dataset archive and any original source metadata files should remain local and ignored by Git.
+
+A dedicated explanation is available in:
+
+```text
+docs/raw_dataset_archive_policy.md
+```
 
 ---
 
@@ -119,7 +127,7 @@ Created by:
 src/create_public_sample.py
 ```
 
-This script reads the large raw CSV from the local ZIP archive in chunks and creates a smaller processed sample.
+This script reads the large raw CSV from the local raw dataset archive in chunks and creates a smaller processed sample.
 
 The processed sample keeps project-useful columns related to:
 
