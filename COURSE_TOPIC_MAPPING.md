@@ -50,12 +50,14 @@ PROJECT_BRIEF.md
 README.md
 docs/product_idea_and_mathematical_framing.md
 docs/model_learning_explanation.md
+docs/growth_monitoring_motivation.md
 notebooks/00_project_concept_and_mathematical_framing.ipynb
 ```
 
 Purpose:
 
 - explain the project as a useful product idea, not only a homework task;
+- explain why large-breed growth monitoring is a meaningful motivation;
 - define the mathematical feature-vector view;
 - explain how the model learns from data;
 - clarify the public data source and limitations;

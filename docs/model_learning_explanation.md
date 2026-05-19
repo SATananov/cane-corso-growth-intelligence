@@ -62,7 +62,29 @@ This is why train/test split and cross-validation are important.
 
 ---
 
-## 3. Feature Matrix and Target Vector
+## 3. Why Growth Features Matter
+
+The model should not learn only from raw numbers without context. In a growth-monitoring problem, the same weight can mean different things depending on age, sex, expected adult size and previous measurements.
+
+This is especially important for large-breed growth monitoring because rapid growth and excessive weight gain can create a practical reason to watch the trajectory more carefully. The model therefore uses or prepares features such as:
+
+```text
+growth_velocity = delta_weight / delta_time
+```
+
+```text
+relative_weight = current_weight / expected_or_reference_weight
+```
+
+```text
+deviation_from_expected = actual_value - model_expected_value
+```
+
+These features help the model learn patterns such as steady growth, unusually fast growth, slower development or records that may deserve closer attention. The result is still an educational monitoring signal, not a veterinary diagnosis.
+
+---
+
+## 4. Feature Matrix and Target Vector
 
 Machine-learning libraries usually represent the data as:
 
@@ -97,7 +119,7 @@ The model does not learn from the dog directly. It learns from this mathematical
 
 ---
 
-## 4. How Regression Learns
+## 5. How Regression Learns
 
 Regression predicts a number.
 

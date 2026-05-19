@@ -60,7 +60,7 @@ Growth standard charts for monitoring bodyweight in dogs of different sizes
 PLOS ONE, 2017
 ```
 
-The source dataset is relevant because it contains dog age and bodyweight information and is connected to public research on dog growth standards.
+The source dataset is relevant because it contains dog age and bodyweight information and is connected to public research on dog growth standards. This fits the project motivation because growth monitoring depends on repeated age and bodyweight records, especially when the goal is to compare measured development with expected patterns.
 
 Important project interpretation:
 

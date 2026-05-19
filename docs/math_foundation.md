@@ -6,6 +6,23 @@ The goal is not to provide a full university-level proof of every algorithm. The
 
 The project remains an educational machine learning project. It does not provide veterinary diagnosis.
 
+A key motivation is that growth in large and giant breeds should be interpreted as a process, not only as a single measurement. Rapid growth or excessive bodyweight can place additional stress on developing bones and joints, so the useful mathematical question is not only `What is the predicted weight?` but also `How does this record compare with an expected growth pattern?`
+
+This turns the motivation into measurable quantities:
+
+```text
+growth_velocity = change_in_weight / change_in_time
+```
+
+```text
+deviation_from_expected = actual_weight - predicted_expected_weight
+```
+
+```text
+relative_deviation = deviation_from_expected / predicted_expected_weight
+```
+
+These quantities support monitoring and interpretation while staying outside medical diagnosis.
 
 ---
 

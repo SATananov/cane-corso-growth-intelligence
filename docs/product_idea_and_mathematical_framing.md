@@ -57,7 +57,30 @@ The project does not replace expert judgment. It gives a data-driven monitoring 
 
 ---
 
-## 3. Not Just Weight Prediction
+## 3. Why Monitoring Matters for Large Breeds
+
+The practical motivation is stronger for large and giant breeds because growth speed and bodyweight can influence the mechanical load on the developing body. If a puppy gains weight too quickly or grows in an uncontrolled way, the developing bones and joints may be placed under additional stress.
+
+This project uses that idea as motivation for mathematical monitoring:
+
+```text
+raw growth record -> growth trajectory -> deviation analysis -> owner-friendly signal
+```
+
+The project does not claim to detect or diagnose joint, skeletal or organ problems. Instead, it asks whether machine learning can help describe the growth pattern more clearly:
+
+```text
+Is the growth steady?
+Is the current weight unusually high or low for the learned pattern?
+Is the deviation increasing over time?
+Does the record belong to a group with faster or slower growth?
+```
+
+This makes the project more useful than a simple prediction task because the output becomes a monitoring explanation, not only a number.
+
+---
+
+## 4. Not Just Weight Prediction
 
 A basic project could be described as:
 
@@ -85,7 +108,7 @@ This version is more interesting because it includes:
 
 ---
 
-## 4. Mathematical Object: The Feature Vector
+## 5. Mathematical Object: The Feature Vector
 
 Machine learning does not understand a dog directly. It understands a numerical representation.
 
@@ -117,7 +140,7 @@ This is the mathematical bridge between the real-world problem and the machine-l
 
 ---
 
-## 5. Regression View
+## 6. Regression View
 
 Regression learns a function:
 
@@ -149,7 +172,7 @@ This makes the project more mathematical and less like a simple library demo.
 
 ---
 
-## 6. Classification View
+## 7. Classification View
 
 Classification learns a class or probability.
 
@@ -180,7 +203,7 @@ This is why precision, recall, F1-score, ROC and AUC are important.
 
 ---
 
-## 7. Clustering View
+## 8. Clustering View
 
 Clustering does not use a known target label.
 
@@ -205,7 +228,7 @@ What structure exists in the data before we define labels?
 
 ---
 
-## 8. Time-Series View
+## 9. Time-Series View
 
 A dog does not grow as a single row. A dog grows through time.
 

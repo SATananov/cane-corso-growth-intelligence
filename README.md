@@ -16,6 +16,8 @@ This is an educational machine learning project. It does **not** provide veterin
 
 Large-breed puppies can grow quickly and unevenly. A single measurement, such as today's weight, is not enough to understand the full development story.
 
+The project is also useful because, in large and giant breeds, growth speed and bodyweight are not only numbers. Very rapid growth or excessive weight gain can place extra stress on the developing bones and joints while the dog is still growing. For this reason, the project treats growth monitoring as a practical data problem: not to diagnose disease, but to observe development trends, deviations and signals that may deserve closer attention.
+
 This project treats growth as a mathematical process:
 
 ```text
@@ -40,6 +42,12 @@ How do different models compare mathematically?
 ```
 
 This makes the project useful beyond a course assignment: it can become the foundation for a practical growth-monitoring assistant.
+
+A dedicated motivation note is available in:
+
+```text
+docs/growth_monitoring_motivation.md
+```
 
 ---
 

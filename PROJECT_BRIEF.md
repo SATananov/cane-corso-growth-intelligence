@@ -34,6 +34,10 @@ This makes the project both interesting and useful:
 
 Large-breed puppies grow quickly. Owners often track weight, age and body measurements, but raw numbers are difficult to interpret without context.
 
+This matters because rapid growth and excessive weight gain in large and giant breeds can increase mechanical stress on the developing bones and joints. The project therefore does not treat weight as an isolated number. It treats weight, age and repeated measurements as part of a growth trajectory that should be monitored carefully over time.
+
+The project keeps this motivation responsible: it does not diagnose joint disease, organ disease or any medical condition. It produces an educational monitoring signal that can support better observation and, when appropriate, professional consultation.
+
 A single record such as:
 
 ```text
@@ -51,6 +55,12 @@ How confident is the model?
 ```
 
 The project uses machine learning to convert these questions into measurable tasks.
+
+A dedicated background note for this motivation is available in:
+
+```text
+docs/growth_monitoring_motivation.md
+```
 
 ---
 
