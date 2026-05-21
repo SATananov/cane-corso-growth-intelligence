@@ -533,6 +533,25 @@ Status:
 Unsupervised Learning and Clustering ✅ completed in Step 09
 ```
 
+### Step 09.1 Mathematical Application Polish
+
+Step 09.1 strengthens the clustering topic for a math-focused final project.
+
+Added emphasis:
+
+- real-world application question;
+- feature-vector definition `x_i`;
+- K-Means assignment and objective formulas;
+- Hierarchical Clustering and Ward linkage interpretation;
+- DBSCAN density/noise interpretation;
+- safe product wording for growth-profile hints.
+
+Status:
+
+```text
+Clustering mathematical application bridge ✅ strengthened in Step 09.1
+```
+
 ---
 
 # Classification Pipeline Exercise Extension
@@ -618,21 +637,21 @@ Classification Pipeline Extension ✅
 
 ---
 
-# Topic 3: Unsupervised Learning, Clustering
+# Topic 3 Follow-up: Clustering Application Polish
 
-Planned notebook:
+Completed notebook:
 
 ```text
-notebooks/04_unsupervised_clustering_growth_patterns.ipynb
+notebooks/04_unsupervised_learning_clustering.ipynb
 ```
 
-Planned mathematical role:
+Mathematical role:
 
 ```text
 discover growth-pattern groups without using target labels
 ```
 
-Planned coverage:
+Strengthened coverage:
 
 - unsupervised learning problem statement
 - feature scaling
@@ -644,7 +663,7 @@ Planned coverage:
 - DBSCAN
 - cluster interpretation
 
-Planned product interpretation:
+Product interpretation:
 
 ```text
 This dog record resembles a steady-growth / fast-growth / slow-growth / irregular-growth group.
@@ -653,7 +672,7 @@ This dog record resembles a steady-growth / fast-growth / slow-growth / irregula
 Status:
 
 ```text
-Unsupervised Learning, Clustering ⏳
+Unsupervised Learning, Clustering ✅ strengthened in Step 09.1
 ```
 
 ---

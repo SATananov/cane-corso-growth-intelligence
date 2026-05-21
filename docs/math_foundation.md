@@ -149,7 +149,7 @@ flowchart TD
     A["Cane Corso Growth Intelligence"] --> P["Mathematical Growth Profile"]
     P --> B["Regression"]
     P --> C["Classification"]
-    P --> D["Next: Clustering"]
+    P --> D["Clustering"]
 
     B --> B1["Linear Regression"]
     B --> B2["Polynomial Regression"]
@@ -170,7 +170,7 @@ flowchart TD
     D --> DM["Elbow Method, Silhouette Score, Noise Points"]
 ```
 
-The diagram shows the project structure: regression predicts a number, classification predicts a known class, and clustering will discover unknown groups.
+The diagram shows the project structure: regression predicts a number, classification predicts a known class, and clustering discovers unknown groups.
 
 ---
 
@@ -191,7 +191,7 @@ The diagram shows the project structure: regression predicts a number, classific
 | Binary Decision Rule | `p >= 0.5 -> 1, otherwise -> 0` | Converts probability into a class label. | `growth_status_binary` prediction |
 | SVM Boundary | `w^T * x + b = 0` | Separates classes with a decision boundary. | SVM classifier |
 | RBF Kernel | `K(x, x') = exp(-gamma * ||x - x'||^2)` | Allows SVM to model non-linear class boundaries. | SVM with RBF kernel |
-| K-Means Objective | `min sum(||x_i - mu_cluster(i)||^2)` | Groups points by minimizing distance to cluster centers. | Planned clustering notebook |
+| K-Means Objective | `min sum(||x_i - mu_cluster(i)||^2)` | Groups points by minimizing distance to cluster centers. | `04_unsupervised_learning_clustering.ipynb` |
 
 ---
 
@@ -226,7 +226,7 @@ The diagram shows the project structure: regression predicts a number, classific
 | Robust Regression | Inlier and outlier separation using residual thresholds | Compare RANSAC with normal regression |
 | Classification | Probability, thresholding, class labels | Predict `normal_growth` vs `needs_attention` |
 | Classification Evaluation | Confusion matrix and derived metrics | Compare Logistic Regression, Tree, Forest, AdaBoost, SVM |
-| Clustering | Distances, cluster centers, density, separation | Planned discovery of growth-pattern groups |
+| Clustering | Distances, cluster centers, density, separation | Discovery of growth-pattern groups |
 | Feature Engineering | Ratios, deviations, growth rates | Convert raw records into meaningful growth signals |
 | Time Series | Ordered observations and trends | Planned growth trajectory monitoring |
 | Dimensionality Reduction | Projection and variance | Planned visual map of high-dimensional growth profiles |
@@ -727,9 +727,9 @@ In the project, SVM is used as another classifier for comparison.
 
 ---
 
-## 14. Planned Clustering Mathematics
+## 14. Clustering Mathematics
 
-The next planned topic is Unsupervised Learning and Clustering.
+The current clustering topic is Unsupervised Learning and Clustering.
 
 Clustering does not use a known target label.
 
@@ -874,7 +874,7 @@ For more dimensions:
 distance(A, B) = sqrt((x1 - y1)^2 + (x2 - y2)^2 + ... + (xn - yn)^2)
 ```
 
-This idea will be especially important in the next topic: **Unsupervised Learning and Clustering**.
+This idea is used in the current **Unsupervised Learning and Clustering** notebook.
 
 ### Decision Boundaries
 
@@ -1020,6 +1020,47 @@ Davies-Bouldin score
 ```
 
 These metrics evaluate mathematical separation and compactness. They do not prove biological or medical meaning.
+
+
+---
+
+## Clustering Application Bridge
+
+The clustering notebook strengthens the practical project idea by translating owner growth monitoring into geometry.
+
+Real-world record:
+
+```text
+age, weight, expected adult breed weight and derived growth ratios
+```
+
+Mathematical vector:
+
+```text
+x_i = [age_months, weight_kg, average_adult_breed_weight_kg,
+       weight_to_adult_ratio, age_weight_ratio, adult_weight_group]
+```
+
+The application pipeline is:
+
+```text
+raw growth record -> engineered features -> scaled vector -> distance/density model -> profile hint
+```
+
+A responsible product statement is:
+
+```text
+This record resembles a mathematically similar growth-profile group.
+```
+
+An unsafe statement would be:
+
+```text
+This cluster proves a health problem.
+```
+
+This distinction is important because the project is a machine-learning education and monitoring prototype, not veterinary diagnosis.
+
 
 ---
 

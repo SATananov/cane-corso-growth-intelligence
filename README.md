@@ -203,6 +203,7 @@ Completed stages:
 4. **Classification Pipeline Exercise Extension**
 5. **Course Coverage Alignment** — added clearer OLS, real-data regression, Precision-Recall, thresholds, tuning and drift coverage
 6. **Unsupervised Learning and Clustering** — added K-Means, k-means++, Hierarchical Clustering, method comparison and DBSCAN
+7. **Clustering Mathematical Application Polish** — strengthened the practical application bridge, formulas and responsible interpretation for the clustering notebook
 
 Next planned course topic:
 
@@ -325,7 +326,7 @@ Adds dummy baselines, preprocessing pipelines, cross-validation, learning curves
 notebooks/04_unsupervised_learning_clustering.ipynb
 ```
 
-Covers unsupervised learning motivation, K-Means with `k-means++`, elbow and silhouette checks, Hierarchical Clustering, comparison between K-Means and Hierarchical Clustering, and DBSCAN density-based clustering/noise detection.
+Covers unsupervised learning motivation, K-Means with `k-means++`, elbow and silhouette checks, Hierarchical Clustering, comparison between K-Means and Hierarchical Clustering, and DBSCAN density-based clustering/noise detection. Step 09.1 strengthens the notebook with a clearer real-world application bridge, feature-vector formulation, K-Means objective, DBSCAN review-candidate interpretation and safe product wording.
 
 ---
 

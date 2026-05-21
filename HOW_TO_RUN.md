@@ -107,6 +107,7 @@ This notebook covers:
 - Hierarchical Clustering
 - K-Means vs Hierarchical Clustering comparison
 - DBSCAN density clustering and noise detection
+- Step 09.1 note: mathematical application bridge and responsible product interpretation
 
 
 ## 6. Read the mathematical foundation
