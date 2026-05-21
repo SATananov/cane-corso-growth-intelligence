@@ -202,11 +202,12 @@ Completed stages:
 3. **Classification**
 4. **Classification Pipeline Exercise Extension**
 5. **Course Coverage Alignment** — added clearer OLS, real-data regression, Precision-Recall, thresholds, tuning and drift coverage
+6. **Unsupervised Learning and Clustering** — added K-Means, k-means++, Hierarchical Clustering, method comparison and DBSCAN
 
 Next planned course topic:
 
 ```text
-Unsupervised Learning, Clustering
+Feature Engineering and Time Series
 ```
 
 
@@ -225,6 +226,7 @@ For a reviewer or instructor, the easiest order is:
 6. notebooks/02_real_data_preparation.ipynb
 7. notebooks/03_classification_growth_status.ipynb
 8. notebooks/03_1_classification_pipeline_exercise.ipynb
+9. notebooks/04_unsupervised_learning_clustering.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -251,13 +253,15 @@ cane-corso-growth-intelligence/
 │   ├── raw_dataset_archive_policy.md
 │   ├── data_preparation_plan.md
 │   ├── math_foundation.md
-│   └── geometric_interpretation.md
+│   ├── geometric_interpretation.md
+│   └── clustering_learning_notes.md
 ├── notebooks/
 │   ├── 00_project_concept_and_mathematical_framing.ipynb
 │   ├── 01_linear_regression_growth_prediction.ipynb
 │   ├── 02_real_data_preparation.ipynb
 │   ├── 03_classification_growth_status.ipynb
-│   └── 03_1_classification_pipeline_exercise.ipynb
+│   ├── 03_1_classification_pipeline_exercise.ipynb
+│   └── 04_unsupervised_learning_clustering.ipynb
 ├── reports/
 │   └── figures/
 ├── src/
@@ -315,6 +319,14 @@ notebooks/03_1_classification_pipeline_exercise.ipynb
 
 Adds dummy baselines, preprocessing pipelines, cross-validation, learning curves, feature engineering, permutation importance, error analysis, and ablation study.
 
+### 4. Unsupervised Learning and Clustering
+
+```text
+notebooks/04_unsupervised_learning_clustering.ipynb
+```
+
+Covers unsupervised learning motivation, K-Means with `k-means++`, elbow and silhouette checks, Hierarchical Clustering, comparison between K-Means and Hierarchical Clustering, and DBSCAN density-based clustering/noise detection.
+
 ---
 
 ## Course Topic Flow
@@ -351,6 +363,7 @@ flowchart TD
 | `docs/notebook_mathematical_formulation_template.md` | Standard mathematical structure for every new notebook |
 | `docs/math_foundation.md` | Mathematical formulas and model intuition |
 | `docs/geometric_interpretation.md` | Coordinate-space view of models and feature space |
+| `docs/clustering_learning_notes.md` | Unsupervised learning, K-Means, HC and DBSCAN explanation |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
 | `COURSE_TOPIC_MAPPING.md` | Mapping between course lectures and project files |
 

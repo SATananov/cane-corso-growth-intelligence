@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains five notebooks.
+The project currently contains six notebooks.
 
 ### Project Concept and Mathematical Framing
 
@@ -91,6 +91,23 @@ This notebook covers:
 - Drift and monitoring considerations
 - Final classification model comparison
 
+### Unsupervised Learning and Clustering Topic
+
+```text
+notebooks/04_unsupervised_learning_clustering.ipynb
+```
+
+This notebook covers:
+
+- Unsupervised Learning problem statement and challenges
+- feature scaling for distance-based methods
+- K-Means Clustering
+- `k-means++` initialization
+- elbow and silhouette checks
+- Hierarchical Clustering
+- K-Means vs Hierarchical Clustering comparison
+- DBSCAN density clustering and noise detection
+
 
 ## 6. Read the mathematical foundation
 
@@ -109,7 +126,7 @@ This document covers:
 - ROC/AUC
 - Decision Tree impurity measures
 - Random Forest, AdaBoost, and SVM intuition
-- planned clustering mathematics
+- K-Means, Hierarchical Clustering and DBSCAN mathematics
 
 ## 7. Project data
 
@@ -176,17 +193,18 @@ docs/raw_dataset_archive_policy.md
 
 ## 9. Current project stage
 
-The project currently covers two completed course topics:
+The project currently covers three completed course topics:
 
 1. Linear Regression, Regularization and Testing
 2. Classification
+3. Unsupervised Learning and Clustering
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset.
 
 The next planned course topic is:
 
 ```text
-Unsupervised Learning, Clustering
+Feature Engineering and Time Series
 ```
 
 Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.

@@ -951,6 +951,76 @@ That is why feature selection, scaling, encoding, and distance are important par
 
 These explanations are educational and do not turn the models into veterinary diagnostic tools.
 
+## Unsupervised Learning and Clustering Mathematics
+
+In unsupervised learning, the model does not receive a target label.
+
+```text
+X = feature matrix
+y = not used
+```
+
+The task is to discover structure inside the data.
+
+### K-Means Objective
+
+K-Means assigns each point to the nearest centroid and tries to minimize within-cluster squared distance:
+
+```text
+minimize sum(||x_i - c_j||^2)
+```
+
+where:
+
+```text
+x_i = data point
+c_j = assigned cluster centroid
+```
+
+The project uses `k-means++` initialization to choose stronger starting centroids.
+
+### Hierarchical Clustering
+
+Agglomerative hierarchical clustering starts with many small groups and repeatedly merges the closest groups.
+
+A common distance idea is:
+
+```text
+distance(group A, group B)
+```
+
+The notebook uses Ward linkage, which tries to merge groups in a way that keeps within-cluster variance low.
+
+### DBSCAN
+
+DBSCAN is density-based. It uses two important parameters:
+
+```text
+eps = radius around a point
+min_samples = minimum number of nearby points required for a dense region
+```
+
+A point can be interpreted as:
+
+```text
+core point
+border point
+noise point
+```
+
+In this project, DBSCAN noise points are not diagnoses. They are records that do not fit dense mathematical groups and may deserve closer review.
+
+### Clustering Evaluation
+
+Because there is no known target label, clustering uses internal metrics such as:
+
+```text
+Silhouette score
+Davies-Bouldin score
+```
+
+These metrics evaluate mathematical separation and compactness. They do not prove biological or medical meaning.
+
 ---
 
 ## Geometric Interpretation Document

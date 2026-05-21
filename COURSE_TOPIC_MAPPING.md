@@ -34,8 +34,8 @@ This standard should appear in every new notebook from Step 04 onward.
 |---|---:|---|
 | Linear Regression, Regularization and Testing | Completed | expected growth prediction and residual analysis |
 | Classification | Completed / extended | `normal_growth` vs `needs_attention` probability signal |
-| Unsupervised Learning, Clustering | Planned next | unknown growth-pattern groups |
-| Feature Engineering and Time Series | Partially started / planned | growth ratios, velocity, trajectory over time |
+| Unsupervised Learning, Clustering | Completed | unknown growth-pattern groups and exploratory outlier/noise detection |
+| Feature Engineering and Time Series | Planned next | growth ratios, velocity, trajectory over time |
 | Dimensionality Reduction | Planned | 2D visualization of high-dimensional growth profiles |
 | MLflow | Planned | experiment tracking and model comparison |
 
@@ -432,6 +432,105 @@ Status:
 
 ```text
 Classification ✅ strengthened in Step 08
+```
+
+---
+
+# Topic 3: Unsupervised Learning and Clustering
+
+Notebook:
+
+```text
+notebooks/04_unsupervised_learning_clustering.ipynb
+```
+
+Supporting explanation:
+
+```text
+docs/clustering_learning_notes.md
+docs/math_foundation.md
+docs/geometric_interpretation.md
+```
+
+The notebook follows the Unsupervised Learning and Clustering lecture and applies it to the processed real public dog growth sample.
+
+Data used:
+
+```text
+data/processed/dog_growth_public_sample.csv
+```
+
+## Topic Coverage
+
+### 1. Unsupervised Learning Problem Statement, Intuition and Challenges
+
+Covered in:
+
+- notebook introduction;
+- mathematical formulation section;
+- `docs/clustering_learning_notes.md`.
+
+Project interpretation:
+
+```text
+discover similar growth-pattern groups without using a target label
+```
+
+### 2. K-Means Clustering Motivation, Example and k-means++
+
+Covered in:
+
+- K-Means section;
+- `KMeans(init="k-means++")` implementation;
+- elbow check;
+- silhouette score check;
+- PCA visualization of K-Means groups.
+
+K-Means objective:
+
+```text
+minimize within-cluster squared distance
+```
+
+### 3. Hierarchical Clustering Motivation and Example
+
+Covered in:
+
+- Hierarchical Clustering section;
+- `AgglomerativeClustering(linkage="ward")` implementation;
+- cluster summary;
+- PCA visualization of hierarchical groups.
+
+### 4. Comparison Between K-Means and Hierarchical Clustering
+
+Covered in:
+
+- comparison table using Silhouette and Davies-Bouldin scores;
+- pros and cons table in the notebook;
+- responsible interpretation notes.
+
+### 5. DBSCAN
+
+Covered in:
+
+- DBSCAN section;
+- k-distance check;
+- `DBSCAN(eps=..., min_samples=...)` implementation;
+- noise-rate output;
+- PCA visualization with `-1 = noise`.
+
+Project interpretation:
+
+```text
+DBSCAN noise points are exploratory records that do not fit dense mathematical groups.
+```
+
+They are not diagnoses.
+
+Status:
+
+```text
+Unsupervised Learning and Clustering ✅ completed in Step 09
 ```
 
 ---
