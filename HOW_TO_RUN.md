@@ -31,7 +31,15 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains three main notebooks.
+The project currently contains five notebooks.
+
+### Project Concept and Mathematical Framing
+
+```text
+notebooks/00_project_concept_and_mathematical_framing.ipynb
+```
+
+This notebook explains the project idea, mathematical formulation, feature-vector view, responsible-use boundaries, and how the work connects to the course topics.
 
 ### Regression Topic
 
@@ -41,7 +49,9 @@ notebooks/01_linear_regression_growth_prediction.ipynb
 
 This notebook covers:
 
+- Ordinary Least Squares simulated example
 - Linear Regression
+- Real-data regression on the processed public dog growth sample
 - Polynomial Regression
 - Multi-Dimensional Linear Regression
 - Ridge and Lasso Regularization
@@ -71,10 +81,14 @@ This notebook covers:
 - Confusion Matrix
 - Accuracy, Precision, Recall, F1-score
 - ROC Curve and AUC
+- Precision-Recall Curve
+- Threshold comparison
 - Decision Tree Classifier
 - Random Forest
 - AdaBoost
 - Support Vector Machine
+- Basic hyperparameter tuning
+- Drift and monitoring considerations
 - Final classification model comparison
 
 

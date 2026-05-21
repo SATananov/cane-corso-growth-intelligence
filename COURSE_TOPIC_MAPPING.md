@@ -196,10 +196,20 @@ residual = real_weight - predicted_weight
 
 This connects model performance to error distribution, bias, outliers and expected growth deviation.
 
+### 11. Course Coverage Alignment Additions
+
+Step 08 strengthens this notebook with:
+
+- a dedicated Ordinary Least Squares simulated example;
+- a real-data regression section using `data/processed/dog_growth_public_sample.csv`;
+- a simple real-data model and a multi-feature real-data model.
+
+This makes the notebook map more directly to the lecture requirements for OLS, simulated examples, real-data implementation, model testing, extensions, regularization and robust regression.
+
 Status:
 
 ```text
-Linear Regression, Regularization and Testing ✅
+Linear Regression, Regularization and Testing ✅ strengthened in Step 08
 ```
 
 ---
@@ -283,11 +293,14 @@ Classification task:
 predict growth_status
 ```
 
-### 2. Binary Classification
+### 2. Binary / Multiclass / Multilabel Classification
 
 Covered in:
 
 - `Create Classification Target` section
+- `Classification Types and Use Cases` section
+
+The current notebook uses binary classification and explains how the same project could later grow into multiclass or multilabel classification.
 
 Target labels:
 
@@ -344,13 +357,15 @@ Metrics:
 - recall
 - F1-score
 
-### 6. ROC Curve and AUC
+### 6. ROC Curve, Precision-Recall Curve and Thresholds
 
 Covered in:
 
 - ROC/AUC section
+- Precision-Recall Curve section
+- Threshold comparison table
 
-This evaluates probability separation across thresholds.
+This evaluates probability separation and explains how different decision thresholds change precision, recall and F1-score.
 
 ### 7. Decision Tree
 
@@ -375,7 +390,23 @@ Covered in:
 
 The notebook trains an SVM classifier and evaluates it with classification metrics and ROC/AUC.
 
-### 10. Final Model Comparison
+### 10. Basic Tuning
+
+Covered in:
+
+- `Basic Hyperparameter Tuning` section
+
+The notebook uses `GridSearchCV` to tune Logistic Regression regularization strength.
+
+### 11. Drift and Monitoring
+
+Covered in:
+
+- `Drift and Monitoring Considerations` section
+
+The notebook explains why future owner records may differ from the training data and adds a basic distribution monitoring check.
+
+### 12. Final Model Comparison
 
 Covered in:
 
@@ -400,7 +431,7 @@ Metrics compared:
 Status:
 
 ```text
-Classification ✅
+Classification ✅ strengthened in Step 08
 ```
 
 ---

@@ -201,12 +201,33 @@ Completed stages:
 2. **Real Data Foundation**
 3. **Classification**
 4. **Classification Pipeline Exercise Extension**
+5. **Course Coverage Alignment** — added clearer OLS, real-data regression, Precision-Recall, thresholds, tuning and drift coverage
 
 Next planned course topic:
 
 ```text
 Unsupervised Learning, Clustering
 ```
+
+
+---
+
+## Recommended Review Order
+
+For a reviewer or instructor, the easiest order is:
+
+```text
+1. README.md
+2. PROJECT_BRIEF.md
+3. COURSE_TOPIC_MAPPING.md
+4. notebooks/00_project_concept_and_mathematical_framing.ipynb
+5. notebooks/01_linear_regression_growth_prediction.ipynb
+6. notebooks/02_real_data_preparation.ipynb
+7. notebooks/03_classification_growth_status.ipynb
+8. notebooks/03_1_classification_pipeline_exercise.ipynb
+```
+
+The course mapping file explains exactly where each lecture requirement is covered.
 
 ---
 
