@@ -1073,3 +1073,83 @@ docs/geometric_interpretation.md
 ```
 
 That document shows how the same ideas appear as coordinate systems, lines, curves, decision boundaries, margins, residual distances, and clusters in feature space.
+
+
+---
+
+## Step 09.2: kNN and Exact Clustering Lesson Mathematics
+
+### k-Nearest Neighbors
+
+kNN is a distance-based lazy-learning method. It stores examples and predicts by using the nearest records.
+
+Minkowski distance:
+
+```text
+d(x, z) = (sum_j |x_j - z_j|^p)^(1/p)
+```
+
+Special cases:
+
+```text
+p = 1 -> Manhattan distance
+p = 2 -> Euclidean distance
+```
+
+For classification, the predicted class is the majority class among the `k` nearest neighbors:
+
+```text
+ŷ = majority_vote(y_i for x_i in N_k(x_new))
+```
+
+In the growth project, this supports a similar-record lookup idea, not a veterinary diagnosis.
+
+### K-Means Random Initialization vs K-Means++
+
+Random initialization can place centroids poorly. K-Means++ chooses starting centroids that are farther apart, which often gives a better starting point.
+
+The objective remains the same:
+
+```text
+J = sum_i ||x_i - μ_c(i)||^2
+```
+
+### Synthetic Geometry Examples
+
+Generated blobs, moons and circles show that the geometry of the data matters.
+
+```text
+Blobs -> K-Means is often suitable
+Moons / circles -> density methods such as DBSCAN may be more suitable
+```
+
+### Silhouette Samples
+
+Average silhouette score summarizes quality, but silhouette samples show each record's cohesion and separation.
+
+For one record:
+
+```text
+s = (b - a) / max(a, b)
+```
+
+where:
+
+```text
+a = average distance to records in the same cluster
+b = average distance to records in the nearest other cluster
+```
+
+### Dendrogram
+
+Hierarchical clustering can be visualized with a dendrogram. The vertical axis shows the distance at which clusters are merged. This helps explain nested similarity.
+
+### Adjusted Rand Index
+
+When comparing clustering with known labels, cluster names are arbitrary. Adjusted Rand Index compares groupings without requiring the same numeric label names.
+
+```text
+ARI = 1 -> perfect agreement
+ARI ≈ 0 -> random-like agreement
+ARI < 0 -> worse than random-like agreement
+```

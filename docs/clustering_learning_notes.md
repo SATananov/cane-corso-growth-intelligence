@@ -169,3 +169,65 @@ The strongest final-project sentence is:
 ```text
 Clustering helps organize growth data into mathematically similar profiles so an owner-facing system can support monitoring and review without claiming diagnosis.
 ```
+
+
+---
+
+## Step 09.2: Exact Lesson Alignment
+
+The lesson also includes k-Nearest Neighbors, generated clustering examples, dendrograms, silhouette samples, and a comparison between clustering and classification. These are now represented in the notebook.
+
+### k-Nearest Neighbors
+
+kNN is a **lazy learner**. It does not learn a fitted mathematical function in the same way as linear regression or logistic regression. Instead, it stores training examples and predicts by looking at nearby records.
+
+Distance view:
+
+```text
+d(x_i, x_new) = (sum_j |x_ij - x_new_j|^p)^(1/p)
+```
+
+When `p = 2`, this is Euclidean distance.
+
+For the growth project, kNN is useful as a similar-record search idea:
+
+```text
+Which previous growth records are closest to the current record?
+```
+
+### Synthetic Clustering Examples
+
+The notebook now includes blobs, moons and circles.
+
+Purpose:
+
+- blobs show why K-Means works well on compact groups;
+- moons and circles show why K-Means can struggle with non-spherical structures;
+- DBSCAN demonstrates density-based clustering and noise handling.
+
+This strengthens the mathematical lesson because it shows that algorithm choice depends on geometry.
+
+### Dendrogram
+
+Hierarchical clustering is visualized with a dendrogram on a sampled set of growth records.
+
+Interpretation:
+
+```text
+The y-axis represents the distance at which groups are merged.
+```
+
+A dendrogram is not a final diagnosis or biological truth. It is a visualization of mathematical similarity.
+
+### Clustering vs Classification
+
+The notebook compares unsupervised clusters with an educational growth-ratio band using Adjusted Rand Index.
+
+This is safer than raw accuracy because cluster labels are arbitrary.
+
+```text
+Classification: learns from known labels y
+Clustering: discovers groups from X without known labels
+```
+
+This directly connects the lecture topic to the project while keeping the medical/veterinary boundary clear.

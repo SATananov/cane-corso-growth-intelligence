@@ -65,7 +65,7 @@ Different course topics use the same data representation in different ways:
 |---|---|---|
 | Regression | learn `weight = f(x)` | estimate expected growth / future bodyweight |
 | Classification | learn `P(needs_attention | x)` | create a probability-based growth signal |
-| Clustering | discover unknown groups | find natural growth-pattern profiles |
+| Clustering | discover unknown groups | find natural growth-pattern profiles and compare distance/density methods |
 | Feature Engineering | transform raw measurements | create growth velocity, ratios, deviations |
 | Time Series | analyze ordered records | monitor development as a trajectory |
 | Dimensionality Reduction | project high-dimensional data | visualize structure and separation |
@@ -139,6 +139,26 @@ docs/model_learning_explanation.md
 ```
 
 ---
+
+
+
+## Current Lecture Coverage: Unsupervised Learning and Clustering
+
+The third lecture is now represented by `notebooks/04_unsupervised_learning_clustering.ipynb`.
+
+The notebook includes:
+
+- unsupervised learning problem formulation;
+- k-Nearest Neighbors as distance-based lazy learning;
+- K-Means and K-Means++;
+- synthetic blobs, moons and circles examples;
+- elbow method and silhouette analysis;
+- hierarchical clustering with dendrogram;
+- DBSCAN density clustering and noise points;
+- clustering vs classification comparison;
+- responsible Cane Corso growth-monitoring interpretation.
+
+This keeps the project aligned with the course while still focusing on a practical application idea.
 
 ## Data Foundation
 

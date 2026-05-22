@@ -100,14 +100,18 @@ notebooks/04_unsupervised_learning_clustering.ipynb
 This notebook covers:
 
 - Unsupervised Learning problem statement and challenges
+- k-Nearest Neighbors as a distance-based lazy-learning method
+- Minkowski / Euclidean distance intuition
+- synthetic blobs, moons and circles examples
 - feature scaling for distance-based methods
 - K-Means Clustering
 - `k-means++` initialization
-- elbow and silhouette checks
-- Hierarchical Clustering
+- elbow method, silhouette score and silhouette samples
+- Hierarchical Clustering and dendrogram visualization
 - K-Means vs Hierarchical Clustering comparison
 - DBSCAN density clustering and noise detection
-- Step 09.1 note: mathematical application bridge and responsible product interpretation
+- clustering vs classification comparison using Adjusted Rand Index
+- Step 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
 
 
 ## 6. Read the mathematical foundation
@@ -127,7 +131,7 @@ This document covers:
 - ROC/AUC
 - Decision Tree impurity measures
 - Random Forest, AdaBoost, and SVM intuition
-- K-Means, Hierarchical Clustering and DBSCAN mathematics
+- kNN distance logic, K-Means, Hierarchical Clustering and DBSCAN mathematics
 
 ## 7. Project data
 

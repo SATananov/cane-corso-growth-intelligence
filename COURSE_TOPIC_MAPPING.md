@@ -552,6 +552,27 @@ Status:
 Clustering mathematical application bridge ✅ strengthened in Step 09.1
 ```
 
+### Step 09.2 Exact Lesson Alignment
+
+Step 09.2 aligns the notebook more closely with the exact lecture PDF structure.
+
+Added coverage:
+
+- k-Nearest Neighbors as a distance-based lazy learner;
+- Minkowski / Euclidean distance explanation;
+- educational kNN classification example;
+- synthetic blobs, moons and circles examples;
+- K-Means random initialization vs K-Means++ comparison context;
+- silhouette samples graphical check;
+- hierarchical dendrogram visualization;
+- clustering vs classification comparison using Adjusted Rand Index.
+
+Status:
+
+```text
+Unsupervised Learning and Clustering ✅ aligned with exact lecture structure in Step 09.2
+```
+
 ---
 
 # Classification Pipeline Exercise Extension
