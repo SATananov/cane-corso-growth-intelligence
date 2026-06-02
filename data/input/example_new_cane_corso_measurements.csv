@@ -1,0 +1,7 @@
+dog_id,dog_name,sex,age_months,weight_kg,height_cm,activity_level,source_type
+101,Ares Practical Example,male,2,8.5,31,medium,user_example
+101,Ares Practical Example,male,4,17.8,40,medium,user_example
+101,Ares Practical Example,male,6,28.5,49,medium,user_example
+101,Ares Practical Example,male,8,38.7,57,medium,user_example
+101,Ares Practical Example,male,10,46.2,62,medium,user_example
+101,Ares Practical Example,male,12,51.8,66,medium,user_example

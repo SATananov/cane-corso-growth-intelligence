@@ -278,3 +278,36 @@ data/processed/dog_growth_classification_sample.csv
 ```
 
 The notebook covers dummy baselines, pipelines, cross-validation, learning curves, engineered features, model comparison, permutation importance, error analysis, and ablation study.
+
+## 11. Run the practical growth assessment workflow
+
+Step 10.1 adds an applied workflow that turns example owner-style measurements into a readable educational report.
+
+Input:
+
+```text
+data/input/example_new_cane_corso_measurements.csv
+```
+
+Run from the project root:
+
+```powershell
+& ".\.venv\Scripts\python.exe" "srcun_growth_assessment.py"
+```
+
+Expected outputs:
+
+```text
+data/processed/example_growth_assessment_features.csv
+reports/example_growth_assessment_report.md
+reports/figures/practical_growth_assessment_weight_trend.png
+reports/figures/practical_growth_assessment_velocity_signal.png
+```
+
+Optional notebook walkthrough:
+
+```text
+notebooks/05_1_practical_growth_assessment_workflow.ipynb
+```
+
+This step demonstrates practical applicability while keeping the project educational and mathematically transparent.

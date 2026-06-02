@@ -732,7 +732,7 @@ relative_deviation = (actual_weight - expected_weight) / expected_weight
 Status:
 
 ```text
-Feature Engineering ⚠️ / Time Series ⏳
+Feature Engineering and Time Series ✅ + Practical Workflow ✅
 ```
 
 ---
@@ -840,4 +840,44 @@ Clustering discovers hidden growth profiles.
 Feature engineering and time series turn raw records into trajectory features.
 Dimensionality reduction visualizes the structure.
 MLflow tracks the experiments professionally.
+```
+
+---
+
+# Applied Step 10.1: Practical Growth Assessment Workflow
+
+Files:
+
+```text
+notebooks/05_1_practical_growth_assessment_workflow.ipynb
+src/run_growth_assessment.py
+data/input/example_new_cane_corso_measurements.csv
+reports/example_growth_assessment_report.md
+```
+
+Course connection:
+
+```text
+Feature Engineering and Time Series -> applied assessment workflow
+```
+
+Mathematical interpretation:
+
+```text
+weight_gain(t) = weight(t) - weight(t-1)
+growth_velocity(t) = weight_gain(t) / delta_age(t)
+z = (latest_velocity - reference_mean_velocity) / reference_standard_deviation
+distance = sqrt(sum((x_latest_scaled - x_reference_scaled)^2))
+```
+
+Functional role:
+
+```text
+new measurement records -> engineered features -> practical educational report
+```
+
+Status:
+
+```text
+Practical Growth Assessment Workflow ✅
 ```

@@ -1,0 +1,7 @@
+dog_id,dog_name,sex,age_months,weight_kg,height_cm,activity_level,source_type,previous_age_months,previous_weight_kg,previous_height_cm,delta_age_months,weight_gain_kg,height_gain_cm,growth_velocity_kg_per_month,height_velocity_cm_per_month,weight_to_height_ratio,rolling_weight_mean_3,rolling_growth_velocity_3,growth_phase
+101,Ares Practical Example,male,2,8.5,31,medium,user_example,,,,,,,,,0.27419354838709675,8.5,,early_growth
+101,Ares Practical Example,male,4,17.8,40,medium,user_example,2.0,8.5,31.0,2.0,9.3,9.0,4.65,4.5,0.445,13.15,4.65,early_growth
+101,Ares Practical Example,male,6,28.5,49,medium,user_example,4.0,17.8,40.0,2.0,10.7,9.0,5.35,4.5,0.5816326530612245,18.266666666666666,5.0,early_growth
+101,Ares Practical Example,male,8,38.7,57,medium,user_example,6.0,28.5,49.0,2.0,10.200000000000003,8.0,5.100000000000001,4.0,0.6789473684210526,28.333333333333332,5.033333333333334,adolescent_growth
+101,Ares Practical Example,male,10,46.2,62,medium,user_example,8.0,38.7,57.0,2.0,7.5,5.0,3.75,2.5,0.7451612903225807,37.800000000000004,4.733333333333333,adolescent_growth
+101,Ares Practical Example,male,12,51.8,66,medium,user_example,10.0,46.2,62.0,2.0,5.599999999999994,4.0,2.799999999999997,2.0,0.7848484848484848,45.56666666666666,3.883333333333333,adolescent_growth

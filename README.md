@@ -418,3 +418,36 @@ The safest final product direction is:
 ```text
 record data -> show trend -> estimate expected growth -> show signal -> explain limitations
 ```
+
+---
+
+## Practical Application Workflow: Step 10.1
+
+The project now includes a small practical workflow that shows how the mathematical features can be used with new owner-style measurements.
+
+Input file:
+
+```text
+data/input/example_new_cane_corso_measurements.csv
+```
+
+Run script:
+
+```powershell
+& ".\.venv\Scripts\python.exe" "srcun_growth_assessment.py"
+```
+
+Generated outputs:
+
+```text
+data/processed/example_growth_assessment_features.csv
+reports/example_growth_assessment_report.md
+reports/figures/practical_growth_assessment_weight_trend.png
+reports/figures/practical_growth_assessment_velocity_signal.png
+```
+
+The practical workflow uses the same mathematical ideas introduced in the Feature Engineering and Time Series notebook: difference features, growth velocity, rolling means, z-score comparison and normalized distance.
+
+This makes the project more applicable: it is no longer only a set of training notebooks, but also a small educational growth-monitoring pipeline.
+
+Responsible use boundary: the report is not a veterinary diagnosis, treatment plan, breed certificate, pedigree proof or official health judgement. It is a learning-based analytical report.

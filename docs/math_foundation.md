@@ -1230,3 +1230,57 @@ The z-score describes how far a value is from the average pattern in standard de
 Feature engineering does not automatically make a model correct. The new features must still be interpreted carefully, tested, and used with clear limitations.
 
 For this project, all engineered signals are educational growth-monitoring signals only. They are not veterinary diagnosis or medical advice.
+
+---
+
+# Practical Growth Assessment Mathematics — Step 10.1
+
+Step 10.1 connects the feature engineering formulas to a small applied workflow. The workflow accepts new repeated measurements for one Cane Corso and returns a readable educational report.
+
+## Measurement Vector
+
+A measurement at time `t` is represented as:
+
+```text
+r(t) = [age_months(t), weight_kg(t), height_cm(t)]
+```
+
+## Consecutive Change
+
+```text
+weight_gain(t) = weight(t) - weight(t-1)
+```
+
+```text
+height_gain(t) = height(t) - height(t-1)
+```
+
+## Growth Velocity
+
+```text
+growth_velocity(t) = weight_gain(t) / (age(t) - age(t-1))
+```
+
+This converts growth from an absolute change into a rate per month.
+
+## Reference Z-Score
+
+```text
+z = (latest_velocity - reference_mean_velocity) / reference_standard_deviation
+```
+
+The z-score is used as a learning signal. It does not diagnose health.
+
+## Normalized Distance
+
+To compare the latest record with reference records, selected features are standardized and compared with Euclidean distance:
+
+```text
+distance = sqrt(sum((x_latest_scaled - x_reference_scaled)^2))
+```
+
+This gives a mathematical similarity signal inside the project data.
+
+## Responsible Interpretation
+
+The practical workflow is useful because it demonstrates a real input-output pipeline. However, the output remains an educational monitoring signal, not a veterinary diagnosis or official judgement.
