@@ -35,8 +35,8 @@ This standard should appear in every new notebook from Step 04 onward.
 | Linear Regression, Regularization and Testing | Completed | expected growth prediction and residual analysis |
 | Classification | Completed / extended | `normal_growth` vs `needs_attention` probability signal |
 | Unsupervised Learning, Clustering | Completed | unknown growth-pattern groups and exploratory outlier/noise detection |
-| Feature Engineering and Time Series | Planned next | growth ratios, velocity, trajectory over time |
-| Dimensionality Reduction | Planned | 2D visualization of high-dimensional growth profiles |
+| Feature Engineering and Time Series | Completed | growth ratios, velocity, lag features and trajectory over time |
+| Dimensionality Reduction | Planned next | 2D visualization of high-dimensional growth profiles |
 | MLflow | Planned | experiment tracking and model comparison |
 
 ---

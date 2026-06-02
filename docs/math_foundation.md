@@ -1153,3 +1153,80 @@ ARI = 1 -> perfect agreement
 ARI ≈ 0 -> random-like agreement
 ARI < 0 -> worse than random-like agreement
 ```
+
+
+---
+
+# Feature Engineering and Time Series Mathematics
+
+This section supports:
+
+```text
+notebooks/05_feature_engineering_time_series_growth.ipynb
+```
+
+Feature engineering transforms the original input variables into new variables that may describe the problem better.
+
+For an ordered growth record of dog `i` at time `t`:
+
+```text
+r(i,t) = [age_months(i,t), weight_kg(i,t), height_cm(i,t)]
+```
+
+The engineered feature vector can be written as:
+
+```text
+phi(r(i,t), r(i,t-1))
+```
+
+## Difference Features
+
+```text
+weight_gain(t) = weight(t) - weight(t-1)
+```
+
+```text
+height_gain(t) = height(t) - height(t-1)
+```
+
+These features describe absolute change between consecutive records.
+
+## Growth Velocity
+
+```text
+growth_velocity(t) = weight_gain(t) / delta_age(t)
+```
+
+This converts weight gain into a rate of change per month.
+
+## Ratio Feature
+
+```text
+weight_to_height_ratio(t) = weight_kg(t) / height_cm(t)
+```
+
+This is a simple body proportion signal. In this project it is used only as an educational feature, not as a medical score.
+
+## Rolling Mean
+
+For a window of size `k`:
+
+```text
+rolling_mean_k(t) = (x(t) + x(t-1) + ... + x(t-k+1)) / k
+```
+
+A rolling mean smooths short-term variation and helps describe the trajectory.
+
+## Z-Score
+
+```text
+z = (value - mean) / standard_deviation
+```
+
+The z-score describes how far a value is from the average pattern in standard deviation units.
+
+## Important Learning Note
+
+Feature engineering does not automatically make a model correct. The new features must still be interpreted carefully, tested, and used with clear limitations.
+
+For this project, all engineered signals are educational growth-monitoring signals only. They are not veterinary diagnosis or medical advice.

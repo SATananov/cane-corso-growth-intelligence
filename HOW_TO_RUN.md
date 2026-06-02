@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains six notebooks.
+The project currently contains seven notebooks.
 
 ### Project Concept and Mathematical Framing
 
@@ -112,6 +112,32 @@ This notebook covers:
 - DBSCAN density clustering and noise detection
 - clustering vs classification comparison using Adjusted Rand Index
 - Step 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
+
+
+### Feature Engineering and Time Series Topic
+
+```text
+notebooks/05_feature_engineering_time_series_growth.ipynb
+```
+
+This notebook covers:
+
+- feature engineering problem statement;
+- ordered growth records as a simple time series;
+- lag features from previous measurements;
+- weight gain and height gain;
+- growth velocity per month;
+- weight-to-height ratio;
+- rolling average smoothing;
+- z-score growth velocity signal;
+- engineered feature correlation check;
+- responsible interpretation for Cane Corso growth monitoring.
+
+It also creates:
+
+```text
+data/processed/cane_corso_time_series_features.csv
+```
 
 
 ## 6. Read the mathematical foundation
@@ -198,18 +224,19 @@ docs/raw_dataset_archive_policy.md
 
 ## 9. Current project stage
 
-The project currently covers three completed course topics:
+The project currently covers four completed course topics:
 
 1. Linear Regression, Regularization and Testing
 2. Classification
 3. Unsupervised Learning and Clustering
+4. Feature Engineering and Time Series
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset.
 
 The next planned course topic is:
 
 ```text
-Feature Engineering and Time Series
+Dimensionality Reduction
 ```
 
 Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.

@@ -142,23 +142,28 @@ docs/model_learning_explanation.md
 
 
 
-## Current Lecture Coverage: Unsupervised Learning and Clustering
+## Current Lecture Coverage: Feature Engineering and Time Series
 
-The third lecture is now represented by `notebooks/04_unsupervised_learning_clustering.ipynb`.
+The fourth lecture stage is now represented by:
+
+```text
+notebooks/05_feature_engineering_time_series_growth.ipynb
+```
 
 The notebook includes:
 
-- unsupervised learning problem formulation;
-- k-Nearest Neighbors as distance-based lazy learning;
-- K-Means and K-Means++;
-- synthetic blobs, moons and circles examples;
-- elbow method and silhouette analysis;
-- hierarchical clustering with dendrogram;
-- DBSCAN density clustering and noise points;
-- clustering vs classification comparison;
+- feature engineering problem formulation;
+- ordered growth records as a simple time series;
+- lag features from previous measurements;
+- weight gain and height gain;
+- growth velocity per month;
+- weight-to-height ratio;
+- rolling average smoothing;
+- z-score growth velocity signal;
+- engineered feature correlation check;
 - responsible Cane Corso growth-monitoring interpretation.
 
-This keeps the project aligned with the course while still focusing on a practical application idea.
+The tone is intentionally learning-oriented: formulas are shown before code, and each feature is connected to the project meaning.
 
 ## Data Foundation
 
@@ -193,6 +198,7 @@ Processed samples used in the project:
 ```text
 data/processed/dog_growth_public_sample.csv
 data/processed/dog_growth_classification_sample.csv
+data/processed/cane_corso_time_series_features.csv
 ```
 
 ### Raw Dataset Archive Terminology
@@ -224,11 +230,12 @@ Completed stages:
 5. **Course Coverage Alignment** — added clearer OLS, real-data regression, Precision-Recall, thresholds, tuning and drift coverage
 6. **Unsupervised Learning and Clustering** — added K-Means, k-means++, Hierarchical Clustering, method comparison and DBSCAN
 7. **Clustering Mathematical Application Polish** — strengthened the practical application bridge, formulas and responsible interpretation for the clustering notebook
+8. **Feature Engineering and Time Series** — added lag features, growth velocity, rolling averages, z-score signals and trajectory visualizations
 
 Next planned course topic:
 
 ```text
-Feature Engineering and Time Series
+Dimensionality Reduction
 ```
 
 
