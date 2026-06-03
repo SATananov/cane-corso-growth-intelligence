@@ -123,3 +123,21 @@ The model can issue registry or certificate decisions.
 This module is for **visual similarity** only.
 
 It is not breed proof, not pedigree proof, not registry proof, not certificate proof and not veterinary diagnosis.
+
+## Step 18.1 SSL-safe official URL hotfix
+
+Some Windows/Python environments may fail on `https://vision.stanford.edu/...` with a certificate hostname mismatch. The project must not bypass SSL verification. The download helper therefore prefers the official Stanford Dogs artifact table and, for this Stanford host only, can use the historically documented `http://vision.stanford.edu/aditya86/ImageNetDogs/...` URLs when HTTPS fails.
+
+Run the small-file check again with:
+
+```powershell
+python src/download_stanford_dogs_local_dataset.py --download-small --force
+```
+
+Then inspect the local files:
+
+```powershell
+python src/inspect_stanford_dogs_real_classes.py
+python src/select_stanford_dogs_baseline_classes.py
+python src/validate_stanford_dogs_real_inspection.py
+```

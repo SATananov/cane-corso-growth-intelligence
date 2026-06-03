@@ -2,8 +2,10 @@ from __future__ import annotations
 
 import argparse
 import csv
+import shutil
 import sys
 import tarfile
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -16,6 +18,8 @@ REPORT_FILE = ROOT / "reports" / "stanford_dogs_download_readiness.md"
 
 LARGE_ARTIFACT_IDS = {"stanford_dogs_images", "stanford_dogs_annotations"}
 SMALL_DEFAULT_MODES = {"yes_small_file"}
+STANFORD_HOST_HTTPS = "https://vision.stanford.edu/"
+STANFORD_HOST_HTTP = "http://vision.stanford.edu/"
 
 
 def read_artifacts() -> list[dict[str, str]]:
@@ -25,22 +29,57 @@ def read_artifacts() -> list[dict[str, str]]:
         return list(csv.DictReader(file))
 
 
-def download_file(url: str, target: Path, force: bool = False) -> str:
+def build_url_candidates(url: str) -> list[str]:
+    """Return safe download candidates without disabling TLS verification.
+
+    The Stanford Dogs page is historically documented with http:// URLs. On some
+    Windows/Python installations, https://vision.stanford.edu may fail with a
+    certificate hostname mismatch before the server redirects or serves content.
+    We do not bypass SSL verification. Instead, for this official Stanford host
+    only, we try the documented http:// endpoint as a fallback.
+    """
+    candidates = [url]
+    if url.startswith(STANFORD_HOST_HTTPS):
+        http_url = STANFORD_HOST_HTTP + url[len(STANFORD_HOST_HTTPS) :]
+        if http_url not in candidates:
+            candidates.append(http_url)
+    return candidates
+
+
+def stream_download(url: str, target: Path) -> None:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (compatible; CaneCorsoGrowthIntelligence/1.0; educational dataset preparation)",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=60) as response:
+        with target.open("wb") as output_file:
+            shutil.copyfileobj(response, output_file)
+
+
+def download_file(url: str, target: Path, force: bool = False) -> tuple[str, str, str]:
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.exists() and not force:
-        return "already_exists"
-    print(f"Downloading: {url}")
-    print(f"Target:      {target}")
-    try:
-        urllib.request.urlretrieve(url, target)
-    except Exception as exc:  # pragma: no cover - network depends on local machine
-        if target.exists():
-            try:
-                target.unlink()
-            except OSError:
-                pass
-        raise RuntimeError(f"Download failed for {url}: {exc}") from exc
-    return "downloaded"
+        return "already_exists", url, "existing_file_reused"
+
+    errors: list[str] = []
+    for candidate_url in build_url_candidates(url):
+        print(f"Downloading: {candidate_url}")
+        print(f"Target:      {target}")
+        try:
+            stream_download(candidate_url, target)
+            return "downloaded", candidate_url, "ok"
+        except Exception as exc:  # pragma: no cover - network depends on local machine
+            if target.exists():
+                try:
+                    target.unlink()
+                except OSError:
+                    pass
+            errors.append(f"{candidate_url} -> {type(exc).__name__}: {exc}")
+            print(f"Download attempt failed: {errors[-1]}")
+
+    raise RuntimeError("Download failed for all candidate URLs:\n" + "\n".join(errors))
 
 
 def extract_tar(archive_path: Path, destination: Path, force: bool = False) -> str:
@@ -94,8 +133,10 @@ def main() -> None:
             reason = "download_annotations_requested"
 
         status = "planned_only"
+        final_url = artifact["official_url"]
+        download_note = "not_attempted"
         if should_download:
-            status = download_file(artifact["official_url"], local_path, force=args.force)
+            status, final_url, download_note = download_file(artifact["official_url"], local_path, force=args.force)
 
         actions.append({
             "artifact_id": artifact_id,
@@ -103,6 +144,8 @@ def main() -> None:
             "status": status,
             "reason": reason,
             "exists_after": str(local_path.exists()),
+            "final_url": final_url,
+            "download_note": download_note,
         })
 
     images_archive = DOWNLOAD_ROOT / "images.tar"
@@ -123,17 +166,23 @@ def main() -> None:
         "",
         "## Actions",
         "",
-        "| Artifact | Status | Exists after | Reason | Local path |",
-        "|---|---|---:|---|---|",
+        "| Artifact | Status | Exists after | Reason | Final URL | Local path |",
+        "|---|---|---:|---|---|---|",
     ]
     for item in actions:
-        lines.append(f"| {item['artifact_id']} | {item['status']} | {item['exists_after']} | {item['reason']} | `{item['local_path']}` |")
+        lines.append(
+            f"| {item['artifact_id']} | {item['status']} | {item['exists_after']} | {item['reason']} | `{item['final_url']}` | `{item['local_path']}` |"
+        )
     lines.extend([
         "",
         "## Extraction",
         "",
         f"- Images extraction status: `{image_extract_status}`",
         f"- Annotations extraction status: `{annotation_extract_status}`",
+        "",
+        "## Download safety note",
+        "",
+        "This script does not disable SSL verification. If the Stanford HTTPS endpoint fails on a local Python/Windows environment because of a certificate hostname mismatch, the script uses the official historically documented `http://vision.stanford.edu/...` Stanford Dogs endpoint instead.",
         "",
         "## Responsible boundary",
         "",
