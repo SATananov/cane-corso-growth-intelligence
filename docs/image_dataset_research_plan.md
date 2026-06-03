@@ -209,3 +209,15 @@ Not allowed for a responsible project:
 Step 11 does not train an image model yet.
 
 It creates the research, data-governance and mathematical plan needed before a future Computer Vision notebook is added.
+
+Step 12 adds a more concrete feasibility layer:
+
+```text
+docs/image_dataset_feasibility.md
+data/image_dataset_feasibility_matrix.csv
+data/molossoid_visual_target_classes.csv
+src/validate_image_dataset_feasibility.py
+notebooks/07_image_dataset_feasibility.ipynb
+```
+
+The Step 12 decision is to verify public dataset metadata and terms before any image model training.

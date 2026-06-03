@@ -32,3 +32,8 @@ Responsible rule:
 ```text
 No random Google, Instagram, Facebook, or breeder-site scraping without permission.
 ```
+
+
+## Step 12 note
+
+Step 12 intentionally keeps this folder free from downloaded image files. The project now stores image dataset feasibility metadata in `data/image_dataset_feasibility_matrix.csv` and target-class planning in `data/molossoid_visual_target_classes.csv`. Actual image archives should remain local until usage terms, class availability and storage strategy are confirmed.

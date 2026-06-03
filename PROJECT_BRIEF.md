@@ -449,6 +449,22 @@ notebooks/06_computer_vision_visual_similarity_concept.ipynb
 
 ---
 
+## Computer Vision Dataset Feasibility
+
+The project now includes a future Computer Vision direction for molossoid visual similarity, but image model training is intentionally postponed until the dataset question is handled responsibly.
+
+Step 12 adds a feasibility matrix for public dog image datasets and a target-class plan for Cane Corso and related molossoid breeds. It also states that large image folders should remain local and that the project should not scrape social media or random web images without permission.
+
+Supporting files:
+
+```text
+docs/image_dataset_feasibility.md
+data/image_dataset_feasibility_matrix.csv
+data/molossoid_visual_target_classes.csv
+notebooks/07_image_dataset_feasibility.ipynb
+src/validate_image_dataset_feasibility.py
+```
+
 ## Limitations and Safety Boundary
 
 The project is educational and analytical.

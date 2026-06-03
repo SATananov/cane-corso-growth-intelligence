@@ -229,9 +229,14 @@ Supporting files:
 ```text
 docs/computer_vision_visual_similarity_plan.md
 docs/image_dataset_research_plan.md
+docs/image_dataset_feasibility.md
 notebooks/06_computer_vision_visual_similarity_concept.ipynb
+notebooks/07_image_dataset_feasibility.ipynb
 data/image_dataset_manifest_example.csv
+data/image_dataset_feasibility_matrix.csv
+data/molossoid_visual_target_classes.csv
 src/validate_image_manifest.py
+src/validate_image_dataset_feasibility.py
 ```
 
 ### Raw Dataset Archive Terminology
@@ -266,6 +271,7 @@ Completed stages:
 8. **Feature Engineering and Time Series** — added lag features, growth velocity, rolling averages, z-score signals and trajectory visualizations
 9. **Dataset Selection Rationale** — documented why the Liverpool DataCat / PLOS ONE dog growth dataset was selected instead of a generic Kaggle dataset
 10. **Computer Vision Visual Similarity Plan** — added a future image-classification extension plan, dataset research strategy, manifest example and responsible visual-similarity boundary
+11. **Public Image Dataset Feasibility** — added public image dataset candidates, target molossoid class planning, repository data rules and validation before image-model training
 
 Next planned course topic:
 
@@ -289,7 +295,8 @@ For a reviewer or instructor, the easiest order is:
 4. docs/dataset_selection_rationale.md
 5. docs/computer_vision_visual_similarity_plan.md
 6. docs/image_dataset_research_plan.md
-7. COURSE_TOPIC_MAPPING.md
+7. docs/image_dataset_feasibility.md
+8. COURSE_TOPIC_MAPPING.md
 8. notebooks/00_project_concept_and_mathematical_framing.ipynb
 9. notebooks/01_linear_regression_growth_prediction.ipynb
 10. notebooks/02_real_data_preparation.ipynb
@@ -299,6 +306,7 @@ For a reviewer or instructor, the easiest order is:
 14. notebooks/05_feature_engineering_time_series_growth.ipynb
 15. notebooks/05_1_practical_growth_assessment_workflow.ipynb
 16. notebooks/06_computer_vision_visual_similarity_concept.ipynb
+17. notebooks/07_image_dataset_feasibility.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -315,6 +323,8 @@ cane-corso-growth-intelligence/
 │   ├── images/
 │   │   └── README.md
 │   ├── image_dataset_manifest_example.csv
+│   ├── image_dataset_feasibility_matrix.csv
+│   ├── molossoid_visual_target_classes.csv
 │   ├── prototype/
 │   │   └── cane_corso_growth_sample.csv
 │   ├── raw/
@@ -328,6 +338,7 @@ cane-corso-growth-intelligence/
 │   ├── dataset_selection_rationale.md
 │   ├── computer_vision_visual_similarity_plan.md
 │   ├── image_dataset_research_plan.md
+│   ├── image_dataset_feasibility.md
 │   ├── product_idea_and_mathematical_framing.md
 │   ├── model_learning_explanation.md
 │   ├── real_data_source_notes.md
@@ -348,7 +359,8 @@ cane-corso-growth-intelligence/
 │   ├── 04_unsupervised_learning_clustering.ipynb
 │   ├── 05_feature_engineering_time_series_growth.ipynb
 │   ├── 05_1_practical_growth_assessment_workflow.ipynb
-│   └── 06_computer_vision_visual_similarity_concept.ipynb
+│   ├── 06_computer_vision_visual_similarity_concept.ipynb
+│   └── 07_image_dataset_feasibility.ipynb
 ├── reports/
 │   ├── example_growth_assessment_report.md
 │   └── figures/
@@ -357,7 +369,8 @@ cane-corso-growth-intelligence/
 │   ├── create_classification_sample.py
 │   ├── create_time_series_features.py
 │   ├── run_growth_assessment.py
-│   └── validate_image_manifest.py
+│   ├── validate_image_manifest.py
+│   └── validate_image_dataset_feasibility.py
 ├── COURSE_TOPIC_MAPPING.md
 ├── DATA_SOURCES.md
 ├── HOW_TO_RUN.md
@@ -442,6 +455,14 @@ notebooks/06_computer_vision_visual_similarity_concept.ipynb
 
 Introduces the future image-classification extension. It explains visual feature extraction, softmax probabilities, public dataset feasibility and why the output must be interpreted as visual similarity rather than breed proof.
 
+### 7. Image Dataset Feasibility
+
+```text
+notebooks/07_image_dataset_feasibility.ipynb
+```
+
+Adds a public image dataset feasibility check before any Computer Vision model is trained. It reviews public dataset candidates, target molossoid classes, repository storage rules and responsible limitations.
+
 ---
 
 ## Course Topic Flow
@@ -486,6 +507,7 @@ flowchart TD
 | `docs/dataset_selection_rationale.md` | Explanation of why the Liverpool DataCat / PLOS ONE dataset was selected instead of a general Kaggle dataset |
 | `docs/computer_vision_visual_similarity_plan.md` | Future Computer Vision extension plan for visual similarity, not breed proof |
 | `docs/image_dataset_research_plan.md` | Public image dataset research and image data governance plan |
+| `docs/image_dataset_feasibility.md` | Step 12 public image dataset feasibility decision before Computer Vision training |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
 | `COURSE_TOPIC_MAPPING.md` | Mapping between course lectures and project files |
 
@@ -505,6 +527,12 @@ Incorrect interpretation:
 
 ```text
 The model diagnoses health problems or proves whether a dog is a Cane Corso.
+```
+
+For Step 12 image dataset feasibility, correct project behavior is:
+
+```text
+check public dataset metadata -> verify class availability -> check usage terms -> train only after responsible data selection
 ```
 
 The safest final product direction is:

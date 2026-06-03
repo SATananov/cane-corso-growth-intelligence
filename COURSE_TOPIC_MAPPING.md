@@ -38,6 +38,8 @@ This standard should appear in every new notebook from Step 04 onward.
 | Feature Engineering and Time Series | Completed | growth ratios, velocity, lag features and trajectory over time |
 | Dimensionality Reduction | Planned next | 2D visualization of high-dimensional growth profiles |
 | MLflow | Planned | experiment tracking and model comparison |
+| Computer Vision Visual Similarity | Planned / documented | future image-based visual similarity, not breed proof |
+| Image Dataset Feasibility | Completed as Step 12 plan | public dataset candidates and target molossoid class planning before training |
 
 ---
 
@@ -853,6 +855,42 @@ This section supports the course topics by showing how mathematical methods can 
 - SVM as margin-based separation;
 - clustering as groups of nearby points.
 
+# Applied Step 12: Public Image Dataset Feasibility
+
+Files:
+
+```text
+docs/image_dataset_feasibility.md
+data/image_dataset_feasibility_matrix.csv
+data/molossoid_visual_target_classes.csv
+src/validate_image_dataset_feasibility.py
+notebooks/07_image_dataset_feasibility.ipynb
+```
+
+Course/project connection:
+
+```text
+Future Computer Vision -> responsible dataset feasibility before model training
+```
+
+Functional role:
+
+```text
+public dataset candidates + target visual classes + data rules -> safe image-model preparation
+```
+
+Responsible boundary:
+
+```text
+No image scraping, no committed image archives, no breed-proof claim from images.
+```
+
+Status:
+
+```text
+Public Image Dataset Feasibility ✅
+```
+
 ---
 
 ## Final Course Strategy
@@ -867,7 +905,7 @@ Clustering discovers hidden growth profiles.
 Feature engineering and time series turn raw records into trajectory features.
 Dimensionality reduction visualizes the structure.
 MLflow tracks the experiments professionally.
-A future Computer Vision extension can add image-based visual similarity probabilities, clearly separated from breed proof or certification.
+A future Computer Vision extension can add image-based visual similarity probabilities, clearly separated from breed proof or certification. Step 12 adds the required public image dataset feasibility layer before any visual model is trained.
 ```
 
 ---

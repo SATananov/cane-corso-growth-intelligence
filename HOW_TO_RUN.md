@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains nine notebooks.
+The project currently contains ten notebooks.
 
 ### Project Concept and Mathematical Framing
 
@@ -149,6 +149,15 @@ notebooks/06_computer_vision_visual_similarity_concept.ipynb
 
 This notebook does not train a real image model yet. It explains the future Computer Vision extension, softmax probability interpretation, dataset feasibility, and the responsible boundary: visual similarity is not breed proof.
 
+
+### Public Image Dataset Feasibility
+
+```text
+notebooks/07_image_dataset_feasibility.ipynb
+```
+
+This notebook reviews public image dataset candidates before any Computer Vision model is trained. It reads the feasibility matrix and target-class plan from CSV files and validates that the project remains a visual-similarity plan, not breed proof.
+
 ## 6. Read the mathematical foundation
 
 The project includes a mathematical explanation of the main formulas used in the notebooks:
@@ -226,7 +235,16 @@ src/create_classification_sample.py
 src/create_time_series_features.py
 src/run_growth_assessment.py
 src/validate_image_manifest.py
+src/validate_image_dataset_feasibility.py
 ```
+
+The Step 12 dataset-feasibility validation script can be run with:
+
+```powershell
+python src/validate_image_dataset_feasibility.py
+```
+
+It validates the public dataset feasibility matrix, the target molossoid class plan, and confirms that no downloaded image files are committed under `data/images/`.
 
 The image manifest validation script can be run with:
 
@@ -259,6 +277,7 @@ The project currently covers four completed course topics plus one future Comput
 3. Unsupervised Learning and Clustering
 4. Feature Engineering and Time Series
 5. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
+6. Public Image Dataset Feasibility (dataset candidates and target class planning, not trained yet)
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
 

@@ -148,6 +148,30 @@ src/validate_image_manifest.py
 
 ---
 
+## Computer Vision Dataset Feasibility
+
+Step 12 adds metadata-only image dataset feasibility files:
+
+```text
+data/image_dataset_feasibility_matrix.csv
+data/molossoid_visual_target_classes.csv
+```
+
+These files do not contain images. They document candidate public datasets, target molossoid / related classes, and the rule that downloaded image archives should not be committed to GitHub.
+
+Supporting documentation:
+
+```text
+docs/image_dataset_feasibility.md
+docs/image_dataset_research_plan.md
+```
+
+Validation script:
+
+```text
+src/validate_image_dataset_feasibility.py
+```
+
 ## 5. Raw Dataset Archive Rule
 
 The full original dataset should not be committed directly to GitHub.
