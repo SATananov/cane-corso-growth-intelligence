@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains eight notebooks.
+The project currently contains nine notebooks.
 
 ### Project Concept and Mathematical Framing
 
@@ -140,6 +140,15 @@ data/processed/cane_corso_time_series_features.csv
 ```
 
 
+
+### Computer Vision Visual Similarity Concept
+
+```text
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
+```
+
+This notebook does not train a real image model yet. It explains the future Computer Vision extension, softmax probability interpretation, dataset feasibility, and the responsible boundary: visual similarity is not breed proof.
+
 ## 6. Read the mathematical foundation
 
 The project includes a mathematical explanation of the main formulas used in the notebooks:
@@ -216,7 +225,16 @@ src/create_public_sample.py
 src/create_classification_sample.py
 src/create_time_series_features.py
 src/run_growth_assessment.py
+src/validate_image_manifest.py
 ```
+
+The image manifest validation script can be run with:
+
+```powershell
+python src/validate_image_manifest.py
+```
+
+It validates the structure of the example image manifest only. It does not download images or train an image model.
 
 The original public dataset is distributed as a compressed archive. In this project, it is referred to as the **raw dataset archive** and should be kept locally in:
 
@@ -234,16 +252,17 @@ docs/raw_dataset_archive_policy.md
 
 ## 9. Current project stage
 
-The project currently covers four completed course topics:
+The project currently covers four completed course topics plus one future Computer Vision extension plan:
 
 1. Linear Regression, Regularization and Testing
 2. Classification
 3. Unsupervised Learning and Clustering
 4. Feature Engineering and Time Series
+5. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
 
-The next planned course topic is:
+The next planned core course topic is:
 
 ```text
 Dimensionality Reduction

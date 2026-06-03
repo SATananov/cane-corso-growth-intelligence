@@ -1,0 +1,7 @@
+image_id,dataset_source,source_reference,local_relative_path,breed_label,split,license_or_terms_checked,permission_status,view_type,age_stage,notes
+example_001,public_dataset_candidate,Stanford Dogs / Kaggle candidate,data/images/local_only/cane_corso/example_001.jpg,cane_corso,train,pending,not_committed_example,full_body,adult,Example row only; no image file is committed.
+example_002,public_dataset_candidate,Stanford Dogs / Kaggle candidate,data/images/local_only/dogo_argentino/example_002.jpg,dogo_argentino,train,pending,not_committed_example,full_body,adult,Example row only; verify class availability before training.
+example_003,public_dataset_candidate,Tsinghua Dogs candidate,data/images/local_only/presa_canario/example_003.jpg,presa_canario,validation,pending,not_committed_example,head_and_body,adult,Example row only; no image file is committed.
+example_004,public_dataset_candidate,Oxford-IIIT / alternative candidate,data/images/local_only/boxer/example_004.jpg,boxer,train,pending,not_committed_example,head,adult,Example row only; class coverage must be checked.
+example_005,future_usg_consent_dataset,owner_permission_required,data/images/local_only/cane_corso/example_005.jpg,cane_corso,test,pending,permission_required,full_body,puppy,Future consent-based USG row example.
+example_006,future_usg_consent_dataset,owner_permission_required,data/images/local_only/other_unknown/example_006.jpg,other_unknown,test,pending,permission_required,unclear,unknown,Used only when a class should not be forced into a known breed.

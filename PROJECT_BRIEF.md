@@ -408,7 +408,44 @@ The project should emphasize these strengths:
 6. feature engineering based on growth logic;
 7. planned clustering and dimensionality reduction as mathematical structure discovery;
 8. responsible interpretation and clear limitations;
-9. reproducible notebooks and documented data sources.
+9. reproducible notebooks and documented data sources;
+10. a responsible Computer Vision extension plan that does not confuse visual similarity with breed proof.
+
+---
+
+
+## Future Computer Vision Extension
+
+The project now includes a planned Computer Vision extension called a **visual similarity classifier**.
+
+This future module would analyze a dog image and return probabilities over trained visual classes, for example:
+
+```text
+Cane Corso: 65%
+Dogo Argentino: 15%
+Presa Canario: 12%
+Great Dane: 8%
+```
+
+The correct interpretation is visual similarity among trained classes, not official breed identification.
+
+This combines naturally with the existing project:
+
+```text
+growth records -> growth monitoring signal
+image -> visual similarity signal
+combined report -> educational interpretation with limitations
+```
+
+The project does not currently have a private image dataset, so Step 11 documents public dataset research and a manifest-based data plan instead of training a fake model.
+
+Supporting files:
+
+```text
+docs/computer_vision_visual_similarity_plan.md
+docs/image_dataset_research_plan.md
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
+```
 
 ---
 

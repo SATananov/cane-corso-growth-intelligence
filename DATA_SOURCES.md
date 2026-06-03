@@ -95,7 +95,60 @@ Cane Corso Growth Intelligence = domain and product context.
 
 ---
 
-## 4. Raw Dataset Archive Rule
+
+## 4. Future Image Data Source Plan
+
+The project now documents a future Computer Vision extension, but it does not currently include a private Cane Corso image dataset and it does not train an image model yet.
+
+Planned visual task:
+
+```text
+dog image -> visual similarity probabilities over trained classes
+```
+
+Candidate public datasets for future baseline experiments include:
+
+- Stanford Dogs Dataset;
+- Kaggle Dog Breed Identification;
+- Tsinghua Dogs Dataset;
+- Oxford-IIIT Pet Dataset.
+
+The exact class list must be verified before training. The project should not assume that every desired molossoid breed exists in every public dataset.
+
+Target candidate classes for future research:
+
+```text
+cane_corso
+dogo_argentino
+presa_canario
+great_dane
+neapolitan_mastiff
+bullmastiff
+boxer
+mastiff
+other_unknown
+```
+
+Responsible image data rule:
+
+```text
+Use public datasets with documented terms, user's own images, or owner-provided images with permission.
+Do not scrape random Google, Instagram, Facebook, or breeder-site images without permission.
+```
+
+Supporting files:
+
+```text
+docs/computer_vision_visual_similarity_plan.md
+docs/image_dataset_research_plan.md
+data/image_dataset_manifest_example.csv
+data/images/README.md
+src/validate_image_manifest.py
+```
+
+---
+
+## 5. Raw Dataset Archive Rule
 
 The full original dataset should not be committed directly to GitHub.
 
@@ -131,7 +184,7 @@ docs/raw_dataset_archive_policy.md
 
 ---
 
-## 5. General Processed Real Public Sample
+## 6. General Processed Real Public Sample
 
 File:
 
@@ -179,7 +232,7 @@ This sample is committed to GitHub because it is small and usable for notebook e
 
 ---
 
-## 6. Classification-Focused Processed Sample
+## 7. Classification-Focused Processed Sample
 
 File:
 
@@ -236,7 +289,7 @@ notebooks/03_1_classification_pipeline_exercise.ipynb
 
 ---
 
-## 7. Time-Series Feature Sample
+## 8. Time-Series Feature Sample
 
 File:
 

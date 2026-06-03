@@ -867,6 +867,7 @@ Clustering discovers hidden growth profiles.
 Feature engineering and time series turn raw records into trajectory features.
 Dimensionality reduction visualizes the structure.
 MLflow tracks the experiments professionally.
+A future Computer Vision extension can add image-based visual similarity probabilities, clearly separated from breed proof or certification.
 ```
 
 ---
@@ -907,4 +908,51 @@ Status:
 
 ```text
 Practical Growth Assessment Workflow ✅
+```
+
+---
+
+# Applied Step 11: Computer Vision Visual Similarity Plan
+
+Files:
+
+```text
+docs/computer_vision_visual_similarity_plan.md
+docs/image_dataset_research_plan.md
+data/image_dataset_manifest_example.csv
+data/images/README.md
+src/validate_image_manifest.py
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
+```
+
+Course/project connection:
+
+```text
+Future Computer Vision / Image Classification extension
+```
+
+Mathematical interpretation:
+
+```text
+h = phi(X_image)
+z = W h + b
+p_i = exp(z_i) / sum(exp(z_j))
+```
+
+Functional role:
+
+```text
+dog image -> visual feature extractor -> breed-similarity probability distribution -> responsible interpretation
+```
+
+Responsible boundary:
+
+```text
+Visual similarity is not breed proof, pedigree proof, genetic testing, registry authority or veterinary diagnosis.
+```
+
+Status:
+
+```text
+Computer Vision Visual Similarity Plan ✅
 ```

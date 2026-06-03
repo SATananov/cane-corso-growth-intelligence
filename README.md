@@ -213,6 +213,27 @@ A dedicated explanation is available in:
 docs/dataset_selection_rationale.md
 ```
 
+
+### Computer Vision Extension Plan
+
+The project also now includes a planned Computer Vision extension for future work:
+
+```text
+uploaded dog image -> visual feature extractor -> visual similarity probabilities
+```
+
+This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The first step is therefore data research, public dataset feasibility, and a manifest-based data plan.
+
+Supporting files:
+
+```text
+docs/computer_vision_visual_similarity_plan.md
+docs/image_dataset_research_plan.md
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
+data/image_dataset_manifest_example.csv
+src/validate_image_manifest.py
+```
+
 ### Raw Dataset Archive Terminology
 
 The original public dataset is distributed by its source as a compressed archive file. In this project, that file is called the **raw dataset archive**:
@@ -244,12 +265,15 @@ Completed stages:
 7. **Clustering Mathematical Application Polish** — strengthened the practical application bridge, formulas and responsible interpretation for the clustering notebook
 8. **Feature Engineering and Time Series** — added lag features, growth velocity, rolling averages, z-score signals and trajectory visualizations
 9. **Dataset Selection Rationale** — documented why the Liverpool DataCat / PLOS ONE dog growth dataset was selected instead of a generic Kaggle dataset
+10. **Computer Vision Visual Similarity Plan** — added a future image-classification extension plan, dataset research strategy, manifest example and responsible visual-similarity boundary
 
 Next planned course topic:
 
 ```text
 Dimensionality Reduction
 ```
+
+Computer Vision is documented as a future extension plan, but it is not yet a trained model.
 
 
 ---
@@ -263,15 +287,18 @@ For a reviewer or instructor, the easiest order is:
 2. PROJECT_BRIEF.md
 3. DATA_SOURCES.md
 4. docs/dataset_selection_rationale.md
-5. COURSE_TOPIC_MAPPING.md
-6. notebooks/00_project_concept_and_mathematical_framing.ipynb
-7. notebooks/01_linear_regression_growth_prediction.ipynb
-8. notebooks/02_real_data_preparation.ipynb
-9. notebooks/03_classification_growth_status.ipynb
-10. notebooks/03_1_classification_pipeline_exercise.ipynb
-11. notebooks/04_unsupervised_learning_clustering.ipynb
-12. notebooks/05_feature_engineering_time_series_growth.ipynb
-13. notebooks/05_1_practical_growth_assessment_workflow.ipynb
+5. docs/computer_vision_visual_similarity_plan.md
+6. docs/image_dataset_research_plan.md
+7. COURSE_TOPIC_MAPPING.md
+8. notebooks/00_project_concept_and_mathematical_framing.ipynb
+9. notebooks/01_linear_regression_growth_prediction.ipynb
+10. notebooks/02_real_data_preparation.ipynb
+11. notebooks/03_classification_growth_status.ipynb
+12. notebooks/03_1_classification_pipeline_exercise.ipynb
+13. notebooks/04_unsupervised_learning_clustering.ipynb
+14. notebooks/05_feature_engineering_time_series_growth.ipynb
+15. notebooks/05_1_practical_growth_assessment_workflow.ipynb
+16. notebooks/06_computer_vision_visual_similarity_concept.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -285,6 +312,9 @@ cane-corso-growth-intelligence/
 ├── data/
 │   ├── input/
 │   │   └── example_new_cane_corso_measurements.csv
+│   ├── images/
+│   │   └── README.md
+│   ├── image_dataset_manifest_example.csv
 │   ├── prototype/
 │   │   └── cane_corso_growth_sample.csv
 │   ├── raw/
@@ -296,6 +326,8 @@ cane-corso-growth-intelligence/
 │       └── example_growth_assessment_features.csv
 ├── docs/
 │   ├── dataset_selection_rationale.md
+│   ├── computer_vision_visual_similarity_plan.md
+│   ├── image_dataset_research_plan.md
 │   ├── product_idea_and_mathematical_framing.md
 │   ├── model_learning_explanation.md
 │   ├── real_data_source_notes.md
@@ -315,7 +347,8 @@ cane-corso-growth-intelligence/
 │   ├── 03_1_classification_pipeline_exercise.ipynb
 │   ├── 04_unsupervised_learning_clustering.ipynb
 │   ├── 05_feature_engineering_time_series_growth.ipynb
-│   └── 05_1_practical_growth_assessment_workflow.ipynb
+│   ├── 05_1_practical_growth_assessment_workflow.ipynb
+│   └── 06_computer_vision_visual_similarity_concept.ipynb
 ├── reports/
 │   ├── example_growth_assessment_report.md
 │   └── figures/
@@ -323,7 +356,8 @@ cane-corso-growth-intelligence/
 │   ├── create_public_sample.py
 │   ├── create_classification_sample.py
 │   ├── create_time_series_features.py
-│   └── run_growth_assessment.py
+│   ├── run_growth_assessment.py
+│   └── validate_image_manifest.py
 ├── COURSE_TOPIC_MAPPING.md
 ├── DATA_SOURCES.md
 ├── HOW_TO_RUN.md
@@ -400,6 +434,14 @@ notebooks/05_1_practical_growth_assessment_workflow.ipynb
 
 Shows how new owner-style measurements can be transformed into a readable educational growth assessment report.
 
+### 6. Computer Vision Visual Similarity Concept
+
+```text
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
+```
+
+Introduces the future image-classification extension. It explains visual feature extraction, softmax probabilities, public dataset feasibility and why the output must be interpreted as visual similarity rather than breed proof.
+
 ---
 
 ## Course Topic Flow
@@ -413,6 +455,7 @@ flowchart TD
     P --> E["Feature Engineering / Time Series"]
     P --> F["Dimensionality Reduction"]
     P --> G["MLflow"]
+    A --> H["Computer Vision Visual Similarity"]
 
     B --> B1["Expected growth curve"]
     B --> B2["Residual analysis"]
@@ -422,6 +465,7 @@ flowchart TD
     E --> E1["Growth velocity and deviation features"]
     F --> F1["2D map of high-dimensional growth records"]
     G --> G1["Tracked model experiments"]
+    H --> H1["Image-based visual similarity probabilities"]
 ```
 
 ---
@@ -440,6 +484,8 @@ flowchart TD
 | `docs/feature_engineering_time_series_notes.md` | Feature engineering and time-series growth-monitoring notes |
 | `docs/practical_growth_assessment_workflow.md` | Applied owner-style growth assessment workflow |
 | `docs/dataset_selection_rationale.md` | Explanation of why the Liverpool DataCat / PLOS ONE dataset was selected instead of a general Kaggle dataset |
+| `docs/computer_vision_visual_similarity_plan.md` | Future Computer Vision extension plan for visual similarity, not breed proof |
+| `docs/image_dataset_research_plan.md` | Public image dataset research and image data governance plan |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
 | `COURSE_TOPIC_MAPPING.md` | Mapping between course lectures and project files |
 
@@ -465,6 +511,18 @@ The safest final product direction is:
 
 ```text
 record data -> show trend -> estimate expected growth -> show signal -> explain limitations
+```
+
+For the future Computer Vision extension, correct interpretation is:
+
+```text
+The image has the strongest visual similarity to this trained class.
+```
+
+Incorrect interpretation is:
+
+```text
+The image proves the dog's official breed, pedigree or registry status.
 ```
 
 ---
