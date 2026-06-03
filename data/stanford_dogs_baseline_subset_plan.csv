@@ -1,0 +1,2 @@
+subset_name,source_dataset,source_selection_report,output_root,max_images_per_class,train_ratio,validation_ratio,test_ratio,random_seed,commit_images_to_git,notes
+stanford_dogs_first_baseline,Stanford Dogs / ImageNet Dogs,reports/stanford_dogs_baseline_class_selection.csv,data/images/local_dataset/splits/stanford_dogs_first_baseline,80,0.70,0.15,0.15,42,no,Local-only first baseline subset prepared from confirmed selected Stanford Dogs classes.
