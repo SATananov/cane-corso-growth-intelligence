@@ -141,3 +141,20 @@ python src/inspect_stanford_dogs_real_classes.py
 python src/select_stanford_dogs_baseline_classes.py
 python src/validate_stanford_dogs_real_inspection.py
 ```
+
+## Step 18.2 — official split-list archive correction
+
+During local testing, direct access to `file_list.mat` returned `404 Not Found`. This is not treated as a project failure. The safer download plan is to use the official Stanford Dogs `lists.tar` archive for split metadata, then extract it locally. This preserves the responsible boundary:
+
+- small metadata artifacts may be downloaded locally;
+- large image archives are still explicit-only;
+- no downloaded images or archives are committed to GitHub;
+- the visual module remains a visual-similarity learning module, not breed proof.
+
+Recommended small-artifact command:
+
+```powershell
+python src/download_stanford_dogs_local_dataset.py --download-small --force
+```
+
+This downloads `README.txt` and `lists.tar`, then extracts `lists.tar` locally when available.

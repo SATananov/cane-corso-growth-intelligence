@@ -108,6 +108,7 @@ def main() -> None:
     parser.add_argument("--download-annotations", action="store_true", help="Download the annotation.tar archive.")
     parser.add_argument("--extract-images", action="store_true", help="Extract images.tar into the local raw Stanford Dogs folder.")
     parser.add_argument("--extract-annotations", action="store_true", help="Extract annotation.tar under local downloads for later bounding-box work.")
+    parser.add_argument("--extract-lists", action="store_true", help="Extract lists.tar under local downloads to create train_list.mat/test_list.mat/file_list.mat when available.")
     parser.add_argument("--force", action="store_true", help="Overwrite existing downloaded/extracted files when possible.")
     args = parser.parse_args()
 
@@ -150,12 +151,16 @@ def main() -> None:
 
     images_archive = DOWNLOAD_ROOT / "images.tar"
     annotations_archive = DOWNLOAD_ROOT / "annotation.tar"
+    lists_archive = DOWNLOAD_ROOT / "lists.tar"
     image_extract_status = "not_requested"
     annotation_extract_status = "not_requested"
+    lists_extract_status = "not_requested"
     if args.extract_images:
         image_extract_status = extract_tar(images_archive, RAW_ROOT, force=args.force)
     if args.extract_annotations:
         annotation_extract_status = extract_tar(annotations_archive, DOWNLOAD_ROOT / "annotations_extracted", force=args.force)
+    if args.extract_lists or args.download_small:
+        lists_extract_status = extract_tar(lists_archive, DOWNLOAD_ROOT, force=args.force)
 
     REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
     lines = [
@@ -179,10 +184,13 @@ def main() -> None:
         "",
         f"- Images extraction status: `{image_extract_status}`",
         f"- Annotations extraction status: `{annotation_extract_status}`",
+        f"- Lists extraction status: `{lists_extract_status}`",
         "",
         "## Download safety note",
         "",
         "This script does not disable SSL verification. If the Stanford HTTPS endpoint fails on a local Python/Windows environment because of a certificate hostname mismatch, the script uses the official historically documented `http://vision.stanford.edu/...` Stanford Dogs endpoint instead.",
+        "",
+        "Step 18.2 note: individual `file_list.mat`, `train_list.mat`, and `test_list.mat` links are not downloaded directly, because the official Stanford Dogs distribution provides these split files through `lists.tar`.",
         "",
         "## Responsible boundary",
         "",
