@@ -1,0 +1,11 @@
+plan_item,value,notes
+project_step,Step 20,Training plan only; no model training in this step
+model_goal,visual_similarity_classification,Estimate class probabilities among selected local classes
+recommended_input_size,224x224,Common transfer-learning image size
+recommended_first_model,pretrained_backbone_frozen_feature_extractor,Fast and explainable for a course project
+fallback_model,feature_extractor_plus_logistic_regression,Useful if deep-learning training is too heavy
+train_split,train,Used for fitting model parameters
+validation_split,validation,Used for monitoring and selection
+test_split,test,Used only for final evaluation
+artifact_policy,no_large_artifacts_in_git,Images and large model weights stay local
+interpretation_boundary,visual_similarity_not_breed_proof,No pedigree/certificate/genetic/veterinary claim

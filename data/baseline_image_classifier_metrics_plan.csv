@@ -1,0 +1,9 @@
+metric,required,why_it_matters
+accuracy,yes,Simple baseline performance indicator
+macro_f1,yes,Balances performance across classes
+per_class_precision,yes,Shows false-positive behavior per class
+per_class_recall,yes,Shows missed examples per class
+confusion_matrix,yes,Shows which visual classes are confused
+example_predictions,yes,Helps explain probability outputs clearly
+training_loss,optional,Useful if a neural model is trained
+validation_loss,optional,Useful for overfitting monitoring
