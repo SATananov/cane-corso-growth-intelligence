@@ -1018,3 +1018,31 @@ Status:
 ```text
 Image Dataset Acquisition and Local Preparation ✅ planned / structure-only
 ```
+
+
+## Step 15 — First Public Image Dataset Candidate / Download Guide
+
+Files:
+
+```text
+docs/first_public_image_dataset_candidate_download_guide.md
+data/first_public_image_dataset_candidate.csv
+data/stanford_dogs_local_download_checklist.csv
+src/validate_first_public_image_dataset_candidate.py
+src/inspect_stanford_dogs_local_dataset.py
+notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+```
+
+Purpose:
+
+- choose the first public dataset candidate for the future visual-similarity baseline;
+- document the local-only download and extraction policy;
+- validate that image data is not committed to GitHub;
+- keep Cane Corso / molossoid class availability evidence-based;
+- preserve the boundary that visual similarity is not breed proof.
+
+Status:
+
+```text
+First public image dataset candidate / download guide ✅
+```

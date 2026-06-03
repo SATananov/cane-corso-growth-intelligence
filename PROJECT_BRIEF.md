@@ -537,3 +537,18 @@ This turns each lecture from a code exercise into a mathematically explained mod
 ## Dataset Selection Rationale
 
 The selected real public data source is documented in `docs/dataset_selection_rationale.md`. Kaggle was considered as a general dataset-search option, but the University of Liverpool DataCat / PLOS ONE dog growth dataset was selected because it is more directly connected to age/bodyweight growth monitoring.
+
+
+## Step 15 — First Public Image Dataset Candidate
+
+The project now has a documented first public image dataset candidate for the future visual-similarity module.
+
+The candidate is Stanford Dogs / ImageNet Dogs, used only as a public baseline candidate. Step 15 does not train a Computer Vision model. It prepares the responsible data-acquisition plan and local inspection flow.
+
+This supports the long-term direction:
+
+```text
+growth intelligence from tabular measurements + visual similarity from images
+```
+
+The visual result must remain educational and probabilistic. It should never be presented as breed proof, pedigree proof, registry proof or veterinary diagnosis.

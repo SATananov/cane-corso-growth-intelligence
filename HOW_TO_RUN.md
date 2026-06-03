@@ -393,3 +393,21 @@ notebooks/05_1_practical_growth_assessment_workflow.ipynb
 ```
 
 This step demonstrates practical applicability while keeping the project educational and mathematically transparent.
+
+
+### First Public Image Dataset Candidate / Download Guide
+
+```text
+notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+```
+
+This notebook documents the first public image dataset candidate for the future Computer Vision module. It does not download images and does not train a model. It validates the local download-guide artifacts and explains how Stanford Dogs can be prepared locally without committing images to GitHub.
+
+Useful commands:
+
+```bash
+python src/validate_first_public_image_dataset_candidate.py
+python src/inspect_stanford_dogs_local_dataset.py
+```
+
+The inspection script is safe before download: zero local images is acceptable at this stage.

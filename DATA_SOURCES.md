@@ -368,3 +368,26 @@ The project does not attempt to identify clients, owners, animals, or clinics.
 The data is used only for educational machine-learning experiments.
 
 The project does not provide veterinary diagnosis. Model outputs should be interpreted as growth-monitoring signals for analysis and learning, not as medical conclusions.
+
+
+## Step 15 — First Public Image Dataset Candidate
+
+For the future Computer Vision visual-similarity extension, the first public dataset candidate is:
+
+```text
+Stanford Dogs / ImageNet Dogs
+```
+
+It is selected as a first educational baseline candidate because it is a known dog-breed image dataset with class labels and a standard fine-grained classification purpose.
+
+The project does not assume that Cane Corso, Dogo Argentino, Presa Canario or any target molossoid class is present before the real downloaded labels are inspected.
+
+Local image archives and extracted image folders must stay outside Git history.
+
+Step 15 artifacts:
+
+```text
+docs/first_public_image_dataset_candidate_download_guide.md
+data/first_public_image_dataset_candidate.csv
+data/stanford_dogs_local_download_checklist.csv
+```

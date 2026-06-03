@@ -633,3 +633,31 @@ python src/validate_local_image_dataset.py
 The folder `data/images/local_dataset/` is ignored by Git. It can contain downloaded public image datasets or future permission-based owner photos on the developer machine, but image files should not be committed.
 
 Responsible boundary: this step prepares data governance and local structure only. It does not download images, train a Computer Vision model, or prove breed identity.
+
+
+## Step 15 — First Public Image Dataset Candidate
+
+The project now documents the first public dataset candidate for the future Computer Vision visual-similarity module:
+
+```text
+Stanford Dogs / ImageNet Dogs
+```
+
+This step does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to GitHub, and how local labels/classes should be inspected before any baseline classifier is trained.
+
+Related files:
+
+```text
+docs/first_public_image_dataset_candidate_download_guide.md
+data/first_public_image_dataset_candidate.csv
+data/stanford_dogs_local_download_checklist.csv
+notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+src/validate_first_public_image_dataset_candidate.py
+src/inspect_stanford_dogs_local_dataset.py
+```
+
+Responsible boundary:
+
+```text
+visual similarity only; not breed proof, pedigree proof, registry proof or veterinary diagnosis
+```
