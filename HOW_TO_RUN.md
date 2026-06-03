@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains seven notebooks.
+The project currently contains eight notebooks.
 
 ### Project Concept and Mathematical Framing
 
@@ -163,6 +163,14 @@ This document covers:
 
 The project contains prototype data and processed real public data samples.
 
+The selected real public source is the University of Liverpool DataCat / PLOS ONE dog growth dataset. Kaggle was considered as a useful dataset-search idea, but the selected source is more directly connected to age/bodyweight growth monitoring.
+
+Read the data-source explanation here:
+
+```text
+docs/dataset_selection_rationale.md
+```
+
 ### Prototype dataset
 
 ```text
@@ -206,6 +214,8 @@ The project includes scripts used to create processed samples from the local raw
 ```text
 src/create_public_sample.py
 src/create_classification_sample.py
+src/create_time_series_features.py
+src/run_growth_assessment.py
 ```
 
 The original public dataset is distributed as a compressed archive. In this project, it is referred to as the **raw dataset archive** and should be kept locally in:
@@ -231,7 +241,7 @@ The project currently covers four completed course topics:
 3. Unsupervised Learning and Clustering
 4. Feature Engineering and Time Series
 
-It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset.
+It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
 
 The next planned course topic is:
 
@@ -292,7 +302,7 @@ data/input/example_new_cane_corso_measurements.csv
 Run from the project root:
 
 ```powershell
-& ".\.venv\Scripts\python.exe" "srcun_growth_assessment.py"
+& ".\.venv\Scripts\python.exe" ".\src\run_growth_assessment.py"
 ```
 
 Expected outputs:

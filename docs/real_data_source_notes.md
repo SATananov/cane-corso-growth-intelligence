@@ -44,6 +44,26 @@ The project uses the Cane Corso domain as a practical product case, but the publ
 
 ---
 
+## Why This Source Was Selected Instead of Kaggle
+
+Kaggle is a useful dataset-discovery platform, and it can be a good starting point for many student machine-learning projects. For this project, however, the goal is not simply to find any dog-related dataset.
+
+The project needs data that matches the mathematical problem:
+
+```text
+age/bodyweight records -> growth features -> model training -> monitoring signal
+```
+
+Many general dog datasets are better suited for other tasks, such as image classification, breed description lookup, adoption analysis or synthetic wellness examples. The selected University of Liverpool DataCat / PLOS ONE source is more directly aligned with dog bodyweight growth monitoring.
+
+A full explanation is available in:
+
+```text
+docs/dataset_selection_rationale.md
+```
+
+---
+
 ## Available Raw Files
 
 The DataCat source lists files such as:

@@ -72,7 +72,30 @@ The project does not claim that the public dataset is a private Cane Corso-only 
 
 ---
 
-## 3. Raw Dataset Archive Rule
+## 3. Why This Dataset Instead of Kaggle?
+
+Kaggle is a useful place to search for datasets, and it was considered as a possible source during the project planning. However, the project does not only need general dog data. It needs data that supports a mathematical growth-monitoring problem.
+
+A random dog-related dataset may focus on images, breed descriptions, adoption records, synthetic wellness examples or general metadata. Those datasets may be useful for other tasks, but they do not necessarily support age/bodyweight growth modelling.
+
+The University of Liverpool DataCat / PLOS ONE dataset was selected because it is directly connected to dog bodyweight growth standards and contains the type of information needed for growth-related machine-learning experiments.
+
+Dedicated explanation:
+
+```text
+docs/dataset_selection_rationale.md
+```
+
+Main project boundary:
+
+```text
+Real public dog-growth dataset = data foundation.
+Cane Corso Growth Intelligence = domain and product context.
+```
+
+---
+
+## 4. Raw Dataset Archive Rule
 
 The full original dataset should not be committed directly to GitHub.
 
@@ -108,7 +131,7 @@ docs/raw_dataset_archive_policy.md
 
 ---
 
-## 4. General Processed Real Public Sample
+## 5. General Processed Real Public Sample
 
 File:
 
@@ -156,7 +179,7 @@ This sample is committed to GitHub because it is small and usable for notebook e
 
 ---
 
-## 5. Classification-Focused Processed Sample
+## 6. Classification-Focused Processed Sample
 
 File:
 
@@ -213,7 +236,31 @@ notebooks/03_1_classification_pipeline_exercise.ipynb
 
 ---
 
-## 6. Why This Data Choice Is Useful
+## 7. Time-Series Feature Sample
+
+File:
+
+```text
+data/processed/cane_corso_time_series_features.csv
+```
+
+Created by:
+
+```text
+src/create_time_series_features.py
+```
+
+This sample supports the Feature Engineering and Time Series stage. It contains engineered measurements such as lag features, weight gain, height gain, growth velocity, weight-to-height ratio, rolling average weight and z-score based monitoring signals.
+
+This file is used in:
+
+```text
+notebooks/05_feature_engineering_time_series_growth.ipynb
+```
+
+---
+
+## 8. Why This Data Choice Is Useful
 
 The project is stronger than a fully synthetic exercise because it has:
 
@@ -227,7 +274,7 @@ This allows the project to stay honest while still being useful and interesting.
 
 ---
 
-## 7. Data Ethics and Limitations
+## 9. Data Ethics and Limitations
 
 The project does not attempt to identify clients, owners, animals, or clinics.
 

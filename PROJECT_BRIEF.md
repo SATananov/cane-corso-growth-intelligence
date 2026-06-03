@@ -454,3 +454,8 @@ This turns each lecture from a code exercise into a mathematically explained mod
 
 ---
 
+
+
+## Dataset Selection Rationale
+
+The selected real public data source is documented in `docs/dataset_selection_rationale.md`. Kaggle was considered as a general dataset-search option, but the University of Liverpool DataCat / PLOS ONE dog growth dataset was selected because it is more directly connected to age/bodyweight growth monitoring.

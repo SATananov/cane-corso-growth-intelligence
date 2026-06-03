@@ -214,6 +214,32 @@ Linear Regression, Regularization and Testing ✅ strengthened in Step 08
 
 ---
 
+## Data Source Selection Rationale
+
+Covered in:
+
+```text
+DATA_SOURCES.md
+docs/real_data_source_notes.md
+docs/dataset_selection_rationale.md
+```
+
+The project documents why the University of Liverpool DataCat / PLOS ONE dog growth dataset was selected instead of a generic dog-related Kaggle dataset.
+
+Reason:
+
+```text
+The selected public source is directly connected to age, bodyweight and growth monitoring, while many general dog datasets are designed for different tasks such as images, breed descriptions or synthetic wellness examples.
+```
+
+Status:
+
+```text
+Dataset selection rationale ✅
+```
+
+---
+
 # Real Data Foundation
 
 Files:
@@ -223,6 +249,7 @@ DATA_SOURCES.md
 docs/real_data_source_notes.md
 docs/real_data_download_instructions.md
 docs/raw_dataset_archive_policy.md
+docs/dataset_selection_rationale.md
 docs/data_preparation_plan.md
 notebooks/02_real_data_preparation.ipynb
 src/create_public_sample.py

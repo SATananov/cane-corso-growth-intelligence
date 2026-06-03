@@ -69,7 +69,7 @@ Different course topics use the same data representation in different ways:
 | Feature Engineering | transform raw measurements | create growth velocity, ratios, deviations |
 | Time Series | analyze ordered records | monitor development as a trajectory |
 | Dimensionality Reduction | project high-dimensional data | visualize structure and separation |
-| MLflow | track experiments | compare models, metrics, parameters and runs |
+| MLflow | planned future topic | track and compare models, metrics, parameters and runs after the course topic is added |
 
 The project is designed to show the full flow:
 
@@ -201,6 +201,18 @@ data/processed/dog_growth_classification_sample.csv
 data/processed/cane_corso_time_series_features.csv
 ```
 
+### Why This Dataset Instead of Kaggle?
+
+Kaggle is a useful place to search for public datasets, but the project needs more than general dog metadata. The mathematical task requires growth-related information such as age, bodyweight and repeated monitoring logic.
+
+For that reason, the project uses the University of Liverpool DataCat / PLOS ONE dog growth dataset as the selected real public foundation. It is more directly connected to dog bodyweight growth standards than a random dog-related Kaggle dataset.
+
+A dedicated explanation is available in:
+
+```text
+docs/dataset_selection_rationale.md
+```
+
 ### Raw Dataset Archive Terminology
 
 The original public dataset is distributed by its source as a compressed archive file. In this project, that file is called the **raw dataset archive**:
@@ -231,6 +243,7 @@ Completed stages:
 6. **Unsupervised Learning and Clustering** — added K-Means, k-means++, Hierarchical Clustering, method comparison and DBSCAN
 7. **Clustering Mathematical Application Polish** — strengthened the practical application bridge, formulas and responsible interpretation for the clustering notebook
 8. **Feature Engineering and Time Series** — added lag features, growth velocity, rolling averages, z-score signals and trajectory visualizations
+9. **Dataset Selection Rationale** — documented why the Liverpool DataCat / PLOS ONE dog growth dataset was selected instead of a generic Kaggle dataset
 
 Next planned course topic:
 
@@ -248,13 +261,17 @@ For a reviewer or instructor, the easiest order is:
 ```text
 1. README.md
 2. PROJECT_BRIEF.md
-3. COURSE_TOPIC_MAPPING.md
-4. notebooks/00_project_concept_and_mathematical_framing.ipynb
-5. notebooks/01_linear_regression_growth_prediction.ipynb
-6. notebooks/02_real_data_preparation.ipynb
-7. notebooks/03_classification_growth_status.ipynb
-8. notebooks/03_1_classification_pipeline_exercise.ipynb
-9. notebooks/04_unsupervised_learning_clustering.ipynb
+3. DATA_SOURCES.md
+4. docs/dataset_selection_rationale.md
+5. COURSE_TOPIC_MAPPING.md
+6. notebooks/00_project_concept_and_mathematical_framing.ipynb
+7. notebooks/01_linear_regression_growth_prediction.ipynb
+8. notebooks/02_real_data_preparation.ipynb
+9. notebooks/03_classification_growth_status.ipynb
+10. notebooks/03_1_classification_pipeline_exercise.ipynb
+11. notebooks/04_unsupervised_learning_clustering.ipynb
+12. notebooks/05_feature_engineering_time_series_growth.ipynb
+13. notebooks/05_1_practical_growth_assessment_workflow.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -266,14 +283,19 @@ The course mapping file explains exactly where each lecture requirement is cover
 ```text
 cane-corso-growth-intelligence/
 ├── data/
+│   ├── input/
+│   │   └── example_new_cane_corso_measurements.csv
 │   ├── prototype/
 │   │   └── cane_corso_growth_sample.csv
 │   ├── raw/
 │   │   └── source_notes.md
 │   └── processed/
 │       ├── dog_growth_public_sample.csv
-│       └── dog_growth_classification_sample.csv
+│       ├── dog_growth_classification_sample.csv
+│       ├── cane_corso_time_series_features.csv
+│       └── example_growth_assessment_features.csv
 ├── docs/
+│   ├── dataset_selection_rationale.md
 │   ├── product_idea_and_mathematical_framing.md
 │   ├── model_learning_explanation.md
 │   ├── real_data_source_notes.md
@@ -282,19 +304,26 @@ cane-corso-growth-intelligence/
 │   ├── data_preparation_plan.md
 │   ├── math_foundation.md
 │   ├── geometric_interpretation.md
-│   └── clustering_learning_notes.md
+│   ├── clustering_learning_notes.md
+│   ├── feature_engineering_time_series_notes.md
+│   └── practical_growth_assessment_workflow.md
 ├── notebooks/
 │   ├── 00_project_concept_and_mathematical_framing.ipynb
 │   ├── 01_linear_regression_growth_prediction.ipynb
 │   ├── 02_real_data_preparation.ipynb
 │   ├── 03_classification_growth_status.ipynb
 │   ├── 03_1_classification_pipeline_exercise.ipynb
-│   └── 04_unsupervised_learning_clustering.ipynb
+│   ├── 04_unsupervised_learning_clustering.ipynb
+│   ├── 05_feature_engineering_time_series_growth.ipynb
+│   └── 05_1_practical_growth_assessment_workflow.ipynb
 ├── reports/
+│   ├── example_growth_assessment_report.md
 │   └── figures/
 ├── src/
 │   ├── create_public_sample.py
-│   └── create_classification_sample.py
+│   ├── create_classification_sample.py
+│   ├── create_time_series_features.py
+│   └── run_growth_assessment.py
 ├── COURSE_TOPIC_MAPPING.md
 ├── DATA_SOURCES.md
 ├── HOW_TO_RUN.md
@@ -355,6 +384,22 @@ notebooks/04_unsupervised_learning_clustering.ipynb
 
 Covers unsupervised learning motivation, K-Means with `k-means++`, elbow and silhouette checks, Hierarchical Clustering, comparison between K-Means and Hierarchical Clustering, and DBSCAN density-based clustering/noise detection. Step 09.1 strengthens the notebook with a clearer real-world application bridge, feature-vector formulation, K-Means objective, DBSCAN review-candidate interpretation and safe product wording.
 
+### 5. Feature Engineering and Time Series
+
+```text
+notebooks/05_feature_engineering_time_series_growth.ipynb
+```
+
+Covers lag features, growth velocity, weight-to-height ratio, rolling averages, z-score monitoring signals and trajectory visualizations.
+
+### 5.1. Practical Growth Assessment Workflow
+
+```text
+notebooks/05_1_practical_growth_assessment_workflow.ipynb
+```
+
+Shows how new owner-style measurements can be transformed into a readable educational growth assessment report.
+
 ---
 
 ## Course Topic Flow
@@ -392,6 +437,9 @@ flowchart TD
 | `docs/math_foundation.md` | Mathematical formulas and model intuition |
 | `docs/geometric_interpretation.md` | Coordinate-space view of models and feature space |
 | `docs/clustering_learning_notes.md` | Unsupervised learning, K-Means, HC and DBSCAN explanation |
+| `docs/feature_engineering_time_series_notes.md` | Feature engineering and time-series growth-monitoring notes |
+| `docs/practical_growth_assessment_workflow.md` | Applied owner-style growth assessment workflow |
+| `docs/dataset_selection_rationale.md` | Explanation of why the Liverpool DataCat / PLOS ONE dataset was selected instead of a general Kaggle dataset |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
 | `COURSE_TOPIC_MAPPING.md` | Mapping between course lectures and project files |
 
@@ -434,7 +482,7 @@ data/input/example_new_cane_corso_measurements.csv
 Run script:
 
 ```powershell
-& ".\.venv\Scripts\python.exe" "srcun_growth_assessment.py"
+& ".\.venv\Scripts\python.exe" ".\src\run_growth_assessment.py"
 ```
 
 Generated outputs:
