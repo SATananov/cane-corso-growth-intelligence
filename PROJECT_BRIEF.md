@@ -552,3 +552,12 @@ growth intelligence from tabular measurements + visual similarity from images
 ```
 
 The visual result must remain educational and probabilistic. It should never be presented as breed proof, pedigree proof, registry proof or veterinary diagnosis.
+
+
+## Step 16 — Evidence-Based Visual Class Selection
+
+The project now includes a local class-selection workflow for the first public image dataset candidate.
+
+This protects the Computer Vision extension from overstating what the dataset can support. A future image classifier can only return probabilities for classes included in its training labels.
+
+Therefore, Cane Corso-specific visual recognition remains future work unless a verified public dataset or consent-based USG dataset provides confirmed Cane Corso images.

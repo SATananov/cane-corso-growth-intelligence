@@ -661,3 +661,28 @@ Responsible boundary:
 ```text
 visual similarity only; not breed proof, pedigree proof, registry proof or veterinary diagnosis
 ```
+
+
+## Step 16 — Local Stanford Dogs Inspection / Baseline Class Selection
+
+The project now includes an evidence-based baseline class-selection workflow for the future Computer Vision visual-similarity module.
+
+Step 16 does not train an image model. It checks which selected baseline classes are actually available in the local Stanford Dogs dataset folders and writes a small report.
+
+Related files:
+
+```text
+docs/local_stanford_dogs_inspection_baseline_class_selection.md
+docs/baseline_visual_class_selection_policy.md
+data/stanford_dogs_baseline_class_candidates.csv
+data/stanford_dogs_baseline_class_selection_template.csv
+notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
+src/select_stanford_dogs_baseline_classes.py
+src/validate_stanford_baseline_class_selection.py
+```
+
+Important boundary:
+
+```text
+If Cane Corso, Dogo Argentino or Presa Canario are not confirmed in the selected public dataset, the project must not claim that the model can recognize them.
+```

@@ -370,24 +370,25 @@ The data is used only for educational machine-learning experiments.
 The project does not provide veterinary diagnosis. Model outputs should be interpreted as growth-monitoring signals for analysis and learning, not as medical conclusions.
 
 
-## Step 15 — First Public Image Dataset Candidate
+## Step 16 — Stanford Dogs Baseline Class Selection
 
-For the future Computer Vision visual-similarity extension, the first public dataset candidate is:
+Step 16 adds a class-selection workflow for the local Stanford Dogs candidate.
+
+The project now documents likely baseline candidates such as Boxer, Bullmastiff and Great Dane, but still requires local label inspection before any class is used for training.
+
+Supporting files:
 
 ```text
-Stanford Dogs / ImageNet Dogs
+docs/local_stanford_dogs_inspection_baseline_class_selection.md
+docs/baseline_visual_class_selection_policy.md
+data/stanford_dogs_baseline_class_candidates.csv
+data/stanford_dogs_baseline_class_selection_template.csv
+src/select_stanford_dogs_baseline_classes.py
+src/validate_stanford_baseline_class_selection.py
 ```
 
-It is selected as a first educational baseline candidate because it is a known dog-breed image dataset with class labels and a standard fine-grained classification purpose.
-
-The project does not assume that Cane Corso, Dogo Argentino, Presa Canario or any target molossoid class is present before the real downloaded labels are inspected.
-
-Local image archives and extracted image folders must stay outside Git history.
-
-Step 15 artifacts:
+Important rule:
 
 ```text
-docs/first_public_image_dataset_candidate_download_guide.md
-data/first_public_image_dataset_candidate.csv
-data/stanford_dogs_local_download_checklist.csv
+Desired target classes must not be treated as available training classes until verified from local labels or a documented data source.
 ```

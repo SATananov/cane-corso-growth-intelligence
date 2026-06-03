@@ -395,19 +395,19 @@ notebooks/05_1_practical_growth_assessment_workflow.ipynb
 This step demonstrates practical applicability while keeping the project educational and mathematically transparent.
 
 
-### First Public Image Dataset Candidate / Download Guide
+### Local Stanford Dogs Inspection / Baseline Class Selection
 
 ```text
-notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 ```
 
-This notebook documents the first public image dataset candidate for the future Computer Vision module. It does not download images and does not train a model. It validates the local download-guide artifacts and explains how Stanford Dogs can be prepared locally without committing images to GitHub.
+This notebook documents the local inspection and first-baseline class selection workflow for Stanford Dogs.
 
 Useful commands:
 
 ```bash
-python src/validate_first_public_image_dataset_candidate.py
-python src/inspect_stanford_dogs_local_dataset.py
+python src/select_stanford_dogs_baseline_classes.py
+python src/validate_stanford_baseline_class_selection.py
 ```
 
-The inspection script is safe before download: zero local images is acceptable at this stage.
+Before the dataset is downloaded locally, zero confirmed classes is acceptable. The purpose is to keep class selection evidence-based before any image model is trained.

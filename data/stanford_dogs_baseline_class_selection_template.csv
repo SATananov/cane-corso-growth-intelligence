@@ -1,0 +1,5 @@
+dataset_name,candidate_id,preferred_display_name,local_class_folder,available_locally,image_count,include_in_first_baseline,baseline_role,decision_notes
+Stanford Dogs / ImageNet Dogs,stanford_boxer,Boxer,,unknown_before_local_inspection,0,pending,near_molossoid_control_class,filled by src/select_stanford_dogs_baseline_classes.py after local inspection
+Stanford Dogs / ImageNet Dogs,stanford_bull_mastiff,Bullmastiff,,unknown_before_local_inspection,0,pending,large_molossoid_like_baseline_class,filled by src/select_stanford_dogs_baseline_classes.py after local inspection
+Stanford Dogs / ImageNet Dogs,stanford_great_dane,Great Dane,,unknown_before_local_inspection,0,pending,large_giant_breed_contrast_class,filled by src/select_stanford_dogs_baseline_classes.py after local inspection
+Stanford Dogs / ImageNet Dogs,stanford_mastiff,Mastiff,,unknown_before_local_inspection,0,pending,large_mastiff_type_candidate_if_present,filled by src/select_stanford_dogs_baseline_classes.py after local inspection

@@ -1020,29 +1020,29 @@ Image Dataset Acquisition and Local Preparation ✅ planned / structure-only
 ```
 
 
-## Step 15 — First Public Image Dataset Candidate / Download Guide
+## Step 16 — Local Stanford Dogs Inspection / Baseline Class Selection
 
 Files:
 
 ```text
-docs/first_public_image_dataset_candidate_download_guide.md
-data/first_public_image_dataset_candidate.csv
-data/stanford_dogs_local_download_checklist.csv
-src/validate_first_public_image_dataset_candidate.py
-src/inspect_stanford_dogs_local_dataset.py
-notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+docs/local_stanford_dogs_inspection_baseline_class_selection.md
+docs/baseline_visual_class_selection_policy.md
+data/stanford_dogs_baseline_class_candidates.csv
+data/stanford_dogs_baseline_class_selection_template.csv
+src/select_stanford_dogs_baseline_classes.py
+src/validate_stanford_baseline_class_selection.py
+notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 ```
 
-Purpose:
+Course connection:
 
-- choose the first public dataset candidate for the future visual-similarity baseline;
-- document the local-only download and extraction policy;
-- validate that image data is not committed to GitHub;
-- keep Cane Corso / molossoid class availability evidence-based;
-- preserve the boundary that visual similarity is not breed proof.
+- translates a real-world image idea into a supervised classification label-space problem;
+- explains why a classifier can only predict known training classes;
+- keeps data preparation, label validation and responsible interpretation separate from model training;
+- prepares the project for a future baseline image classifier.
 
 Status:
 
 ```text
-First public image dataset candidate / download guide ✅
+Local Stanford Dogs inspection / baseline class selection ✅
 ```
