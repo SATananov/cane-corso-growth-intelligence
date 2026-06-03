@@ -686,3 +686,32 @@ Important boundary:
 ```text
 If Cane Corso, Dogo Argentino or Presa Canario are not confirmed in the selected public dataset, the project must not claim that the model can recognize them.
 ```
+
+
+## Step 17 — Stanford Dogs Local Download / Real Class Inspection
+
+Step 17 adds a safe local Stanford Dogs download and real class inspection workflow.
+
+The workflow is intentionally conservative:
+
+- large image archives are not downloaded by default
+- downloaded images remain local and ignored by Git
+- real class folders are inspected before any baseline image model is trained
+- results are framed as visual similarity only, not breed proof or certificate logic
+
+Useful commands:
+
+```bash
+python src/download_stanford_dogs_local_dataset.py
+python src/inspect_stanford_dogs_real_classes.py
+python src/validate_stanford_dogs_real_inspection.py
+```
+
+Optional local download sequence:
+
+```bash
+python src/download_stanford_dogs_local_dataset.py --download-small
+python src/download_stanford_dogs_local_dataset.py --download-images
+python src/download_stanford_dogs_local_dataset.py --extract-images
+python src/inspect_stanford_dogs_real_classes.py
+```

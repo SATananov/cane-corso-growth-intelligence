@@ -561,3 +561,10 @@ The project now includes a local class-selection workflow for the first public i
 This protects the Computer Vision extension from overstating what the dataset can support. A future image classifier can only return probabilities for classes included in its training labels.
 
 Therefore, Cane Corso-specific visual recognition remains future work unless a verified public dataset or consent-based USG dataset provides confirmed Cane Corso images.
+
+
+## Step 17 Computer Vision Data Inspection Extension
+
+The project now includes a local inspection workflow for Stanford Dogs / ImageNet Dogs. This supports the future visual-similarity classifier by verifying real local class folders before model training.
+
+This extension strengthens the project methodology because it separates desired classes from available labels and keeps the visual module honest and evidence-based.

@@ -411,3 +411,28 @@ python src/validate_stanford_baseline_class_selection.py
 ```
 
 Before the dataset is downloaded locally, zero confirmed classes is acceptable. The purpose is to keep class selection evidence-based before any image model is trained.
+
+
+## Step 17 — Stanford Dogs Local Download / Real Class Inspection
+
+Safe checks without downloading large files:
+
+```bash
+python src/download_stanford_dogs_local_dataset.py
+python src/inspect_stanford_dogs_real_classes.py
+python src/validate_stanford_dogs_real_inspection.py
+python src/select_stanford_dogs_baseline_classes.py
+python src/validate_stanford_baseline_class_selection.py
+```
+
+Optional real local download when ready:
+
+```bash
+python src/download_stanford_dogs_local_dataset.py --download-small
+python src/download_stanford_dogs_local_dataset.py --download-images
+python src/download_stanford_dogs_local_dataset.py --extract-images
+python src/inspect_stanford_dogs_real_classes.py
+python src/select_stanford_dogs_baseline_classes.py
+```
+
+Do not commit downloaded images, archives or extracted dataset folders.

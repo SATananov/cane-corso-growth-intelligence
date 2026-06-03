@@ -392,3 +392,12 @@ Important rule:
 ```text
 Desired target classes must not be treated as available training classes until verified from local labels or a documented data source.
 ```
+
+
+## Step 17 Stanford Dogs Local Download Boundary
+
+Stanford Dogs / ImageNet Dogs remains the first public image dataset candidate for the Computer Vision branch.
+
+Step 17 adds local-only download and inspection artifacts. It does not commit image files and does not assume that any desired molossoid class is available until local class folders are inspected.
+
+Large image archives must be downloaded only with explicit user action and kept under ignored local dataset folders.

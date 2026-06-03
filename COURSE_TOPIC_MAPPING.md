@@ -1046,3 +1046,15 @@ Status:
 ```text
 Local Stanford Dogs inspection / baseline class selection ✅
 ```
+
+
+## Step 17 Mapping — Local Public Image Dataset Inspection
+
+Course-relevant skills demonstrated:
+
+- dataset acquisition planning
+- responsible local data handling
+- class-label availability inspection
+- reproducible preprocessing workflow design
+- clear separation between data inspection and model training
+- explicit limitation language for visual-similarity ML
