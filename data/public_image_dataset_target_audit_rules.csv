@@ -1,0 +1,8 @@
+target_class,priority,baseline_policy,reason
+cane_corso,primary_long_term,future_consent_required_unless_public_exact_class_confirmed,Main USG visual context; do not fake availability if public dataset lacks a clean class.
+dogo_argentino,comparison_long_term,future_consent_required_unless_public_exact_class_confirmed,Important molossoid comparison class.
+presa_canario,comparison_long_term,future_consent_required_unless_public_exact_class_confirmed,Important molossoid comparison class.
+great_dane,baseline_candidate,use_if_public_class_confirmed,Large dog comparison class; visually distinct and useful for baseline.
+bullmastiff,baseline_candidate,use_if_public_class_confirmed,Related mastiff-type comparison class.
+boxer,baseline_candidate,use_if_public_class_confirmed,Common public dataset class and useful contrast.
+other_unknown,safety_class,use_with_caution,Avoid forcing every image into a target breed; supports uncertainty handling.
