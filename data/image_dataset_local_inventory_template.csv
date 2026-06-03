@@ -1,0 +1,5 @@
+dataset_name,source_url_or_reference,local_storage_path,class_list_checked,terms_checked,allowed_for_education,download_date,notes
+Stanford Dogs Dataset,official dataset page,data/images/local_dataset/downloads/stanford_dogs,pending,pending,pending,,Candidate only; verify class list and terms before use.
+Tsinghua Dogs Dataset,official dataset page,data/images/local_dataset/downloads/tsinghua_dogs,pending,pending,pending,,Candidate only; verify class list and terms before use.
+Kaggle Dog Breed Identification,Kaggle competition page,data/images/local_dataset/downloads/kaggle_dog_breed_identification,pending,pending,pending,,Candidate only; use Kaggle terms and do not commit downloaded images.
+Future USG Consent Dataset,owner permission workflow,data/images/local_dataset/downloads/usg_consent_images,pending,pending,pending,,Future local-only dataset requiring explicit permission.

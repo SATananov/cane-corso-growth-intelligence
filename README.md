@@ -230,13 +230,18 @@ Supporting files:
 docs/computer_vision_visual_similarity_plan.md
 docs/image_dataset_research_plan.md
 docs/image_dataset_feasibility.md
+docs/image_dataset_acquisition_and_local_preparation.md
 notebooks/06_computer_vision_visual_similarity_concept.ipynb
 notebooks/07_image_dataset_feasibility.ipynb
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
 data/image_dataset_manifest_example.csv
 data/image_dataset_feasibility_matrix.csv
 data/molossoid_visual_target_classes.csv
+data/image_dataset_local_inventory_template.csv
 src/validate_image_manifest.py
 src/validate_image_dataset_feasibility.py
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py
 ```
 
 ### Raw Dataset Archive Terminology
@@ -272,6 +277,7 @@ Completed stages:
 9. **Dataset Selection Rationale** — documented why the Liverpool DataCat / PLOS ONE dog growth dataset was selected instead of a generic Kaggle dataset
 10. **Computer Vision Visual Similarity Plan** — added a future image-classification extension plan, dataset research strategy, manifest example and responsible visual-similarity boundary
 11. **Public Image Dataset Feasibility** — added public image dataset candidates, target molossoid class planning, repository data rules and validation before image-model training
+12. **Image Dataset Acquisition and Local Preparation** — added local-only image dataset structure, inventory template and validation scripts before any image model training
 
 Next planned course topic:
 
@@ -296,7 +302,8 @@ For a reviewer or instructor, the easiest order is:
 5. docs/computer_vision_visual_similarity_plan.md
 6. docs/image_dataset_research_plan.md
 7. docs/image_dataset_feasibility.md
-8. COURSE_TOPIC_MAPPING.md
+8. docs/image_dataset_acquisition_and_local_preparation.md
+9. COURSE_TOPIC_MAPPING.md
 8. notebooks/00_project_concept_and_mathematical_framing.ipynb
 9. notebooks/01_linear_regression_growth_prediction.ipynb
 10. notebooks/02_real_data_preparation.ipynb
@@ -307,6 +314,7 @@ For a reviewer or instructor, the easiest order is:
 15. notebooks/05_1_practical_growth_assessment_workflow.ipynb
 16. notebooks/06_computer_vision_visual_similarity_concept.ipynb
 17. notebooks/07_image_dataset_feasibility.ipynb
+18. notebooks/08_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -321,10 +329,14 @@ cane-corso-growth-intelligence/
 │   ├── input/
 │   │   └── example_new_cane_corso_measurements.csv
 │   ├── images/
-│   │   └── README.md
+│   │   ├── README.md
+│   │   └── local_dataset/
+│   │       ├── .gitignore
+│   │       └── README.md
 │   ├── image_dataset_manifest_example.csv
 │   ├── image_dataset_feasibility_matrix.csv
 │   ├── molossoid_visual_target_classes.csv
+│   ├── image_dataset_local_inventory_template.csv
 │   ├── prototype/
 │   │   └── cane_corso_growth_sample.csv
 │   ├── raw/
@@ -339,6 +351,7 @@ cane-corso-growth-intelligence/
 │   ├── computer_vision_visual_similarity_plan.md
 │   ├── image_dataset_research_plan.md
 │   ├── image_dataset_feasibility.md
+│   ├── image_dataset_acquisition_and_local_preparation.md
 │   ├── product_idea_and_mathematical_framing.md
 │   ├── model_learning_explanation.md
 │   ├── real_data_source_notes.md
@@ -360,7 +373,8 @@ cane-corso-growth-intelligence/
 │   ├── 05_feature_engineering_time_series_growth.ipynb
 │   ├── 05_1_practical_growth_assessment_workflow.ipynb
 │   ├── 06_computer_vision_visual_similarity_concept.ipynb
-│   └── 07_image_dataset_feasibility.ipynb
+│   ├── 07_image_dataset_feasibility.ipynb
+│   └── 08_image_dataset_acquisition_local_preparation.ipynb
 ├── reports/
 │   ├── example_growth_assessment_report.md
 │   └── figures/
@@ -370,7 +384,9 @@ cane-corso-growth-intelligence/
 │   ├── create_time_series_features.py
 │   ├── run_growth_assessment.py
 │   ├── validate_image_manifest.py
-│   └── validate_image_dataset_feasibility.py
+│   ├── validate_image_dataset_feasibility.py
+│   ├── prepare_image_dataset_structure.py
+│   └── validate_local_image_dataset.py
 ├── COURSE_TOPIC_MAPPING.md
 ├── DATA_SOURCES.md
 ├── HOW_TO_RUN.md
@@ -463,6 +479,14 @@ notebooks/07_image_dataset_feasibility.ipynb
 
 Adds a public image dataset feasibility check before any Computer Vision model is trained. It reviews public dataset candidates, target molossoid classes, repository storage rules and responsible limitations.
 
+### 8. Image Dataset Acquisition and Local Preparation
+
+```text
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+```
+
+Documents the local-only image dataset preparation workflow. It explains how future public or consent-based image datasets should be stored locally, ignored by Git, inventoried, split and validated before Computer Vision training.
+
 ---
 
 ## Course Topic Flow
@@ -508,6 +532,7 @@ flowchart TD
 | `docs/computer_vision_visual_similarity_plan.md` | Future Computer Vision extension plan for visual similarity, not breed proof |
 | `docs/image_dataset_research_plan.md` | Public image dataset research and image data governance plan |
 | `docs/image_dataset_feasibility.md` | Step 12 public image dataset feasibility decision before Computer Vision training |
+| `docs/image_dataset_acquisition_and_local_preparation.md` | Step 13 local image dataset acquisition and preparation workflow |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
 | `COURSE_TOPIC_MAPPING.md` | Mapping between course lectures and project files |
 
@@ -532,7 +557,7 @@ The model diagnoses health problems or proves whether a dog is a Cane Corso.
 For Step 12 image dataset feasibility, correct project behavior is:
 
 ```text
-check public dataset metadata -> verify class availability -> check usage terms -> train only after responsible data selection
+check public dataset metadata -> verify class availability -> check usage terms -> prepare ignored local folder -> train only after responsible data selection
 ```
 
 The safest final product direction is:
@@ -585,3 +610,26 @@ The practical workflow uses the same mathematical ideas introduced in the Featur
 This makes the project more applicable: it is no longer only a set of training notebooks, but also a small educational growth-monitoring pipeline.
 
 Responsible use boundary: the report is not a veterinary diagnosis, treatment plan, breed certificate, pedigree proof or official health judgement. It is a learning-based analytical report.
+
+
+---
+
+## Computer Vision Local Image Dataset Preparation: Step 13
+
+Step 13 adds a local-only preparation workflow for future image datasets.
+
+Prepare local folders:
+
+```powershell
+python src/prepare_image_dataset_structure.py
+```
+
+Validate local structure:
+
+```powershell
+python src/validate_local_image_dataset.py
+```
+
+The folder `data/images/local_dataset/` is ignored by Git. It can contain downloaded public image datasets or future permission-based owner photos on the developer machine, but image files should not be committed.
+
+Responsible boundary: this step prepares data governance and local structure only. It does not download images, train a Computer Vision model, or prove breed identity.

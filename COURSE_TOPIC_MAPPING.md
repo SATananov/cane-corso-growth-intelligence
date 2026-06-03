@@ -40,6 +40,7 @@ This standard should appear in every new notebook from Step 04 onward.
 | MLflow | Planned | experiment tracking and model comparison |
 | Computer Vision Visual Similarity | Planned / documented | future image-based visual similarity, not breed proof |
 | Image Dataset Feasibility | Completed as Step 12 plan | public dataset candidates and target molossoid class planning before training |
+| Image Dataset Acquisition and Local Preparation | Completed as Step 13 plan | local-only image dataset folder structure, inventory template and validation before training |
 
 ---
 
@@ -993,4 +994,27 @@ Status:
 
 ```text
 Computer Vision Visual Similarity Plan ✅
+```
+
+
+---
+
+## Image Dataset Acquisition and Local Preparation
+
+Covered in:
+
+```text
+docs/image_dataset_acquisition_and_local_preparation.md
+data/image_dataset_local_inventory_template.csv
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py
+```
+
+Step 13 prepares the project for future Computer Vision work by adding a local-only image dataset structure and validation workflow. It keeps downloaded public datasets and consent-based images out of GitHub while preserving reproducible instructions and metadata templates.
+
+Status:
+
+```text
+Image Dataset Acquisition and Local Preparation ✅ planned / structure-only
 ```

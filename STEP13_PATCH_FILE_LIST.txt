@@ -1,0 +1,15 @@
+.gitignore
+COURSE_TOPIC_MAPPING.md
+DATA_SOURCES.md
+HOW_TO_RUN.md
+PATCH_REPORT_STEP13_IMAGE_DATASET_ACQUISITION_LOCAL_PREPARATION.md
+PROJECT_BRIEF.md
+README.md
+data/image_dataset_local_inventory_template.csv
+data/images/README.md
+data/images/local_dataset/.gitignore
+data/images/local_dataset/README.md
+docs/image_dataset_acquisition_and_local_preparation.md
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py

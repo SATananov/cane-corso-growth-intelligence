@@ -1,4 +1,4 @@
-﻿__pycache__/
+__pycache__/
 .ipynb_checkpoints/
 .env
 .venv/
@@ -20,3 +20,18 @@ data/raw/*.parquet
 # Raw external metadata files
 data/raw/*.txt
 !data/raw/source_notes.md
+
+# Local image datasets for Computer Vision experiments
+# These folders may contain downloaded public datasets or consent-based owner images.
+# They must stay local and must not be committed to GitHub.
+data/images/local_dataset/*
+!data/images/local_dataset/.gitignore
+!data/images/local_dataset/README.md
+data/images/local_only/
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.tif
+*.tiff

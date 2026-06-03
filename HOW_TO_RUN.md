@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains ten notebooks.
+The project currently contains eleven notebooks.
 
 ### Project Concept and Mathematical Framing
 
@@ -158,6 +158,14 @@ notebooks/07_image_dataset_feasibility.ipynb
 
 This notebook reviews public image dataset candidates before any Computer Vision model is trained. It reads the feasibility matrix and target-class plan from CSV files and validates that the project remains a visual-similarity plan, not breed proof.
 
+### Image Dataset Acquisition and Local Preparation
+
+```text
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+```
+
+This notebook documents the local-only data acquisition workflow for the future Computer Vision module. It does not train an image model. It explains where local images would be stored, how class folders are prepared, and why downloaded images should remain outside Git history.
+
 ## 6. Read the mathematical foundation
 
 The project includes a mathematical explanation of the main formulas used in the notebooks:
@@ -236,12 +244,16 @@ src/create_time_series_features.py
 src/run_growth_assessment.py
 src/validate_image_manifest.py
 src/validate_image_dataset_feasibility.py
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py
 ```
 
 The Step 12 dataset-feasibility validation script can be run with:
 
 ```powershell
 python src/validate_image_dataset_feasibility.py
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py
 ```
 
 It validates the public dataset feasibility matrix, the target molossoid class plan, and confirms that no downloaded image files are committed under `data/images/`.
@@ -253,6 +265,27 @@ python src/validate_image_manifest.py
 ```
 
 It validates the structure of the example image manifest only. It does not download images or train an image model.
+
+
+The Step 13 local image dataset preparation script can be run with:
+
+```powershell
+python src/prepare_image_dataset_structure.py
+```
+
+It creates the ignored local folder structure under:
+
+```text
+data/images/local_dataset/
+```
+
+Validate the local structure with:
+
+```powershell
+python src/validate_local_image_dataset.py
+```
+
+This validation allows zero images at Step 13. It checks folder structure and metadata templates only.
 
 The original public dataset is distributed as a compressed archive. In this project, it is referred to as the **raw dataset archive** and should be kept locally in:
 
@@ -278,6 +311,7 @@ The project currently covers four completed course topics plus one future Comput
 4. Feature Engineering and Time Series
 5. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
 6. Public Image Dataset Feasibility (dataset candidates and target class planning, not trained yet)
+7. Image Dataset Acquisition and Local Preparation (local-only structure and validation, not trained yet)
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
 

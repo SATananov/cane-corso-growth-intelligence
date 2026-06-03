@@ -37,3 +37,28 @@ No random Google, Instagram, Facebook, or breeder-site scraping without permissi
 ## Step 12 note
 
 Step 12 intentionally keeps this folder free from downloaded image files. The project now stores image dataset feasibility metadata in `data/image_dataset_feasibility_matrix.csv` and target-class planning in `data/molossoid_visual_target_classes.csv`. Actual image archives should remain local until usage terms, class availability and storage strategy are confirmed.
+
+
+## Step 13 Local Dataset Preparation
+
+The project now reserves this ignored local folder for future image experiments:
+
+```text
+data/images/local_dataset/
+```
+
+Use it only on the local machine for downloaded public datasets or future consent-based owner images. Do not commit actual image files to GitHub.
+
+Prepare the structure:
+
+```powershell
+python src/prepare_image_dataset_structure.py
+```
+
+Validate the structure:
+
+```powershell
+python src/validate_local_image_dataset.py
+```
+
+The committed repository should contain documentation, scripts and lightweight metadata templates only.

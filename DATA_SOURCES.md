@@ -148,31 +148,41 @@ src/validate_image_manifest.py
 
 ---
 
-## Computer Vision Dataset Feasibility
 
-Step 12 adds metadata-only image dataset feasibility files:
 
-```text
-data/image_dataset_feasibility_matrix.csv
-data/molossoid_visual_target_classes.csv
-```
+## 5. Local Image Dataset Acquisition and Preparation
 
-These files do not contain images. They document candidate public datasets, target molossoid / related classes, and the rule that downloaded image archives should not be committed to GitHub.
+Step 13 adds a local-only preparation workflow for future image datasets.
 
-Supporting documentation:
+Local image root:
 
 ```text
-docs/image_dataset_feasibility.md
-docs/image_dataset_research_plan.md
+data/images/local_dataset/
 ```
 
-Validation script:
+This folder is ignored by Git and should be used only on the developer machine for downloaded public datasets or future consent-based images.
+
+Supporting files:
 
 ```text
-src/validate_image_dataset_feasibility.py
+docs/image_dataset_acquisition_and_local_preparation.md
+data/image_dataset_local_inventory_template.csv
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
 ```
 
-## 5. Raw Dataset Archive Rule
+Important rule:
+
+```text
+Do not commit downloaded image datasets, private owner images, or scraped web images to GitHub.
+```
+
+The current project still contains no actual image dataset and no trained image model. Step 13 prepares the acquisition workflow and local structure only.
+
+---
+
+## 6. Raw Dataset Archive Rule
 
 The full original dataset should not be committed directly to GitHub.
 
@@ -208,7 +218,7 @@ docs/raw_dataset_archive_policy.md
 
 ---
 
-## 6. General Processed Real Public Sample
+## 7. General Processed Real Public Sample
 
 File:
 
@@ -256,7 +266,7 @@ This sample is committed to GitHub because it is small and usable for notebook e
 
 ---
 
-## 7. Classification-Focused Processed Sample
+## 8. Classification-Focused Processed Sample
 
 File:
 

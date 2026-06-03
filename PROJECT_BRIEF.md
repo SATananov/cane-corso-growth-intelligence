@@ -465,6 +465,31 @@ notebooks/07_image_dataset_feasibility.ipynb
 src/validate_image_dataset_feasibility.py
 ```
 
+
+## Image Dataset Acquisition and Local Preparation
+
+Step 13 adds the practical local-data workflow needed before future Computer Vision training.
+
+Supporting files:
+
+```text
+docs/image_dataset_acquisition_and_local_preparation.md
+data/image_dataset_local_inventory_template.csv
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+src/prepare_image_dataset_structure.py
+src/validate_local_image_dataset.py
+```
+
+This stage prepares ignored local folders under:
+
+```text
+data/images/local_dataset/
+```
+
+It does not download image datasets, commit photos, train a visual model, or claim breed proof. It only prepares the project for responsible future image experiments.
+
+---
+
 ## Limitations and Safety Boundary
 
 The project is educational and analytical.
