@@ -1,0 +1,4 @@
+model,cv_f1_mean,cv_f1_std,test_accuracy,test_f1,test_precision,test_recall
+previous_body_size_only,0.9048,0.1313,0.7143,0.75,0.6,1.0
+previous_body_size_plus_age,1.0,0.0,0.7143,0.75,0.6,1.0
+full_feature_set,1.0,0.0,0.7143,0.75,0.6,1.0

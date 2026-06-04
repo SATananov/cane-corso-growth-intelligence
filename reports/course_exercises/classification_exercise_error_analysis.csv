@@ -1,0 +1,8 @@
+age_months,previous_weight_kg,previous_height_cm,previous_weight_height_ratio,age_gap_months,age_squared,sex,activity_level,actual,predicted,probability_fast_growth,error_type
+6,21.6,47.0,0.45957446808510644,1.0,36,female,low,1,1,0.8938,correct
+10,32.1,56.0,0.5732142857142858,2.0,100,female,low,0,0,0.0456,correct
+5,20.1,45.0,0.4466666666666667,1.0,25,male,medium,1,1,0.9527,correct
+3,8.1,30.0,0.26999999999999996,1.0,9,female,low,0,1,0.9932,false_positive
+3,10.1,33.0,0.30606060606060603,1.0,9,male,high,1,1,0.9946,correct
+8,34.6,58.0,0.596551724137931,2.0,64,male,high,0,0,0.127,correct
+3,8.7,31.0,0.2806451612903226,1.0,9,female,medium,0,1,0.993,false_positive

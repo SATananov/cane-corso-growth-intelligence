@@ -1,0 +1,13 @@
+requirement_id,exercise_requirement,project_alignment
+problem_formulation,Define a binary classification task and explain why it is meaningful.,Covered by a growth-interval fast-growth proxy classification question.
+data_inspection,"Inspect data types, target balance, missing values, and candidate features.",Covered by source table inspection and interval feature derivation.
+experimental_protocol,"Define validation, main metric, secondary metrics, baseline, and comparison rules before model comparison.",Covered by a fixed protocol in the script and summary report.
+dummy_models,Train at least two dummy models.,Covered by most_frequent and stratified dummy classifiers.
+pipeline,Use preprocessing pipelines for numeric and categorical variables.,"Covered by ColumnTransformer with imputation, scaling, and one-hot encoding."
+logistic_regression,Train logistic regression as the first interpretable baseline.,Covered by a logistic regression pipeline.
+learning_curve,Inspect how performance changes with training size when feasible.,Covered by a learning-curve output section.
+feature_engineering,Add and evaluate engineered features.,"Covered by previous measurements, ratios, and interval features."
+different_model,Train and compare another classifier.,Covered by random forest comparison.
+feature_importance,Use a safer feature-importance method and avoid overclaiming causality.,Covered by permutation importance.
+error_analysis,"Analyze false positives, false negatives, and confident wrong predictions.",Covered by error-analysis output.
+ablation,Compare feature groups using the same protocol.,Covered by a small feature-group ablation table.

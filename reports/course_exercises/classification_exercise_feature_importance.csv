@@ -1,0 +1,9 @@
+feature,importance_mean,importance_std
+age_months,0.0,0.0
+previous_weight_kg,0.0,0.0
+previous_height_cm,0.0,0.0
+previous_weight_height_ratio,0.0,0.0
+age_gap_months,0.059524,0.055838
+age_squared,0.0,0.0
+sex,0.0,0.0
+activity_level,0.0,0.0

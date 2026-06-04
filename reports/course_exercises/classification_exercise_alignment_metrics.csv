@@ -1,0 +1,7 @@
+model,cv_f1_mean,cv_f1_std,test_accuracy,test_f1,test_precision,test_recall
+dummy_most_frequent,0.5333,0.2667,0.4286,0.6,0.4286,1.0
+dummy_stratified,0.2133,0.2746,0.5714,0.5714,0.5,0.6667
+logistic_regression,1.0,0.0,0.7143,0.75,0.6,1.0
+random_forest,1.0,0.0,0.7143,0.75,0.6,1.0
+logistic_regression_tuned,1.0,0.0,0.7143,0.75,0.6,1.0
+random_forest_tuned,1.0,0.0,0.7143,0.75,0.6,1.0
