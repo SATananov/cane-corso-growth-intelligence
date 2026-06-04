@@ -41,7 +41,7 @@ How does the trajectory change over time?
 How do different models compare mathematically?
 ```
 
-This makes the project useful beyond a course assignment: it can become the foundation for a practical growth-monitoring assistant.
+This makes the project useful beyond a course assignment: it can become the foundation for a practical growth-monitoring system.
 
 A dedicated motivation note is available in:
 
@@ -89,9 +89,22 @@ Unsupervised Learning and Clustering
 Feature Engineering and Time Series
 ```
 
-Upcoming course topics such as **Dimensionality Reduction** and **MLflow** are planned as future additions after they are studied in class.
+The next course-aligned additions are reserved for:
 
-The image-based work is intentionally documented as an **exploratory visual-similarity extension**, not as a required course topic and not as a breed-certification system. Its purpose is to test whether a small public image dataset can support an educational comparison between available large-dog classes. The core grading evidence remains the tabular growth-intelligence workflow: regression, classification, clustering, feature engineering, time-series features, evaluation, documentation, and responsible interpretation.
+```text
+Dimensionality Reduction
+MLflow
+```
+
+These two topics are intentionally kept as future course slots until they are studied in class and practiced through exercises. Their notebooks are present in the reading sequence, but they are not presented as completed experiments yet.
+
+The image-based work is documented as an **exploratory visual-similarity extension**, not as a required course topic and not as a breed-certification system. Its purpose is to test whether a small public image dataset can support an educational comparison between available large-dog classes. The core grading evidence remains the tabular growth-intelligence workflow: regression, classification, clustering, feature engineering, time-series features, evaluation, documentation, and responsible interpretation.
+
+A course progression note is available in:
+
+```text
+docs/course_progression_plan.md
+```
 
 ---
 

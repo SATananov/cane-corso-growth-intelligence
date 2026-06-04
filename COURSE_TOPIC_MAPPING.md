@@ -31,6 +31,8 @@ MLflow
 
 The visual-similarity work is not listed as a core course topic. It is an optional exploratory extension that demonstrates curiosity and responsible dataset handling. It should support the project story, but it should not replace the course-aligned mathematical and tabular ML deliverables.
 
+The continuation plan is documented in `docs/course_progression_plan.md`. The final results-and-figures summary should be added after Dimensionality Reduction and MLflow are implemented.
+
 ---
 
 ## Notebook Mathematical Formulation Standard

@@ -33,9 +33,11 @@ This makes the project both interesting and useful:
 
 The main project is the tabular Cane Corso growth-intelligence workflow. It is aligned with the course topics covered so far: regression, classification, unsupervised learning / clustering, feature engineering, time-series features, data processing, model evaluation, and careful interpretation of results.
 
+Dimensionality Reduction and MLflow are reserved as future additions. They should be implemented only after the related lectures and exercises are covered, so the project continues to follow the real course path.
+
 The image-based work is included only as an **exploratory extension**. It investigates whether a small public dog-image dataset can support a simple visual-similarity comparison between available large-dog classes. This part should not be presented as a core course requirement, a breed detector, a pedigree tool, or a Cane Corso certification system.
 
-The next course-aligned additions should follow the actual lecture path: Feature Engineering and Time Series exercise work first, then Dimensionality Reduction, and later MLflow when those topics are covered.
+The final results and figures summary should be prepared after the remaining course topics are added, so that the final presentation reflects the complete course-aligned project.
 
 ---
 
@@ -90,7 +92,7 @@ A possible real user flow is:
 The project should not be presented as a veterinary diagnostic system. The correct product framing is:
 
 ```text
-owner-friendly growth monitoring assistant
+owner-friendly growth monitoring system
 ```
 
 not:

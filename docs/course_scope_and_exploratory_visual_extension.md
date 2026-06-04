@@ -10,7 +10,18 @@ The core of this project is the Cane Corso growth-intelligence workflow built fr
 - Feature Engineering and Time Series;
 - data processing, model evaluation, documentation and responsible interpretation.
 
-The project should continue to follow the course path. After the relevant lectures, the next natural additions are Dimensionality Reduction and MLflow.
+The project should continue to follow the course path. Dimensionality Reduction and MLflow are reserved as future course additions and should be completed after the corresponding lectures and exercises are covered.
+
+## Reserved notebook slots
+
+The project keeps two reserved notebooks in the main course sequence:
+
+```text
+notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/07_mlflow_future_course_topic.ipynb
+```
+
+These files clarify the intended direction but do not pretend that the topics have already been studied or completed.
 
 ## Exploratory visual extension
 
@@ -44,3 +55,7 @@ The extension is still useful because it demonstrates:
 - careful limits around model interpretation.
 
 It adds creativity and project growth while the main grading evidence remains the course-aligned growth ML workflow.
+
+## Final project summary timing
+
+A final visual summary and figures package should be created after the remaining course topics are completed. This keeps the project order clear: course-aligned work first, exploratory extension second, final presentation last.
