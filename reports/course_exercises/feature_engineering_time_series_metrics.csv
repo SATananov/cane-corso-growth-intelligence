@@ -1,0 +1,10 @@
+experiment,split,estimator,feature_group,n_features,n_rows,mae,rmse,r2
+baseline_lag_age,validation,linear_regression,lag plus age,2,4,1.9707539986453462,2.0201247055315834,0.7152692254736394
+baseline_lag_age,test,linear_regression,lag plus age,2,4,3.4773243717046807,3.5023146082229255,0.215307977131873
+lag_height_rolling,validation,ridge,"lag, height and rolling statistics",5,4,2.0658083934355354,2.0698488813926232,0.7010797563717222
+lag_height_rolling,test,ridge,"lag, height and rolling statistics",5,4,4.241989112993355,4.252712418850803,-0.15696696125371035
+time_velocity_category,validation,ridge,"time, velocity and categorical descriptors",10,4,0.5698328698052073,0.6912549422173137,0.9666608480628041
+time_velocity_category,test,ridge,"time, velocity and categorical descriptors",10,4,0.797198236341897,0.9417237892681738,0.9432669660374327
+nonlinear_reference,validation,random_forest,nonlinear baseline with engineered time features,12,4,3.0520833333333286,3.8009789948701713,-0.008019628079138474
+nonlinear_reference,test,random_forest,nonlinear baseline with engineered time features,12,4,5.060208333333291,6.221846939637564,-1.4764386447740483
+selected_final_model,test,ridge,"time, velocity and categorical descriptors",10,4,0.5516641891465461,0.7004157705020587,0.9686165446200157

@@ -1,0 +1,5 @@
+dog_id,dog_name,rows,min_age_months,max_age_months,age_gaps_months,has_duplicate_age,time_order_is_monotonic
+1,Ares,8,2,12,1;1;1;1;2;2;2,False,True
+2,Bruna,8,2,12,1;1;1;1;2;2;2,False,True
+3,Bruno,8,2,12,1;1;1;1;2;2;2,False,True
+4,Luna,8,2,12,1;1;1;1;2;2;2,False,True

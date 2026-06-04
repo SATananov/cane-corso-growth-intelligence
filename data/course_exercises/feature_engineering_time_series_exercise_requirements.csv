@@ -1,0 +1,10 @@
+exercise_area,requirement,project_alignment
+Problem formulation,Define the target and assumptions,The project forecasts weight_kg in a longitudinal Cane Corso growth setting and documents educational limitations.
+Time column audit,"Inspect time order, gaps, index choices, and leakage risk","The project derives a measurement_date from age_months, sorts by dog_id and time, and reports sequence gaps."
+Baseline forecasting,Create a simple comparable baseline,The project trains a chronological baseline using lagged weight and age-based predictors.
+Iterative improvement,Try at least three feature/model improvements,"The project compares lag features, rolling features, growth velocity, height features, and categorical features."
+Categories and text features,Use categorical/text-like variables,The project encodes sex and activity_level while treating source_type as a data provenance variable.
+Pipeline,Use a reusable sklearn workflow,The project uses preprocessing and estimator pipelines for comparable model evaluation.
+Model testing,Use chronological train/validation/test logic,The project avoids random leakage by splitting later ages into validation and test portions.
+Feature ablation,Compare feature groups and analyze residuals,The project reports ablation metrics and residual diagnostics by age and dog.
+Multi-horizon forecasting,Compare direct and recursive ideas,The project records a direct/recursive forecasting plan suitable for future larger longitudinal data.
