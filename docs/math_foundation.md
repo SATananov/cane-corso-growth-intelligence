@@ -601,7 +601,7 @@ In the classification notebook, AUC helps compare Logistic Regression, Decision 
 
 ## 10. Decision Trees
 
-Decision Trees split the data step by step.
+Decision Trees split the data gradually.
 
 Each split asks a question such as:
 
@@ -1077,7 +1077,7 @@ That document shows how the same ideas appear as coordinate systems, lines, curv
 
 ---
 
-## Step 09.2: kNN and Exact Clustering Lesson Mathematics
+## Clustering and k-nearest-neighbor lesson alignment: kNN and Exact Clustering Lesson Mathematics
 
 ### k-Nearest Neighbors
 
@@ -1233,9 +1233,9 @@ For this project, all engineered signals are educational growth-monitoring signa
 
 ---
 
-# Practical Growth Assessment Mathematics — Step 10.1
+# Practical Growth Assessment Mathematics — Practical growth-assessment workflow
 
-Step 10.1 connects the feature engineering formulas to a small applied workflow. The workflow accepts new repeated measurements for one Cane Corso and returns a readable educational report.
+Practical growth-assessment workflow connects the feature engineering formulas to a small applied workflow. The workflow accepts new repeated measurements for one Cane Corso and returns a readable educational report.
 
 ## Measurement Vector
 

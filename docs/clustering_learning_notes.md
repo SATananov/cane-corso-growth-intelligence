@@ -105,7 +105,7 @@ K-Means is useful when the project needs a simple and fast grouping method, but 
 
 ## Hierarchical Clustering
 
-Hierarchical clustering builds groups step by step.
+Hierarchical clustering builds groups gradually.
 
 Agglomerative clustering starts with many small groups and merges similar groups until a final number of clusters is reached.
 
@@ -173,7 +173,7 @@ Clustering helps organize growth data into mathematically similar profiles so an
 
 ---
 
-## Step 09.2: Exact Lesson Alignment
+## Clustering and k-nearest-neighbor lesson alignment: Exact Lesson Alignment
 
 The lesson also includes k-Nearest Neighbors, generated clustering examples, dendrograms, silhouette samples, and a comparison between clustering and classification. These are now represented in the notebook.
 

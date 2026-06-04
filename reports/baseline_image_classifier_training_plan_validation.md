@@ -17,4 +17,4 @@ Required metrics: accuracy, macro_f1, per_class_precision, per_class_recall, con
 
 ## Boundary
 
-Step 20 validates the future image-classifier training plan only. It does not download images, train a model, create model weights, or claim breed proof.
+Baseline image classifier training-plan stage validates the future image-classifier training plan only. It does not download images, train a model, create model weights, or claim breed proof.

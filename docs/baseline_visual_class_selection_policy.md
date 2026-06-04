@@ -57,7 +57,7 @@ The goal is not production accuracy. The goal is to demonstrate:
 image tensor -> class labels -> probability vector -> responsible interpretation
 ```
 
-## GitHub Policy
+## Repository Policy
 
 Do not commit:
 
@@ -65,7 +65,7 @@ Do not commit:
 raw image folders
 large image archives
 processed image arrays
-trained model checkpoints
+trained model saved artifacts
 ```
 
 Commit only:

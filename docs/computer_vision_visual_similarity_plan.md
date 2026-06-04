@@ -66,7 +66,7 @@ The result is educational and visual only. It is not pedigree proof, breed certi
 
 At the moment, the project does not have a private Cane Corso image dataset.
 
-This is not a problem for the planning stage. The correct first step is to document the data strategy and evaluate public datasets before training any model.
+This is not a problem for the planning stage. The correct first stage is to document the data strategy and evaluate public datasets before training any model.
 
 The future data plan has two layers:
 
@@ -242,9 +242,9 @@ This model proves the breed of the dog from a photo.
 
 ---
 
-## Future Implementation Steps
+## Future Implementation Stages
 
-Recommended next steps:
+Recommended next stages:
 
 1. verify which public datasets contain the desired molossoid breeds;
 2. document terms of use and citations;
@@ -255,4 +255,4 @@ Recommended next steps:
 7. add confusion matrix and top-k predictions;
 8. combine the visual signal with the existing growth signal.
 
-For now, this stage is intentionally a **feasibility and design step**, not a trained image model.
+For now, this stage is intentionally a **feasibility and design stage**, not a trained image model.

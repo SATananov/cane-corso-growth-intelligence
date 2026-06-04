@@ -1,5 +1,5 @@
 plan_item,value,notes
-project_step,Step 20,Training plan only; no model training in this step
+project_stage,Baseline image classifier training-plan stage,Training plan only; no model training in this stage
 model_goal,visual_similarity_classification,Estimate class probabilities among selected local classes
 recommended_input_size,224x224,Common transfer-learning image size
 recommended_first_model,pretrained_backbone_frozen_feature_extractor,Fast and explainable for a course project

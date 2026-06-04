@@ -36,4 +36,4 @@ Skipped selected classes: 0
 
 This subset supports a future educational visual-similarity baseline only.
 It does not prove breed, pedigree, genetic origin, registry status, certification or veterinary condition.
-Actual image files are local-only and must not be committed to GitHub.
+Actual image files are local-only and must not be committed to repository.

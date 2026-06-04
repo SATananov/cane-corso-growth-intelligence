@@ -1,6 +1,6 @@
 # Raw Dataset Archive Policy
 
-This document explains what the project means by **raw dataset archive** and how it is different from the files used for development, GitHub submission, or checkpoint packaging.
+This document explains what the project means by **raw dataset archive** and how it is different from the files used for development, repository submission, or saved state packaging.
 
 ## What “raw dataset archive” means
 
@@ -12,11 +12,11 @@ Final_Data_PLOS.zip
 
 In this project, that file is called the **raw dataset archive**.
 
-This is a normal data-engineering term. It means that the public dataset was provided as a compressed file that contains the original raw data. It does **not** mean that the project depends on random downloaded files, patch archives, or local working ZIP files.
+This is a normal data-engineering term. It means that the public dataset was provided as a compressed file that contains the original raw data. It does **not** mean that the project depends on random downloaded files, temporary update archives, or local working ZIP files.
 
 ## Why the raw archive is not committed
 
-The raw dataset archive is intentionally kept outside GitHub because:
+The raw dataset archive is intentionally kept outside repository because:
 
 - it is an external public dataset;
 - the original source must remain clearly attributed;
@@ -30,7 +30,7 @@ The expected local path is:
 data/raw/Final_Data_PLOS.zip
 ```
 
-The file can exist locally when the processed samples need to be regenerated, but it should not be committed to GitHub.
+The file can exist locally when the processed samples need to be regenerated, but it should not be committed to repository.
 
 ## What is committed instead
 
@@ -61,9 +61,9 @@ The term **raw dataset archive** refers only to the original public dataset dist
 
 It is different from:
 
-- a project checkpoint archive;
+- a project local backup archive;
 - a clean submission archive;
-- a development patch archive;
+- a development temporary update archive;
 - any temporary local ZIP file used outside the project.
 
 Only the processed CSV samples are part of the current analytical workflow.

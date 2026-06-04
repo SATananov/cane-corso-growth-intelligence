@@ -1,8 +1,8 @@
-# Step 13 — Image Dataset Acquisition Instructions and Local Preparation
+# Local image dataset preparation stage — Image Dataset Acquisition Instructions and Local Preparation
 
-This document explains how the future Computer Vision module should acquire and prepare image data **without committing downloaded images to GitHub**.
+This document explains how the future Computer Vision module should acquire and prepare image data **without committing downloaded images to repository**.
 
-The project is still an educational machine-learning project. Step 13 does not train an image classifier yet. It prepares the responsible local data workflow needed before a baseline visual-similarity model can be created.
+The project is still an educational machine-learning project. Local image dataset preparation stage does not train an image classifier yet. It prepares the responsible local data workflow needed before a baseline visual-similarity model can be created.
 
 ---
 
@@ -76,7 +76,7 @@ The project should not use random Google, Instagram, Facebook, breeder-site or s
 
 ## Candidate Public Datasets
 
-Step 12 documents candidate sources in:
+Image dataset feasibility stage documents candidate sources in:
 
 ```text
 data/image_dataset_feasibility_matrix.csv
@@ -228,9 +228,9 @@ If the public dataset does not contain enough reliable examples for a class, tha
 
 ---
 
-## Step 13 Boundary
+## Local image dataset preparation stage Boundary
 
-Step 13 adds:
+Local image dataset preparation stage adds:
 
 ```text
 local acquisition instructions
@@ -240,7 +240,7 @@ local inventory template
 responsible image-data rules
 ```
 
-Step 13 does not add:
+Local image dataset preparation stage does not add:
 
 ```text
 actual downloaded image datasets

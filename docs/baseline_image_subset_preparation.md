@@ -2,7 +2,7 @@
 
 This document belongs to an optional exploratory extension outside the current core course sequence. The core course-aligned project remains the tabular growth-intelligence workflow using regression, classification, clustering, feature engineering and time-series features.
 
-This step prepares a small, local, reproducible image subset for the first Stanford Dogs baseline image-classification experiment.
+This stage prepares a small, local, reproducible image subset for the first Stanford Dogs baseline image-classification experiment.
 
 The project has already confirmed that Stanford Dogs can be downloaded locally and inspected without committing image files to the repository. this stage builds on that by creating a controlled subset from the selected baseline classes.
 

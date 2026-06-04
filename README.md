@@ -246,7 +246,7 @@ The project also includes an optional exploratory visual-similarity extension fo
 uploaded dog image -> visual feature extractor -> visual similarity probabilities
 ```
 
-This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The first step is therefore data research, public dataset feasibility, and a manifest-based data plan.
+This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The first stage is therefore data research, public dataset feasibility, and a manifest-based data plan.
 
 Supporting files:
 
@@ -549,7 +549,7 @@ flowchart TD
 |---|---|
 | `PROJECT_BRIEF.md` | Main project story and scope |
 | `docs/product_idea_and_mathematical_framing.md` | Strong explanation of the useful and interesting idea |
-| `docs/model_learning_explanation.md` | How the models learn, step by step |
+| `docs/model_learning_explanation.md` | How the models learn, gradually |
 | `docs/notebook_mathematical_formulation_template.md` | Standard mathematical structure for every new notebook |
 | `docs/math_foundation.md` | Mathematical formulas and model intuition |
 | `docs/geometric_interpretation.md` | Coordinate-space view of models and feature space |
@@ -660,7 +660,7 @@ python src/validate_local_image_dataset.py
 
 The folder `data/images/local_dataset/` is ignored by Git. It can contain downloaded public image datasets or future permission-based owner photos on the developer machine, but image files should not be committed.
 
-Responsible boundary: this step prepares data governance and local structure only. It does not download images, train a visual-similarity model, or prove breed identity.
+Responsible boundary: this stage prepares data governance and local structure only. It does not download images, train a visual-similarity model, or prove breed identity.
 
 
 ## First Public Image Dataset Candidate
@@ -671,7 +671,7 @@ The project now documents the first public dataset candidate for the future Comp
 Stanford Dogs / ImageNet Dogs
 ```
 
-This step does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to the repository, and how local labels/classes should be inspected before any baseline classifier is trained.
+This stage does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to the repository, and how local labels/classes should be inspected before any baseline classifier is trained.
 
 Related files:
 

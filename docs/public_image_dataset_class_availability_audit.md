@@ -1,12 +1,12 @@
-# Step 14 — Public Image Dataset Class Availability Audit
+# Public image dataset class-availability audit stage — Public Image Dataset Class Availability Audit
 
 ## Purpose
 
-This step checks whether public dog image datasets can support the future **Molossoid Visual Similarity** module.
+This stage checks whether public dog image datasets can support the future **Molossoid Visual Similarity** module.
 
 The goal is **not** to train an image model yet. The goal is to document which target visual classes may be available from public datasets and which classes must remain future work until a consent-based USG image dataset is collected.
 
-## Why this step is needed
+## Why this stage is needed
 
 A visual classifier can only learn the classes that are actually represented in the image dataset. For a Cane Corso / molossoid comparison task, public datasets may contain common dog breeds such as Boxer, Great Dane, Bullmastiff, Mastiff, or Rottweiler, but they may not contain Cane Corso, Dogo Argentino, or Presa Canario as clean labeled classes.
 
@@ -29,7 +29,7 @@ The final baseline class list must depend on what is legally and practically ava
 
 ## Dataset candidates
 
-The public dataset candidates considered in this step are:
+The public dataset candidates considered in this stage are:
 
 - Stanford Dogs Dataset
 - Kaggle Dog Breed Identification
@@ -54,7 +54,7 @@ A photo cannot prove pedigree, genetic origin, registry status, health status, o
 
 ## Expected workflow
 
-1. Prepare local image dataset folders using Step 13.
+1. Prepare local image dataset folders using Local image dataset preparation stage.
 2. Inspect available class labels in the selected public dataset.
 3. Map available class labels to the target molossoid visual classes.
 4. Mark which classes are suitable for a baseline model.

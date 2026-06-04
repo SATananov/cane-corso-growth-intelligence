@@ -77,7 +77,7 @@ The raw files are external source files and should remain local in:
 data/raw/
 ```
 
-They should not be included in the final clean GitHub submission ZIP.
+They should not be included in the final clean repository submission ZIP.
 
 ---
 

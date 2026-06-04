@@ -1,6 +1,6 @@
 # Practical Growth Assessment Workflow
 
-This document explains the applied layer added in Step 10.1.
+This document explains the applied layer added in Practical growth-assessment workflow.
 
 The goal is to show that the course project is not only a collection of notebooks. It can also be used as a small practical workflow:
 

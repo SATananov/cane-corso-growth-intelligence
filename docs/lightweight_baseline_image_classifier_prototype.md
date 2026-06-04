@@ -2,7 +2,7 @@
 
 This document belongs to an optional exploratory extension outside the current core course sequence. The core course-aligned project remains the tabular growth-intelligence workflow using regression, classification, clustering, feature engineering and time-series features.
 
-This step introduces the first real image-classification prototype for the visual-similarity extension of the Cane Corso Growth Intelligence project.
+This stage introduces the first real image-classification prototype for the visual-similarity extension of the Cane Corso Growth Intelligence project.
 
 The goal is deliberately modest: train a small, explainable baseline classifier on the local Stanford Dogs subset prepared in this stage. The prototype is not a final breed-recognition model and does not attempt to prove breed, pedigree, registry status, or genetic origin.
 
@@ -17,7 +17,7 @@ A lightweight baseline is useful before deep learning because it establishes the
 5. produce metrics and prediction-probability examples;
 6. document limitations before any transfer-learning model is attempted.
 
-This is a good course-project step because it connects image data handling, feature extraction, classification, metrics, and responsible interpretation.
+This is a good course-project stage because it connects image data handling, feature extraction, classification, metrics, and responsible interpretation.
 
 ## Local-only image data
 

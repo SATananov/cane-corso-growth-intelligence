@@ -11,7 +11,7 @@ Top-level class-like directories under raw: 0
 No local Stanford Dogs class folders were detected yet.
 
 This is acceptable before the dataset has been downloaded/extracted.
-Step 15 only provides the local download and inspection guide.
+First public image dataset candidate stage only provides the local download and inspection guide.
 
 ## Responsible boundary
 

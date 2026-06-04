@@ -1,10 +1,10 @@
-# Step 15 — First Public Image Dataset Candidate / Download Guide
+# First public image dataset candidate stage — First Public Image Dataset Candidate / Download Guide
 
 ## Purpose
 
-This step chooses the first public image dataset candidate for the future Computer Vision part of the project.
+This stage chooses the first public image dataset candidate for the future Computer Vision part of the project.
 
-The project is still **not training an image model** in Step 15. The purpose is to document how the first public dataset candidate should be obtained and prepared locally without committing image archives or extracted image folders to GitHub.
+The project is still **not training an image model** in First public image dataset candidate stage. The purpose is to document how the first public dataset candidate should be obtained and prepared locally without committing image archives or extracted image folders to repository.
 
 ## Selected First Candidate
 
@@ -60,9 +60,9 @@ data/images/local_dataset/processed/stanford_dogs/
 data/images/local_dataset/splits/stanford_dogs/
 ```
 
-These folders are local working areas and should not be committed to GitHub. Local image archives and extracted folders must not be committed to GitHub.
+These folders are local working areas and should not be committed to repository. Local image archives and extracted folders must not be committed to repository.
 
-GitHub should contain:
+repository should contain:
 
 ```text
 code
@@ -71,13 +71,13 @@ small CSV manifests/checklists
 notebooks explaining the process
 ```
 
-GitHub should not contain:
+repository should not contain:
 
 ```text
 large image archives
 raw extracted image folders
 processed image arrays
-training output checkpoints
+training output saved artifacts
 ```
 
 ## Local Download Workflow
@@ -100,9 +100,9 @@ python src/inspect_stanford_dogs_local_dataset.py
 6. Use the inspection result to decide the first baseline classes.
 7. Do not train the model until the class list has been confirmed.
 
-## What Step 15 Validates
+## What First public image dataset candidate stage Validates
 
-Step 15 validates only the planning artifacts:
+First public image dataset candidate stage validates only the planning artifacts:
 
 ```bash
 python src/validate_first_public_image_dataset_candidate.py
@@ -110,9 +110,9 @@ python src/validate_first_public_image_dataset_candidate.py
 
 It checks that the selected candidate, checklist and responsible-use boundaries are documented.
 
-## What Step 15 Does Not Validate
+## What First public image dataset candidate stage Does Not Validate
 
-Step 15 does not validate:
+First public image dataset candidate stage does not validate:
 
 - actual image download success;
 - image quality;
@@ -122,14 +122,14 @@ Step 15 does not validate:
 - model accuracy;
 - breed proof.
 
-Those belong to later steps.
+Those belong to later stages.
 
-## Next Step After This
+## Next Stage After This
 
-The next logical step is:
+The next logical stage is:
 
 ```text
-Step 16 — Local Stanford Dogs Inspection / Baseline Class Selection
+Local Stanford Dogs class-selection stage — Local Stanford Dogs Inspection / Baseline Class Selection
 ```
 
-That step should inspect the local labels and decide which classes can be used for the first safe baseline.
+That stage should inspect the local labels and decide which classes can be used for the first safe baseline.

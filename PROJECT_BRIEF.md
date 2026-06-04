@@ -537,7 +537,7 @@ Interpretation
 Limitations
 ```
 
-This turns each lecture from a code exercise into a mathematically explained modelling step. It also makes the project easier to defend, because every method is connected to a precise input, objective, evaluation metric, and responsible interpretation.
+This turns each lecture from a code exercise into a mathematically explained modelling stage. It also makes the project easier to defend, because every method is connected to a precise input, objective, evaluation metric, and responsible interpretation.
 
 ---
 

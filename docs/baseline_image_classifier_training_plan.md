@@ -4,7 +4,7 @@ This document belongs to an optional exploratory extension outside the current c
 
 This document defines the first safe training plan for the visual similarity extension of the Cane Corso Growth Intelligence project.
 
-The goal of this step is **not** to claim official breed detection. The goal is to prepare a small, transparent, reproducible baseline image-classification experiment that can report visual similarity among the locally available Stanford Dogs classes selected in the previous steps.
+The goal of this stage is **not** to claim official breed detection. The goal is to prepare a small, transparent, reproducible baseline image-classification experiment that can report visual similarity among the locally available Stanford Dogs classes selected in the previous stages.
 
 ## Current project context
 
@@ -108,9 +108,9 @@ The first visual baseline will be limited by:
 
 The project must explain these limitations clearly.
 
-## Output artifacts for a future training step
+## Output artifacts for a future training stage
 
-A future training step may generate local artifacts such as:
+A future training stage may generate local artifacts such as:
 
 ```text
 models/baseline_visual_classifier/
@@ -138,4 +138,4 @@ The combined report should still avoid any official breed, pedigree, or veterina
 
 ## this stage conclusion
 
-this stage defines the training plan and validation boundaries. The next step can implement a lightweight baseline training prototype, provided that the local image subset remains available and the repository remains free of large image/model artifacts.
+this stage defines the training plan and validation boundaries. The next stage can implement a lightweight baseline training prototype, provided that the local image subset remains available and the repository remains free of large image/model artifacts.

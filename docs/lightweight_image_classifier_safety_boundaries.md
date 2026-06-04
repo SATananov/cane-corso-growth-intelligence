@@ -1,6 +1,6 @@
 # Lightweight Image Classifier Safety Boundaries
 
-The Step 21 classifier must stay within strict educational boundaries.
+The Lightweight image classifier prototype stage classifier must stay within strict educational boundaries.
 
 ## Allowed interpretation
 
@@ -34,7 +34,7 @@ The classifier must not claim:
 
 The first baseline uses public Stanford Dogs classes that are available locally. This means the first model may not include Cane Corso, Dogo Argentino, or Presa Canario if those classes are not present in the selected public dataset.
 
-That limitation is acceptable because this step is about proving the image-classification workflow, not creating a final Cane Corso recognition system.
+That limitation is acceptable because this stage is about proving the image-classification workflow, not creating a final Cane Corso recognition system.
 
 ## Future direction
 

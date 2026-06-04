@@ -20,7 +20,7 @@ is useful, but it does not fully describe the growth story. Growth is a process 
 
 ## Learning-Oriented Mathematical Framing
 
-A growth record for dog `i` at time step `t` can be represented as:
+A growth record for dog `i` at time stage `t` can be represented as:
 
 ```text
 r(i,t) = [age_months(i,t), weight_kg(i,t), height_cm(i,t)]

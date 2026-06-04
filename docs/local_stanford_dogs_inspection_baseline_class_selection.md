@@ -1,10 +1,10 @@
-# Step 16 — Local Stanford Dogs Inspection / Baseline Class Selection
+# Local Stanford Dogs class-selection stage — Local Stanford Dogs Inspection / Baseline Class Selection
 
 ## Purpose
 
-Step 16 connects the public image dataset plan to a concrete local class-selection workflow.
+Local Stanford Dogs class-selection stage connects the public image dataset plan to a concrete local class-selection workflow.
 
-The project still does **not** train an image model in this step. Instead, it defines how to inspect the locally downloaded Stanford Dogs / ImageNet Dogs dataset and select only classes that are actually present.
+The project still does **not** train an image model in this stage. Instead, it defines how to inspect the locally downloaded Stanford Dogs / ImageNet Dogs dataset and select only classes that are actually present.
 
 The key rule is:
 
@@ -12,13 +12,13 @@ The key rule is:
 Do not assume a breed class exists. Verify it from local labels/folders first.
 ```
 
-## Why This Step Is Needed
+## Why This Stage Is Needed
 
 The long-term visual idea is a molossoid visual-similarity assistant, but a public dataset may not contain every desired class.
 
 Target classes such as Cane Corso, Dogo Argentino and Presa Canario should not be claimed unless they are confirmed from a valid data source.
 
-This step protects the project from a common machine-learning mistake:
+This stage protects the project from a common machine-learning mistake:
 
 ```text
 desired class list != available training labels
@@ -83,7 +83,7 @@ reports/stanford_dogs_baseline_class_selection.md
 reports/stanford_dogs_baseline_class_selection.csv
 ```
 
-Before the dataset is downloaded locally, the report may show zero available classes. That is acceptable at this step.
+Before the dataset is downloaded locally, the report may show zero available classes. That is acceptable at this stage.
 
 ## Responsible Boundary
 
@@ -101,12 +101,12 @@ certificate proof
 veterinary diagnosis
 ```
 
-## Next Step After This
+## Next Stage After This
 
-After local class availability is confirmed, the next logical step is:
+After local class availability is confirmed, the next logical stage is:
 
 ```text
-Step 17 — Baseline Image Classifier Prototype
+Stanford Dogs local inspection stage — Baseline Image Classifier Prototype
 ```
 
-That future step may train a small educational classifier using only verified available classes.
+That future stage may train a small educational classifier using only verified available classes.

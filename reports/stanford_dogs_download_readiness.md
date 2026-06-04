@@ -22,7 +22,7 @@ Raw root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\loc
 
 This script does not disable SSL verification. If the Stanford HTTPS endpoint fails on a local Python/Windows environment because of a certificate hostname mismatch, the script uses the official historically documented `http://vision.stanford.edu/...` Stanford Dogs endpoint instead.
 
-Step 18.2 note: individual `file_list.mat`, `train_list.mat`, and `test_list.mat` links are not downloaded directly, because the official Stanford Dogs distribution provides these split files through `lists.tar`.
+Stanford Dogs split-list archive correction note: individual `file_list.mat`, `train_list.mat`, and `test_list.mat` links are not downloaded directly, because the official Stanford Dogs distribution provides these split files through `lists.tar`.
 
 ## Responsible boundary
 

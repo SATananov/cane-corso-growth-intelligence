@@ -230,7 +230,7 @@ flowchart TD
 
 This geometric view helps explain why preprocessing matters.
 
-| Step | Geometric reason |
+| Stage | Geometric reason |
 |---|---|
 | Feature selection | chooses the axes of the coordinate system |
 | Encoding | converts categories into numeric coordinates |

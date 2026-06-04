@@ -24,7 +24,7 @@ data/raw/
 
 The local folder where external source files can be placed manually.
 
-Raw files should not be committed to GitHub or included in the final clean project submission.
+Raw files should not be committed to repository or included in the final clean project submission.
 
 ### Processed Public Data
 
@@ -37,9 +37,9 @@ Smaller samples created from the real public dog growth dataset for notebook exp
 
 ---
 
-## 2. Preparation Steps
+## 2. Preparation Workflow
 
-### Step 1: Keep the raw dataset archive locally
+### Stage 1: Keep the raw dataset archive locally
 
 The original public dataset is distributed as a compressed archive. In this project, that file is called the **raw dataset archive**.
 
@@ -49,11 +49,11 @@ Expected local path:
 data/raw/Final_Data_PLOS.zip
 ```
 
-This is a normal dataset-distribution format, not a project patch or clean checkpoint archive.
+This is a normal dataset-distribution format, not a project update or clean local backup archive.
 
 The original large file should stay local.
 
-### Step 2: Inspect the raw data
+### Stage 2: Inspect the raw data
 
 Check:
 
@@ -66,7 +66,7 @@ Check:
 - body condition columns;
 - category columns.
 
-### Step 3: Select useful columns
+### Stage 3: Select useful columns
 
 Useful columns are related to:
 
@@ -78,7 +78,7 @@ Useful columns are related to:
 - adult breed weight information;
 - health-related flags if available.
 
-### Step 4: Clean the data
+### Stage 4: Clean the data
 
 Cleaning may include:
 
@@ -88,7 +88,7 @@ Cleaning may include:
 - renaming columns for clarity;
 - keeping a consistent source label.
 
-### Step 5: Create processed samples
+### Stage 5: Create processed samples
 
 The project creates:
 
@@ -104,9 +104,9 @@ data/processed/dog_growth_classification_sample.csv
 
 for classification experiments.
 
-### Step 6: Use the processed samples in notebooks
+### Stage 6: Use the processed samples in notebooks
 
-The processed samples are small enough for reproducible notebooks and GitHub.
+The processed samples are small enough for reproducible notebooks and repository.
 
 ---
 
@@ -166,7 +166,7 @@ This distinction protects the academic integrity of the project.
 
 ---
 
-## 6. Why This Step Matters
+## 6. Why This Stage Matters
 
 Using real public data makes the project stronger and more realistic.
 

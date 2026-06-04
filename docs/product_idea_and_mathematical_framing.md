@@ -246,7 +246,7 @@ This allows future analysis of:
 - acceleration or slowdown;
 - deviation over time.
 
-This is the key step that makes the project more useful in everyday life.
+This is the key stage that makes the project more useful in everyday life.
 
 ---
 

@@ -1,10 +1,10 @@
-# Step 12: Public Image Dataset Feasibility
+# Image dataset feasibility stage: Public Image Dataset Feasibility
 
 ## Purpose
 
 This document evaluates whether public dog image datasets can support a future **Molossoid Visual Similarity Classifier** inside the Cane Corso Growth Intelligence project.
 
-The project does not currently have a private Cane Corso image dataset. Therefore, the responsible first step is not model training. The responsible first step is to check public dataset candidates, class coverage, access rules, repository storage policy and limitations.
+The project does not currently have a private Cane Corso image dataset. Therefore, the responsible first stage is not model training. The responsible first stage is to check public dataset candidates, class coverage, access rules, repository storage policy and limitations.
 
 The future visual model must be framed as:
 
@@ -63,7 +63,7 @@ dogue_de_bordeaux
 other_unknown
 ```
 
-However, Step 12 does **not** claim that all these classes are available in every public dataset.
+However, Image dataset feasibility stage does **not** claim that all these classes are available in every public dataset.
 
 The class list for each candidate dataset must be checked from the dataset metadata before training.
 
@@ -75,7 +75,7 @@ The class list for each candidate dataset must be checked from the dataset metad
 
 The project should not use random images from Google Images, Instagram, Facebook, breeder websites or social media posts without permission.
 
-### Rule 2: GitHub stores metadata, not image archives
+### Rule 2: repository stores metadata, not image archives
 
 The repository should contain:
 
@@ -99,7 +99,7 @@ Before using any public image dataset, the project should check:
 - license or usage terms;
 - whether redistribution is allowed;
 - whether course/demo use is allowed;
-- whether images can be committed to GitHub.
+- whether images can be committed to repository.
 
 ### Rule 4: Missing target classes are not a failure
 
@@ -114,14 +114,14 @@ future USG consent-based images -> Cane Corso-focused extension
 
 ---
 
-## Step 12 Decision
+## Image dataset feasibility stage Decision
 
-Step 12 adds feasibility documentation and validation, but it intentionally does not train a visual model yet.
+Image dataset feasibility stage adds feasibility documentation and validation, but it intentionally does not train a visual model yet.
 
-The correct next step after Step 12 is:
+The correct next stage after Image dataset feasibility stage is:
 
 ```text
-Step 13: Download / metadata verification instructions for the selected public image dataset
+Local image dataset preparation stage: Download / metadata verification instructions for the selected public image dataset
 ```
 
 Only after the class list and terms are verified should the project move to a baseline Computer Vision model.

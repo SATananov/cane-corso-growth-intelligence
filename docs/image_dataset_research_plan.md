@@ -156,7 +156,7 @@ If a class is missing, the project should either:
 
 ## Image Data Storage Rule
 
-Do not commit large downloaded image datasets directly to GitHub.
+Do not commit large downloaded image datasets directly to repository.
 
 The repository should contain:
 
@@ -206,11 +206,11 @@ Not allowed for a responsible project:
 
 ## Current Status
 
-Step 11 does not train an image model yet.
+Visual similarity concept stage does not train an image model yet.
 
 It creates the research, data-governance and mathematical plan needed before a future Computer Vision notebook is added.
 
-Step 12 adds a more concrete feasibility layer:
+Image dataset feasibility stage adds a more concrete feasibility layer:
 
 ```text
 docs/image_dataset_feasibility.md
@@ -220,4 +220,4 @@ src/validate_image_dataset_feasibility.py
 notebooks/09_image_dataset_feasibility.ipynb
 ```
 
-The Step 12 decision is to verify public dataset metadata and terms before any image model training.
+The Image dataset feasibility stage decision is to verify public dataset metadata and terms before any image model training.

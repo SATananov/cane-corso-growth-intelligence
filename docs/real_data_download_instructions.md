@@ -46,13 +46,13 @@ Final_Data_PLOS.zip
 
 In this project, that file is called the **raw dataset archive**.
 
-This is a data-source term. It means the original public data file is compressed before processing. It does not refer to project patch archives, clean checkpoint archives, or any development ZIP files used outside the analytical workflow.
+This is a data-source term. It means the original public data file is compressed before processing. It does not refer to project temporary update archives, local backup archives, or any development ZIP files used outside the analytical workflow.
 
 ---
 
 ## Repository Rule
 
-The raw dataset archive should not be committed directly to GitHub.
+The raw dataset archive should not be committed directly to repository.
 
 Reasons:
 
@@ -110,4 +110,4 @@ data/processed/dog_growth_classification_sample.csv
 5. Do not commit the original raw dataset archive.
 ```
 
-This keeps the project transparent, reproducible, and suitable for GitHub review.
+This keeps the project transparent, reproducible, and suitable for repository review.

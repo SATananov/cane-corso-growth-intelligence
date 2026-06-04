@@ -1,4 +1,4 @@
-class_slug,display_name,role,use_in_step12,dataset_availability_status,minimum_images_for_baseline,comments
+class_slug,display_name,role,use_in_stage12,dataset_availability_status,minimum_images_for_baseline,comments
 cane_corso,Cane Corso,primary_domain_target,planned_target,must_verify_from_dataset_metadata,100,Core USG/Cane Corso class. Do not claim availability until metadata is checked.
 dogo_argentino,Dogo Argentino,related_molossoid_comparison,planned_target,must_verify_from_dataset_metadata,100,Important comparison class for visual similarity.
 presa_canario,Presa Canario,related_molossoid_comparison,planned_target,must_verify_from_dataset_metadata,100,Important molossoid comparison class if publicly available.

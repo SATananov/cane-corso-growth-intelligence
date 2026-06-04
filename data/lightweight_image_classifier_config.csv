@@ -1,7 +1,7 @@
 key,value,notes
-subset_root,data/images/local_dataset/splits/stanford_dogs_first_baseline,Local-only prepared image subset from Step 19
+subset_root,data/images/local_dataset/splits/stanford_dogs_first_baseline,Local-only prepared image subset from Baseline image subset preparation stage
 feature_type,rgb_histogram_statistics,Simple interpretable baseline features
 histogram_bins,16,Per RGB channel
 model_type,logistic_regression,Lightweight sklearn classifier
-save_model,no,Model weights are not committed in Step 21
+save_model,no,Model weights are not committed in Lightweight image classifier prototype stage
 interpretation,visual_similarity_only,Not breed proof or pedigree proof

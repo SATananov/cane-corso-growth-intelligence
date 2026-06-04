@@ -20,7 +20,7 @@ This report validates the class-availability planning data for the future visual
 - other_unknown: 3
 - presa_canario: 2
 
-## Step 15 usability flags
+## First public image dataset candidate stage usability flags
 
 - future: 3
 - no_until_confirmed: 3

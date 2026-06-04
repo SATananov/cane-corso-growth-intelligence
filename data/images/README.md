@@ -47,7 +47,7 @@ The project now reserves this ignored local folder for future image experiments:
 data/images/local_dataset/
 ```
 
-Use it only on the local machine for downloaded public datasets or future consent-based owner images. Do not commit actual image files to GitHub.
+Use it only on the local machine for downloaded public datasets or future consent-based owner images. Do not commit actual image files to repository.
 
 Prepare the structure:
 
