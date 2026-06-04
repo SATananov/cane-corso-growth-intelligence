@@ -1,0 +1,4 @@
+growth_segment,segment_name,row_count,dog_count,median_age_months,median_weight_kg,median_height_cm,median_weight_velocity_kg_per_month,most_common_sex,most_common_activity,suggested_action,risk_note
+0,lighter_early_growth_profile,12,4,3.0,13.65,37.5,4.475,female,medium,inspect trend consistency and compare with age-aware growth context,small educational dataset; segment should not be interpreted as medical diagnosis
+1,middle_growth_profile,8,3,4.5,24.35,49.0,5.8,male,medium,inspect trend consistency and compare with age-aware growth context,small educational dataset; segment should not be interpreted as medical diagnosis
+2,heavier_later_growth_profile,12,4,10.0,40.35,61.5,2.2,male,medium,inspect trend consistency and compare with age-aware growth context,small educational dataset; segment should not be interpreted as medical diagnosis

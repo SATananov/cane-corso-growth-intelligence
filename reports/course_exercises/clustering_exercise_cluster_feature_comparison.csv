@@ -1,0 +1,4 @@
+feature_set,mean_accuracy,mean_f1_macro,interpretation_limit
+original_growth_features,0.875,0.859163,educational comparison on a small prototype dataset
+cluster_distance_features,0.71875,0.707937,educational comparison on a small prototype dataset
+original_plus_cluster_distances,0.875,0.859163,educational comparison on a small prototype dataset

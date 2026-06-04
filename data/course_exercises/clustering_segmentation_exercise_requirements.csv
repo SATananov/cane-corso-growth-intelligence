@@ -1,0 +1,14 @@
+exercise_area,course exercise expectation,project alignment
+research_question,Discover meaningful segments and examine whether they help later prediction.,Segment Cane Corso growth-state observations and test whether cluster-derived features add useful signal.
+sample_definition,Reason carefully about the independent sample and avoid blindly treating every raw row as independent.,The project defines a growth-state row as the educational clustering unit and documents the limitation that production work should use larger dog-level longitudinal profiles.
+eda_cleaning,"Inspect duplicates, missing identifiers, invalid quantities, outliers, sparse customers or countries, and create a cleaning policy.","The project checks missing dog identifiers, numeric growth measurements, impossible non-positive values, very small groups, repeated observations, and growth outliers."
+chronological_split,Use a time-aware split and explain leakage risk.,The project separates early growth ages from later growth ages and treats later observations as future-like evaluation context.
+pipeline,"Use a reproducible preprocessing pipeline with imputation, scaling and categorical handling.",The project uses a ColumnTransformer-style preprocessing pipeline for numeric growth features and categorical dog descriptors.
+kmeans,Run KMeans and compare candidate k values with inertia and silhouette.,"The project evaluates multiple k values and records inertia, silhouette, and selected cluster count."
+contesting_algorithm,Compare with at least one additional clustering algorithm.,The project compares KMeans with agglomerative clustering for the same prepared feature space.
+segment_profiles,Create human-readable segment profiles with statistics and recommendations.,"The project produces growth-segment profiles with median age, weight, height, velocity, action and risk notes."
+debugging_explainability,Create visualisation and stability diagnostics.,The project records a visualization plan and tests KMeans stability across several random seeds.
+clustering_vs_classification,Compare descriptive clustering with supervised prediction.,"The project compares original features, cluster-distance features, and combined features on an educational supervised target."
+cluster_features,Test whether cluster-derived features improve supervised prediction.,"The project reports cross-validated metrics for original, cluster-only and combined feature sets."
+final_verdict,Write a plain-language recommendation and next validation action.,The project summary explains how the segmentation should be interpreted and what the next validation action should be.
+optional_feature_clustering,Consider feature clustering or dimensionality reduction where appropriate.,"The project leaves feature agglomeration as a later dimensionality-reduction extension, because the course topic appears later."

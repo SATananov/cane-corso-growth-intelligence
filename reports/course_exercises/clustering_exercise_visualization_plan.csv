@@ -1,0 +1,6 @@
+visualization,purpose
+age_vs_weight_by_segment,"show whether clusters separate early, middle, and later growth states"
+height_vs_weight_by_segment,inspect body-size profile differences between clusters
+cluster_size_bar_chart,detect tiny or dominant clusters that may be preprocessing artifacts
+pca_2d_cluster_projection,project the prepared feature space to two dimensions for debugging and communication
+cluster_distance_feature_importance,explain whether cluster-derived features add predictive information

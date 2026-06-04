@@ -1,0 +1,6 @@
+algorithm,cluster_count,inertia,silhouette,selected_for_project
+kmeans,2,116.253585,0.493296,False
+kmeans,3,51.282036,0.519267,True
+kmeans,4,41.986554,0.402268,False
+kmeans,5,33.817207,0.381722,False
+agglomerative,3,,0.519267,False
