@@ -111,7 +111,7 @@ This notebook covers:
 - K-Means vs Hierarchical Clustering comparison
 - DBSCAN density clustering and noise detection
 - clustering vs classification comparison using Adjusted Rand Index
-- Step 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
+- Additional clustering notes: mathematical application bridge and exact lesson alignment
 
 
 ### Feature Engineering and Time Series Topic
@@ -248,7 +248,7 @@ src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
 ```
 
-The Step 12 dataset-feasibility validation script can be run with:
+The dataset-feasibility validation script can be run with:
 
 ```powershell
 python src/validate_image_dataset_feasibility.py
@@ -267,7 +267,7 @@ python src/validate_image_manifest.py
 It validates the structure of the example image manifest only. It does not download images or train an image model.
 
 
-The Step 13 local image dataset preparation script can be run with:
+The local image dataset preparation script can be run with:
 
 ```powershell
 python src/prepare_image_dataset_structure.py
@@ -285,7 +285,7 @@ Validate the local structure with:
 python src/validate_local_image_dataset.py
 ```
 
-This validation allows zero images at Step 13. It checks folder structure and metadata templates only.
+This validation allows zero images during the local preparation phase. It checks folder structure and metadata templates only.
 
 The original public dataset is distributed as a compressed archive. In this project, it is referred to as the **raw dataset archive** and should be kept locally in:
 
@@ -321,7 +321,7 @@ The next planned core course topic is:
 Dimensionality Reduction
 ```
 
-Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.
+Future course topics can be added as new notebooks with updated course mapping.
 
 ## 10. Read the geometric interpretation
 
@@ -363,7 +363,7 @@ The notebook covers dummy baselines, pipelines, cross-validation, learning curve
 
 ## 11. Run the practical growth assessment workflow
 
-Step 10.1 adds an applied workflow that turns example owner-style measurements into a readable educational report.
+The practical growth assessment workflow turns example owner-style measurements into a readable educational report.
 
 Input:
 
@@ -392,7 +392,7 @@ Optional notebook walkthrough:
 notebooks/06_practical_growth_assessment_workflow.ipynb
 ```
 
-This step demonstrates practical applicability while keeping the project educational and mathematically transparent.
+This workflow demonstrates practical applicability while keeping the project educational and mathematically transparent.
 
 
 ### Local Stanford Dogs Inspection / Baseline Class Selection
@@ -413,7 +413,7 @@ python src/validate_stanford_baseline_class_selection.py
 Before the dataset is downloaded locally, zero confirmed classes is acceptable. The purpose is to keep class selection evidence-based before any image model is trained.
 
 
-## Step 17 — Stanford Dogs Local Download / Real Class Inspection
+## Stanford Dogs Local Download / Real Class Inspection
 
 Safe checks without downloading large files:
 

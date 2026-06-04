@@ -152,7 +152,7 @@ src/validate_image_manifest.py
 
 ## 5. Local Image Dataset Acquisition and Preparation
 
-Step 13 adds a local-only preparation workflow for future image datasets.
+The local-only preparation workflow defines how future image datasets should be organized.
 
 Local image root:
 
@@ -178,7 +178,7 @@ Important rule:
 Do not commit downloaded image datasets, private owner images, or scraped web images to GitHub.
 ```
 
-The current project still contains no actual image dataset and no trained image model. Step 13 prepares the acquisition workflow and local structure only.
+The current project still contains no committed image dataset and no trained image model. The preparation workflow defines the acquisition process and local structure only.
 
 ---
 
@@ -370,9 +370,9 @@ The data is used only for educational machine-learning experiments.
 The project does not provide veterinary diagnosis. Model outputs should be interpreted as growth-monitoring signals for analysis and learning, not as medical conclusions.
 
 
-## Step 16 — Stanford Dogs Baseline Class Selection
+## Stanford Dogs Baseline Class Selection
 
-Step 16 adds a class-selection workflow for the local Stanford Dogs candidate.
+The class-selection workflow documents how the local Stanford Dogs candidate classes are selected.
 
 The project now documents likely baseline candidates such as Boxer, Bullmastiff and Great Dane, but still requires local label inspection before any class is used for training.
 
@@ -394,10 +394,10 @@ Desired target classes must not be treated as available training classes until v
 ```
 
 
-## Step 17 Stanford Dogs Local Download Boundary
+## Stanford Dogs Local Download Boundary
 
 Stanford Dogs / ImageNet Dogs remains the first public image dataset candidate for the Computer Vision branch.
 
-Step 17 adds local-only download and inspection artifacts. It does not commit image files and does not assume that any desired molossoid class is available until local class folders are inspected.
+The local-only download and inspection workflow documents the real Stanford Dogs files inspected on the developer machine. It does not include image files in the repository and does not assume that any desired molossoid class is available until local class folders are inspected.
 
 Large image archives must be downloaded only with explicit user action and kept under ignored local dataset folders.
