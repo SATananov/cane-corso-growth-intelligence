@@ -794,12 +794,12 @@ Feature Engineering and Time Series ✅ + Practical Workflow ✅
 
 ---
 
-# Topic 5: Dimensionality Reduction
+# Future Course Topic: Dimensionality Reduction
 
 Planned notebook or section:
 
 ```text
-notebooks/05_dimensionality_reduction_growth_profiles.ipynb
+notebooks/06_dimensionality_reduction_future_course_topic.ipynb
 ```
 
 Planned methods:
@@ -827,12 +827,12 @@ Dimensionality Reduction ⏳
 
 ---
 
-# Topic 6: MLflow
+# Future Course Topic: MLflow
 
 Planned notebook or experiment folder:
 
 ```text
-notebooks/06_mlflow_experiment_tracking.ipynb
+notebooks/07_mlflow_future_course_topic.ipynb
 ```
 
 Planned coverage:
@@ -943,7 +943,7 @@ A future Visual Similarity extension can add image-based visual similarity proba
 Files:
 
 ```text
-notebooks/06_practical_growth_assessment_workflow.ipynb
+notebooks/05_1_practical_growth_assessment_workflow.ipynb
 src/run_growth_assessment.py
 data/input/example_new_cane_corso_measurements.csv
 reports/example_growth_assessment_report.md

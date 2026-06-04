@@ -577,3 +577,8 @@ Therefore, Cane Corso-specific visual recognition remains future work unless a v
 The project now includes a local inspection workflow for Stanford Dogs / ImageNet Dogs. This supports the future visual-similarity classifier by verifying real local class folders before model training.
 
 This extension strengthens the project methodology because it separates desired classes from available labels and keeps the visual module honest and evidence-based.
+
+
+## Reserved Future Course Notebooks
+
+Dimensionality Reduction and MLflow are planned future course topics. The project reserves `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` and `notebooks/07_mlflow_future_course_topic.ipynb` for these topics. They should be completed only after the lectures and exercises are covered in class.

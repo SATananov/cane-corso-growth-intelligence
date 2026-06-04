@@ -232,13 +232,21 @@ docs/dataset_selection_rationale.md
 
 ### Exploratory Visual Similarity Extension
 
+
+Future course-topic slots are reserved but intentionally not implemented yet:
+
+notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/07_mlflow_future_course_topic.ipynb
+
+These notebooks should be completed only after the corresponding lecture and exercise are covered in class.
+
 The project also includes an optional exploratory visual-similarity extension for future work:
 
 ```text
 uploaded dog image -> visual feature extractor -> visual similarity probabilities
 ```
 
-This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The starting point is therefore data research, public dataset feasibility, and a manifest-based data plan.
+This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The first step is therefore data research, public dataset feasibility, and a manifest-based data plan.
 
 Supporting files:
 
@@ -331,7 +339,7 @@ For a reviewer or instructor, the easiest order is:
 12. notebooks/03_1_classification_pipeline_exercise.ipynb
 13. notebooks/04_unsupervised_learning_clustering.ipynb
 14. notebooks/05_feature_engineering_time_series_growth.ipynb
-15. notebooks/06_practical_growth_assessment_workflow.ipynb
+15. notebooks/05_1_practical_growth_assessment_workflow.ipynb
 16. notebooks/08_computer_vision_visual_similarity_concept.ipynb
 17. notebooks/09_image_dataset_feasibility.ipynb
 18. notebooks/10_image_dataset_acquisition_local_preparation.ipynb
@@ -478,7 +486,7 @@ Covers lag features, growth velocity, weight-to-height ratio, rolling averages, 
 ### 5.1. Practical Growth Assessment Workflow
 
 ```text
-notebooks/06_practical_growth_assessment_workflow.ipynb
+notebooks/05_1_practical_growth_assessment_workflow.ipynb
 ```
 
 Shows how new owner-style measurements can be transformed into a readable educational growth assessment report.
@@ -541,7 +549,7 @@ flowchart TD
 |---|---|
 | `PROJECT_BRIEF.md` | Main project story and scope |
 | `docs/product_idea_and_mathematical_framing.md` | Strong explanation of the useful and interesting idea |
-| `docs/model_learning_explanation.md` | How the models learn through the project workflow |
+| `docs/model_learning_explanation.md` | How the models learn, step by step |
 | `docs/notebook_mathematical_formulation_template.md` | Standard mathematical structure for every new notebook |
 | `docs/math_foundation.md` | Mathematical formulas and model intuition |
 | `docs/geometric_interpretation.md` | Coordinate-space view of models and feature space |
@@ -652,7 +660,7 @@ python src/validate_local_image_dataset.py
 
 The folder `data/images/local_dataset/` is ignored by Git. It can contain downloaded public image datasets or future permission-based owner photos on the developer machine, but image files should not be committed.
 
-Responsible boundary: this workflow prepares data governance and local structure only. It does not download images, train a visual-similarity model, or prove breed identity.
+Responsible boundary: this step prepares data governance and local structure only. It does not download images, train a visual-similarity model, or prove breed identity.
 
 
 ## First Public Image Dataset Candidate
@@ -663,7 +671,7 @@ The project now documents the first public dataset candidate for the future Comp
 Stanford Dogs / ImageNet Dogs
 ```
 
-This workflow does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to the repository, and how local labels/classes should be inspected before any baseline classifier is trained.
+This step does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to the repository, and how local labels/classes should be inspected before any baseline classifier is trained.
 
 Related files:
 
