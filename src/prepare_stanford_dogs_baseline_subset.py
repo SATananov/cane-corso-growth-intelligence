@@ -58,7 +58,7 @@ def selected_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def find_candidate_folder(row: dict[str, str]) -> Path | None:
-    # Prefer explicit local paths written by Step 16/18 reports.
+    # Prefer explicit local paths written by the class-selection and real-inspection reports.
     explicit_paths = row.get("local_class_paths", "")
     for raw_part in explicit_paths.split(";"):
         part = raw_part.strip()
@@ -123,7 +123,7 @@ def write_empty_outputs(reason: str) -> None:
         "# Stanford Dogs Baseline Image Subset Summary\n\n"
         f"No image subset rows were prepared. Reason: {reason}\n\n"
         "This is acceptable in a clean repository before local image data is downloaded/extracted.\n"
-        "Actual image files must remain local-only and must not be committed to GitHub.\n",
+        "Actual image files must remain local-only and must not be committed to the repository.\n",
         encoding="utf-8",
     )
 
@@ -257,7 +257,7 @@ def main() -> None:
         "",
         "This subset supports a future educational visual-similarity baseline only.",
         "It does not prove breed, pedigree, genetic origin, registry status, certification or veterinary condition.",
-        "Actual image files are local-only and must not be committed to GitHub.",
+        "Actual image files are local-only and must not be committed to the repository.",
     ])
     SUMMARY.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -268,7 +268,7 @@ def main() -> None:
     print(f"Output root: {output_root}")
     print(f"Manifest: {MANIFEST}")
     print(f"Summary:  {SUMMARY}")
-    print("Note: copied images are local-only and must not be committed to GitHub.")
+    print("Note: copied images are local-only and must not be committed to the repository.")
 
 
 if __name__ == "__main__":

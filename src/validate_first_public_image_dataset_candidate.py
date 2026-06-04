@@ -26,7 +26,7 @@ REQUIRED_GUIDE_PHRASES = [
     "not as",
     "breed proof",
     "not training an image model",
-    "must not be committed to GitHub",
+    "should not be committed",
 ]
 
 
@@ -51,10 +51,10 @@ def main() -> None:
 
     candidate = candidate_rows[0]
     if "stanford" not in candidate["dataset_name"].lower():
-        raise AssertionError("Step 15 first candidate should be Stanford Dogs / ImageNet Dogs.")
+        raise AssertionError("The first candidate should be Stanford Dogs / ImageNet Dogs.")
 
-    if candidate["training_status"] != "not_trained_in_step_15":
-        raise AssertionError("Step 15 must not claim that an image model has already been trained.")
+    if candidate["training_status"] != "not_trained_in_stage_15":
+        raise AssertionError("The first candidate stage must not claim that an image model has already been trained.")
 
     if "not_assumed" not in candidate["cane_corso_status"]:
         raise AssertionError("Cane Corso availability must be documented as not assumed before label inspection.")
@@ -74,7 +74,7 @@ def main() -> None:
         f"Candidate: {candidate['dataset_name']}\n\n"
         f"Expected download location: `{candidate['expected_download_location']}`\n\n"
         f"Expected raw location: `{candidate['expected_raw_location']}`\n\n"
-        "Training status: no image model is trained in Step 15.\n\n"
+        "Training status: no image model is trained at this candidate-selection stage.\n\n"
         "Responsible boundary: visual similarity only; not breed proof, pedigree proof, registry proof or veterinary diagnosis.\n",
         encoding="utf-8",
     )

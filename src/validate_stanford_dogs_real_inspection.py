@@ -26,7 +26,7 @@ def read_csv(path: Path) -> list[dict[str, str]]:
 def main() -> None:
     missing = [str(path.relative_to(ROOT)) for path in REQUIRED_FILES if not path.exists()]
     if missing:
-        raise SystemExit("Missing Step 17 files: " + ", ".join(missing))
+        raise SystemExit("Missing Stanford Dogs real-inspection files: " + ", ".join(missing))
 
     artifacts = read_csv(ARTIFACTS_FILE)
     rules = read_csv(RULES_FILE)
@@ -43,9 +43,9 @@ def main() -> None:
     required_terms = ["visual similarity", "not breed proof", "not downloaded by default", "local only"]
     for term in required_terms:
         if term not in doc:
-            raise SystemExit(f"Step 17 document missing required boundary term: {term}")
+            raise SystemExit(f"Stanford Dogs real-inspection document missing required boundary term: {term}")
 
-    print("Step 17 Stanford Dogs real inspection validation PASS")
+    print("Stanford Dogs real inspection validation PASS")
     print(f"Download artifacts: {len(artifacts)}")
     print(f"Inspection rules: {len(rules)}")
     print("Boundary: large image archives are not downloaded by default; inspection is visual-similarity only.")

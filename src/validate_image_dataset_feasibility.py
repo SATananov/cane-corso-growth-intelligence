@@ -1,4 +1,4 @@
-"""Validate Step 12 image dataset feasibility planning files.
+"""Validate image dataset feasibility planning files.
 
 This script intentionally validates metadata only. It does not download images,
 train a model, or check private/local image files.
@@ -25,14 +25,14 @@ FEASIBILITY_COLUMNS = {
     "target_class_check_required",
     "license_terms_check_required",
     "repository_policy",
-    "step12_decision",
+    "stage12_decision",
 }
 
 TARGET_COLUMNS = {
     "class_slug",
     "display_name",
     "role",
-    "use_in_step12",
+    "use_in_stage12",
     "dataset_availability_status",
     "minimum_images_for_baseline",
     "comments",
@@ -99,7 +99,7 @@ def validate_no_committed_images() -> None:
     if image_files:
         rel = [str(path.relative_to(ROOT)) for path in image_files[:10]]
         raise ValueError(
-            "Downloaded image files should not be committed in Step 12. "
+            "Downloaded image files should not be committed during feasibility planning. "
             f"Found examples: {rel}"
         )
 
@@ -110,7 +110,7 @@ def main() -> None:
     validate_feasibility(feasibility_rows)
     validate_targets(target_rows)
     validate_no_committed_images()
-    print("Step 12 image dataset feasibility validation PASS")
+    print("Image dataset feasibility validation PASS")
     print(f"Dataset candidates: {len(feasibility_rows)}")
     print(f"Target visual classes: {len(target_rows)}")
     print("No downloaded image files detected in data/images")

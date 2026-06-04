@@ -62,7 +62,7 @@ def main() -> None:
             "No local Stanford Dogs class folders were detected yet.",
             "",
             "This is acceptable before the dataset has been downloaded/extracted.",
-            "Step 15 only provides the local download and inspection guide.",
+            "The current guide only defines the local download and inspection workflow.",
         ])
 
     lines.extend([

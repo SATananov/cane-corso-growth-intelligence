@@ -1,4 +1,4 @@
-"""Validate Step 20 baseline image classifier training-plan artifacts.
+"""Validate baseline image classifier training-plan artifacts.
 
 This validation is intentionally lightweight. It checks documentation, CSV plans,
 and interpretation boundaries. It does not download images, train a model, or
@@ -37,9 +37,9 @@ REQUIRED_METRICS = {
 
 REQUIRED_BOUNDARY_PHRASES = [
     "visual similarity",
-    "not breed proof",
+    "not as proof of breed identity",
     "No pedigree",
-    "No images are downloaded",
+    "local-only copies of images",
 ]
 
 
@@ -115,7 +115,7 @@ Required metrics: {', '.join(required_metrics)}
 
 ## Boundary
 
-Step 20 validates the future image-classifier training plan only. It does not download images, train a model, create model weights, or claim breed proof.
+This validation covers the future image-classifier training plan only. It does not download images, train a model, create model weights, or claim breed proof.
 """
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
     REPORT_PATH.write_text(report, encoding="utf-8")
@@ -124,18 +124,15 @@ Step 20 validates the future image-classifier training plan only. It does not do
 def main() -> None:
     training_text = require_file(TRAINING_PLAN_DOC)
     safety_text = require_file(SAFETY_DOC)
-    patch_path = ROOT / "PATCH_REPORT_STEP20_BASELINE_IMAGE_CLASSIFIER_TRAINING_PLAN.md"
-    patch_text = patch_path.read_text(encoding="utf-8") if patch_path.exists() else ""
-
     training_rows = read_csv_rows(TRAINING_PLAN_CSV)
     metric_rows = read_csv_rows(METRICS_PLAN_CSV)
 
     validate_training_plan_csv(training_rows)
     validate_metrics_csv(metric_rows)
-    validate_docs(training_text, safety_text, patch_text)
+    validate_docs(training_text, safety_text, "")
     write_report(training_rows, metric_rows)
 
-    print("Step 20 baseline image classifier training-plan validation PASS")
+    print("Baseline image classifier training-plan validation PASS")
     print(f"Training plan rows: {len(training_rows)}")
     print(f"Metrics plan rows:  {len(metric_rows)}")
     print(f"Report: {REPORT_PATH}")

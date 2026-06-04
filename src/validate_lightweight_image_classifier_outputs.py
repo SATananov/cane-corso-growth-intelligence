@@ -1,4 +1,4 @@
-"""Validate Step 21 lightweight image classifier report artifacts."""
+"""Validate lightweight image classifier report artifacts."""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ def main() -> None:
     missing = [path for path in REQUIRED_FILES if not path.exists()]
     if missing:
         raise SystemExit(
-            "Missing Step 21 report artifact(s):\n"
+            "Missing lightweight image classifier report artifact(s):\n"
             + "\n".join(f"- {path}" for path in missing)
             + "\nRun: python src/train_lightweight_image_classifier.py"
         )
@@ -69,10 +69,10 @@ def main() -> None:
 
     examples = read_csv(REPORTS_DIR / "lightweight_image_classifier_prediction_examples.csv")
 
-    print("Step 21 lightweight image classifier output validation PASS")
+    print("Lightweight image classifier output validation PASS")
     print(f"Metrics rows: {len(metrics)}")
     print(f"Prediction example rows: {len(examples)}")
-    print("Boundary: visual similarity only; no image files or model weights are required in GitHub.")
+    print("Boundary: visual similarity only; no image files or model weights are required in the repository.")
 
 
 if __name__ == "__main__":

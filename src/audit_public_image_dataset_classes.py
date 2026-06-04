@@ -19,7 +19,7 @@ REQUIRED_CANDIDATE_COLUMNS = {
     "match_level",
     "baseline_role",
     "confirmation_status",
-    "usable_for_step15_baseline",
+    "usable_for_stage15_baseline",
     "limitation_notes",
 }
 
@@ -57,7 +57,7 @@ def inspect_local_class_dir(class_dir: Path | None) -> list[str]:
 def build_report(candidates: list[dict[str, str]], rules: list[dict[str, str]], local_classes: list[str]) -> str:
     dataset_counts = Counter(row["dataset_name"] for row in candidates)
     target_counts = Counter(row["target_class"] for row in candidates)
-    usable_counts = Counter(row["usable_for_step15_baseline"] for row in candidates)
+    usable_counts = Counter(row["usable_for_stage15_baseline"] for row in candidates)
 
     lines: list[str] = []
     lines.append("# Public Image Dataset Class Availability Audit")
@@ -74,7 +74,7 @@ def build_report(candidates: list[dict[str, str]], rules: list[dict[str, str]], 
     for target_class, count in sorted(target_counts.items()):
         lines.append(f"- {target_class}: {count}")
     lines.append("")
-    lines.append("## Step 15 usability flags")
+    lines.append("## First baseline usability flags")
     lines.append("")
     for flag, count in sorted(usable_counts.items()):
         lines.append(f"- {flag}: {count}")

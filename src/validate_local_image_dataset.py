@@ -116,7 +116,7 @@ def main() -> None:
     print(f"Raw image files counted: {sum(raw_counts.values())}")
     print(f"Processed image files counted: {sum(processed_counts.values())}")
     print(f"Split image files counted: {sum(split_counts.values())}")
-    print("\nNote: zero image files is acceptable at Step 13. This validates local structure only.")
+    print("\nNote: zero image files is acceptable at the local preparation stage. This validates local structure only.")
     print("It does not check licensing, image quality, label correctness, or train a model.")
 
 

@@ -1,7 +1,7 @@
 """Train a lightweight visual-similarity baseline classifier.
 
-Step 21 intentionally avoids deep learning. It uses simple image features and a
-scikit-learn classifier to prove the end-to-end image-classification workflow.
+This lightweight prototype intentionally avoids deep learning. It uses simple image features and a
+scikit-learn classifier to demonstrate the end-to-end image-classification workflow.
 
 The model output is visual similarity among trained classes only. It is not breed
 proof, pedigree proof, registry proof, genetic proof, or veterinary advice.
@@ -161,7 +161,7 @@ def write_prediction_examples(model, labels: list[str], paths: list[Path], y_tru
 
 def write_report(class_counts: dict[str, Counter], metrics: list[dict[str, object]], labels: list[str]) -> None:
     lines = [
-        "# Step 21 — Lightweight Baseline Image Classifier Training Report",
+        "# Lightweight Baseline Image Classifier Training Report",
         "",
         "This report records a local-only lightweight image-classification prototype.",
         "The output is visual similarity among trained classes only; it is not breed proof, pedigree proof, registry proof, genetic proof, or veterinary advice.",
@@ -195,7 +195,7 @@ def write_report(class_counts: dict[str, Counter], metrics: list[dict[str, objec
         "## Boundary",
         "",
         "The model is a course-project baseline. It uses simple histogram/statistical image features and logistic regression.",
-        "No image files and no model weights should be committed to GitHub.",
+        "No image files and no model weights should be committed to the repository.",
     ])
     REPORT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
@@ -212,7 +212,7 @@ def main() -> None:
     X_test, y_test, test_paths = load_split("test")
 
     if len(y_train) == 0:
-        raise SystemExit("No training images found. Run Step 19 subset preparation first.")
+        raise SystemExit("No training images found. Run the baseline subset preparation script first.")
     if len(set(y_train)) < 2:
         raise SystemExit("At least two training classes are required for classification.")
 
