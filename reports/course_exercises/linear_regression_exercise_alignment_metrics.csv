@@ -1,0 +1,4 @@
+model,mae,rmse,r2,best_alpha,cv_rmse
+age_only_linear_regression,4.4801,4.7889,0.8556,,
+enriched_linear_regression,1.3898,1.821,0.9791,,
+tuned_ridge_regression,1.36,1.7574,0.9806,0.1,1.0583
