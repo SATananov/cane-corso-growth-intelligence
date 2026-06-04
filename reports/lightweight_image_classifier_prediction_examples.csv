@@ -1,0 +1,13 @@
+image_path,actual_label,predicted_label,prob_boxer,prob_bullmastiff,prob_great_dane
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_11032.jpg,boxer,bullmastiff,0.2813,0.5780,0.1407
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_12232.jpg,boxer,boxer,0.6078,0.0210,0.3712
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_1367.jpg,boxer,boxer,0.5173,0.3875,0.0952
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_13898.jpg,boxer,bullmastiff,0.2475,0.5567,0.1958
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_1575.jpg,boxer,bullmastiff,0.0256,0.9499,0.0245
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_2740.jpg,boxer,boxer,0.4601,0.2851,0.2548
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_3162.jpg,boxer,bullmastiff,0.1929,0.4920,0.3151
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_4002.jpg,boxer,bullmastiff,0.2508,0.3848,0.3644
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_4486.jpg,boxer,boxer,0.8232,0.0664,0.1103
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_7259.jpg,boxer,boxer,0.6907,0.2058,0.1035
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_7853.jpg,boxer,bullmastiff,0.0433,0.7798,0.1769
+data/images/local_dataset/splits/stanford_dogs_first_baseline/test/boxer/n02108089-boxer__n02108089_922.jpg,boxer,bullmastiff,0.0577,0.8222,0.1201
