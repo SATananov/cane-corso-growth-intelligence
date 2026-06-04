@@ -28,6 +28,15 @@ This makes the project both interesting and useful:
 - useful, because the same idea can later become an owner-friendly growth monitor;
 - academically relevant, because it applies multiple machine-learning topics from the course in one coherent domain.
 
+
+## Scope in Relation to the Course
+
+The main project is the tabular Cane Corso growth-intelligence workflow. It is aligned with the course topics covered so far: regression, classification, unsupervised learning / clustering, feature engineering, time-series features, data processing, model evaluation, and careful interpretation of results.
+
+The image-based work is included only as an **exploratory extension**. It investigates whether a small public dog-image dataset can support a simple visual-similarity comparison between available large-dog classes. This part should not be presented as a core course requirement, a breed detector, a pedigree tool, or a Cane Corso certification system.
+
+The next course-aligned additions should follow the actual lecture path: Feature Engineering and Time Series exercise work first, then Dimensionality Reduction, and later MLflow when those topics are covered.
+
 ---
 
 ## Real-World Motivation
@@ -414,9 +423,9 @@ The project should emphasize these strengths:
 ---
 
 
-## Future Computer Vision Extension
+## Optional Exploratory Visual Similarity Extension
 
-The project now includes a planned Computer Vision extension called a **visual similarity classifier**.
+The project includes an optional exploratory visual-similarity extension called a **visual similarity classifier**.
 
 This future module would analyze a dog image and return probabilities over trained visual classes, for example:
 
@@ -437,7 +446,7 @@ image -> visual similarity signal
 combined report -> educational interpretation with limitations
 ```
 
-The project does not currently have a private image dataset, so Step 11 documents public dataset research and a manifest-based data plan instead of training a fake model.
+The project does not currently have a private image dataset, so this stage documents public dataset research and a manifest-based data plan instead of training a fake model.
 
 Supporting files:
 
@@ -449,11 +458,11 @@ notebooks/06_computer_vision_visual_similarity_concept.ipynb
 
 ---
 
-## Computer Vision Dataset Feasibility
+## Visual Dataset Feasibility for the Exploratory Extension
 
-The project now includes a future Computer Vision direction for molossoid visual similarity, but image model training is intentionally postponed until the dataset question is handled responsibly.
+The project now includes a optional visual-similarity direction for molossoid visual similarity, but image model training is intentionally postponed until the dataset question is handled responsibly.
 
-Step 12 adds a feasibility matrix for public dog image datasets and a target-class plan for Cane Corso and related molossoid breeds. It also states that large image folders should remain local and that the project should not scrape social media or random web images without permission.
+this stage adds a feasibility matrix for public dog image datasets and a target-class plan for Cane Corso and related molossoid breeds. It also states that large image folders should remain local and that the project should not scrape social media or random web images without permission.
 
 Supporting files:
 
@@ -468,7 +477,7 @@ src/validate_image_dataset_feasibility.py
 
 ## Image Dataset Acquisition and Local Preparation
 
-Step 13 adds the practical local-data workflow needed before future Computer Vision training.
+this stage adds the practical local-data workflow needed before future visual-similarity training.
 
 Supporting files:
 
@@ -539,11 +548,11 @@ This turns each lecture from a code exercise into a mathematically explained mod
 The selected real public data source is documented in `docs/dataset_selection_rationale.md`. Kaggle was considered as a general dataset-search option, but the University of Liverpool DataCat / PLOS ONE dog growth dataset was selected because it is more directly connected to age/bodyweight growth monitoring.
 
 
-## Step 15 — First Public Image Dataset Candidate
+## First Public Image Dataset Candidate
 
 The project now has a documented first public image dataset candidate for the future visual-similarity module.
 
-The candidate is Stanford Dogs / ImageNet Dogs, used only as a public baseline candidate. Step 15 does not train a Computer Vision model. It prepares the responsible data-acquisition plan and local inspection flow.
+The candidate is Stanford Dogs / ImageNet Dogs, used only as a public baseline candidate. this stage does not train a visual-similarity model. It prepares the responsible data-acquisition plan and local inspection flow.
 
 This supports the long-term direction:
 
@@ -554,7 +563,7 @@ growth intelligence from tabular measurements + visual similarity from images
 The visual result must remain educational and probabilistic. It should never be presented as breed proof, pedigree proof, registry proof or veterinary diagnosis.
 
 
-## Step 16 — Evidence-Based Visual Class Selection
+## Evidence-Based Visual Class Selection
 
 The project now includes a local class-selection workflow for the first public image dataset candidate.
 
@@ -563,7 +572,7 @@ This protects the Computer Vision extension from overstating what the dataset ca
 Therefore, Cane Corso-specific visual recognition remains future work unless a verified public dataset or consent-based USG dataset provides confirmed Cane Corso images.
 
 
-## Step 17 Computer Vision Data Inspection Extension
+## this stage Computer Vision Data Inspection Extension
 
 The project now includes a local inspection workflow for Stanford Dogs / ImageNet Dogs. This supports the future visual-similarity classifier by verifying real local class folders before model training.
 

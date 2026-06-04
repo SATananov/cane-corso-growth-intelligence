@@ -1,5 +1,7 @@
 # Visual Similarity Training Safety Boundaries
 
+This document belongs to an optional exploratory extension outside the current core course sequence. The core course-aligned project remains the tabular growth-intelligence workflow using regression, classification, clustering, feature engineering and time-series features.
+
 This document defines the safety and interpretation boundaries for the future baseline image classifier.
 
 ## Core principle
@@ -56,10 +58,10 @@ The project should use:
 
 - public datasets with documented sources,
 - local-only copies of images,
-- manifest files and reports in GitHub,
+- manifest files and reports in the repository,
 - no random scraping from Google, Facebook, Instagram, or private pages without permission.
 
-## GitHub boundary
+## the repository boundary
 
 Do not commit:
 

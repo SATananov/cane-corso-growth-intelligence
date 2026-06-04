@@ -1,8 +1,10 @@
-# Computer Vision Visual Similarity Extension Plan
+# Exploratory Visual Similarity Extension Plan
+
+This document belongs to an optional exploratory extension outside the current core course sequence. The core course-aligned project remains the tabular growth-intelligence workflow using regression, classification, clustering, feature engineering and time-series features.
 
 ## Purpose
 
-This document describes a future Computer Vision extension for the Cane Corso Growth Intelligence project.
+This document describes a future visual similarity extension for the Cane Corso Growth Intelligence project.
 
 The current project already works with tabular growth data: age, bodyweight, height, engineered features, classification signals, clustering, and time-series monitoring. The planned extension adds an image-based learning direction:
 
@@ -246,11 +248,11 @@ Recommended next steps:
 
 1. verify which public datasets contain the desired molossoid breeds;
 2. document terms of use and citations;
-3. keep downloaded image datasets out of GitHub;
+3. keep downloaded image datasets out of the repository;
 4. create a local image folder structure;
 5. create an image manifest CSV;
 6. train a small transfer-learning baseline;
 7. add confusion matrix and top-k predictions;
 8. combine the visual signal with the existing growth signal.
 
-For now, Step 11 is intentionally a **feasibility and design step**, not a trained image model.
+For now, this stage is intentionally a **feasibility and design step**, not a trained image model.

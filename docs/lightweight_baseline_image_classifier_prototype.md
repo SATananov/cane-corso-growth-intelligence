@@ -1,8 +1,10 @@
-# Step 21 — Lightweight Baseline Image Classifier Prototype
+# Lightweight Baseline Image Classifier Prototype
+
+This document belongs to an optional exploratory extension outside the current core course sequence. The core course-aligned project remains the tabular growth-intelligence workflow using regression, classification, clustering, feature engineering and time-series features.
 
 This step introduces the first real image-classification prototype for the visual-similarity extension of the Cane Corso Growth Intelligence project.
 
-The goal is deliberately modest: train a small, explainable baseline classifier on the local Stanford Dogs subset prepared in Step 19. The prototype is not a final breed-recognition model and does not attempt to prove breed, pedigree, registry status, or genetic origin.
+The goal is deliberately modest: train a small, explainable baseline classifier on the local Stanford Dogs subset prepared in this stage. The prototype is not a final breed-recognition model and does not attempt to prove breed, pedigree, registry status, or genetic origin.
 
 ## Why a lightweight baseline first
 
@@ -28,7 +30,7 @@ data/images/local_dataset/splits/stanford_dogs_first_baseline/
   test/
 ```
 
-These images must not be committed to GitHub. The repository should only contain code, documentation, notebooks, CSV plans, and reports.
+These images must not be committed to the repository. The repository should only contain code, documentation, notebooks, CSV plans, and reports.
 
 ## Initial baseline classes
 

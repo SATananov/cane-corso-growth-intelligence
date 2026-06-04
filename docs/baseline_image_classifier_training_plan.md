@@ -1,6 +1,8 @@
-# Step 20 — Baseline Image Classifier Training Plan
+# this stage — Baseline Image Classifier Training Plan
 
-This document defines the first safe training plan for the Computer Vision extension of the Cane Corso Growth Intelligence project.
+This document belongs to an optional exploratory extension outside the current core course sequence. The core course-aligned project remains the tabular growth-intelligence workflow using regression, classification, clustering, feature engineering and time-series features.
+
+This document defines the first safe training plan for the visual similarity extension of the Cane Corso Growth Intelligence project.
 
 The goal of this step is **not** to claim official breed detection. The goal is to prepare a small, transparent, reproducible baseline image-classification experiment that can report visual similarity among the locally available Stanford Dogs classes selected in the previous steps.
 
@@ -11,7 +13,7 @@ The project already contains two learning directions:
 1. **Tabular Growth Intelligence** — age, weight, height, engineered features, regression, classification, clustering, and growth monitoring signals.
 2. **Visual Similarity Intelligence** — public dog-image dataset research, Stanford Dogs local inspection, candidate class selection, and a local baseline subset preparation workflow.
 
-Step 20 connects the second direction to a future lightweight image-classification prototype.
+this stage connects the second direction to a future lightweight image-classification prototype.
 
 ## Training objective
 
@@ -117,10 +119,10 @@ reports/baseline_visual_classifier_confusion_matrix.csv
 reports/baseline_visual_classifier_predictions.csv
 ```
 
-Large trained model weights should not be committed to GitHub unless they are intentionally small and documented. The preferred rule is:
+Large trained model weights should not be committed to the repository unless they are intentionally small and documented. The preferred rule is:
 
 ```text
-GitHub: code, documentation, notebooks, metrics, small CSV reports
+the repository: code, documentation, notebooks, metrics, small CSV reports
 Local only: image datasets, large model weights, raw archives
 ```
 
@@ -134,6 +136,6 @@ The visual module should remain separate from the growth module at first. Later,
 
 The combined report should still avoid any official breed, pedigree, or veterinary claim.
 
-## Step 20 conclusion
+## this stage conclusion
 
-Step 20 defines the training plan and validation boundaries. The next step can implement a lightweight baseline training prototype, provided that the local image subset remains available and GitHub remains free of large image/model artifacts.
+this stage defines the training plan and validation boundaries. The next step can implement a lightweight baseline training prototype, provided that the local image subset remains available and the repository remains free of large image/model artifacts.

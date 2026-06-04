@@ -10,6 +10,29 @@ Cane Corso Growth Intelligence = mathematical growth profiling + predictive moni
 
 ---
 
+
+## Current Course Position
+
+The project is currently aligned with the course up to **Feature Engineering and Time Series**. The completed core work covers:
+
+```text
+Linear Regression, Regularization and Testing
+Classification
+Unsupervised Learning and Clustering
+Feature Engineering and Time Series
+```
+
+The next course-aligned topics should be added only after they are covered in class:
+
+```text
+Dimensionality Reduction
+MLflow
+```
+
+The visual-similarity work is not listed as a core course topic. It is an optional exploratory extension that demonstrates curiosity and responsible dataset handling. It should support the project story, but it should not replace the course-aligned mathematical and tabular ML deliverables.
+
+---
+
 ## Notebook Mathematical Formulation Standard
 
 For every course topic notebook, the project uses the same mathematical structure:
@@ -24,7 +47,7 @@ For every course topic notebook, the project uses the same mathematical structur
 | `Interpretation` | Translates model output into the growth-monitoring story |
 | `Limitations` | States assumptions, boundaries, and responsible use |
 
-This standard should appear in every new notebook from Step 04 onward.
+This standard should appear in every new notebook from this stage onward.
 
 ---
 
@@ -35,12 +58,16 @@ This standard should appear in every new notebook from Step 04 onward.
 | Linear Regression, Regularization and Testing | Completed | expected growth prediction and residual analysis |
 | Classification | Completed / extended | `normal_growth` vs `needs_attention` probability signal |
 | Unsupervised Learning, Clustering | Completed | unknown growth-pattern groups and exploratory outlier/noise detection |
-| Feature Engineering and Time Series | Completed | growth ratios, velocity, lag features and trajectory over time |
-| Dimensionality Reduction | Planned next | 2D visualization of high-dimensional growth profiles |
-| MLflow | Planned | experiment tracking and model comparison |
-| Computer Vision Visual Similarity | Planned / documented | future image-based visual similarity, not breed proof |
-| Image Dataset Feasibility | Completed as Step 12 plan | public dataset candidates and target molossoid class planning before training |
-| Image Dataset Acquisition and Local Preparation | Completed as Step 13 plan | local-only image dataset folder structure, inventory template and validation before training |
+| Feature Engineering and Time Series | Completed / current exercise topic | growth ratios, velocity, lag features and trajectory over time |
+| Dimensionality Reduction | Future course topic | planned 2D visualization of high-dimensional growth profiles after the lecture is covered |
+| MLflow | Future course topic | planned experiment tracking and model comparison after the lecture is covered |
+
+### Optional exploratory extension, outside the current core course path
+
+| Extension area | Status | Project role |
+|---|---:|---|
+| Visual similarity with public dog images | Exploratory prototype | educational comparison among available trained classes only; not breed proof |
+| Image dataset feasibility and local preparation | Completed as supporting research | responsible public dataset selection, local-only data storage and validation |
 
 ---
 
@@ -201,7 +228,7 @@ This connects model performance to error distribution, bias, outliers and expect
 
 ### 11. Course Coverage Alignment Additions
 
-Step 08 strengthens this notebook with:
+this stage strengthens this notebook with:
 
 - a dedicated Ordinary Least Squares simulated example;
 - a real-data regression section using `data/processed/dog_growth_public_sample.csv`;
@@ -212,7 +239,7 @@ This makes the notebook map more directly to the lecture requirements for OLS, s
 Status:
 
 ```text
-Linear Regression, Regularization and Testing ✅ strengthened in Step 08
+Linear Regression, Regularization and Testing ✅ strengthened in this stage
 ```
 
 ---
@@ -266,7 +293,7 @@ data/processed/dog_growth_public_sample.csv
 data/processed/dog_growth_classification_sample.csv
 ```
 
-The original public dataset is kept local only as a raw dataset archive in `data/raw/` and should not be committed to GitHub or included in the final clean project submission. The notebooks use processed CSV samples from `data/processed/`.
+The original public dataset is kept local only as a raw dataset archive in `data/raw/` and should not be committed to the repository or included in the final clean project submission. The notebooks use processed CSV samples from `data/processed/`.
 
 Status:
 
@@ -461,7 +488,7 @@ Metrics compared:
 Status:
 
 ```text
-Classification ✅ strengthened in Step 08
+Classification ✅ strengthened in this stage
 ```
 
 ---
@@ -560,12 +587,12 @@ They are not diagnoses.
 Status:
 
 ```text
-Unsupervised Learning and Clustering ✅ completed in Step 09
+Unsupervised Learning and Clustering ✅ completed in this stage
 ```
 
-### Step 09.1 Mathematical Application Polish
+### this stage Mathematical Application Polish
 
-Step 09.1 strengthens the clustering topic for a math-focused final project.
+this stage strengthens the clustering topic for a math-focused final project.
 
 Added emphasis:
 
@@ -579,12 +606,12 @@ Added emphasis:
 Status:
 
 ```text
-Clustering mathematical application bridge ✅ strengthened in Step 09.1
+Clustering mathematical application bridge ✅ strengthened in this stage
 ```
 
-### Step 09.2 Exact Lesson Alignment
+### this stage Exact Lesson Alignment
 
-Step 09.2 aligns the notebook more closely with the exact lecture PDF structure.
+this stage aligns the notebook more closely with the exact lecture PDF structure.
 
 Added coverage:
 
@@ -600,7 +627,7 @@ Added coverage:
 Status:
 
 ```text
-Unsupervised Learning and Clustering ✅ aligned with exact lecture structure in Step 09.2
+Unsupervised Learning and Clustering ✅ aligned with exact lecture structure in this stage
 ```
 
 ---
@@ -723,7 +750,7 @@ This dog record resembles a steady-growth / fast-growth / slow-growth / irregula
 Status:
 
 ```text
-Unsupervised Learning, Clustering ✅ strengthened in Step 09.1
+Unsupervised Learning, Clustering ✅ strengthened in this stage
 ```
 
 ---
@@ -856,7 +883,7 @@ This section supports the course topics by showing how mathematical methods can 
 - SVM as margin-based separation;
 - clustering as groups of nearby points.
 
-# Applied Step 12: Public Image Dataset Feasibility
+# Applied Course/Project Extension: Public Image Dataset Feasibility
 
 Files:
 
@@ -871,7 +898,7 @@ notebooks/07_image_dataset_feasibility.ipynb
 Course/project connection:
 
 ```text
-Future Computer Vision -> responsible dataset feasibility before model training
+Future Visual Similarity -> responsible dataset feasibility before model training
 ```
 
 Functional role:
@@ -906,12 +933,12 @@ Clustering discovers hidden growth profiles.
 Feature engineering and time series turn raw records into trajectory features.
 Dimensionality reduction visualizes the structure.
 MLflow tracks the experiments professionally.
-A future Computer Vision extension can add image-based visual similarity probabilities, clearly separated from breed proof or certification. Step 12 adds the required public image dataset feasibility layer before any visual model is trained.
+A future Visual Similarity extension can add image-based visual similarity probabilities, clearly separated from breed proof or certification. this stage adds the required public image dataset feasibility layer before any visual model is trained.
 ```
 
 ---
 
-# Applied Step 10.1: Practical Growth Assessment Workflow
+# Applied Course/Project Extension: Practical Growth Assessment Workflow
 
 Files:
 
@@ -951,7 +978,7 @@ Practical Growth Assessment Workflow ✅
 
 ---
 
-# Applied Step 11: Computer Vision Visual Similarity Plan
+# Applied Course/Project Extension: Visual Similarity Visual Similarity Plan
 
 Files:
 
@@ -967,7 +994,7 @@ notebooks/06_computer_vision_visual_similarity_concept.ipynb
 Course/project connection:
 
 ```text
-Future Computer Vision / Image Classification extension
+Future Visual Similarity / Image Classification extension
 ```
 
 Mathematical interpretation:
@@ -993,7 +1020,7 @@ Visual similarity is not breed proof, pedigree proof, genetic testing, registry 
 Status:
 
 ```text
-Computer Vision Visual Similarity Plan ✅
+Visual Similarity Visual Similarity Plan ✅
 ```
 
 
@@ -1011,7 +1038,7 @@ src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
 ```
 
-Step 13 prepares the project for future Computer Vision work by adding a local-only image dataset structure and validation workflow. It keeps downloaded public datasets and consent-based images out of GitHub while preserving reproducible instructions and metadata templates.
+this stage prepares the project for future Visual Similarity work by adding a local-only image dataset structure and validation workflow. It keeps downloaded public datasets and consent-based images out of the repository while preserving reproducible instructions and metadata templates.
 
 Status:
 
@@ -1020,7 +1047,7 @@ Image Dataset Acquisition and Local Preparation ✅ planned / structure-only
 ```
 
 
-## Step 16 — Local Stanford Dogs Inspection / Baseline Class Selection
+## Local Stanford Dogs Inspection / Baseline Class Selection
 
 Files:
 
@@ -1048,7 +1075,7 @@ Local Stanford Dogs inspection / baseline class selection ✅
 ```
 
 
-## Step 17 Mapping — Local Public Image Dataset Inspection
+## this stage Mapping — Local Public Image Dataset Inspection
 
 Course-relevant skills demonstrated:
 
