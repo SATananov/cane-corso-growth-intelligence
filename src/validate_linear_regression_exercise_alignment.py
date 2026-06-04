@@ -10,7 +10,7 @@ REQUIREMENTS_PATH = ROOT / "data" / "course_exercises" / "linear_regression_test
 METRICS_PATH = ROOT / "reports" / "course_exercises" / "linear_regression_exercise_alignment_metrics.csv"
 SUMMARY_PATH = ROOT / "reports" / "course_exercises" / "linear_regression_exercise_alignment_summary.md"
 DOC_PATH = ROOT / "docs" / "course_exercises" / "linear_regression_testing_exercise_alignment.md"
-NOTEBOOK_PATH = ROOT / "notebooks" / "16_linear_regression_testing_exercise_project_alignment.ipynb"
+NOTEBOOK_PATH = ROOT / "notebooks" / "01_1_linear_regression_testing_exercise_project_alignment.ipynb"
 
 REQUIRED_PROBLEMS = set(range(1, 11))
 REQUIRED_MODELS = {

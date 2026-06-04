@@ -169,7 +169,7 @@ docs/image_dataset_acquisition_and_local_preparation.md
 data/image_dataset_local_inventory_template.csv
 src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 Important rule:
@@ -192,7 +192,7 @@ The public source distributes the original data as a compressed archive. In this
 data/raw/Final_Data_PLOS.zip
 ```
 
-This term means only the original public dataset distribution file. It does not refer to project patch files, clean checkpoint archives, submission archives, or any temporary development ZIP files.
+This term means only the original public dataset distribution file. It is not part of the repository contents and is kept local when large image data is used.
 
 Reasons for keeping the raw dataset archive local only:
 

@@ -100,13 +100,14 @@ reports/figures/practical_growth_assessment_velocity_signal.png
 From the project root:
 
 ```powershell
-& ".\.venv\Scripts\python.exe" "srcun_growth_assessment.py"
+& ".\.venv\Scripts\python.exe" "src
+un_growth_assessment.py"
 ```
 
 Optional notebook walkthrough:
 
 ```text
-notebooks/05_1_practical_growth_assessment_workflow.ipynb
+notebooks/06_practical_growth_assessment_workflow.ipynb
 ```
 
 ## Responsible Use

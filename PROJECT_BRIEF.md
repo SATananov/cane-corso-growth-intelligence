@@ -384,7 +384,7 @@ Unsupervised Learning, Clustering
 Planned notebook:
 
 ```text
-notebooks/04_unsupervised_clustering_growth_patterns.ipynb
+notebooks/04_unsupervised_learning_clustering.ipynb
 ```
 
 Planned goal:
@@ -453,7 +453,7 @@ Supporting files:
 ```text
 docs/computer_vision_visual_similarity_plan.md
 docs/image_dataset_research_plan.md
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
 ```
 
 ---
@@ -470,7 +470,7 @@ Supporting files:
 docs/image_dataset_feasibility.md
 data/image_dataset_feasibility_matrix.csv
 data/molossoid_visual_target_classes.csv
-notebooks/07_image_dataset_feasibility.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
 src/validate_image_dataset_feasibility.py
 ```
 
@@ -484,7 +484,7 @@ Supporting files:
 ```text
 docs/image_dataset_acquisition_and_local_preparation.md
 data/image_dataset_local_inventory_template.csv
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
 ```

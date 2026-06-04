@@ -892,7 +892,7 @@ docs/image_dataset_feasibility.md
 data/image_dataset_feasibility_matrix.csv
 data/molossoid_visual_target_classes.csv
 src/validate_image_dataset_feasibility.py
-notebooks/07_image_dataset_feasibility.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
 ```
 
 Course/project connection:
@@ -943,7 +943,7 @@ A future Visual Similarity extension can add image-based visual similarity proba
 Files:
 
 ```text
-notebooks/05_1_practical_growth_assessment_workflow.ipynb
+notebooks/06_practical_growth_assessment_workflow.ipynb
 src/run_growth_assessment.py
 data/input/example_new_cane_corso_measurements.csv
 reports/example_growth_assessment_report.md
@@ -988,7 +988,7 @@ docs/image_dataset_research_plan.md
 data/image_dataset_manifest_example.csv
 data/images/README.md
 src/validate_image_manifest.py
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
 ```
 
 Course/project connection:
@@ -1033,7 +1033,7 @@ Covered in:
 ```text
 docs/image_dataset_acquisition_and_local_preparation.md
 data/image_dataset_local_inventory_template.csv
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
 ```
@@ -1058,7 +1058,7 @@ data/stanford_dogs_baseline_class_candidates.csv
 data/stanford_dogs_baseline_class_selection_template.csv
 src/select_stanford_dogs_baseline_classes.py
 src/validate_stanford_baseline_class_selection.py
-notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
+notebooks/13_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 ```
 
 Course connection:

@@ -144,7 +144,7 @@ data/processed/cane_corso_time_series_features.csv
 ### Computer Vision Visual Similarity Concept
 
 ```text
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
 ```
 
 This notebook does not train a real image model yet. It explains the future Computer Vision extension, softmax probability interpretation, dataset feasibility, and the responsible boundary: visual similarity is not breed proof.
@@ -153,7 +153,7 @@ This notebook does not train a real image model yet. It explains the future Comp
 ### Public Image Dataset Feasibility
 
 ```text
-notebooks/07_image_dataset_feasibility.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
 ```
 
 This notebook reviews public image dataset candidates before any Computer Vision model is trained. It reads the feasibility matrix and target-class plan from CSV files and validates that the project remains a visual-similarity plan, not breed proof.
@@ -161,7 +161,7 @@ This notebook reviews public image dataset candidates before any Computer Vision
 ### Image Dataset Acquisition and Local Preparation
 
 ```text
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 This notebook documents the local-only data acquisition workflow for the future Computer Vision module. It does not train an image model. It explains where local images would be stored, how class folders are prepared, and why downloaded images should remain outside Git history.
@@ -389,7 +389,7 @@ reports/figures/practical_growth_assessment_velocity_signal.png
 Optional notebook walkthrough:
 
 ```text
-notebooks/05_1_practical_growth_assessment_workflow.ipynb
+notebooks/06_practical_growth_assessment_workflow.ipynb
 ```
 
 This step demonstrates practical applicability while keeping the project educational and mathematically transparent.
@@ -398,7 +398,7 @@ This step demonstrates practical applicability while keeping the project educati
 ### Local Stanford Dogs Inspection / Baseline Class Selection
 
 ```text
-notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
+notebooks/13_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 ```
 
 This notebook documents the local inspection and first-baseline class selection workflow for Stanford Dogs.

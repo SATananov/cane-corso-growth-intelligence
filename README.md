@@ -247,9 +247,9 @@ docs/computer_vision_visual_similarity_plan.md
 docs/image_dataset_research_plan.md
 docs/image_dataset_feasibility.md
 docs/image_dataset_acquisition_and_local_preparation.md
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
-notebooks/07_image_dataset_feasibility.ipynb
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 data/image_dataset_manifest_example.csv
 data/image_dataset_feasibility_matrix.csv
 data/molossoid_visual_target_classes.csv
@@ -268,7 +268,7 @@ The original public dataset is distributed by its source as a compressed archive
 data/raw/Final_Data_PLOS.zip
 ```
 
-This term refers only to the original public dataset distribution format. It does not mean that the notebooks depend on development patch files or clean project ZIP files. The raw archive is kept local and ignored by Git. The notebooks use the smaller processed CSV files stored in `data/processed/`.
+This term refers only to the original public dataset distribution format. The raw archive is kept local and ignored by the repository. The notebooks use the smaller processed CSV files stored in `data/processed/`.
 
 A detailed explanation is available in:
 
@@ -308,6 +308,10 @@ The visual-similarity work is documented as an optional extension outside the cu
 
 ## Recommended Review Order
 
+For a concise ordered notebook map, see `docs/notebook_reading_sequence.md`.
+
+
+
 For a reviewer or instructor, the easiest order is:
 
 ```text
@@ -327,10 +331,10 @@ For a reviewer or instructor, the easiest order is:
 12. notebooks/03_1_classification_pipeline_exercise.ipynb
 13. notebooks/04_unsupervised_learning_clustering.ipynb
 14. notebooks/05_feature_engineering_time_series_growth.ipynb
-15. notebooks/05_1_practical_growth_assessment_workflow.ipynb
-16. notebooks/06_computer_vision_visual_similarity_concept.ipynb
-17. notebooks/07_image_dataset_feasibility.ipynb
-18. notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+15. notebooks/06_practical_growth_assessment_workflow.ipynb
+16. notebooks/08_computer_vision_visual_similarity_concept.ipynb
+17. notebooks/09_image_dataset_feasibility.ipynb
+18. notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -387,10 +391,10 @@ cane-corso-growth-intelligence/
 │   ├── 03_1_classification_pipeline_exercise.ipynb
 │   ├── 04_unsupervised_learning_clustering.ipynb
 │   ├── 05_feature_engineering_time_series_growth.ipynb
-│   ├── 05_1_practical_growth_assessment_workflow.ipynb
-│   ├── 06_computer_vision_visual_similarity_concept.ipynb
-│   ├── 07_image_dataset_feasibility.ipynb
-│   └── 08_image_dataset_acquisition_local_preparation.ipynb
+│   ├── 06_practical_growth_assessment_workflow.ipynb
+│   ├── 08_computer_vision_visual_similarity_concept.ipynb
+│   ├── 09_image_dataset_feasibility.ipynb
+│   └── 10_image_dataset_acquisition_local_preparation.ipynb
 ├── reports/
 │   ├── example_growth_assessment_report.md
 │   └── figures/
@@ -474,7 +478,7 @@ Covers lag features, growth velocity, weight-to-height ratio, rolling averages, 
 ### 5.1. Practical Growth Assessment Workflow
 
 ```text
-notebooks/05_1_practical_growth_assessment_workflow.ipynb
+notebooks/06_practical_growth_assessment_workflow.ipynb
 ```
 
 Shows how new owner-style measurements can be transformed into a readable educational growth assessment report.
@@ -482,7 +486,7 @@ Shows how new owner-style measurements can be transformed into a readable educat
 ### 6. Exploratory Visual Similarity Concept
 
 ```text
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
 ```
 
 Introduces the future image-classification extension. It explains visual feature extraction, softmax probabilities, public dataset feasibility and why the output must be interpreted as visual similarity rather than breed proof.
@@ -490,7 +494,7 @@ Introduces the future image-classification extension. It explains visual feature
 ### 7. Image Dataset Feasibility
 
 ```text
-notebooks/07_image_dataset_feasibility.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
 ```
 
 Adds a public image dataset feasibility check before any visual-similarity model is trained. It reviews public dataset candidates, target molossoid classes, repository storage rules and responsible limitations.
@@ -498,7 +502,7 @@ Adds a public image dataset feasibility check before any visual-similarity model
 ### 8. Image Dataset Acquisition and Local Preparation
 
 ```text
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 Documents the local-only image dataset preparation workflow. It explains how future public or consent-based image datasets should be stored locally, ignored by Git, inventoried, split and validated before visual-similarity training.
@@ -667,7 +671,7 @@ Related files:
 docs/first_public_image_dataset_candidate_download_guide.md
 data/first_public_image_dataset_candidate.csv
 data/stanford_dogs_local_download_checklist.csv
-notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+notebooks/12_first_public_image_dataset_candidate_download_guide.ipynb
 src/validate_first_public_image_dataset_candidate.py
 src/inspect_stanford_dogs_local_dataset.py
 ```
@@ -692,7 +696,7 @@ docs/local_stanford_dogs_inspection_baseline_class_selection.md
 docs/baseline_visual_class_selection_policy.md
 data/stanford_dogs_baseline_class_candidates.csv
 data/stanford_dogs_baseline_class_selection_template.csv
-notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
+notebooks/13_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 src/select_stanford_dogs_baseline_classes.py
 src/validate_stanford_baseline_class_selection.py
 ```
