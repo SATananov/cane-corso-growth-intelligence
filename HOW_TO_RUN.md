@@ -66,7 +66,7 @@ notebooks/02_real_data_preparation.ipynb
 
 This notebook prepares the project for working with the real public dog growth dataset.
 
-The full raw dataset is not committed to repository.
+The full raw dataset is not committed to GitHub.
 
 ### Classification Topic
 
@@ -111,7 +111,7 @@ This notebook covers:
 - K-Means vs Hierarchical Clustering comparison
 - DBSCAN density clustering and noise detection
 - clustering vs classification comparison using Adjusted Rand Index
-- Stage 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
+- Step 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
 
 
 ### Feature Engineering and Time Series Topic
@@ -144,7 +144,7 @@ data/processed/cane_corso_time_series_features.csv
 ### Computer Vision Visual Similarity Concept
 
 ```text
-notebooks/08_computer_vision_visual_similarity_concept.ipynb
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
 ```
 
 This notebook does not train a real image model yet. It explains the future Computer Vision extension, softmax probability interpretation, dataset feasibility, and the responsible boundary: visual similarity is not breed proof.
@@ -153,7 +153,7 @@ This notebook does not train a real image model yet. It explains the future Comp
 ### Public Image Dataset Feasibility
 
 ```text
-notebooks/09_image_dataset_feasibility.ipynb
+notebooks/07_image_dataset_feasibility.ipynb
 ```
 
 This notebook reviews public image dataset candidates before any Computer Vision model is trained. It reads the feasibility matrix and target-class plan from CSV files and validates that the project remains a visual-similarity plan, not breed proof.
@@ -161,7 +161,7 @@ This notebook reviews public image dataset candidates before any Computer Vision
 ### Image Dataset Acquisition and Local Preparation
 
 ```text
-notebooks/10_image_dataset_acquisition_local_preparation.ipynb
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 This notebook documents the local-only data acquisition workflow for the future Computer Vision module. It does not train an image model. It explains where local images would be stored, how class folders are prepared, and why downloaded images should remain outside Git history.
@@ -248,7 +248,7 @@ src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
 ```
 
-The Image dataset feasibility stage dataset-feasibility validation script can be run with:
+The Step 12 dataset-feasibility validation script can be run with:
 
 ```powershell
 python src/validate_image_dataset_feasibility.py
@@ -267,7 +267,7 @@ python src/validate_image_manifest.py
 It validates the structure of the example image manifest only. It does not download images or train an image model.
 
 
-The Local image dataset preparation stage local image dataset preparation script can be run with:
+The Step 13 local image dataset preparation script can be run with:
 
 ```powershell
 python src/prepare_image_dataset_structure.py
@@ -285,7 +285,7 @@ Validate the local structure with:
 python src/validate_local_image_dataset.py
 ```
 
-This validation allows zero images at Local image dataset preparation stage. It checks folder structure and metadata templates only.
+This validation allows zero images at Step 13. It checks folder structure and metadata templates only.
 
 The original public dataset is distributed as a compressed archive. In this project, it is referred to as the **raw dataset archive** and should be kept locally in:
 
@@ -293,7 +293,7 @@ The original public dataset is distributed as a compressed archive. In this proj
 data/raw/Final_Data_PLOS.zip
 ```
 
-The raw dataset archive is intentionally ignored by Git and is not committed to repository. The current notebooks use the smaller processed CSV files already stored in `data/processed/`.
+The raw dataset archive is intentionally ignored by Git and is not committed to GitHub. The current notebooks use the smaller processed CSV files already stored in `data/processed/`.
 
 More detail is documented in:
 
@@ -321,7 +321,7 @@ The next planned core course topic is:
 Dimensionality Reduction
 ```
 
-Future topics will be added gradually in new notebooks, with separate commits and updated course mapping.
+Future topics will be added step by step in new notebooks, with separate commits and updated course mapping.
 
 ## 10. Read the geometric interpretation
 
@@ -363,7 +363,7 @@ The notebook covers dummy baselines, pipelines, cross-validation, learning curve
 
 ## 11. Run the practical growth assessment workflow
 
-Practical growth-assessment workflow adds an applied workflow that turns example owner-style measurements into a readable educational report.
+Step 10.1 adds an applied workflow that turns example owner-style measurements into a readable educational report.
 
 Input:
 
@@ -392,13 +392,13 @@ Optional notebook walkthrough:
 notebooks/05_1_practical_growth_assessment_workflow.ipynb
 ```
 
-This stage demonstrates practical applicability while keeping the project educational and mathematically transparent.
+This step demonstrates practical applicability while keeping the project educational and mathematically transparent.
 
 
 ### Local Stanford Dogs Inspection / Baseline Class Selection
 
 ```text
-notebooks/13_local_stanford_dogs_inspection_baseline_class_selection.ipynb
+notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 ```
 
 This notebook documents the local inspection and first-baseline class selection workflow for Stanford Dogs.
@@ -413,7 +413,7 @@ python src/validate_stanford_baseline_class_selection.py
 Before the dataset is downloaded locally, zero confirmed classes is acceptable. The purpose is to keep class selection evidence-based before any image model is trained.
 
 
-## Stanford Dogs local inspection stage — Stanford Dogs Local Download / Real Class Inspection
+## Step 17 — Stanford Dogs Local Download / Real Class Inspection
 
 Safe checks without downloading large files:
 
@@ -436,14 +436,3 @@ python src/select_stanford_dogs_baseline_classes.py
 ```
 
 Do not commit downloaded images, archives or extracted dataset folders.
-
-
-### Future Course Topic Notebooks
-
-These notebooks are intentionally reserved and should be completed after the course topics are covered:
-
-```text
-notebooks/06_dimensionality_reduction_future_course_topic.ipynb
-notebooks/07_mlflow_future_course_topic.ipynb
-```
-

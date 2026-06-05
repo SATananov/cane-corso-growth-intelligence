@@ -28,17 +28,6 @@ This makes the project both interesting and useful:
 - useful, because the same idea can later become an owner-friendly growth monitor;
 - academically relevant, because it applies multiple machine-learning topics from the course in one coherent domain.
 
-
-## Scope in Relation to the Course
-
-The main project is the tabular Cane Corso growth-intelligence workflow. It is aligned with the course topics covered so far: regression, classification, unsupervised learning / clustering, feature engineering, time-series features, data processing, model evaluation, and careful interpretation of results.
-
-Dimensionality Reduction and MLflow are reserved as future additions. They should be implemented only after the related lectures and exercises are covered, so the project continues to follow the real course path.
-
-The image-based work is included only as an **exploratory extension**. It investigates whether a small public dog-image dataset can support a simple visual-similarity comparison between available large-dog classes. This part should not be presented as a core course requirement, a breed detector, a pedigree tool, or a Cane Corso certification system.
-
-The final results and figures summary should be prepared after the remaining course topics are added, so that the final presentation reflects the complete course-aligned project.
-
 ---
 
 ## Real-World Motivation
@@ -92,7 +81,7 @@ A possible real user flow is:
 The project should not be presented as a veterinary diagnostic system. The correct product framing is:
 
 ```text
-owner-friendly growth monitoring system
+owner-friendly growth monitoring assistant
 ```
 
 not:
@@ -386,7 +375,7 @@ Unsupervised Learning, Clustering
 Planned notebook:
 
 ```text
-notebooks/04_unsupervised_learning_clustering.ipynb
+notebooks/04_unsupervised_clustering_growth_patterns.ipynb
 ```
 
 Planned goal:
@@ -425,9 +414,9 @@ The project should emphasize these strengths:
 ---
 
 
-## Optional Exploratory Visual Similarity Extension
+## Future Computer Vision Extension
 
-The project includes an optional exploratory visual-similarity extension called a **visual similarity classifier**.
+The project now includes a planned Computer Vision extension called a **visual similarity classifier**.
 
 This future module would analyze a dog image and return probabilities over trained visual classes, for example:
 
@@ -448,23 +437,23 @@ image -> visual similarity signal
 combined report -> educational interpretation with limitations
 ```
 
-The project does not currently have a private image dataset, so this stage documents public dataset research and a manifest-based data plan instead of training a fake model.
+The project does not currently have a private image dataset, so Step 11 documents public dataset research and a manifest-based data plan instead of training a fake model.
 
 Supporting files:
 
 ```text
 docs/computer_vision_visual_similarity_plan.md
 docs/image_dataset_research_plan.md
-notebooks/08_computer_vision_visual_similarity_concept.ipynb
+notebooks/06_computer_vision_visual_similarity_concept.ipynb
 ```
 
 ---
 
-## Visual Dataset Feasibility for the Exploratory Extension
+## Computer Vision Dataset Feasibility
 
-The project now includes a optional visual-similarity direction for molossoid visual similarity, but image model training is intentionally postponed until the dataset question is handled responsibly.
+The project now includes a future Computer Vision direction for molossoid visual similarity, but image model training is intentionally postponed until the dataset question is handled responsibly.
 
-this stage adds a feasibility matrix for public dog image datasets and a target-class plan for Cane Corso and related molossoid breeds. It also states that large image folders should remain local and that the project should not scrape social media or random web images without permission.
+Step 12 adds a feasibility matrix for public dog image datasets and a target-class plan for Cane Corso and related molossoid breeds. It also states that large image folders should remain local and that the project should not scrape social media or random web images without permission.
 
 Supporting files:
 
@@ -472,21 +461,21 @@ Supporting files:
 docs/image_dataset_feasibility.md
 data/image_dataset_feasibility_matrix.csv
 data/molossoid_visual_target_classes.csv
-notebooks/09_image_dataset_feasibility.ipynb
+notebooks/07_image_dataset_feasibility.ipynb
 src/validate_image_dataset_feasibility.py
 ```
 
 
 ## Image Dataset Acquisition and Local Preparation
 
-this stage adds the practical local-data workflow needed before future visual-similarity training.
+Step 13 adds the practical local-data workflow needed before future Computer Vision training.
 
 Supporting files:
 
 ```text
 docs/image_dataset_acquisition_and_local_preparation.md
 data/image_dataset_local_inventory_template.csv
-notebooks/10_image_dataset_acquisition_local_preparation.ipynb
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
 src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
 ```
@@ -539,7 +528,7 @@ Interpretation
 Limitations
 ```
 
-This turns each lecture from a code exercise into a mathematically explained modelling stage. It also makes the project easier to defend, because every method is connected to a precise input, objective, evaluation metric, and responsible interpretation.
+This turns each lecture from a code exercise into a mathematically explained modelling step. It also makes the project easier to defend, because every method is connected to a precise input, objective, evaluation metric, and responsible interpretation.
 
 ---
 
@@ -550,11 +539,11 @@ This turns each lecture from a code exercise into a mathematically explained mod
 The selected real public data source is documented in `docs/dataset_selection_rationale.md`. Kaggle was considered as a general dataset-search option, but the University of Liverpool DataCat / PLOS ONE dog growth dataset was selected because it is more directly connected to age/bodyweight growth monitoring.
 
 
-## First Public Image Dataset Candidate
+## Step 15 — First Public Image Dataset Candidate
 
 The project now has a documented first public image dataset candidate for the future visual-similarity module.
 
-The candidate is Stanford Dogs / ImageNet Dogs, used only as a public baseline candidate. this stage does not train a visual-similarity model. It prepares the responsible data-acquisition plan and local inspection flow.
+The candidate is Stanford Dogs / ImageNet Dogs, used only as a public baseline candidate. Step 15 does not train a Computer Vision model. It prepares the responsible data-acquisition plan and local inspection flow.
 
 This supports the long-term direction:
 
@@ -565,7 +554,7 @@ growth intelligence from tabular measurements + visual similarity from images
 The visual result must remain educational and probabilistic. It should never be presented as breed proof, pedigree proof, registry proof or veterinary diagnosis.
 
 
-## Evidence-Based Visual Class Selection
+## Step 16 — Evidence-Based Visual Class Selection
 
 The project now includes a local class-selection workflow for the first public image dataset candidate.
 
@@ -574,13 +563,8 @@ This protects the Computer Vision extension from overstating what the dataset ca
 Therefore, Cane Corso-specific visual recognition remains future work unless a verified public dataset or consent-based USG dataset provides confirmed Cane Corso images.
 
 
-## this stage Computer Vision Data Inspection Extension
+## Step 17 Computer Vision Data Inspection Extension
 
 The project now includes a local inspection workflow for Stanford Dogs / ImageNet Dogs. This supports the future visual-similarity classifier by verifying real local class folders before model training.
 
 This extension strengthens the project methodology because it separates desired classes from available labels and keeps the visual module honest and evidence-based.
-
-
-## Reserved Future Course Notebooks
-
-Dimensionality Reduction and MLflow are planned future course topics. The project reserves `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` and `notebooks/07_mlflow_future_course_topic.ipynb` for these topics. They should be completed only after the lectures and exercises are covered in class.

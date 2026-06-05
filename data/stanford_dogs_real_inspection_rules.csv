@@ -1,6 +1,6 @@
 rule_id,description,required_for_pass
 class_folder_count,Count class-like folders under raw/stanford_dogs and extracted Images folder.,no_zero_is_allowed_before_download
 image_count_by_folder,Count jpg/jpeg/png/webp files by class folder.,no_zero_is_allowed_before_download
-target_candidate_match,Match local folder names against candidate aliases from Local Stanford Dogs class-selection stage.,yes_script_must_run
+target_candidate_match,Match local folder names against candidate aliases from Step 16.,yes_script_must_run
 no_breed_proof_claim,Reports must state visual-similarity only and not pedigree or registry proof.,yes
 no_images_in_git,Local images and archive files remain ignored and uncommitted.,yes
