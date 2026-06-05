@@ -152,7 +152,7 @@ src/validate_image_manifest.py
 
 ## 5. Local Image Dataset Acquisition and Preparation
 
-Local image dataset preparation stage adds a local-only preparation workflow for future image datasets.
+Step 13 adds a local-only preparation workflow for future image datasets.
 
 Local image root:
 
@@ -169,22 +169,22 @@ docs/image_dataset_acquisition_and_local_preparation.md
 data/image_dataset_local_inventory_template.csv
 src/prepare_image_dataset_structure.py
 src/validate_local_image_dataset.py
-notebooks/10_image_dataset_acquisition_local_preparation.ipynb
+notebooks/08_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 Important rule:
 
 ```text
-Do not commit downloaded image datasets, private owner images, or scraped web images to repository.
+Do not commit downloaded image datasets, private owner images, or scraped web images to GitHub.
 ```
 
-The current project still contains no actual image dataset and no trained image model. Local image dataset preparation stage prepares the acquisition workflow and local structure only.
+The current project still contains no actual image dataset and no trained image model. Step 13 prepares the acquisition workflow and local structure only.
 
 ---
 
 ## 6. Raw Dataset Archive Rule
 
-The full original dataset should not be committed directly to repository.
+The full original dataset should not be committed directly to GitHub.
 
 The public source distributes the original data as a compressed archive. In this project, that file is called the **raw dataset archive**:
 
@@ -192,7 +192,7 @@ The public source distributes the original data as a compressed archive. In this
 data/raw/Final_Data_PLOS.zip
 ```
 
-This term means only the original public dataset distribution file. It is not part of the repository contents and is kept local when large image data is used.
+This term means only the original public dataset distribution file. It does not refer to project patch files, clean checkpoint archives, submission archives, or any temporary development ZIP files.
 
 Reasons for keeping the raw dataset archive local only:
 
@@ -262,7 +262,7 @@ Source label:
 real_public_processed_sample
 ```
 
-This sample is committed to repository because it is small and usable for notebook experiments.
+This sample is committed to GitHub because it is small and usable for notebook experiments.
 
 ---
 
@@ -370,9 +370,9 @@ The data is used only for educational machine-learning experiments.
 The project does not provide veterinary diagnosis. Model outputs should be interpreted as growth-monitoring signals for analysis and learning, not as medical conclusions.
 
 
-## Local Stanford Dogs class-selection stage — Stanford Dogs Baseline Class Selection
+## Step 16 — Stanford Dogs Baseline Class Selection
 
-Local Stanford Dogs class-selection stage adds a class-selection workflow for the local Stanford Dogs candidate.
+Step 16 adds a class-selection workflow for the local Stanford Dogs candidate.
 
 The project now documents likely baseline candidates such as Boxer, Bullmastiff and Great Dane, but still requires local label inspection before any class is used for training.
 
@@ -394,10 +394,10 @@ Desired target classes must not be treated as available training classes until v
 ```
 
 
-## Stanford Dogs local inspection stage Stanford Dogs Local Download Boundary
+## Step 17 Stanford Dogs Local Download Boundary
 
 Stanford Dogs / ImageNet Dogs remains the first public image dataset candidate for the Computer Vision branch.
 
-Stanford Dogs local inspection stage adds local-only download and inspection artifacts. It does not commit image files and does not assume that any desired molossoid class is available until local class folders are inspected.
+Step 17 adds local-only download and inspection artifacts. It does not commit image files and does not assume that any desired molossoid class is available until local class folders are inspected.
 
 Large image archives must be downloaded only with explicit user action and kept under ignored local dataset folders.
