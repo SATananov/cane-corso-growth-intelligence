@@ -23,7 +23,7 @@ Selected first-baseline classes: 3
 ## Interpretation
 
 Before Stanford Dogs is downloaded/extracted locally, zero confirmed classes is acceptable.
-The purpose of this class-selection stage is to make baseline class selection evidence-based, not to train a model.
+The purpose of Local Stanford Dogs class-selection stage is to make class selection evidence-based, not to train a model.
 
 A future baseline image classifier should use only classes confirmed as available locally.
 If Cane Corso, Dogo Argentino or Presa Canario are not confirmed, the project must not claim that the model can recognize them.

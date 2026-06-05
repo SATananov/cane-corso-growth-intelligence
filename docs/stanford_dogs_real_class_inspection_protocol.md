@@ -8,7 +8,7 @@ The project checks:
 
 - whether a local Stanford Dogs raw folder exists
 - how many image-containing class folders are present
-- which folder names match the Step 16 baseline candidate aliases
+- which folder names match the Local Stanford Dogs class-selection stage baseline candidate aliases
 - which classes are safe to consider for the first baseline
 
 ## Evidence-Based Class Rule
@@ -29,8 +29,8 @@ The first image baseline should use only locally confirmed and reviewed classes.
 
 A possible first baseline may include broad dog-breed contrast classes such as Boxer, Bullmastiff or Great Dane only if their class folders are actually detected locally.
 
-## No Images in GitHub
+## No Images in repository
 
-Only scripts, manifests, reports and notebooks belong in GitHub.
+Only scripts, manifests, reports and notebooks belong in repository.
 
 Downloaded images and archives stay local.
