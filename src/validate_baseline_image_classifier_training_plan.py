@@ -84,8 +84,8 @@ def validate_metrics_csv(rows: list[dict[str, str]]) -> None:
         raise AssertionError("At least five required metrics are expected for the baseline plan")
 
 
-def validate_docs(training_text: str, safety_text: str, patch_text: str | None = None) -> None:
-    combined = "\n".join(text for text in [training_text, safety_text, patch_text or ""] if text)
+def validate_docs(training_text: str, safety_text: str, extra_text: str | None = None) -> None:
+    combined = "\n".join(text for text in [training_text, safety_text, extra_text or ""] if text)
     for phrase in REQUIRED_BOUNDARY_PHRASES:
         if phrase.lower() not in combined.lower():
             raise AssertionError(f"Missing required boundary phrase: {phrase}")
