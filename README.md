@@ -41,7 +41,7 @@ How does the trajectory change over time?
 How do different models compare mathematically?
 ```
 
-This makes the project useful beyond a course assignment: it can become the foundation for a practical growth-monitoring assistant.
+This makes the project useful beyond a course assignment: it can become the foundation for a practical growth-monitoring system.
 
 A dedicated motivation note is available in:
 
@@ -75,6 +75,35 @@ The project is designed to show the full flow:
 
 ```text
 real-world problem -> mathematical formulation -> data preparation -> model training -> evaluation -> interpretation -> limitations
+```
+
+
+## Current Course Alignment
+
+The core project follows the machine-learning topics covered so far in the course. At the current stage, the project is aligned with the course sequence up to **Feature Engineering and Time Series**:
+
+```text
+Linear Regression / Regularization / Testing
+Classification
+Unsupervised Learning and Clustering
+Feature Engineering and Time Series
+```
+
+The next course-aligned additions are reserved for:
+
+```text
+Dimensionality Reduction
+MLflow
+```
+
+These two topics are intentionally kept as future course slots until they are studied in class and practiced through exercises. Their notebooks are present in the reading sequence, but they are not presented as completed experiments yet.
+
+The image-based work is documented as an **exploratory visual-similarity extension**, not as a required course topic and not as a breed-certification system. Its purpose is to test whether a small public image dataset can support an educational comparison between available large-dog classes. The core grading evidence remains the tabular growth-intelligence workflow: regression, classification, clustering, feature engineering, time-series features, evaluation, documentation, and responsible interpretation.
+
+A course progression note is available in:
+
+```text
+docs/course_progression_plan.md
 ```
 
 ---
@@ -214,15 +243,23 @@ docs/dataset_selection_rationale.md
 ```
 
 
-### Computer Vision Extension Plan
+### Exploratory Visual Similarity Extension
 
-The project also now includes a planned Computer Vision extension for future work:
+
+Future course-topic slots are reserved but intentionally not implemented yet:
+
+notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/07_mlflow_future_course_topic.ipynb
+
+These notebooks should be completed only after the corresponding lecture and exercise are covered in class.
+
+The project also includes an optional exploratory visual-similarity extension for future work:
 
 ```text
 uploaded dog image -> visual feature extractor -> visual similarity probabilities
 ```
 
-This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The first step is therefore data research, public dataset feasibility, and a manifest-based data plan.
+This is documented as a future **visual similarity classifier**, not as a breed-proof system. The project does not currently have a private Cane Corso image dataset. The first stage is therefore data research, public dataset feasibility, and a manifest-based data plan.
 
 Supporting files:
 
@@ -231,9 +268,9 @@ docs/computer_vision_visual_similarity_plan.md
 docs/image_dataset_research_plan.md
 docs/image_dataset_feasibility.md
 docs/image_dataset_acquisition_and_local_preparation.md
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
-notebooks/07_image_dataset_feasibility.ipynb
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 data/image_dataset_manifest_example.csv
 data/image_dataset_feasibility_matrix.csv
 data/molossoid_visual_target_classes.csv
@@ -252,7 +289,7 @@ The original public dataset is distributed by its source as a compressed archive
 data/raw/Final_Data_PLOS.zip
 ```
 
-This term refers only to the original public dataset distribution format. It does not mean that the notebooks depend on development patch files or clean project ZIP files. The raw archive is kept local and ignored by Git. The notebooks use the smaller processed CSV files stored in `data/processed/`.
+This term refers only to the original public dataset distribution format. The raw archive is kept local and ignored by the repository. The notebooks use the smaller processed CSV files stored in `data/processed/`.
 
 A detailed explanation is available in:
 
@@ -285,12 +322,16 @@ Next planned course topic:
 Dimensionality Reduction
 ```
 
-Computer Vision is documented as a future extension plan, but it is not yet a trained model.
+The visual-similarity work is documented as an optional extension outside the current core course sequence; it must not be presented as breed proof or as the main course deliverable.
 
 
 ---
 
 ## Recommended Review Order
+
+For a concise ordered notebook map, see `docs/notebook_reading_sequence.md`.
+
+
 
 For a reviewer or instructor, the easiest order is:
 
@@ -312,9 +353,9 @@ For a reviewer or instructor, the easiest order is:
 13. notebooks/04_unsupervised_learning_clustering.ipynb
 14. notebooks/05_feature_engineering_time_series_growth.ipynb
 15. notebooks/05_1_practical_growth_assessment_workflow.ipynb
-16. notebooks/06_computer_vision_visual_similarity_concept.ipynb
-17. notebooks/07_image_dataset_feasibility.ipynb
-18. notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+16. notebooks/08_computer_vision_visual_similarity_concept.ipynb
+17. notebooks/09_image_dataset_feasibility.ipynb
+18. notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 ```
 
 The course mapping file explains exactly where each lecture requirement is covered.
@@ -371,10 +412,10 @@ cane-corso-growth-intelligence/
 │   ├── 03_1_classification_pipeline_exercise.ipynb
 │   ├── 04_unsupervised_learning_clustering.ipynb
 │   ├── 05_feature_engineering_time_series_growth.ipynb
-│   ├── 05_1_practical_growth_assessment_workflow.ipynb
-│   ├── 06_computer_vision_visual_similarity_concept.ipynb
-│   ├── 07_image_dataset_feasibility.ipynb
-│   └── 08_image_dataset_acquisition_local_preparation.ipynb
+│   ├── 06_practical_growth_assessment_workflow.ipynb
+│   ├── 08_computer_vision_visual_similarity_concept.ipynb
+│   ├── 09_image_dataset_feasibility.ipynb
+│   └── 10_image_dataset_acquisition_local_preparation.ipynb
 ├── reports/
 │   ├── example_growth_assessment_report.md
 │   └── figures/
@@ -445,7 +486,7 @@ Adds dummy baselines, preprocessing pipelines, cross-validation, learning curves
 notebooks/04_unsupervised_learning_clustering.ipynb
 ```
 
-Covers unsupervised learning motivation, K-Means with `k-means++`, elbow and silhouette checks, Hierarchical Clustering, comparison between K-Means and Hierarchical Clustering, and DBSCAN density-based clustering/noise detection. Step 09.1 strengthens the notebook with a clearer real-world application bridge, feature-vector formulation, K-Means objective, DBSCAN review-candidate interpretation and safe product wording.
+Covers unsupervised learning motivation, K-Means with `k-means++`, elbow and silhouette checks, Hierarchical Clustering, comparison between K-Means and Hierarchical Clustering, and DBSCAN density-based clustering/noise detection. this stage strengthens the notebook with a clearer real-world application bridge, feature-vector formulation, K-Means objective, DBSCAN review-candidate interpretation and safe product wording.
 
 ### 5. Feature Engineering and Time Series
 
@@ -463,10 +504,10 @@ notebooks/05_1_practical_growth_assessment_workflow.ipynb
 
 Shows how new owner-style measurements can be transformed into a readable educational growth assessment report.
 
-### 6. Computer Vision Visual Similarity Concept
+### 6. Exploratory Visual Similarity Concept
 
 ```text
-notebooks/06_computer_vision_visual_similarity_concept.ipynb
+notebooks/08_computer_vision_visual_similarity_concept.ipynb
 ```
 
 Introduces the future image-classification extension. It explains visual feature extraction, softmax probabilities, public dataset feasibility and why the output must be interpreted as visual similarity rather than breed proof.
@@ -474,18 +515,18 @@ Introduces the future image-classification extension. It explains visual feature
 ### 7. Image Dataset Feasibility
 
 ```text
-notebooks/07_image_dataset_feasibility.ipynb
+notebooks/09_image_dataset_feasibility.ipynb
 ```
 
-Adds a public image dataset feasibility check before any Computer Vision model is trained. It reviews public dataset candidates, target molossoid classes, repository storage rules and responsible limitations.
+Adds a public image dataset feasibility check before any visual-similarity model is trained. It reviews public dataset candidates, target molossoid classes, repository storage rules and responsible limitations.
 
 ### 8. Image Dataset Acquisition and Local Preparation
 
 ```text
-notebooks/08_image_dataset_acquisition_local_preparation.ipynb
+notebooks/10_image_dataset_acquisition_local_preparation.ipynb
 ```
 
-Documents the local-only image dataset preparation workflow. It explains how future public or consent-based image datasets should be stored locally, ignored by Git, inventoried, split and validated before Computer Vision training.
+Documents the local-only image dataset preparation workflow. It explains how future public or consent-based image datasets should be stored locally, ignored by Git, inventoried, split and validated before visual-similarity training.
 
 ---
 
@@ -521,7 +562,7 @@ flowchart TD
 |---|---|
 | `PROJECT_BRIEF.md` | Main project story and scope |
 | `docs/product_idea_and_mathematical_framing.md` | Strong explanation of the useful and interesting idea |
-| `docs/model_learning_explanation.md` | How the models learn, step by step |
+| `docs/model_learning_explanation.md` | How the models learn, gradually |
 | `docs/notebook_mathematical_formulation_template.md` | Standard mathematical structure for every new notebook |
 | `docs/math_foundation.md` | Mathematical formulas and model intuition |
 | `docs/geometric_interpretation.md` | Coordinate-space view of models and feature space |
@@ -529,10 +570,10 @@ flowchart TD
 | `docs/feature_engineering_time_series_notes.md` | Feature engineering and time-series growth-monitoring notes |
 | `docs/practical_growth_assessment_workflow.md` | Applied owner-style growth assessment workflow |
 | `docs/dataset_selection_rationale.md` | Explanation of why the Liverpool DataCat / PLOS ONE dataset was selected instead of a general Kaggle dataset |
-| `docs/computer_vision_visual_similarity_plan.md` | Future Computer Vision extension plan for visual similarity, not breed proof |
+| `docs/computer_vision_visual_similarity_plan.md` | optional visual-similarity extension plan for visual similarity, not breed proof |
 | `docs/image_dataset_research_plan.md` | Public image dataset research and image data governance plan |
-| `docs/image_dataset_feasibility.md` | Step 12 public image dataset feasibility decision before Computer Vision training |
-| `docs/image_dataset_acquisition_and_local_preparation.md` | Step 13 local image dataset acquisition and preparation workflow |
+| `docs/image_dataset_feasibility.md` | this stage public image dataset feasibility decision before visual-similarity training |
+| `docs/image_dataset_acquisition_and_local_preparation.md` | this stage local image dataset acquisition and preparation workflow |
 | `DATA_SOURCES.md` | Prototype, raw and processed data documentation |
 | `COURSE_TOPIC_MAPPING.md` | Mapping between course lectures and project files |
 
@@ -554,7 +595,7 @@ Incorrect interpretation:
 The model diagnoses health problems or proves whether a dog is a Cane Corso.
 ```
 
-For Step 12 image dataset feasibility, correct project behavior is:
+For this stage image dataset feasibility, correct project behavior is:
 
 ```text
 check public dataset metadata -> verify class availability -> check usage terms -> prepare ignored local folder -> train only after responsible data selection
@@ -566,7 +607,7 @@ The safest final product direction is:
 record data -> show trend -> estimate expected growth -> show signal -> explain limitations
 ```
 
-For the future Computer Vision extension, correct interpretation is:
+For the optional visual-similarity extension, correct interpretation is:
 
 ```text
 The image has the strongest visual similarity to this trained class.
@@ -580,7 +621,7 @@ The image proves the dog's official breed, pedigree or registry status.
 
 ---
 
-## Practical Application Workflow: Step 10.1
+## Practical Application Workflow: this stage
 
 The project now includes a small practical workflow that shows how the mathematical features can be used with new owner-style measurements.
 
@@ -614,9 +655,9 @@ Responsible use boundary: the report is not a veterinary diagnosis, treatment pl
 
 ---
 
-## Computer Vision Local Image Dataset Preparation: Step 13
+## Computer Vision Local Image Dataset Preparation: this stage
 
-Step 13 adds a local-only preparation workflow for future image datasets.
+this stage adds a local-only preparation workflow for future image datasets.
 
 Prepare local folders:
 
@@ -632,10 +673,10 @@ python src/validate_local_image_dataset.py
 
 The folder `data/images/local_dataset/` is ignored by Git. It can contain downloaded public image datasets or future permission-based owner photos on the developer machine, but image files should not be committed.
 
-Responsible boundary: this step prepares data governance and local structure only. It does not download images, train a Computer Vision model, or prove breed identity.
+Responsible boundary: this stage prepares data governance and local structure only. It does not download images, train a visual-similarity model, or prove breed identity.
 
 
-## Step 15 — First Public Image Dataset Candidate
+## First Public Image Dataset Candidate
 
 The project now documents the first public dataset candidate for the future Computer Vision visual-similarity module:
 
@@ -643,7 +684,7 @@ The project now documents the first public dataset candidate for the future Comp
 Stanford Dogs / ImageNet Dogs
 ```
 
-This step does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to GitHub, and how local labels/classes should be inspected before any baseline classifier is trained.
+This stage does not download images and does not train an image model. It explains how the dataset should be prepared locally, why images should not be committed to the repository, and how local labels/classes should be inspected before any baseline classifier is trained.
 
 Related files:
 
@@ -651,7 +692,7 @@ Related files:
 docs/first_public_image_dataset_candidate_download_guide.md
 data/first_public_image_dataset_candidate.csv
 data/stanford_dogs_local_download_checklist.csv
-notebooks/10_first_public_image_dataset_candidate_download_guide.ipynb
+notebooks/12_first_public_image_dataset_candidate_download_guide.ipynb
 src/validate_first_public_image_dataset_candidate.py
 src/inspect_stanford_dogs_local_dataset.py
 ```
@@ -663,11 +704,11 @@ visual similarity only; not breed proof, pedigree proof, registry proof or veter
 ```
 
 
-## Step 16 — Local Stanford Dogs Inspection / Baseline Class Selection
+## Local Stanford Dogs Inspection / Baseline Class Selection
 
 The project now includes an evidence-based baseline class-selection workflow for the future Computer Vision visual-similarity module.
 
-Step 16 does not train an image model. It checks which selected baseline classes are actually available in the local Stanford Dogs dataset folders and writes a small report.
+this stage does not train an image model. It checks which selected baseline classes are actually available in the local Stanford Dogs dataset folders and writes a small report.
 
 Related files:
 
@@ -676,7 +717,7 @@ docs/local_stanford_dogs_inspection_baseline_class_selection.md
 docs/baseline_visual_class_selection_policy.md
 data/stanford_dogs_baseline_class_candidates.csv
 data/stanford_dogs_baseline_class_selection_template.csv
-notebooks/11_local_stanford_dogs_inspection_baseline_class_selection.ipynb
+notebooks/13_local_stanford_dogs_inspection_baseline_class_selection.ipynb
 src/select_stanford_dogs_baseline_classes.py
 src/validate_stanford_baseline_class_selection.py
 ```
@@ -688,9 +729,9 @@ If Cane Corso, Dogo Argentino or Presa Canario are not confirmed in the selected
 ```
 
 
-## Step 17 — Stanford Dogs Local Download / Real Class Inspection
+## Stanford Dogs Local Download / Real Class Inspection
 
-Step 17 adds a safe local Stanford Dogs download and real class inspection workflow.
+this stage adds a safe local Stanford Dogs download and real class inspection workflow.
 
 The workflow is intentionally conservative:
 
