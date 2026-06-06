@@ -1,7 +1,7 @@
-# Stanford Dogs Baseline Class Selection
+﻿# Stanford Dogs Baseline Class Selection
 
-Raw root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\raw\stanford_dogs`
-Downloads root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\downloads\stanford_dogs`
+Raw root: `<project-root>\data\images\local_dataset\raw\stanford_dogs`
+Downloads root: `<project-root>\data\images\local_dataset\downloads\stanford_dogs`
 Local image-containing folders detected: 121
 Candidate rows evaluated: 8
 Confirmed candidate classes: 4
@@ -31,3 +31,4 @@ If Cane Corso, Dogo Argentino or Presa Canario are not confirmed, the project mu
 ## Responsible boundary
 
 This report supports visual-similarity research only. It is not breed proof, pedigree proof, registry proof, certificate proof or veterinary diagnosis.
+

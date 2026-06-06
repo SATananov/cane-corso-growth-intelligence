@@ -1,11 +1,11 @@
-# Lightweight image classifier prototype stage — Lightweight Baseline Image Classifier Training Report
+﻿# Lightweight image classifier prototype stage вЂ” Lightweight Baseline Image Classifier Training Report
 
 This report records a local-only lightweight image-classification prototype.
 The output is visual similarity among trained classes only; it is not breed proof, pedigree proof, registry proof, genetic proof, or veterinary advice.
 
 ## Dataset
 
-Subset root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\splits\stanford_dogs_first_baseline`
+Subset root: `<project-root>\data\images\local_dataset\splits\stanford_dogs_first_baseline`
 
 ## Labels
 
@@ -40,3 +40,4 @@ Subset root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\
 
 The model is a course-project baseline. It uses simple histogram/statistical image features and logistic regression.
 No image files and no model weights should be committed to repository.
+

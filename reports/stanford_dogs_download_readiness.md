@@ -1,7 +1,7 @@
-# Stanford Dogs Local Download Readiness
+﻿# Stanford Dogs Local Download Readiness
 
-Download root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\downloads\stanford_dogs`
-Raw root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\raw\stanford_dogs`
+Download root: `<project-root>\data\images\local_dataset\downloads\stanford_dogs`
+Raw root: `<project-root>\data\images\local_dataset\raw\stanford_dogs`
 
 ## Actions
 
@@ -27,3 +27,4 @@ Stanford Dogs split-list archive correction note: individual `file_list.mat`, `t
 ## Responsible boundary
 
 This script prepares local public dataset artifacts only. It does not commit images, train a model, prove breed identity, prove pedigree, or create a registry/certificate decision.
+

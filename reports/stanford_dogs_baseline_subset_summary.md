@@ -1,8 +1,8 @@
-# Stanford Dogs Baseline Image Subset Summary
+﻿# Stanford Dogs Baseline Image Subset Summary
 
-Output root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\splits\stanford_dogs_first_baseline`
-Selection report: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\reports\stanford_dogs_baseline_class_selection.csv`
-Manifest: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\reports\stanford_dogs_baseline_subset_manifest.csv`
+Output root: `<project-root>\data\images\local_dataset\splits\stanford_dogs_first_baseline`
+Selection report: `<project-root>\reports\stanford_dogs_baseline_class_selection.csv`
+Manifest: `<project-root>\reports\stanford_dogs_baseline_subset_manifest.csv`
 Max images per class: 80
 Random seed: 42
 Prepared image rows: 240
@@ -37,3 +37,4 @@ Skipped selected classes: 0
 This subset supports a future educational visual-similarity baseline only.
 It does not prove breed, pedigree, genetic origin, registry status, certification or veterinary condition.
 Actual image files are local-only and must not be committed to repository.
+
