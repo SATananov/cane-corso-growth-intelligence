@@ -108,6 +108,26 @@ docs/course_progression_plan.md
 
 ---
 
+## Final Submission Notebook
+
+The project now includes a lightweight evaluator-friendly final notebook:
+
+```text
+notebooks/final_project_cane_corso_growth_intelligence.ipynb
+```
+
+This notebook acts as the main course submission backbone. It summarizes the project idea, mathematical framing, data strategy, regression, classification, clustering, feature engineering, time-series perspective, optional computer vision extension, results, limitations and future work.
+
+It is intentionally safe for GitHub and course review: it does not download external datasets, does not require image archives, does not train heavy models, and does not load model weights. It reads only the small report files that already exist in the repository.
+
+A submission readiness audit is available in:
+
+```text
+docs/final_submission_readiness_audit.md
+```
+
+---
+
 ## Notebook Mathematical Formulation Standard
 
 Every notebook now follows the same mathematical section before the main implementation:
