@@ -1,0 +1,5 @@
+component,top_positive_terms,top_negative_terms,explained_variance_ratio,cumulative_explained_variance
+SVD1,"weight, activity, and, gain, weight gain, growth","chest development, good muscle, development, good, feeding routine, development regular",0.02957020636131231,0.02957020636131231
+SVD2,"growth, in, in growth, feeding, schedule next, schedule","weight, activity, low, with, height, with low",0.09321526072139434,0.12278546708270666
+SVD3,"curve, expected, warning, deviation from, expected curve, repeated warning","gain, weight gain, in, in growth, activity, feeding",0.10207837864023245,0.2248638457229391
+SVD4,"chest, with, compare, changed quickly, changed, chest measurement","appetite, growth, appetite veterinary, and reduced, consultation recommended, consultation",0.08975187186336768,0.3146157175863068

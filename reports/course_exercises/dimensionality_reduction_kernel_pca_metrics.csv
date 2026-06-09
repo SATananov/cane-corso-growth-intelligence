@@ -1,0 +1,3 @@
+representation,balanced_accuracy,macro_f1,notes
+linear_pca_on_moons,0.916667,0.916667,train_test_logistic_regression_lightweight_demo
+rbf_kernel_pca_on_moons,0.875,0.873016,train_test_logistic_regression_lightweight_demo

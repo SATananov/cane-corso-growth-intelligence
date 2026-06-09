@@ -1,0 +1,13 @@
+requirement,project_file,implementation_note
+Inspect data and target distribution,src/run_dimensionality_reduction_and_manifold_learning.py,Iris target distribution and feature audit are generated into CSV reports.
+Feature selection,src/run_dimensionality_reduction_and_manifold_learning.py,Low variance filter high correlation audit and Random Forest importance are reported.
+Baseline model,src/run_dimensionality_reduction_and_manifold_learning.py,Logistic Regression is evaluated on raw scaled Iris features.
+Text features,src/run_dimensionality_reduction_and_manifold_learning.py,Small project-style notes are vectorized with TF-IDF.
+Dimensionality reduction for text,src/run_dimensionality_reduction_and_manifold_learning.py,TruncatedSVD creates latent semantic components from TF-IDF features.
+PCA,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,PCA explained variance and 2D embedding are documented.
+Kernel PCA,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,Non-linear make_moons example compares linear PCA and RBF Kernel PCA.
+LinDA,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,Supervised Linear Discriminant Analysis is used for class-aware embedding.
+Isomap,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,Manifold embedding is generated for Iris features.
+t-SNE,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,t-SNE is treated as visualization-only embedding.
+Compare representations,reports/course_exercises/dimensionality_reduction_representation_metrics.csv,Balanced accuracy and macro F1 compare raw PCA LinDA and Isomap features.
+Interpretability,reports/course_exercises/dimensionality_reduction_text_svd_components.csv,SVD component terms are exported for interpretation.

@@ -1,0 +1,3 @@
+representation,balanced_accuracy,macro_f1,notes
+tfidf_sparse_text,0.333333,0.111111,tiny_project_style_text_sample_for_exercise_alignment
+tfidf_truncated_svd_latent_text,0.333333,0.111111,tiny_project_style_text_sample_for_exercise_alignment

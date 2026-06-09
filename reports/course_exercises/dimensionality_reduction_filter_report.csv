@@ -1,0 +1,3 @@
+filter,feature_a,feature_b,value,action
+high_correlation,sepal_length_cm,petal_length_cm,0.871754,review_one_of_the_pair
+high_correlation,petal_length_cm,petal_width_cm,0.962865,review_one_of_the_pair

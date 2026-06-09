@@ -1,0 +1,2 @@
+method,recommended_use,production_note,course_link
+t-SNE,2D/3D visualization of local clusters,not_scored_as_a_stable_transform_for_new_incoming_data,covered_in_dimensionality_reduction_lecture_and_notes
