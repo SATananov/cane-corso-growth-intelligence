@@ -181,7 +181,7 @@ For example, K-Means tries to find cluster centers and assign points to the near
 
 ![Clustering feature space concept](../reports/figures/clustering_feature_space_concept.png)
 
-This future topic will use distance and coordinate-space thinking even more directly.
+The implemented Dimensionality Reduction topic uses distance and coordinate-space thinking directly through PCA-style projections and manifold-learning visualizations.
 
 ---
 

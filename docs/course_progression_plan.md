@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document explains how the project will continue to follow the course sequence. The current implementation already covers the main topics studied so far: regression, classification, clustering, feature engineering and time-series work.
+This document explains how the project will continue to follow the course sequence. The current implementation already covers the main topics studied so far: regression, classification, clustering, feature engineering, time-series work, dimensionality reduction and manifold learning.
 
 The project is intentionally maintained as an evolving course project. New course topics should be added only after they are studied in class and practiced in exercises.
 
@@ -14,15 +14,15 @@ The project is intentionally maintained as an evolving course project. New cours
 | Classification | growth-signal classification, pipeline-based modeling and evaluation |
 | Unsupervised Learning and Clustering | growth-pattern segmentation, cluster profiling and stability checks |
 | Feature Engineering and Time Series | lag features, rolling features, growth velocity, time-aware split and residual analysis |
+| Dimensionality Reduction and Manifold Learning | PCA, Kernel PCA, LinDA, Isomap, t-SNE visualization planning, TF-IDF + TruncatedSVD and strengthened Problem 5 component analysis |
 
 ## Reserved future course areas
 
 | Future course area | Planned project direction |
 |---|---|
-| Dimensionality Reduction | implemented: compare lower-dimensional projections and strengthen Problem 5 component analysis |
-| MLflow | track model parameters, metrics, experiment runs and reproducible comparisons |
+| MLflow / Experiment Tracking | track model parameters, metrics, experiment runs and reproducible comparisons |
 
-Dimensionality Reduction is now implemented. MLflow remains reserved until the lecture and exercise are available.
+Dimensionality Reduction is now implemented and synchronized across the project documentation. MLflow remains reserved until the lecture and exercise are available.
 
 ## Exploratory extension boundary
 

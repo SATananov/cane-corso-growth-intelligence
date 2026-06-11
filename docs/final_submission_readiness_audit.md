@@ -59,6 +59,9 @@ notebooks/01_linear_regression_growth_prediction.ipynb
 notebooks/03_classification_growth_status.ipynb
 notebooks/04_unsupervised_learning_clustering.ipynb
 notebooks/05_feature_engineering_time_series_growth.ipynb
+notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
+docs/course_exercises/dimensionality_reduction_problem5_component_analysis.md
 reports/course_exercises/
 src/
 ```
@@ -76,8 +79,10 @@ src/
 | 4 | `03_1_classification_pipeline_exercise.ipynb` | classification exercise workflow |
 | 5 | `04_unsupervised_learning_clustering.ipynb` | growth segmentation |
 | 6 | `05_feature_engineering_time_series_growth.ipynb` | lag features, velocity, rolling statistics, trajectory view |
-| 7 | `08_computer_vision_visual_similarity_concept.ipynb` | optional exploratory visual-similarity extension |
-| 8 | `final_project_cane_corso_growth_intelligence.ipynb` | final submission backbone and evaluator-friendly summary |
+| 7 | `06_dimensionality_reduction_future_course_topic.ipynb` | PCA, Kernel PCA, LinDA, Isomap and t-SNE visualization planning |
+| 8 | `06_1_dimensionality_reduction_exercise_project_alignment.ipynb` | exercise alignment with strengthened Problem 5 component analysis |
+| 9 | `08_computer_vision_visual_similarity_concept.ipynb` | optional exploratory visual-similarity extension |
+| 10 | `final_project_cane_corso_growth_intelligence.ipynb` | final submission backbone and evaluator-friendly summary |
 
 ---
 
@@ -89,6 +94,8 @@ src/
 | `src/run_classification_exercise_alignment.py` | generates classification metrics, ablation and error analysis |
 | `src/run_clustering_exercise_alignment.py` | generates clustering metrics and segment profiles |
 | `src/run_feature_engineering_time_series_exercise_alignment.py` | generates time-series feature metrics and residual reports |
+| `src/run_dimensionality_reduction_and_manifold_learning.py` | generates dimensionality-reduction reports, Problem 5 component analysis and visualization interpretation |
+| `src/validate_dimensionality_reduction_and_manifold_learning.py` | validates dimensionality-reduction reports, notebooks and Problem 5 outputs |
 | `src/run_growth_assessment.py` | creates an example owner-friendly growth assessment report |
 | `src/train_lightweight_image_classifier.py` | optional lightweight image prototype; not core course evidence |
 
@@ -128,11 +135,12 @@ The project should remain GitHub-friendly and reproducible from source code, not
 ## Current Strengths
 
 1. The project has a clear practical idea: growth monitoring for Cane Corso development.
-2. The same domain is reused across regression, classification, clustering and time-series features.
+2. The same domain is reused across regression, classification, clustering, time-series features and dimensionality reduction.
 3. The README and documentation explain limitations and responsible use.
 4. The image work is correctly framed as optional exploration, not breed proof.
 5. The repository has scripts and generated reports, not only notebooks.
-6. The new final notebook gives evaluators one clear entry point.
+6. The final notebook gives evaluators one clear entry point.
+7. Step 20.1 clearly documents the important Problem 5 component-analysis requirement.
 
 ---
 
@@ -157,7 +165,7 @@ git log --oneline
 The next best course-aligned step is:
 
 ```text
-Step 20: Dimensionality Reduction implementation completed. Step 20.1 strengthens the important Problem 5 component-analysis requirement.
+Step 21: MLflow / Experiment Tracking
 ```
 
-Until then, the project has a strong final-submission backbone and can be reviewed as a coherent ML project.
+This should wait until the MLflow lecture and exercise are available. Until then, the project has a strong final-submission backbone and Dimensionality Reduction is documented as completed course-aligned work.

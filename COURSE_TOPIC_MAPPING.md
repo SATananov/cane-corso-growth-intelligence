@@ -13,25 +13,27 @@ Cane Corso Growth Intelligence = mathematical growth profiling + predictive moni
 
 ## Current Course Position
 
-The project is currently aligned with the course up to **Feature Engineering and Time Series**. The completed core work covers:
+The project is currently aligned with the course through **Dimensionality Reduction and Manifold Learning**. The completed core work covers:
 
 ```text
 Linear Regression, Regularization and Testing
 Classification
 Unsupervised Learning and Clustering
 Feature Engineering and Time Series
+Dimensionality Reduction and Manifold Learning
 ```
 
-The next course-aligned topics should be added only after they are covered in class:
+The latest sync step is **Step 20.1**, which strengthens the important Dimensionality Reduction exercise Problem 5 by adding component terms, high-value example records, visualization coordinates and written interpretation.
+
+The next course-aligned topic should be added only after it is covered in class:
 
 ```text
-Dimensionality Reduction
-MLflow
+MLflow / Experiment Tracking
 ```
 
 The visual-similarity work is not listed as a core course topic. It is an optional exploratory extension that demonstrates curiosity and responsible dataset handling. It should support the project story, but it should not replace the course-aligned mathematical and tabular ML deliverables.
 
-The continuation plan is documented in `docs/course_progression_plan.md`. The final results-and-figures summary should be added after Dimensionality Reduction and MLflow are implemented.
+The continuation plan is documented in `docs/course_progression_plan.md`. The final results-and-figures summary should be added after MLflow is implemented.
 
 ---
 
@@ -60,7 +62,7 @@ This standard should appear in every new notebook from this stage onward.
 | Linear Regression, Regularization and Testing | Completed | expected growth prediction and residual analysis |
 | Classification | Completed / extended | `normal_growth` vs `needs_attention` probability signal |
 | Unsupervised Learning, Clustering | Completed | unknown growth-pattern groups and exploratory outlier/noise detection |
-| Feature Engineering and Time Series | Completed / current exercise topic | growth ratios, velocity, lag features and trajectory over time |
+| Feature Engineering and Time Series | Completed | growth ratios, velocity, lag features and trajectory over time |
 | Dimensionality Reduction | Implemented course topic | PCA, Kernel PCA, LinDA, Isomap, t-SNE plan, TF-IDF + TruncatedSVD and explicit Problem 5 component analysis |
 | MLflow | Future course topic | planned experiment tracking and model comparison after the lecture is covered |
 
@@ -762,19 +764,16 @@ Unsupervised Learning, Clustering ✅ strengthened in this stage
 Current status:
 
 ```text
-Feature Engineering: partially covered
-Time Series: planned
+Feature Engineering and Time Series ✅
+Practical growth assessment workflow ✅
 ```
 
-Already covered in the classification exercise:
+Covered feature work:
 
 - ratio features
 - growth-pressure features
 - puppy-stage grouping
 - categorical encoding
-
-Planned additions:
-
 - growth velocity
 - moving average
 - rolling deviation
@@ -796,29 +795,41 @@ Feature Engineering and Time Series ✅ + Practical Workflow ✅
 
 ---
 
-# Future Course Topic: Dimensionality Reduction
+# Topic 5: Dimensionality Reduction and Manifold Learning
 
-Planned notebook or section:
+Implemented notebooks and reports:
 
 ```text
 notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
+docs/course_exercises/dimensionality_reduction_problem5_component_analysis.md
+reports/course_exercises/dimensionality_reduction_problem5_component_terms.csv
+reports/course_exercises/dimensionality_reduction_problem5_component_examples.csv
+reports/course_exercises/dimensionality_reduction_problem5_visualization_coordinates.csv
+reports/course_exercises/dimensionality_reduction_problem5_visualization_interpretation.md
 ```
 
-Planned methods:
+
+Implemented methods:
 
 - PCA
-- optional t-SNE / UMAP discussion if appropriate
+- Kernel PCA
+- Linear Discriminant Analysis / LinDA
+- Isomap
+- t-SNE visualization planning
+- TF-IDF + TruncatedSVD exercise alignment
+- Problem 5 component interpretation with example records and visualization coordinates
 
 Mathematical role:
 
 ```text
-project high-dimensional growth records into 2D for visualization
+project high-dimensional growth records and text-note representations into fewer dimensions for visualization and interpretation
 ```
 
 Product role:
 
 ```text
-show a visual map of growth profiles and how records separate by status or cluster
+show visual maps of growth profiles, inspect component meaning and explain whether visible structure is useful or misleading
 ```
 
 Status:

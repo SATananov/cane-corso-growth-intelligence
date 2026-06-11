@@ -8,20 +8,22 @@ The core of this project is the Cane Corso growth-intelligence workflow built fr
 - Classification;
 - Unsupervised Learning and Clustering;
 - Feature Engineering and Time Series;
+- Dimensionality Reduction and Manifold Learning;
 - data processing, model evaluation, documentation and responsible interpretation.
 
-The project should continue to follow the course path. Dimensionality Reduction and MLflow are reserved as future course additions and should be completed after the corresponding lectures and exercises are covered.
+The project should continue to follow the course path. Dimensionality Reduction is now implemented and strengthened through Step 20.1 Problem 5 component analysis. MLflow remains reserved as the next course addition and should be completed after the corresponding lecture and exercise are covered.
 
-## Reserved notebook slots
+## Implemented and reserved notebook slots
 
-The project keeps two reserved notebooks in the main course sequence:
+The project now includes the implemented Dimensionality Reduction notebooks and one remaining reserved notebook for MLflow:
 
 ```text
 notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
 notebooks/07_mlflow_future_course_topic.ipynb
 ```
 
-These files clarify the intended direction but do not pretend that the topics have already been studied or completed.
+The Dimensionality Reduction files are completed course-aligned evidence. The MLflow notebook is intentionally reserved and should not be presented as implemented until the topic is studied.
 
 ## Exploratory visual extension
 

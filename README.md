@@ -80,23 +80,25 @@ real-world problem -> mathematical formulation -> data preparation -> model trai
 
 ## Current Course Alignment
 
-The core project follows the machine-learning topics covered so far in the course. At the current stage, the project is aligned with the course sequence up to **Feature Engineering and Time Series**:
+The core project follows the machine-learning topics covered so far in the course. At the current stage, the project is aligned with the course sequence through **Dimensionality Reduction and Manifold Learning**:
 
 ```text
 Linear Regression / Regularization / Testing
 Classification
 Unsupervised Learning and Clustering
 Feature Engineering and Time Series
+Dimensionality Reduction and Manifold Learning
 ```
 
-The next course-aligned additions are reserved for:
+The latest course-aligned addition is **Step 20.1 — Problem 5 Component Analysis**. It strengthens the Dimensionality Reduction exercise by adding SVD component interpretation, example high-value records, visualization coordinates and written analysis.
+
+The next reserved course topic is:
 
 ```text
-Dimensionality Reduction
-MLflow
+MLflow / Experiment Tracking
 ```
 
-These two topics are intentionally kept as future course slots until they are studied in class and practiced through exercises. Their notebooks are present in the reading sequence, but they are not presented as completed experiments yet.
+MLflow is intentionally kept as a future course slot until the lecture and exercise are studied in class.
 
 The image-based work is documented as an **exploratory visual-similarity extension**, not as a required course topic and not as a breed-certification system. Its purpose is to test whether a small public image dataset can support an educational comparison between available large-dog classes. The core grading evidence remains the tabular growth-intelligence workflow: regression, classification, clustering, feature engineering, time-series features, evaluation, documentation, and responsible interpretation.
 
@@ -335,11 +337,13 @@ Completed stages:
 10. **Computer Vision Visual Similarity Plan** — added a future image-classification extension plan, dataset research strategy, manifest example and responsible visual-similarity boundary
 11. **Public Image Dataset Feasibility** — added public image dataset candidates, target molossoid class planning, repository data rules and validation before image-model training
 12. **Image Dataset Acquisition and Local Preparation** — added local-only image dataset structure, inventory template and validation scripts before any image model training
+13. **Dimensionality Reduction and Manifold Learning** — added PCA, Kernel PCA, LinDA, Isomap, t-SNE visualization planning and representation comparison
+14. **Problem 5 Component Analysis** — strengthened SVD component interpretation with example records, visualization coordinates and written conclusions
 
 Next planned course topic:
 
 ```text
-Dimensionality Reduction
+MLflow / Experiment Tracking
 ```
 
 The visual-similarity work is documented as an optional extension outside the current core course sequence; it must not be presented as breed proof or as the main course deliverable.
@@ -522,6 +526,15 @@ Covers lag features, growth velocity, weight-to-height ratio, rolling averages, 
 notebooks/05_1_practical_growth_assessment_workflow.ipynb
 ```
 
+### 6. Dimensionality Reduction and Manifold Learning
+
+```text
+notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
+```
+
+Covers PCA, Kernel PCA, Linear Discriminant Analysis, Isomap, t-SNE visualization planning, TF-IDF + TruncatedSVD alignment and explicit Problem 5 component analysis. The exercise adaptation interprets reduced components through top terms, example records and visualization coordinates.
+
 Shows how new owner-style measurements can be transformed into a readable educational growth assessment report.
 
 ### 6. Exploratory Visual Similarity Concept
@@ -532,7 +545,7 @@ notebooks/08_computer_vision_visual_similarity_concept.ipynb
 
 Introduces the future image-classification extension. It explains visual feature extraction, softmax probabilities, public dataset feasibility and why the output must be interpreted as visual similarity rather than breed proof.
 
-### 7. Image Dataset Feasibility
+### 8. Image Dataset Feasibility
 
 ```text
 notebooks/09_image_dataset_feasibility.ipynb
@@ -540,7 +553,7 @@ notebooks/09_image_dataset_feasibility.ipynb
 
 Adds a public image dataset feasibility check before any visual-similarity model is trained. It reviews public dataset candidates, target molossoid classes, repository storage rules and responsible limitations.
 
-### 8. Image Dataset Acquisition and Local Preparation
+### 9. Image Dataset Acquisition and Local Preparation
 
 ```text
 notebooks/10_image_dataset_acquisition_local_preparation.ipynb

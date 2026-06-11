@@ -303,22 +303,25 @@ docs/raw_dataset_archive_policy.md
 
 ## 9. Current project stage
 
-The project currently covers four completed course topics plus one future Computer Vision extension plan:
+The project currently covers five completed core course topics plus one optional Computer Vision extension plan:
 
 1. Linear Regression, Regularization and Testing
 2. Classification
 3. Unsupervised Learning and Clustering
 4. Feature Engineering and Time Series
-5. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
-6. Public Image Dataset Feasibility (dataset candidates and target class planning, not trained yet)
-7. Image Dataset Acquisition and Local Preparation (local-only structure and validation, not trained yet)
+5. Dimensionality Reduction and Manifold Learning
+6. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
+7. Public Image Dataset Feasibility (dataset candidates and target class planning, not trained yet)
+8. Image Dataset Acquisition and Local Preparation (local-only structure and validation, not trained yet)
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
+
+The latest completed course-aligned polish is Step 20.1, which strengthens the Dimensionality Reduction exercise Problem 5 component analysis.
 
 The next planned core course topic is:
 
 ```text
-Dimensionality Reduction
+MLflow / Experiment Tracking
 ```
 
 Future topics will be added gradually in new notebooks, with separate commits and updated course mapping.
@@ -438,12 +441,18 @@ python src/select_stanford_dogs_baseline_classes.py
 Do not commit downloaded images, archives or extracted dataset folders.
 
 
-### Future Course Topic Notebooks
+### Current and Future Course Topic Notebooks
 
-These notebooks are intentionally reserved and should be completed after the course topics are covered:
+Dimensionality Reduction is implemented and strengthened through these notebooks:
 
 ```text
 notebooks/06_dimensionality_reduction_future_course_topic.ipynb
+notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
+```
+
+The remaining reserved course-topic notebook is:
+
+```text
 notebooks/07_mlflow_future_course_topic.ipynb
 ```
 
