@@ -1,0 +1,25 @@
+component,side,rank,record_id,status,component_value,note,why_it_matters
+SVD1,high_positive_value,1,8,risk,0.540977,rapid weight gain with low activity possible overweight risk,Example growth note with strong loading on this latent component.
+SVD1,high_positive_value,2,0,healthy,0.531271,steady monthly weight gain strong appetite normal activity balanced growth,Example growth note with strong loading on this latent component.
+SVD1,high_positive_value,3,4,monitor,0.446108,weight increased faster than height review diet and activity,Example growth note with strong loading on this latent component.
+SVD1,low_or_opposite_value,1,2,healthy,0.041289,good muscle tone stable chest development regular feeding routine,Contrasting example used to understand whether the component has a meaningful axis.
+SVD1,low_or_opposite_value,2,6,monitor,0.12545,chest measurement changed quickly compare with previous records,Contrasting example used to understand whether the component has a meaningful axis.
+SVD1,low_or_opposite_value,3,7,monitor,0.142162,mild asymmetry in growth notes requires follow up observation,Contrasting example used to understand whether the component has a meaningful axis.
+SVD2,high_positive_value,1,5,monitor,0.634304,temporary slowdown in growth check feeding schedule next month,Example growth note with strong loading on this latent component.
+SVD2,high_positive_value,2,7,monitor,0.602061,mild asymmetry in growth notes requires follow up observation,Example growth note with strong loading on this latent component.
+SVD2,high_positive_value,3,3,healthy,0.327133,growth curve remains within expected range energetic and active,Example growth note with strong loading on this latent component.
+SVD2,low_or_opposite_value,1,8,risk,-0.270659,rapid weight gain with low activity possible overweight risk,Contrasting example used to understand whether the component has a meaningful axis.
+SVD2,low_or_opposite_value,2,4,monitor,-0.181084,weight increased faster than height review diet and activity,Contrasting example used to understand whether the component has a meaningful axis.
+SVD2,low_or_opposite_value,3,11,risk,-0.15383,low weight progression and fatigue signal potential health concern,Contrasting example used to understand whether the component has a meaningful axis.
+SVD3,high_positive_value,1,10,risk,0.653908,large deviation from expected curve repeated warning measurements,Example growth note with strong loading on this latent component.
+SVD3,high_positive_value,2,3,healthy,0.548397,growth curve remains within expected range energetic and active,Example growth note with strong loading on this latent component.
+SVD3,high_positive_value,3,1,healthy,0.245572,height and weight progress consistent with age no warning signs,Example growth note with strong loading on this latent component.
+SVD3,low_or_opposite_value,1,0,healthy,-0.277916,steady monthly weight gain strong appetite normal activity balanced growth,Contrasting example used to understand whether the component has a meaningful axis.
+SVD3,low_or_opposite_value,2,5,monitor,-0.268022,temporary slowdown in growth check feeding schedule next month,Contrasting example used to understand whether the component has a meaningful axis.
+SVD3,low_or_opposite_value,3,8,risk,-0.265207,rapid weight gain with low activity possible overweight risk,Contrasting example used to understand whether the component has a meaningful axis.
+SVD4,high_positive_value,1,6,monitor,0.670516,chest measurement changed quickly compare with previous records,Example growth note with strong loading on this latent component.
+SVD4,high_positive_value,2,2,healthy,0.613044,good muscle tone stable chest development regular feeding routine,Example growth note with strong loading on this latent component.
+SVD4,high_positive_value,3,1,healthy,0.258944,height and weight progress consistent with age no warning signs,Example growth note with strong loading on this latent component.
+SVD4,low_or_opposite_value,1,9,risk,-0.270026,growth stagnation and reduced appetite veterinary consultation recommended,Contrasting example used to understand whether the component has a meaningful axis.
+SVD4,low_or_opposite_value,2,0,healthy,-0.251738,steady monthly weight gain strong appetite normal activity balanced growth,Contrasting example used to understand whether the component has a meaningful axis.
+SVD4,low_or_opposite_value,3,7,monitor,-0.074757,mild asymmetry in growth notes requires follow up observation,Contrasting example used to understand whether the component has a meaningful axis.

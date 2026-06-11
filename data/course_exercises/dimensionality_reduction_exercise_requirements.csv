@@ -11,3 +11,7 @@ Isomap,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,Manifold 
 t-SNE,notebooks/06_dimensionality_reduction_future_course_topic.ipynb,t-SNE is treated as visualization-only embedding.
 Compare representations,reports/course_exercises/dimensionality_reduction_representation_metrics.csv,Balanced accuracy and macro F1 compare raw PCA LinDA and Isomap features.
 Interpretability,reports/course_exercises/dimensionality_reduction_text_svd_components.csv,SVD component terms are exported for interpretation.
+Problem 5 component term inspection,reports/course_exercises/dimensionality_reduction_problem5_component_terms.csv,Exports top positive terms low/opposite-loading terms explained variance and a cautious semantic-axis interpretation for each SVD component.
+Problem 5 high-value examples,reports/course_exercises/dimensionality_reduction_problem5_component_examples.csv,Exports example growth-note records with high-positive and contrasting values for each SVD component.
+Problem 5 visualizations,reports/course_exercises/dimensionality_reduction_problem5_visualization_coordinates.csv,Provides coordinates for at least two visualizations: SVD text-note space and PCA numeric reference space with Isomap when available.
+Problem 5 interpretation questions,reports/course_exercises/dimensionality_reduction_problem5_visualization_interpretation.md,Directly answers the adapted cluster quality geometry and misleading-visualization questions from the exercise.

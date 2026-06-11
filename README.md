@@ -776,3 +776,8 @@ python src/download_stanford_dogs_local_dataset.py --download-images
 python src/download_stanford_dogs_local_dataset.py --extract-images
 python src/inspect_stanford_dogs_real_classes.py
 ```
+
+
+## Step 20.1 — Problem 5 Component Analysis
+
+The Dimensionality Reduction exercise component-analysis task is treated as a priority. The project now exports SVD term interpretation, high-value example growth notes, visualization coordinates and written interpretation for the adapted Problem 5 workflow.

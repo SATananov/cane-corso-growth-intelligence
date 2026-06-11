@@ -81,3 +81,10 @@ The course exercise asks for comparison between metadata, text representations, 
 - Logistic Regression compares classification performance across representations.
 
 This keeps the project GitHub-friendly while still covering the core course idea.
+
+
+## Problem 5: component analysis and visualization
+
+The exercise requirement to analyze and visualize components is represented explicitly in this project. The generated Problem 5 reports inspect TruncatedSVD components from the text-note representation, list top positive and low/opposite-loading terms, export example records with high component values, and provide visualization coordinates for notebook plots.
+
+The key interpretation rule is conservative: a 2D projection can suggest structure, but it should not be treated as proof. For this project, SVD and projection views are used as exploratory tools for growth-note patterns until larger real Cane Corso growth datasets are available.

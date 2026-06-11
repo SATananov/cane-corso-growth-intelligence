@@ -43,3 +43,24 @@ The module uses:
 The original exercise points to a Kaggle dataset. Including that dataset would make the repository heavier and less portable. For the course project, the safer choice is to demonstrate the same methodology with small reproducible data.
 
 This keeps the repository clean while preserving the educational value of the exercise.
+
+
+## Strengthened Problem 5 coverage
+
+Problem 5 from the exercise is treated as a priority because it tests whether dimensionality reduction is interpreted correctly, not just executed.
+
+The project now includes explicit evidence for:
+
+- high-positive and low/opposite-loading SVD terms;
+- example growth-note records with high component values;
+- cautious semantic-axis interpretation for each component;
+- at least two visualization coordinate sets;
+- direct answers to the exercise questions about clustering, misleading geometry, and whether patterns reflect the target or other factors.
+
+See:
+
+- `docs/course_exercises/dimensionality_reduction_problem5_component_analysis.md`
+- `reports/course_exercises/dimensionality_reduction_problem5_component_terms.csv`
+- `reports/course_exercises/dimensionality_reduction_problem5_component_examples.csv`
+- `reports/course_exercises/dimensionality_reduction_problem5_visualization_coordinates.csv`
+- `reports/course_exercises/dimensionality_reduction_problem5_visualization_interpretation.md`

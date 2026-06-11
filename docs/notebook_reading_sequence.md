@@ -17,10 +17,11 @@ This file documents the current notebook order for review. The project starts wi
 11. `notebooks/05_1_practical_growth_assessment_workflow.ipynb`
 12. `notebooks/05_2_feature_engineering_time_series_exercise_project_alignment.ipynb`
 
-## Reserved future course topics
+## Current and reserved course topics
 
-13. `notebooks/06_dimensionality_reduction_future_course_topic.ipynb`
-14. `notebooks/07_mlflow_future_course_topic.ipynb`
+13. `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` — implemented in Step 20
+14. `notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb` — strengthened in Step 20.1
+15. `notebooks/07_mlflow_future_course_topic.ipynb` — reserved for the next lecture
 
 These notebooks are intentionally reserved. They will be completed after the corresponding lectures and exercises are covered in class.
 

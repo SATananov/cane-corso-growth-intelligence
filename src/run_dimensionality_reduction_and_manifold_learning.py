@@ -227,6 +227,204 @@ def write_text_reports() -> None:
     pd.DataFrame(component_rows).to_csv(report_path("text_svd_components.csv"), index=False)
 
 
+def interpret_svd_axis(component_name: str) -> str:
+    """Small, human-readable interpretation for the synthetic growth-note sample.
+
+    The sign of SVD components can flip between implementations, so these labels are
+    used as cautious interpretations rather than hard scientific conclusions.
+    """
+    mapping = {
+        "SVD1": "general growth-note intensity: repeated growth, weight, activity and measurement vocabulary",
+        "SVD2": "healthy expected development versus risk or monitoring language",
+        "SVD3": "measurement-change and follow-up language versus stable routine language",
+        "SVD4": "health-concern signals such as appetite, fatigue or deviation versus normal development notes",
+    }
+    return mapping.get(component_name, "latent semantic direction requiring manual inspection")
+
+
+def write_problem5_component_analysis() -> None:
+    """Generate the explicit Problem 5 component-analysis evidence.
+
+    The original exercise asks for component inspection, example postings with high
+    component values, at least two visualizations, and a written interpretation of
+    whether visible patterns are meaningful or potentially misleading.  This project
+    uses lightweight Cane Corso growth notes instead of the external fake-job dataset,
+    but keeps the same methodology.
+    """
+    data = text_note_sample().reset_index(names="record_id")
+
+    vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
+    X_text = vectorizer.fit_transform(data["note"])
+    svd = TruncatedSVD(n_components=4, random_state=RANDOM_STATE)
+    X_svd = svd.fit_transform(X_text)
+    terms = np.array(vectorizer.get_feature_names_out())
+
+    component_rows = []
+    example_rows = []
+    for idx, comp in enumerate(svd.components_):
+        component = f"SVD{idx + 1}"
+        positive_idx = np.argsort(comp)[-8:][::-1]
+        negative_idx = np.argsort(comp)[:8]
+        scores = X_svd[:, idx]
+
+        component_rows.append(
+            {
+                "component": component,
+                "top_positive_terms": ", ".join(terms[positive_idx]),
+                "top_negative_terms_or_low_loading_terms": ", ".join(terms[negative_idx]),
+                "explained_variance_ratio": round(float(svd.explained_variance_ratio_[idx]), 6),
+                "cumulative_explained_variance": round(float(np.cumsum(svd.explained_variance_ratio_)[idx]), 6),
+                "interpreted_semantic_axis": interpret_svd_axis(component),
+                "interpretation_caution": "SVD component signs can flip; interpret term groups and high-scoring records together.",
+            }
+        )
+
+        high_positive = np.argsort(scores)[-3:][::-1]
+        high_negative = np.argsort(scores)[:3]
+        for rank, row_idx in enumerate(high_positive, start=1):
+            example_rows.append(
+                {
+                    "component": component,
+                    "side": "high_positive_value",
+                    "rank": rank,
+                    "record_id": int(data.loc[row_idx, "record_id"]),
+                    "status": data.loc[row_idx, "status"],
+                    "component_value": round(float(scores[row_idx]), 6),
+                    "note": data.loc[row_idx, "note"],
+                    "why_it_matters": "Example growth note with strong loading on this latent component.",
+                }
+            )
+        for rank, row_idx in enumerate(high_negative, start=1):
+            example_rows.append(
+                {
+                    "component": component,
+                    "side": "low_or_opposite_value",
+                    "rank": rank,
+                    "record_id": int(data.loc[row_idx, "record_id"]),
+                    "status": data.loc[row_idx, "status"],
+                    "component_value": round(float(scores[row_idx]), 6),
+                    "note": data.loc[row_idx, "note"],
+                    "why_it_matters": "Contrasting example used to understand whether the component has a meaningful axis.",
+                }
+            )
+
+    pd.DataFrame(component_rows).to_csv(report_path("problem5_component_terms.csv"), index=False)
+    pd.DataFrame(example_rows).to_csv(report_path("problem5_component_examples.csv"), index=False)
+
+    # Coordinates for at least two notebook visualizations without storing images.
+    coords = pd.DataFrame(
+        {
+            "visualization": "SVD_2D_text_notes",
+            "record_id": data["record_id"],
+            "label": data["status"],
+            "x": X_svd[:, 0],
+            "y": X_svd[:, 1],
+            "source_text": data["note"],
+            "interpretation_use": "Inspect whether healthy, monitor and risk notes separate in latent semantic space.",
+        }
+    )
+
+    X_num, y_num = load_iris_frame()
+    X_scaled = StandardScaler().fit_transform(X_num)
+    pca_coords = PCA(n_components=2, random_state=RANDOM_STATE).fit_transform(X_scaled)
+    pca_view = pd.DataFrame(
+        {
+            "visualization": "PCA_2D_numeric_reference",
+            "record_id": np.arange(len(y_num)),
+            "label": y_num.values,
+            "x": pca_coords[:, 0],
+            "y": pca_coords[:, 1],
+            "source_text": "built-in numeric reference dataset used for projection methodology",
+            "interpretation_use": "Reference visualization for how PCA separates numeric classes after scaling.",
+        }
+    )
+
+    try:
+        iso_coords = Isomap(n_neighbors=5, n_components=2).fit_transform(X_scaled)
+        iso_view = pd.DataFrame(
+            {
+                "visualization": "Isomap_2D_numeric_reference",
+                "record_id": np.arange(len(y_num)),
+                "label": y_num.values,
+                "x": iso_coords[:, 0],
+                "y": iso_coords[:, 1],
+                "source_text": "built-in numeric reference dataset used for manifold methodology",
+                "interpretation_use": "Reference visualization for local neighborhood geometry; useful but not production preprocessing.",
+            }
+        )
+        coords = pd.concat([coords, pca_view, iso_view], ignore_index=True)
+    except Exception as exc:
+        warnings.warn(f"Problem 5 Isomap coordinates skipped: {exc}")
+        coords = pd.concat([coords, pca_view], ignore_index=True)
+
+    coords.to_csv(report_path("problem5_visualization_coordinates.csv"), index=False)
+
+    interpretation = """# Problem 5 — Component Analysis and Visualization Interpretation
+
+This report directly addresses the most important part of the dimensionality-reduction exercise: inspect components, inspect examples with high component values, create visualizations, and explain what the visual geometry does and does not mean.
+
+## Dataset adaptation
+
+The original exercise uses fake-job postings. This project uses a small built-in set of Cane Corso growth-monitoring notes so the repository stays lightweight and reproducible. The methodology is the same:
+
+- convert text to TF-IDF features;
+- reduce sparse text features with TruncatedSVD;
+- inspect top positive and low/opposite-loading terms;
+- inspect example records with high component values;
+- create 2D visualization coordinates;
+- interpret whether visible grouping is meaningful or potentially misleading.
+
+## Visualizations generated
+
+The script generates coordinates for at least two visualizations:
+
+1. `SVD_2D_text_notes` — first two SVD components from TF-IDF growth notes.
+2. `PCA_2D_numeric_reference` — first two PCA components on a scaled built-in numeric reference dataset.
+3. `Isomap_2D_numeric_reference` — manifold-learning reference coordinates when available.
+
+The notebook contains plotting cells for these views. The project does not commit PNG images, keeping the repository clean while preserving reproducible visualization code.
+
+## What the visualizations reveal
+
+For the tiny text-note sample, risk and monitor notes can show partial separation because words such as `risk`, `warning`, `deviation`, `appetite`, `fatigue`, `review`, and `follow up` carry different TF-IDF/SVD signals from words such as `steady`, `normal`, `balanced`, and `expected`.
+
+This should be interpreted as a methodology demonstration, not a scientific biological conclusion. The sample is intentionally small and manually written.
+
+## Adapted exercise questions
+
+### Do abnormal or risk growth cases form a cluster?
+
+They may form a partial cluster in the SVD text-note space, but this is evidence of vocabulary separation, not proof of a biological growth cluster.
+
+### Are there several kinds of risk cases?
+
+The notes suggest at least two possible risk styles: rapid/overweight-risk language and stagnation/low-appetite/health-concern language. This is useful for project thinking, but it needs real data before becoming a model claim.
+
+### Are the strongest patterns unrelated to the target?
+
+Possibly. A component can capture writing style, repeated measurement words, age-related phrasing, or follow-up vocabulary instead of true risk. This is why component examples are exported next to terms.
+
+### Does geometry reflect metadata or real patterns?
+
+In this project-safe version, the text SVD geometry mostly reflects language patterns in growth notes. Numeric PCA and Isomap examples demonstrate projection methodology, not final Cane Corso biological evidence.
+
+### Which visualization is most useful and which may be misleading?
+
+The most useful view is the SVD component table combined with high-value example records, because it connects components to actual text. The most potentially misleading views are t-SNE or manifold plots if read as proof of real clusters. They are useful for exploration, not final evidence.
+
+## Final project decision
+
+Problem 5 is now represented explicitly through:
+
+- `dimensionality_reduction_problem5_component_terms.csv`
+- `dimensionality_reduction_problem5_component_examples.csv`
+- `dimensionality_reduction_problem5_visualization_coordinates.csv`
+- `dimensionality_reduction_problem5_visualization_interpretation.md`
+- the notebook section **Problem 5 — Analyze and visualize components**
+"""
+    report_path("problem5_visualization_interpretation.md").write_text(interpretation, encoding="utf-8")
+
+
 def write_summary() -> None:
     summary = """# Dimensionality Reduction Exercise Alignment Summary
 
@@ -241,6 +439,7 @@ Generated by `src/run_dimensionality_reduction_and_manifold_learning.py`.
 - t-SNE as visualization-only embedding
 - Feature selection through low variance, high correlation, and Random Forest importance
 - Text latent representation through TF-IDF + TruncatedSVD
+- Explicit Problem 5 component analysis: terms, example records, visual coordinates, and interpretation
 
 ## Project decision
 
@@ -260,6 +459,7 @@ def main() -> None:
     write_representation_metrics(X, y)
     write_kernel_pca_metrics()
     write_text_reports()
+    write_problem5_component_analysis()
     write_summary()
     print(f"Dimensionality reduction reports generated in {REPORT_DIR.as_posix()}")
 

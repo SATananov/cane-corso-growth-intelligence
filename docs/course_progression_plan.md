@@ -19,10 +19,10 @@ The project is intentionally maintained as an evolving course project. New cours
 
 | Future course area | Planned project direction |
 |---|---|
-| Dimensionality Reduction | visualize high-dimensional growth profiles and compare lower-dimensional projections |
+| Dimensionality Reduction | implemented: compare lower-dimensional projections and strengthen Problem 5 component analysis |
 | MLflow | track model parameters, metrics, experiment runs and reproducible comparisons |
 
-The reserved notebooks are present in the project sequence so the future course work has a clear place, but they are not implemented as full experiments yet.
+Dimensionality Reduction is now implemented. MLflow remains reserved until the lecture and exercise are available.
 
 ## Exploratory extension boundary
 

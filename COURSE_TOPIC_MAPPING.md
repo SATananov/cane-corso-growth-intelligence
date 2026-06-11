@@ -61,7 +61,7 @@ This standard should appear in every new notebook from this stage onward.
 | Classification | Completed / extended | `normal_growth` vs `needs_attention` probability signal |
 | Unsupervised Learning, Clustering | Completed | unknown growth-pattern groups and exploratory outlier/noise detection |
 | Feature Engineering and Time Series | Completed / current exercise topic | growth ratios, velocity, lag features and trajectory over time |
-| Dimensionality Reduction | Future course topic | planned 2D visualization of high-dimensional growth profiles after the lecture is covered |
+| Dimensionality Reduction | Implemented course topic | PCA, Kernel PCA, LinDA, Isomap, t-SNE plan, TF-IDF + TruncatedSVD and explicit Problem 5 component analysis |
 | MLflow | Future course topic | planned experiment tracking and model comparison after the lecture is covered |
 
 ### Optional exploratory extension, outside the current core course path
@@ -824,7 +824,7 @@ show a visual map of growth profiles and how records separate by status or clust
 Status:
 
 ```text
-Dimensionality Reduction ⏳
+Dimensionality Reduction ✅
 ```
 
 ---

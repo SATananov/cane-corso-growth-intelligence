@@ -22,6 +22,11 @@ EXPECTED_REPORTS = [
     REPORT_DIR / "dimensionality_reduction_text_representation_metrics.csv",
     REPORT_DIR / "dimensionality_reduction_tsne_visualization_plan.csv",
     REPORT_DIR / "dimensionality_reduction_exercise_alignment_summary.md",
+
+    REPORT_DIR / "dimensionality_reduction_problem5_component_terms.csv",
+    REPORT_DIR / "dimensionality_reduction_problem5_component_examples.csv",
+    REPORT_DIR / "dimensionality_reduction_problem5_visualization_coordinates.csv",
+    REPORT_DIR / "dimensionality_reduction_problem5_visualization_interpretation.md",
 ]
 
 EXPECTED_NOTEBOOKS = [
@@ -77,10 +82,33 @@ def validate_reports() -> None:
         raise ValueError("Expected at least two SVD components for text representation.")
 
 
+    problem5_terms = pd.read_csv(REPORT_DIR / "dimensionality_reduction_problem5_component_terms.csv")
+    required_term_columns = {
+        "component",
+        "top_positive_terms",
+        "top_negative_terms_or_low_loading_terms",
+        "interpreted_semantic_axis",
+    }
+    if not required_term_columns.issubset(problem5_terms.columns):
+        raise ValueError("Problem 5 component term report is missing required interpretation columns.")
+    if len(problem5_terms) < 2:
+        raise ValueError("Problem 5 should inspect at least two SVD components.")
+
+    problem5_examples = pd.read_csv(REPORT_DIR / "dimensionality_reduction_problem5_component_examples.csv")
+    if problem5_examples["component"].nunique() < 2:
+        raise ValueError("Problem 5 examples should cover at least two components.")
+    if {"high_positive_value", "low_or_opposite_value"} - set(problem5_examples["side"].astype(str)):
+        raise ValueError("Problem 5 examples must include both high-positive and contrasting records.")
+
+    viz = pd.read_csv(REPORT_DIR / "dimensionality_reduction_problem5_visualization_coordinates.csv")
+    if viz["visualization"].nunique() < 2:
+        raise ValueError("Problem 5 must provide at least two visualization coordinate sets.")
+
+
 def main() -> None:
     validate_notebooks()
     validate_reports()
-    print("Step 20 validation passed: dimensionality reduction reports and notebooks are valid.")
+    print("Step 20 validation passed: dimensionality reduction reports, Problem 5 analysis, and notebooks are valid.")
 
 
 if __name__ == "__main__":
