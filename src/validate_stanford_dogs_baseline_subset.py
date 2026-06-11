@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "reports" / "stanford_dogs_baseline_subset_manifest.csv"
 SUMMARY = ROOT / "reports" / "stanford_dogs_baseline_subset_summary.md"
 LOCAL_DATASET_ROOT = ROOT / "data" / "images" / "local_dataset"
+IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tif", ".tiff"}
+
 EXPECTED_COLUMNS = {
     "row_id",
     "source_dataset",
@@ -24,6 +26,31 @@ EXPECTED_COLUMNS = {
 
 def fail(message: str) -> None:
     raise SystemExit(f"Stanford Dogs baseline subset validation FAIL: {message}")
+
+
+def local_image_files_exist() -> bool:
+    if not LOCAL_DATASET_ROOT.exists():
+        return False
+    return any(
+        path.is_file() and path.suffix.lower() in IMAGE_EXTENSIONS
+        for path in LOCAL_DATASET_ROOT.rglob("*")
+    )
+
+
+def print_metadata_only_pass(rows: list[dict[str, str]], labels: Counter, splits: Counter) -> None:
+    print("Stanford Dogs baseline subset validation PASS")
+    print(f"Manifest rows: {len(rows)}")
+    print(f"Labels: {len(labels)}")
+    for label, count in sorted(labels.items()):
+        print(f"- {label}: {count}")
+    print("Rows by split:")
+    for split in ["train", "validation", "test"]:
+        print(f"- {split}: {splits.get(split, 0)}")
+    print(
+        "Local copied image files are absent, which is valid for a clean repository clone. "
+        "Run the local Stanford Dogs preparation step only when performing image experiments."
+    )
+    print("Boundary: this validates metadata only when images are intentionally omitted from the repository.")
 
 
 def main() -> None:
@@ -68,20 +95,8 @@ def main() -> None:
                 break
 
     if missing_files:
-        if not LOCAL_DATASET_ROOT.exists():
-            print("Stanford Dogs baseline subset validation PASS")
-            print(f"Manifest rows: {len(rows)}")
-            print(f"Labels: {len(labels)}")
-            for label, count in sorted(labels.items()):
-                print(f"- {label}: {count}")
-            print("Rows by split:")
-            for split in ["train", "validation", "test"]:
-                print(f"- {split}: {splits.get(split, 0)}")
-            print(
-                "Local copied image files are absent, which is valid for a clean repository clone. "
-                "Run the local Stanford Dogs preparation step only when performing image experiments."
-            )
-            print("Boundary: this validates metadata only when images are intentionally omitted from the repository.")
+        if not local_image_files_exist():
+            print_metadata_only_pass(rows, labels, splits)
             return
         fail(f"manifest points to missing local copied image files: {missing_files}")
 
