@@ -75,9 +75,14 @@ def main() -> None:
     validate_inventory_template()
 
     if not LOCAL_ROOT.exists():
-        raise FileNotFoundError(
-            "Local image dataset folder does not exist. Run: python src/prepare_image_dataset_structure.py"
-        )
+        print("Local image dataset structure validation PASS")
+        print(f"Root: {LOCAL_ROOT}")
+        print(f"Target classes: {len(classes)}")
+        print("Local image dataset folder is absent, which is valid for a clean repository clone.")
+        print("Run: python src/prepare_image_dataset_structure.py only when preparing local image experiments.")
+        print("\nNote: this validation confirms that required metadata templates exist.")
+        print("It does not check licensing, image quality, label correctness, or train a model.")
+        return
 
     required_paths = [
         LOCAL_ROOT / ".gitignore",

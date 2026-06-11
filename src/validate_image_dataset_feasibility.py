@@ -92,9 +92,19 @@ def validate_targets(rows: list[dict[str, str]]) -> None:
             )
 
 
-def validate_no_committed_images() -> None:
+def validate_no_committed_images() -> bool:
+    """Validate that no downloaded/local image files are present in the repository.
+
+    The course project keeps image-dataset work as feasibility planning only.
+    A fresh clone or clean submission archive may not contain data/images at all,
+    because Git does not preserve empty directories and downloaded images are
+    intentionally excluded from version control. In that case, the repository is
+    clean and the validation should pass.
+    """
+
     if not IMAGES_DIR.exists():
-        raise FileNotFoundError("data/images directory is missing")
+        return False
+
     image_files = [path for path in IMAGES_DIR.rglob("*") if path.suffix.lower() in IMAGE_SUFFIXES]
     if image_files:
         rel = [str(path.relative_to(ROOT)) for path in image_files[:10]]
@@ -103,17 +113,22 @@ def validate_no_committed_images() -> None:
             f"Found examples: {rel}"
         )
 
+    return True
+
 
 def main() -> None:
     feasibility_rows = read_csv(FEASIBILITY)
     target_rows = read_csv(TARGET_CLASSES)
     validate_feasibility(feasibility_rows)
     validate_targets(target_rows)
-    validate_no_committed_images()
+    images_dir_present = validate_no_committed_images()
     print("Image dataset feasibility validation PASS")
     print(f"Dataset candidates: {len(feasibility_rows)}")
     print(f"Target visual classes: {len(target_rows)}")
-    print("No downloaded image files detected in data/images")
+    if images_dir_present:
+        print("No downloaded image files detected in data/images")
+    else:
+        print("data/images is absent, which is valid for a clean repository clone")
 
 
 if __name__ == "__main__":
