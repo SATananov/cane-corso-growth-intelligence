@@ -1,9 +1,9 @@
 candidate_id,preferred_display_name,available_locally,image_count,local_class_paths,include_in_first_baseline,baseline_role,decision_notes
-stanford_boxer,Boxer,True,151,data\images\local_dataset\raw\stanford_dogs\Images\n02108089-boxer,yes,near_molossoid_control_class,confirmed from local folders
-stanford_bull_mastiff,Bullmastiff,True,156,data\images\local_dataset\raw\stanford_dogs\Images\n02108422-bull_mastiff,yes,large_molossoid_like_baseline_class,confirmed from local folders
-stanford_great_dane,Great Dane,True,156,data\images\local_dataset\raw\stanford_dogs\Images\n02109047-Great_Dane,yes,large_giant_breed_contrast_class,confirmed from local folders
+stanford_boxer,Boxer,False,0,,pending_or_no,near_molossoid_control_class,not confirmed locally yet; do not train this class before data is available
+stanford_bull_mastiff,Bullmastiff,False,0,,pending_or_no,large_molossoid_like_baseline_class,not confirmed locally yet; do not train this class before data is available
+stanford_great_dane,Great Dane,False,0,,pending_or_no,large_giant_breed_contrast_class,not confirmed locally yet; do not train this class before data is available
 stanford_mastiff,Mastiff,False,0,,pending_or_no,large_mastiff_type_candidate_if_present,not confirmed locally yet; do not train this class before data is available
-stanford_tibetan_mastiff,Tibetan Mastiff,True,152,data\images\local_dataset\raw\stanford_dogs\Images\n02108551-Tibetan_mastiff,optional,mastiff_name_but_different_type_contrast,confirmed from local folders
+stanford_tibetan_mastiff,Tibetan Mastiff,False,0,,pending_or_no,mastiff_name_but_different_type_contrast,not confirmed locally yet; do not train this class before data is available
 missing_cane_corso,Cane Corso,False,0,,pending_or_no,future_target_class_if_found_or_future_consent_dataset,not confirmed locally yet; do not train this class before data is available
 missing_dogo_argentino,Dogo Argentino,False,0,,pending_or_no,future comparison target if found or consent/public dataset later,not confirmed locally yet; do not train this class before data is available
 missing_presa_canario,Presa Canario,False,0,,pending_or_no,future comparison target if found or consent/public dataset later,not confirmed locally yet; do not train this class before data is available

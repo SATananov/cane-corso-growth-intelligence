@@ -1,4 +1,4 @@
 approach,project_use,leakage_risk,current_status
-direct one-stage model,Predict the next recorded growth measurement from current and previous measurements.,Low if future rows are never used for feature construction.,Implemented as the baseline comparable forecasting workflow.
+direct one-step model,Predict the next recorded growth measurement from current and previous measurements.,Low if future rows are never used for feature construction.,Implemented as the baseline comparable forecasting workflow.
 direct multi-horizon model,Train separate targets for later future ages when more longitudinal data exists.,Medium; each horizon must be created after chronological splitting rules are defined.,Documented as a next experiment for a larger real dataset.
 recursive forecasting,Use predicted weight as an input for a later predicted point.,Medium to high; prediction error can compound across horizons.,"Documented as an educational comparison, not used for final claims."

@@ -4,7 +4,7 @@ This report validates that the project follows the main workflow from the course
 
 ## Dataset
 
-- Source file: `data/prototype/cane_corso_growth_sample.csv`
+- Source file: `data\prototype\cane_corso_growth_sample.csv`
 - Rows: 32
 - Target: `weight_kg`
 - Main project interpretation: educational growth-weight prediction, not veterinary advice.
