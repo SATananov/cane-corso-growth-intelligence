@@ -98,7 +98,7 @@ The next reserved course topic is:
 MLflow / Experiment Tracking
 ```
 
-MLflow is intentionally kept as a future course slot until the lecture and exercise are studied in class.
+Machine Learning Tools is implemented as the latest course-aligned workflow until the lecture and exercise are studied in class.
 
 The image-based work is documented as an **exploratory visual-similarity extension**, not as a required course topic and not as a breed-certification system. Its purpose is to test whether a small public image dataset can support an educational comparison between available large-dog classes. The core grading evidence remains the tabular growth-intelligence workflow: regression, classification, clustering, feature engineering, time-series features, evaluation, documentation, and responsible interpretation.
 
