@@ -12,6 +12,30 @@ This is an educational machine learning project. It does **not** provide veterin
 
 ---
 
+## Academic focus, course coverage, and practical direction
+
+This project is designed as a Machine Learning final exam project with both an academic and a practical direction.
+
+The academic goal is to demonstrate understanding of the main machine learning topics covered in the course: linear regression, regularization and testing, classification, unsupervised learning and clustering, feature engineering and time series, dimensionality reduction, and machine learning tools. The project does not focus only on producing predictions. It also explains the mathematical and methodological reasoning behind the selected approaches, including assumptions, limitations, metrics, validation, and interpretation.
+
+The practical goal is to explore how machine learning can support structured Cane Corso growth and development analysis in a real-world context. The idea is translated into several machine learning tasks: predicting growth-related values, classifying growth status, grouping similar development profiles, engineering time-aware features, reducing dimensionality for interpretation, and organizing experiments in a reproducible way.
+
+Some parts of the repository go beyond the minimum notebook requirement because the project is also being prepared as a possible foundation for future integration into a real Cane Corso platform. These additional parts include reusable Python scripts, configuration files, validation scripts, reports, saved model artifacts, a model card, and a one-line Machine Learning Tools workflow.
+
+These extensions do not replace the academic notebook work. They support reproducibility, testing, maintainability, clearer evaluation, and possible future real-world use.
+
+Recommended review path:
+
+1. `notebooks/final_project_cane_corso_growth_intelligence.ipynb`
+2. `COURSE_TOPIC_MAPPING.md`
+3. `README.md`
+4. `HOW_TO_RUN.md`
+5. `notebooks/07_machine_learning_tools_exercise_alignment.ipynb`
+6. `reports/machine_learning_tools/step21_machine_learning_tools_report.md`
+7. `reports/machine_learning_tools/model_card_growth_status.md`
+
+----
+
 ## Why This Project Is Interesting
 
 Large-breed puppies can grow quickly and unevenly. A single measurement, such as today's weight, is not enough to understand the full development story.
