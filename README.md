@@ -16,6 +16,8 @@ This is an educational machine learning project. It does **not** provide veterin
 
 This project is designed as a Machine Learning final exam project with both an academic and a practical direction.
 
+The project was developed progressively during the course. After each relevant lecture and exercise, the newly covered material was applied to the same project instead of being kept as separate isolated examples. This approach shows how one real-world machine learning idea can evolve step by step: from regression and testing, through classification, clustering, feature engineering and dimensionality reduction, to machine learning tooling, reproducibility and saved model artifacts.
+
 The academic goal is to demonstrate understanding of the main machine learning topics covered in the course: linear regression, regularization and testing, classification, unsupervised learning and clustering, feature engineering and time series, dimensionality reduction, and machine learning tools. The project does not focus only on producing predictions. It also explains the mathematical and methodological reasoning behind the selected approaches, including assumptions, limitations, metrics, validation, and interpretation.
 
 The practical goal is to explore how machine learning can support structured Cane Corso growth and development analysis in a real-world context. The idea is translated into several machine learning tasks: predicting growth-related values, classifying growth status, grouping similar development profiles, engineering time-aware features, reducing dimensionality for interpretation, and organizing experiments in a reproducible way.
