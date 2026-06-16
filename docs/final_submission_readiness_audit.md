@@ -165,7 +165,7 @@ git log --oneline
 The next best course-aligned step is:
 
 ```text
-Step 21: MLflow / Experiment Tracking
+Step 21: Machine Learning Tools
 ```
 
 This should wait until the MLflow lecture and exercise are available. Until then, the project has a strong final-submission backbone and Dimensionality Reduction is documented as completed course-aligned work.

@@ -92,13 +92,13 @@ Dimensionality Reduction and Manifold Learning
 
 The latest course-aligned addition is **Step 20.1 — Problem 5 Component Analysis**. It strengthens the Dimensionality Reduction exercise by adding SVD component interpretation, example high-value records, visualization coordinates and written analysis.
 
-The next reserved course topic is:
+The latest completed course topic is:
 
 ```text
-MLflow / Experiment Tracking
+Machine Learning Tools
 ```
 
-Machine Learning Tools is implemented as the latest course-aligned workflow until the lecture and exercise are studied in class.
+Step 21 adds a configurable workflow, experiment comparison, model persistence, a model card, validation, reporting and smoke testing.
 
 The image-based work is documented as an **exploratory visual-similarity extension**, not as a required course topic and not as a breed-certification system. Its purpose is to test whether a small public image dataset can support an educational comparison between available large-dog classes. The core grading evidence remains the tabular growth-intelligence workflow: regression, classification, clustering, feature engineering, time-series features, evaluation, documentation, and responsible interpretation.
 
@@ -343,7 +343,7 @@ Completed stages:
 Next planned course topic:
 
 ```text
-MLflow / Experiment Tracking
+Machine Learning Tools
 ```
 
 The visual-similarity work is documented as an optional extension outside the current core course sequence; it must not be presented as breed proof or as the main course deliverable.

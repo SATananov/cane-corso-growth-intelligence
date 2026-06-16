@@ -20,7 +20,7 @@ The project is intentionally maintained as an evolving course project. New cours
 
 | Future course area | Planned project direction |
 |---|---|
-| MLflow / Experiment Tracking | track model parameters, metrics, experiment runs and reproducible comparisons |
+| Machine Learning Tools | configurable experiments, model persistence, validation, smoke tests, reports and MLflow-compatible tracking |
 
 Dimensionality Reduction is now implemented and synchronized across the project documentation. MLflow remains reserved until the lecture and exercise are available.
 

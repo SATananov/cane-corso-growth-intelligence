@@ -321,7 +321,7 @@ The latest completed course-aligned polish is Step 20.1, which strengthens the D
 The next planned core course topic is:
 
 ```text
-MLflow / Experiment Tracking
+Machine Learning Tools
 ```
 
 Future topics will be added gradually in new notebooks, with separate commits and updated course mapping.

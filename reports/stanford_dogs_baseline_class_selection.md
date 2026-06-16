@@ -1,7 +1,7 @@
 # Stanford Dogs Baseline Class Selection
 
-Raw root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\raw\stanford_dogs`
-Downloads root: `C:\Users\stana\Desktop\cane-corso-growth-intelligence\data\images\local_dataset\downloads\stanford_dogs`
+Raw root: `data/images/local_dataset/raw/stanford_dogs`
+Downloads root: `data/images/local_dataset/downloads/stanford_dogs`
 Local image-containing folders detected: 0
 Candidate rows evaluated: 8
 Confirmed candidate classes: 0
