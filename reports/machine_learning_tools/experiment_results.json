@@ -1,0 +1,42 @@
+[
+  {
+    "experiment": "text_tfidf_sparse_logistic",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "train_rows": 3750,
+    "test_rows": 1250
+  },
+  {
+    "experiment": "text_tfidf_svd_dense_logistic",
+    "accuracy": 0.9984,
+    "precision": 0.998358,
+    "recall": 0.998358,
+    "f1": 0.998358,
+    "roc_auc": 0.999959,
+    "train_rows": 3750,
+    "test_rows": 1250
+  },
+  {
+    "experiment": "metadata_logistic_regression",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "train_rows": 3750,
+    "test_rows": 1250
+  },
+  {
+    "experiment": "metadata_random_forest",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "train_rows": 3750,
+    "test_rows": 1250
+  }
+]

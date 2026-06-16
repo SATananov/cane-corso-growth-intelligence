@@ -1,0 +1,8 @@
+problem,requirement,project_alignment
+Problem 1,Project structure,"Uses src modules, configs, reports, models, tests, docs and notebooks without deleting existing work."
+Problem 2,Configuration and one-line running,configs/machine_learning_tools_config.json and python app.py --config configs/machine_learning_tools_config.json.
+Problem 3,Compare text representations,Compares sparse TF-IDF growth-record text vs dense TF-IDF + TruncatedSVD representation.
+Problem 4,Compare dimensionality reduction,Uses TruncatedSVD as dense feature extraction and reports representation comparison.
+Problem 5,Compare different models,Compares Logistic Regression and Random Forest metadata pipelines with fixed split/config.
+Problem 6,Save best model and create model card,"Saves best pipeline with joblib, creates smoke test, model metadata, model card and inspected examples."
+Problem 7,Optional containerization / app,Documented as optional; not implemented to avoid unnecessary complexity before final requirements.

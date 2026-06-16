@@ -13,7 +13,7 @@ Cane Corso Growth Intelligence = mathematical growth profiling + predictive moni
 
 ## Current Course Position
 
-The project is currently aligned with the course through **Dimensionality Reduction and Manifold Learning**. The completed core work covers:
+The project is currently aligned with the course through **Machine Learning Tools**. The completed core work covers:
 
 ```text
 Linear Regression, Regularization and Testing
@@ -25,10 +25,10 @@ Dimensionality Reduction and Manifold Learning
 
 The latest sync step is **Step 20.1**, which strengthens the important Dimensionality Reduction exercise Problem 5 by adding component terms, high-value example records, visualization coordinates and written interpretation.
 
-The next course-aligned topic should be added only after it is covered in class:
+The latest course-aligned topic is now implemented:
 
 ```text
-MLflow / Experiment Tracking
+Machine Learning Tools
 ```
 
 The visual-similarity work is not listed as a core course topic. It is an optional exploratory extension that demonstrates curiosity and responsible dataset handling. It should support the project story, but it should not replace the course-aligned mathematical and tabular ML deliverables.
@@ -1098,3 +1098,19 @@ Course-relevant skills demonstrated:
 - reproducible preprocessing workflow design
 - clear separation between data inspection and model training
 - explicit limitation language for visual-similarity ML
+
+## Machine Learning Tools Coverage
+
+| Exercise requirement | Project evidence |
+|---|---|
+| Project structure | `src/`, `configs/`, `models/`, `reports/`, `tests/`, `docs/`, `notebooks/` |
+| Configuration and one-line running | `python app.py --config configs/machine_learning_tools_config.json` |
+| Compare representations | sparse TF-IDF vs dense TF-IDF + TruncatedSVD growth-record representation |
+| Compare dimensionality reduction | TruncatedSVD dense feature extraction report |
+| Compare different models | Logistic Regression vs Random Forest metadata pipelines |
+| Experiment tracking | MLflow when installed, fallback manifest otherwise |
+| Data governance | `dvc.yaml` and DVC governance note |
+| Save best model | `models/machine_learning_tools/best_growth_status_pipeline.joblib` |
+| Model card | `reports/machine_learning_tools/model_card_growth_status.md` |
+| Smoke test | `python tests/smoke_test_machine_learning_tools.py` |
+

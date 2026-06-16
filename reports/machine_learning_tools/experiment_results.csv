@@ -1,0 +1,5 @@
+experiment,accuracy,precision,recall,f1,roc_auc,train_rows,test_rows
+text_tfidf_sparse_logistic,1.0,1.0,1.0,1.0,1.0,3750,1250
+metadata_logistic_regression,1.0,1.0,1.0,1.0,1.0,3750,1250
+metadata_random_forest,1.0,1.0,1.0,1.0,1.0,3750,1250
+text_tfidf_svd_dense_logistic,0.9984,0.998358,0.998358,0.998358,0.999959,3750,1250

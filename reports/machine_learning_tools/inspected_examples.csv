@@ -1,0 +1,11 @@
+visit_age_months,visit_age_years,weight_kg,average_adult_breed_weight_kg,gender,bcs_predicted,bcs_source,preventive_care_visit,healthy_pet_diagnosis,actual,predicted,probability_needs_attention,experiment,is_correct,uncertainty,example_type
+32.4,2.7,13.971,12.569,M,Normal,Normal,Y,N,0,0,0.004897,text_tfidf_sparse_logistic,True,0.495103,correct
+32.93,2.744,39.236,35.91,MN,,Heavy,N,N,1,1,0.975813,text_tfidf_sparse_logistic,True,0.47581300000000004,correct
+24.37,2.031,38.283,35.91,M,Thin,Thin,Y,Y,1,1,0.974439,text_tfidf_sparse_logistic,True,0.47443900000000006,correct
+30.23,2.519,12.066,12.569,F,,Normal,Y,Y,0,0,0.015858,text_tfidf_sparse_logistic,True,0.484142,correct
+25.18,2.098,37.013,35.91,MN,,Normal,N,N,0,0,0.045288,text_tfidf_sparse_logistic,True,0.454712,correct
+31.86,2.655,43.999,35.91,MN,,Normal,Y,N,0,0,0.187977,text_tfidf_sparse_logistic,True,0.312023,uncertain_or_suspicious
+14.26,1.188,45.359,35.91,M,,Normal,N,N,0,0,0.179538,text_tfidf_sparse_logistic,True,0.320462,uncertain_or_suspicious
+12.68,1.057,42.638,35.91,M,,Normal,N,N,0,0,0.176302,text_tfidf_sparse_logistic,True,0.32369800000000004,uncertain_or_suspicious
+25.38,2.115,41.504,35.91,FS,,Normal,N,N,0,0,0.175932,text_tfidf_sparse_logistic,True,0.324068,uncertain_or_suspicious
+16.33,1.361,34.019,35.91,F,,Normal,N,N,0,0,0.161463,text_tfidf_sparse_logistic,True,0.338537,uncertain_or_suspicious

@@ -1,0 +1,17 @@
+stages:
+  machine_learning_tools:
+    cmd: python app.py --config configs/machine_learning_tools_config.json
+    deps:
+      - app.py
+      - configs/machine_learning_tools_config.json
+      - data/processed/dog_growth_classification_sample.csv
+      - src/machine_learning_tools_pipeline.py
+    outs:
+      - reports/machine_learning_tools/experiment_results.csv
+      - reports/machine_learning_tools/experiment_results.json
+      - reports/machine_learning_tools/sample_predictions.csv
+      - reports/machine_learning_tools/inspected_examples.csv
+      - reports/machine_learning_tools/model_comparison_f1.svg
+      - reports/machine_learning_tools/model_card_growth_status.md
+      - models/machine_learning_tools/best_growth_status_pipeline.joblib
+      - models/machine_learning_tools/best_growth_status_pipeline_metadata.json

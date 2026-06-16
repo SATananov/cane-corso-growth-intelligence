@@ -794,3 +794,36 @@ python src/inspect_stanford_dogs_real_classes.py
 ## Step 20.1 — Problem 5 Component Analysis
 
 The Dimensionality Reduction exercise component-analysis task is treated as a priority. The project now exports SVD term interpretation, high-value example growth notes, visualization coordinates and written interpretation for the adapted Problem 5 workflow.
+---
+
+## Step 21 — Machine Learning Tools
+
+The project now includes a course-aligned **Machine Learning Tools** workflow focused on reproducibility, configurable execution, experiment comparison, saved-model artifacts and documentation.
+
+Run the Step 21 workflow from the project root:
+
+```bash
+python app.py --config configs/machine_learning_tools_config.json
+```
+
+Validate the generated artifacts and saved model:
+
+```bash
+python src/validate_machine_learning_tools_outputs.py
+python tests/smoke_test_machine_learning_tools.py
+```
+
+Main Step 21 artifacts:
+
+```text
+configs/machine_learning_tools_config.json
+app.py
+src/machine_learning_tools_pipeline.py
+reports/machine_learning_tools/step21_machine_learning_tools_report.md
+reports/machine_learning_tools/model_card_growth_status.md
+models/machine_learning_tools/best_growth_status_pipeline.joblib
+notebooks/07_machine_learning_tools_exercise_alignment.ipynb
+```
+
+The workflow compares sparse TF-IDF text-style growth-record representation, dense TF-IDF + TruncatedSVD representation, Logistic Regression metadata pipeline and Random Forest metadata pipeline. It saves the best pipeline with `joblib` and keeps MLflow/DVC integration clean-clone friendly. MLflow logging is used automatically if `mlflow` is installed; otherwise the project writes a tracking manifest.
+

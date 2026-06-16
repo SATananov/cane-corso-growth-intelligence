@@ -455,4 +455,36 @@ The remaining reserved course-topic notebook is:
 ```text
 notebooks/07_mlflow_future_course_topic.ipynb
 ```
+---
+
+## Step 21 — Machine Learning Tools
+
+The Machine Learning Tools exercise can be run with one command from the project root:
+
+```bash
+python app.py --config configs/machine_learning_tools_config.json
+```
+
+This command trains and compares several configured pipelines, writes reports, saves the best model, and creates a model card.
+
+Useful follow-up checks:
+
+```bash
+python src/validate_machine_learning_tools_outputs.py
+python tests/smoke_test_machine_learning_tools.py
+```
+
+Main notebook for this topic:
+
+```text
+notebooks/07_machine_learning_tools_exercise_alignment.ipynb
+```
+
+Optional tools for richer tracking and demos are listed in:
+
+```text
+requirements-optional-machine-learning-tools.txt
+```
+
+The core workflow does not require local image datasets and can run from a clean GitHub clone.
 

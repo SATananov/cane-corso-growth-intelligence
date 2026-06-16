@@ -1,0 +1,21 @@
+{
+  "project": "cane-corso-growth-intelligence",
+  "step": "Step 21 - Machine Learning Tools",
+  "best_experiment": "text_tfidf_sparse_logistic",
+  "target_column": "growth_status_binary",
+  "input_path": "data/processed/dog_growth_classification_sample.csv",
+  "feature_columns": [
+    "visit_age_months",
+    "visit_age_years",
+    "weight_kg",
+    "average_adult_breed_weight_kg",
+    "gender",
+    "bcs_predicted",
+    "bcs_source",
+    "preventive_care_visit",
+    "healthy_pet_diagnosis"
+  ],
+  "positive_class_meaning": "needs_attention_growth_signal",
+  "model_path": "models/machine_learning_tools/best_growth_status_pipeline.joblib",
+  "report_dir": "reports/machine_learning_tools"
+}

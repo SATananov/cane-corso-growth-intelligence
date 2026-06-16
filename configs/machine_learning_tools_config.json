@@ -1,0 +1,67 @@
+{
+  "project_name": "cane-corso-growth-intelligence",
+  "experiment_name": "step21_machine_learning_tools",
+  "random_state": 42,
+  "data": {
+    "input_path": "data/processed/dog_growth_classification_sample.csv",
+    "target_column": "growth_status_binary",
+    "label_column": "growth_status",
+    "max_rows": 5000,
+    "test_size": 0.25
+  },
+  "features": {
+    "numeric_columns": [
+      "visit_age_months",
+      "visit_age_years",
+      "weight_kg",
+      "average_adult_breed_weight_kg"
+    ],
+    "categorical_columns": [
+      "gender",
+      "bcs_predicted",
+      "bcs_source",
+      "preventive_care_visit",
+      "healthy_pet_diagnosis"
+    ],
+    "text_columns": [
+      "gender",
+      "bcs_predicted",
+      "bcs_source",
+      "preventive_care_visit",
+      "healthy_pet_diagnosis",
+      "visit_age_months",
+      "weight_kg",
+      "average_adult_breed_weight_kg"
+    ]
+  },
+  "vectorizer": {
+    "ngram_range": [1, 2],
+    "min_df": 2,
+    "max_features": 700
+  },
+  "dimensionality_reduction": {
+    "method": "TruncatedSVD",
+    "n_components": 12
+  },
+  "models": {
+    "logistic_regression": {
+      "max_iter": 1000,
+      "C": 1.0
+    },
+    "random_forest": {
+      "n_estimators": 120,
+      "max_depth": 6
+    }
+  },
+  "outputs": {
+    "report_dir": "reports/machine_learning_tools",
+    "model_dir": "models/machine_learning_tools",
+    "best_model_path": "models/machine_learning_tools/best_growth_status_pipeline.joblib",
+    "model_metadata_path": "models/machine_learning_tools/best_growth_status_pipeline_metadata.json"
+  },
+  "tracking": {
+    "use_mlflow_if_available": true,
+    "mlflow_tracking_uri": "mlruns",
+    "dvc_stage_name": "machine_learning_tools"
+  }
+}

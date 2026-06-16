@@ -1,0 +1,7 @@
+# Optional tools for the Machine Learning Tools exercise.
+# The core project runs without these packages, but installing them enables
+# richer experiment tracking / data versioning / demo interfaces.
+mlflow
+dvc
+optuna
+gradio
