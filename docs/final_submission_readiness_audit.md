@@ -37,7 +37,7 @@ The notebook is lightweight by design. It does not download external datasets, t
 | Reproducibility notes | Covered | `HOW_TO_RUN.md`, `DATA_SOURCES.md`, `README.md` |
 | Results reports | Covered | `reports/`, `reports/course_exercises/` |
 | Dimensionality Reduction | Implemented in Step 20 and strengthened in Step 20.1 | `notebooks/06_dimensionality_reduction_future_course_topic.ipynb`, `notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb` |
-| MLflow | Future course slot | `notebooks/07_mlflow_future_course_topic.ipynb` |
+| Machine Learning Tools | Completed Step 21 | `notebooks/07_machine_learning_tools_exercise_alignment.ipynb` |
 | GitHub repository | To verify before submission | Check remote repo and commit history |
 | Minimum 10 meaningful commits | To verify before submission | Run `git log --oneline` |
 
@@ -153,8 +153,8 @@ The project should remain GitHub-friendly and reproducible from source code, not
 git log --oneline
 ```
 
-3. Dimensionality Reduction has been implemented and Problem 5 component analysis has been strengthened; next update should happen after the MLflow lecture.
-4. After the course covers MLflow, add experiment tracking in a lightweight way.
+3. Dimensionality Reduction has been implemented and Problem 5 component analysis has been strengthened; next update should happen after the Machine Learning Tools lecture.
+4. After the course covers Machine Learning Tools, add experiment tracking in a lightweight way.
 5. Add a short final conclusion after all course topics are complete.
 6. Create the final clean ZIP without datasets, environments or model weights.
 
@@ -168,4 +168,4 @@ The next best course-aligned step is:
 Step 21: Machine Learning Tools
 ```
 
-This should wait until the MLflow lecture and exercise are available. Until then, the project has a strong final-submission backbone and Dimensionality Reduction is documented as completed course-aligned work.
+This should wait until the Machine Learning Tools lecture and exercise are available. Until then, the project has a strong final-submission backbone and Dimensionality Reduction is documented as completed course-aligned work.
