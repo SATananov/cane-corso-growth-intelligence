@@ -24,6 +24,8 @@ The practical goal is to explore how machine learning can support structured Can
 
 Some parts of the repository go beyond the minimum notebook requirement because the project is also being prepared as a possible foundation for future integration into a real Cane Corso platform. These additional parts include reusable Python scripts, configuration files, validation scripts, reports, saved model artifacts, a model card, and a one-line Machine Learning Tools workflow.
 
+The exploratory Computer Vision / visual-similarity materials are included only as a long-term research and preparation direction. They are not presented as the main exam deliverable, a completed production feature, breed proof, or certification logic. They show possible future steps for connecting responsible growth intelligence, visual comparison, and owner-friendly explanations inside the planned USG Cane Corso platform ecosystem (`www.usg-cane-corso-platform.com`).
+
 These extensions do not replace the academic notebook work. They support reproducibility, testing, maintainability, clearer evaluation, and possible future real-world use.
 
 Recommended review path:
@@ -294,14 +296,11 @@ docs/dataset_selection_rationale.md
 ### Exploratory Visual Similarity Extension
 
 
-Future course-topic slots are reserved but intentionally not implemented yet:
+The core exam deliverable remains the tabular Machine Learning workflow and the final project notebook. In addition, the repository includes an optional exploratory Computer Vision / visual-similarity direction for future work and possible later integration into the planned USG Cane Corso platform ecosystem (`www.usg-cane-corso-platform.com`).
 
-notebooks/06_dimensionality_reduction_future_course_topic.ipynb
-notebooks/07_machine_learning_tools_exercise_alignment.ipynb
+This extension is preparation for future development only. It is not the main exam deliverable, not a completed production module, and not breed-proof, pedigree-proof, certification, registry, or veterinary logic.
 
-These notebooks should be completed only after the corresponding lecture and exercise are covered in class.
-
-The project also includes an optional exploratory visual-similarity extension for future work:
+The exploratory visual-similarity idea is:
 
 ```text
 uploaded dog image -> visual feature extractor -> visual similarity probabilities
@@ -365,14 +364,9 @@ Completed stages:
 12. **Image Dataset Acquisition and Local Preparation** — added local-only image dataset structure, inventory template and validation scripts before any image model training
 13. **Dimensionality Reduction and Manifold Learning** — added PCA, Kernel PCA, LinDA, Isomap, t-SNE visualization planning and representation comparison
 14. **Problem 5 Component Analysis** — strengthened SVD component interpretation with example records, visualization coordinates and written conclusions
+15. **Machine Learning Tools** — added configurable experiment comparison, model persistence, model card, validation, reporting and MLflow-compatible tracking
 
-Next planned course topic:
-
-```text
-Machine Learning Tools
-```
-
-The visual-similarity work is documented as an optional extension outside the current core course sequence; it must not be presented as breed proof or as the main course deliverable.
+The visual-similarity work is documented as an optional future extension outside the current core course sequence. It supports longer-term preparation for the planned USG Cane Corso platform ecosystem, but it must not be presented as breed proof, certification logic, veterinary logic, or the main course deliverable.
 
 
 ---
@@ -599,7 +593,7 @@ flowchart TD
     P --> D["Clustering"]
     P --> E["Feature Engineering / Time Series"]
     P --> F["Dimensionality Reduction"]
-    P --> G["MLflow"]
+    P --> G["Machine Learning Tools"]
     A --> H["Computer Vision Visual Similarity"]
 
     B --> B1["Expected growth curve"]
@@ -609,7 +603,7 @@ flowchart TD
     D --> D1["Unknown growth-pattern groups"]
     E --> E1["Growth velocity and deviation features"]
     F --> F1["2D map of high-dimensional growth records"]
-    G --> G1["Tracked model experiments"]
+    G --> G1["Reproducible experiments and saved models"]
     H --> H1["Image-based visual similarity probabilities"]
 ```
 

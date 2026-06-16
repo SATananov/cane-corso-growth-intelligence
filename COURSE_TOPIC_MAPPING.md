@@ -31,9 +31,9 @@ The latest course-aligned topic is now implemented:
 Machine Learning Tools
 ```
 
-The visual-similarity work is not listed as a core course topic. It is an optional exploratory extension that demonstrates curiosity and responsible dataset handling. It should support the project story, but it should not replace the course-aligned mathematical and tabular ML deliverables.
+The visual-similarity work is not listed as a core course topic. It is an optional exploratory extension that demonstrates curiosity and responsible dataset handling. It should support the project story and possible future USG Cane Corso platform integration, but it should not replace the course-aligned mathematical and tabular ML deliverables.
 
-The continuation plan is documented in `docs/course_progression_plan.md`. The final results-and-figures summary should be added after MLflow is implemented.
+The continuation plan is documented in `docs/course_progression_plan.md`. The current final results, reports, validation outputs and saved model artifacts are represented in the completed Machine Learning Tools stage.
 
 ---
 

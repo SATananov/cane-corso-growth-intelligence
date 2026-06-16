@@ -574,13 +574,13 @@ This protects the Computer Vision extension from overstating what the dataset ca
 Therefore, Cane Corso-specific visual recognition remains future work unless a verified public dataset or consent-based USG dataset provides confirmed Cane Corso images.
 
 
-## this stage Computer Vision Data Inspection Extension
+## Exploratory Computer Vision Data Inspection Extension
 
-The project now includes a local inspection workflow for Stanford Dogs / ImageNet Dogs. This supports the future visual-similarity classifier by verifying real local class folders before model training.
+The project includes a local inspection workflow for Stanford Dogs / ImageNet Dogs. This supports a possible future visual-similarity classifier by verifying real local class folders before any image model training.
 
-This extension strengthens the project methodology because it separates desired classes from available labels and keeps the visual module honest and evidence-based.
+This extension strengthens the project methodology because it separates desired classes from available labels and keeps the visual module honest and evidence-based. It is included as preparation for possible later integration into the planned USG Cane Corso platform ecosystem, not as the main exam deliverable, breed proof, certification logic, registry logic, or veterinary logic.
 
 
-## Reserved Future Course Notebooks
+## Completed Course-Aligned Notebooks
 
-Dimensionality Reduction and Machine Learning Tools are completed course-aligned topics. The project reserves `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` and `notebooks/07_machine_learning_tools_exercise_alignment.ipynb` for these topics. They are now completed and documented in the project repository.
+Dimensionality Reduction and Machine Learning Tools are completed course-aligned topics. Their notebooks are now implemented and documented in the project repository. Some legacy notebook filenames are preserved to keep the progressive course-development history traceable.
