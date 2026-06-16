@@ -453,7 +453,7 @@ notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
 The remaining reserved course-topic notebook is:
 
 ```text
-notebooks/07_mlflow_future_course_topic.ipynb
+notebooks/07_machine_learning_tools_exercise_alignment.ipynb
 ```
 ---
 

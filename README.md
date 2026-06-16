@@ -271,7 +271,7 @@ docs/dataset_selection_rationale.md
 Future course-topic slots are reserved but intentionally not implemented yet:
 
 notebooks/06_dimensionality_reduction_future_course_topic.ipynb
-notebooks/07_mlflow_future_course_topic.ipynb
+notebooks/07_machine_learning_tools_exercise_alignment.ipynb
 
 These notebooks should be completed only after the corresponding lecture and exercise are covered in class.
 

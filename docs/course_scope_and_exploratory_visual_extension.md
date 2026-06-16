@@ -20,7 +20,7 @@ The project now includes the implemented Dimensionality Reduction notebooks and 
 ```text
 notebooks/06_dimensionality_reduction_future_course_topic.ipynb
 notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
-notebooks/07_mlflow_future_course_topic.ipynb
+notebooks/07_machine_learning_tools_exercise_alignment.ipynb
 ```
 
 The Dimensionality Reduction files are completed course-aligned evidence. The MLflow notebook is intentionally reserved and should not be presented as implemented until the topic is studied.

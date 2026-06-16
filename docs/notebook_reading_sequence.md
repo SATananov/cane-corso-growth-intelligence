@@ -1,6 +1,6 @@
 # Notebook Reading Sequence
 
-This file documents the current notebook order for review. The project starts with the course-aligned tabular machine learning workflow, includes the completed Dimensionality Reduction work, keeps MLflow reserved for the next lecture, and then continues with an optional visual-similarity extension.
+This file documents the current notebook order for review. The project starts with the course-aligned tabular machine learning workflow, includes the completed Dimensionality Reduction work, keeps MLflow completed as Step 21 Machine Learning Tools, and then continues with an optional visual-similarity extension.
 
 ## Core course-aligned project sequence
 
@@ -21,7 +21,7 @@ This file documents the current notebook order for review. The project starts wi
 
 13. `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` — implemented in Step 20
 14. `notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb` — strengthened in Step 20.1
-15. `notebooks/07_mlflow_future_course_topic.ipynb` — reserved for the next lecture
+15. `notebooks/07_machine_learning_tools_exercise_alignment.ipynb` — completed as Step 21 Machine Learning Tools
 
 Only MLflow is still reserved. The Dimensionality Reduction notebooks are implemented and can be reviewed as course-aligned evidence.
 

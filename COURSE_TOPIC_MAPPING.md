@@ -845,7 +845,7 @@ Dimensionality Reduction ✅
 Planned notebook or experiment folder:
 
 ```text
-notebooks/07_mlflow_future_course_topic.ipynb
+notebooks/07_machine_learning_tools_exercise_alignment.ipynb
 ```
 
 Planned coverage:

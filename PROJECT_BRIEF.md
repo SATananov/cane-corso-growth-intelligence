@@ -583,4 +583,4 @@ This extension strengthens the project methodology because it separates desired 
 
 ## Reserved Future Course Notebooks
 
-Dimensionality Reduction and MLflow are planned future course topics. The project reserves `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` and `notebooks/07_mlflow_future_course_topic.ipynb` for these topics. They should be completed only after the lectures and exercises are covered in class.
+Dimensionality Reduction and Machine Learning Tools are completed course-aligned topics. The project reserves `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` and `notebooks/07_machine_learning_tools_exercise_alignment.ipynb` for these topics. They are now completed and documented in the project repository.
