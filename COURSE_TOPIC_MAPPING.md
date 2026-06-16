@@ -64,7 +64,7 @@ This standard should appear in every new notebook from this stage onward.
 | Unsupervised Learning, Clustering | Completed | unknown growth-pattern groups and exploratory outlier/noise detection |
 | Feature Engineering and Time Series | Completed | growth ratios, velocity, lag features and trajectory over time |
 | Dimensionality Reduction | Implemented course topic | PCA, Kernel PCA, LinDA, Isomap, t-SNE plan, TF-IDF + TruncatedSVD and explicit Problem 5 component analysis |
-| MLflow | Future course topic | planned experiment tracking and model comparison after the lecture is covered |
+| Machine Learning Tools | Completed Step 21 | configurable experiment comparison, model persistence, validation, reporting, and MLflow-compatible tracking |
 
 ### Optional exploratory extension, outside the current core course path
 
@@ -840,7 +840,7 @@ Dimensionality Reduction ✅
 
 ---
 
-# Future Course Topic: MLflow
+# Completed Course Topic: Machine Learning Tools
 
 Planned notebook or experiment folder:
 
@@ -865,7 +865,7 @@ track which model version gives the best growth-monitoring signal
 Status:
 
 ```text
-MLflow ⏳
+Machine Learning Tools ✅
 ```
 
 ---

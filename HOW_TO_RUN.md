@@ -441,7 +441,7 @@ python src/select_stanford_dogs_baseline_classes.py
 Do not commit downloaded images, archives or extracted dataset folders.
 
 
-### Current and Future Course Topic Notebooks
+### Current Course Topic Notebooks
 
 Dimensionality Reduction is implemented and strengthened through these notebooks:
 
@@ -450,7 +450,7 @@ notebooks/06_dimensionality_reduction_future_course_topic.ipynb
 notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb
 ```
 
-The remaining reserved course-topic notebook is:
+The latest completed course-topic notebook is:
 
 ```text
 notebooks/07_machine_learning_tools_exercise_alignment.ipynb

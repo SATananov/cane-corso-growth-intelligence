@@ -93,7 +93,7 @@ Different course topics use the same data representation in different ways:
 | Feature Engineering | transform raw measurements | create growth velocity, ratios, deviations |
 | Time Series | analyze ordered records | monitor development as a trajectory |
 | Dimensionality Reduction | project high-dimensional data | visualize structure and separation |
-| MLflow | planned future topic | track and compare models, metrics, parameters and runs after the course topic is added |
+| Machine Learning Tools | compare reproducible experiments, metrics and saved model artifacts | organize configurable runs, compare models, save the best pipeline, document limitations and keep MLflow-compatible tracking |
 
 The project is designed to show the full flow:
 
