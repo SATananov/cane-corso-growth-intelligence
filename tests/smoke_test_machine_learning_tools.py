@@ -1,5 +1,3 @@
-"""Smoke test for the saved Step 21 Machine Learning Tools model."""
-
 from __future__ import annotations
 
 import sys
