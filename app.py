@@ -1,10 +1,3 @@
-"""One-line entry point for the Machine Learning Tools exercise alignment.
-
-Usage:
-    python app.py
-    python app.py --config configs/machine_learning_tools_config.json
-"""
-
 from __future__ import annotations
 
 import argparse
