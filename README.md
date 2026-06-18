@@ -834,6 +834,7 @@ Validate the generated artifacts and saved model:
 python src/validate_machine_learning_tools_outputs.py
 python tests/smoke_test_machine_learning_tools.py
 ```
+The project includes one formal smoke test under `tests/` and multiple validation scripts under `src/`. These checks validate generated artifacts, course-alignment outputs, image-data preparation files, saved model artifacts, and the Machine Learning Tools workflow. They are not presented as a full production test suite, but as practical project-level validation and smoke testing for reproducibility.
 
 Main Step 21 artifacts:
 
