@@ -272,6 +272,8 @@ Growth standard charts for monitoring bodyweight in dogs of different sizes, PLO
 
 The project does **not** claim to have private Cane Corso veterinary records. The Cane Corso domain is the practical product case, while the real public dataset provides the broader growth-data foundation for machine learning experiments.
 
+The initial Cane Corso prototype sample is intentionally small and is used for early mathematical framing and first regression experiments. The broader machine learning experiments use processed public dog-growth samples with larger record counts, while future real-world platform use would require more Cane Corso-specific longitudinal data collected responsibly over time.
+
 Processed samples used in the project:
 
 ```text
