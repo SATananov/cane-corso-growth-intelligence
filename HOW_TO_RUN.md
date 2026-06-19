@@ -31,7 +31,7 @@ pip install -r requirements.txt
 
 ## 5. Open the notebooks
 
-The project currently contains eleven notebooks.
+The project currently contains 26 notebooks in total. The sequence below highlights the main notebooks recommended for review.
 
 ### Project Concept and Mathematical Framing
 
@@ -49,14 +49,14 @@ notebooks/01_linear_regression_growth_prediction.ipynb
 
 This notebook covers:
 
-- Ordinary Least Squares simulated example
-- Linear Regression
-- Real-data regression on the processed public dog growth sample
-- Polynomial Regression
-- Multi-Dimensional Linear Regression
-- Ridge and Lasso Regularization
-- RANSAC Robust Regression
-- Regression model comparison
+* Ordinary Least Squares simulated example
+* Linear Regression
+* Real-data regression on the processed public dog growth sample
+* Polynomial Regression
+* Multi-Dimensional Linear Regression
+* Ridge and Lasso Regularization
+* RANSAC Robust Regression
+* Regression model comparison
 
 ### Real Data Preparation
 
@@ -66,7 +66,7 @@ notebooks/02_real_data_preparation.ipynb
 
 This notebook prepares the project for working with the real public dog growth dataset.
 
-The full raw dataset is not committed to repository.
+The full raw dataset is not committed to the repository.
 
 ### Classification Topic
 
@@ -76,20 +76,20 @@ notebooks/03_classification_growth_status.ipynb
 
 This notebook covers:
 
-- Classification problem statement
-- Logistic Regression
-- Confusion Matrix
-- Accuracy, Precision, Recall, F1-score
-- ROC Curve and AUC
-- Precision-Recall Curve
-- Threshold comparison
-- Decision Tree Classifier
-- Random Forest
-- AdaBoost
-- Support Vector Machine
-- Basic hyperparameter tuning
-- Drift and monitoring considerations
-- Final classification model comparison
+* Classification problem statement
+* Logistic Regression
+* Confusion Matrix
+* Accuracy, Precision, Recall, F1-score
+* ROC Curve and AUC
+* Precision-Recall Curve
+* Threshold comparison
+* Decision Tree Classifier
+* Random Forest
+* AdaBoost
+* Support Vector Machine
+* Basic hyperparameter tuning
+* Drift and monitoring considerations
+* Final classification model comparison
 
 ### Unsupervised Learning and Clustering Topic
 
@@ -99,20 +99,19 @@ notebooks/04_unsupervised_learning_clustering.ipynb
 
 This notebook covers:
 
-- Unsupervised Learning problem statement and challenges
-- k-Nearest Neighbors as a distance-based lazy-learning method
-- Minkowski / Euclidean distance intuition
-- synthetic blobs, moons and circles examples
-- feature scaling for distance-based methods
-- K-Means Clustering
-- `k-means++` initialization
-- elbow method, silhouette score and silhouette samples
-- Hierarchical Clustering and dendrogram visualization
-- K-Means vs Hierarchical Clustering comparison
-- DBSCAN density clustering and noise detection
-- clustering vs classification comparison using Adjusted Rand Index
-- Stage 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
-
+* Unsupervised Learning problem statement and challenges
+* k-Nearest Neighbors as a distance-based lazy-learning method
+* Minkowski / Euclidean distance intuition
+* synthetic blobs, moons and circles examples
+* feature scaling for distance-based methods
+* K-Means Clustering
+* `k-means++` initialization
+* elbow method, silhouette score and silhouette samples
+* Hierarchical Clustering and dendrogram visualization
+* K-Means vs Hierarchical Clustering comparison
+* DBSCAN density clustering and noise detection
+* clustering vs classification comparison using Adjusted Rand Index
+* Stage 09.1/09.2 notes: mathematical application bridge and exact lesson alignment
 
 ### Feature Engineering and Time Series Topic
 
@@ -122,24 +121,22 @@ notebooks/05_feature_engineering_time_series_growth.ipynb
 
 This notebook covers:
 
-- feature engineering problem statement;
-- ordered growth records as a simple time series;
-- lag features from previous measurements;
-- weight gain and height gain;
-- growth velocity per month;
-- weight-to-height ratio;
-- rolling average smoothing;
-- z-score growth velocity signal;
-- engineered feature correlation check;
-- responsible interpretation for Cane Corso growth monitoring.
+* feature engineering problem statement;
+* ordered growth records as a simple time series;
+* lag features from previous measurements;
+* weight gain and height gain;
+* growth velocity per month;
+* weight-to-height ratio;
+* rolling average smoothing;
+* z-score growth velocity signal;
+* engineered feature correlation check;
+* responsible interpretation for Cane Corso growth monitoring.
 
 It also creates:
 
 ```text
 data/processed/cane_corso_time_series_features.csv
 ```
-
-
 
 ### Computer Vision Visual Similarity Concept
 
@@ -148,7 +145,6 @@ notebooks/08_computer_vision_visual_similarity_concept.ipynb
 ```
 
 This notebook does not train a real image model yet. It explains the future Computer Vision extension, softmax probability interpretation, dataset feasibility, and the responsible boundary: visual similarity is not breed proof.
-
 
 ### Public Image Dataset Feasibility
 
@@ -176,14 +172,14 @@ docs/math_foundation.md
 
 This document covers:
 
-- regression equations and error metrics
-- Ridge and Lasso regularization
-- Logistic Regression and the sigmoid function
-- confusion matrix metrics
-- ROC/AUC
-- Decision Tree impurity measures
-- Random Forest, AdaBoost, and SVM intuition
-- kNN distance logic, K-Means, Hierarchical Clustering and DBSCAN mathematics
+* regression equations and error metrics
+* Ridge and Lasso regularization
+* Logistic Regression and the sigmoid function
+* confusion matrix metrics
+* ROC/AUC
+* Decision Tree impurity measures
+* Random Forest, AdaBoost, and SVM intuition
+* kNN distance logic, K-Means, Hierarchical Clustering and DBSCAN mathematics
 
 ## 7. Project data
 
@@ -215,9 +211,9 @@ This is a smaller processed sample created from the real public dog growth datas
 
 It contains:
 
-- 10,000 rows
-- 12 columns
-- source label: `real_public_processed_sample`
+* 10,000 rows
+* 12 columns
+* source label: `real_public_processed_sample`
 
 ### Classification-focused processed sample
 
@@ -227,11 +223,11 @@ data/processed/dog_growth_classification_sample.csv
 
 This sample is balanced for the Classification topic and contains:
 
-- 10,000 rows
-- 15 columns
-- 5,000 `normal_growth` records
-- 5,000 `needs_attention` records
-- source label: `real_public_classification_sample`
+* 10,000 rows
+* 15 columns
+* 5,000 `normal_growth` records
+* 5,000 `needs_attention` records
+* source label: `real_public_classification_sample`
 
 ## 8. Source scripts
 
@@ -266,7 +262,6 @@ python src/validate_image_manifest.py
 
 It validates the structure of the example image manifest only. It does not download images or train an image model.
 
-
 The Local image dataset preparation stage local image dataset preparation script can be run with:
 
 ```powershell
@@ -293,7 +288,7 @@ The original public dataset is distributed as a compressed archive. In this proj
 data/raw/Final_Data_PLOS.zip
 ```
 
-The raw dataset archive is intentionally ignored by Git and is not committed to repository. The current notebooks use the smaller processed CSV files already stored in `data/processed/`.
+The raw dataset archive is intentionally ignored by Git and is not committed to the repository. The current notebooks use the smaller processed CSV files already stored in `data/processed/`.
 
 More detail is documented in:
 
@@ -303,16 +298,17 @@ docs/raw_dataset_archive_policy.md
 
 ## 9. Current project stage
 
-The project currently covers five completed core course topics plus one optional Computer Vision extension plan:
+The project currently covers six completed core course topic areas plus optional exploratory visual-similarity preparation:
 
 1. Linear Regression, Regularization and Testing
 2. Classification
 3. Unsupervised Learning and Clustering
 4. Feature Engineering and Time Series
 5. Dimensionality Reduction and Manifold Learning
-6. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
-7. Public Image Dataset Feasibility (dataset candidates and target class planning, not trained yet)
-8. Image Dataset Acquisition and Local Preparation (local-only structure and validation, not trained yet)
+6. Machine Learning Tools
+7. Computer Vision Visual Similarity Plan (concept and feasibility, not trained yet)
+8. Public Image Dataset Feasibility (dataset candidates and target class planning, not trained yet)
+9. Image Dataset Acquisition and Local Preparation (local-only structure and validation, not trained yet)
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
 
@@ -336,11 +332,11 @@ docs/geometric_interpretation.md
 
 This document connects the project to coordinate systems and feature space. It explains:
 
-- data records as points
-- regression as a line or curve
-- residuals as vertical errors
-- classification as a decision boundary
-- clustering as groups of nearby points
+* data records as points
+* regression as a line or curve
+* residuals as vertical errors
+* classification as a decision boundary
+* clustering as groups of nearby points
 
 The related figures are stored in:
 
@@ -397,7 +393,6 @@ notebooks/05_1_practical_growth_assessment_workflow.ipynb
 
 This stage demonstrates practical applicability while keeping the project educational and mathematically transparent.
 
-
 ### Local Stanford Dogs Inspection / Baseline Class Selection
 
 ```text
@@ -414,7 +409,6 @@ python src/validate_stanford_baseline_class_selection.py
 ```
 
 Before the dataset is downloaded locally, zero confirmed classes is acceptable. The purpose is to keep class selection evidence-based before any image model is trained.
-
 
 ## Stanford Dogs local inspection stage — Stanford Dogs Local Download / Real Class Inspection
 
@@ -440,7 +434,6 @@ python src/select_stanford_dogs_baseline_classes.py
 
 Do not commit downloaded images, archives or extracted dataset folders.
 
-
 ### Current Course Topic Notebooks
 
 Dimensionality Reduction is implemented and strengthened through these notebooks:
@@ -455,6 +448,7 @@ The latest completed course-topic notebook is:
 ```text
 notebooks/07_machine_learning_tools_exercise_alignment.ipynb
 ```
+
 ---
 
 ## Step 21 — Machine Learning Tools
@@ -487,4 +481,3 @@ requirements-optional-machine-learning-tools.txt
 ```
 
 The core workflow does not require local image datasets and can run from a clean GitHub clone.
-
