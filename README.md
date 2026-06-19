@@ -25,6 +25,8 @@ The practical goal is to explore how machine learning can support structured Can
 Some parts of the repository go beyond the minimum notebook requirement because the project is also being prepared as a possible foundation for future integration into a real Cane Corso platform. These additional parts include reusable Python scripts, configuration files, validation scripts, reports, saved model artifacts, a model card, and a one-line Machine Learning Tools workflow.
 
 The exploratory Computer Vision / visual-similarity materials are included only as a long-term research and preparation direction. They are not presented as the main exam deliverable, a completed production feature, breed proof, or certification logic. They show possible future steps for connecting responsible growth intelligence, visual comparison, and owner-friendly explanations inside the planned USG Cane Corso platform ecosystem (`www.usg-cane-corso-platform.com`).
+My first interest was JavaScript and web development, because I wanted to build the USG Cane Corso platform from the ground up. For almost two years, I have been learning and applying what I learn step by step while continuing to develop the platform, even though it is still not finished. This machine learning project extends that same long-term direction: it explores how future platform intelligence and data-driven analysis could support Cane Corso growth monitoring in a responsible way.
+
 
 These extensions do not replace the academic notebook work. They support reproducibility, testing, maintainability, clearer evaluation, and possible future real-world use.
 
