@@ -31,7 +31,7 @@ This makes the project both interesting and useful:
 
 ## Scope in Relation to the Course
 
-The main project is the tabular Cane Corso growth-intelligence workflow. It is aligned with the course topics covered so far: regression, classification, unsupervised learning / clustering, feature engineering, time-series features, data processing, model evaluation, and careful interpretation of results.
+The main project is the tabular Cane Corso growth-intelligence workflow. It is aligned with the completed course-topic sequence represented in the project: regression, classification, unsupervised learning / clustering, feature engineering, time-series features, dimensionality reduction, Machine Learning Tools, data processing, model evaluation, and careful interpretation of results.
 
 Dimensionality Reduction and Machine Learning Tools are completed course-aligned additions. They were implemented after the related lectures and exercises were covered, so the project continues to follow the real course path.
 

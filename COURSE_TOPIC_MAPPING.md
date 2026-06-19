@@ -1,6 +1,6 @@
 # Course Topic Mapping
 
-This document maps the course lectures to the project files, notebooks and planned stages.
+This document maps the course lectures to the project files, notebooks and implemented project stages.
 
 The project is built lecture by lecture. The goal is not to create separate unrelated exercises, but to connect every topic into one coherent idea:
 
@@ -842,13 +842,13 @@ Dimensionality Reduction ✅
 
 # Completed Course Topic: Machine Learning Tools
 
-Planned notebook or experiment folder:
+Implemented notebook and workflow:
 
 ```text
 notebooks/07_machine_learning_tools_exercise_alignment.ipynb
 ```
 
-Planned coverage:
+Implemented coverage:
 
 - experiment tracking
 - logged parameters
@@ -1056,7 +1056,7 @@ this stage prepares the project for future Visual Similarity work by adding a lo
 Status:
 
 ```text
-Image Dataset Acquisition and Local Preparation ✅ planned / structure-only
+Image Dataset Acquisition and Local Preparation ✅ structure-only preparation
 ```
 
 

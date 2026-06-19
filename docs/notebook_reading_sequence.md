@@ -1,6 +1,6 @@
 # Notebook Reading Sequence
 
-This file documents the current notebook order for review. The project starts with the course-aligned tabular machine learning workflow, includes the completed Dimensionality Reduction work, keeps MLflow completed as Step 21 Machine Learning Tools, and then continues with an optional visual-similarity extension.
+This file documents the current notebook order for review. The project starts with the course-aligned tabular machine learning workflow, includes the completed Dimensionality Reduction work, includes Machine Learning Tools completed as Step 21, and then continues with an optional visual-similarity extension.
 
 ## Core course-aligned project sequence
 
@@ -37,5 +37,9 @@ The Dimensionality Reduction notebooks and the Machine Learning Tools notebook a
 23. `notebooks/15_baseline_image_subset_preparation.ipynb`
 24. `notebooks/16_baseline_image_classifier_training_plan.ipynb`
 25. `notebooks/17_lightweight_baseline_image_classifier_prototype.ipynb`
+
+## Final submission backbone
+
+26. `notebooks/final_project_cane_corso_growth_intelligence.ipynb` — evaluator-friendly final project summary and main review entry point
 
 The visual extension is exploratory and educational. It compares visual similarity between available public dataset classes and does not prove breed identity, pedigree, origin, or veterinary status.

@@ -2,7 +2,7 @@
 
 ## Core course-aligned project
 
-The core of this project is the Cane Corso growth-intelligence workflow built from tabular growth records. This part is aligned with the course topics covered so far:
+The core of this project is the Cane Corso growth-intelligence workflow built from tabular growth records. This part is aligned with the completed course-topic sequence represented in the project:
 
 - Linear Regression, Regularization and Testing;
 - Classification;

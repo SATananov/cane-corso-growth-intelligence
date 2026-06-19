@@ -2,9 +2,9 @@
 
 ## Purpose
 
-This document explains how the project will continue to follow the course sequence. The current implementation already covers the main topics studied so far: regression, classification, clustering, feature engineering, time-series work, dimensionality reduction and manifold learning.
+This document explains how the project followed the course sequence. The current final implementation covers the completed course-aligned topics represented in the submission: regression, classification, clustering, feature engineering, time-series work, dimensionality reduction, manifold learning and Machine Learning Tools.
 
-The project is intentionally maintained as an evolving course project. New course topics should be added only after they are studied in class and practiced in exercises.
+The project was intentionally maintained as an evolving course project. New course topics were added after they were studied in class and practiced in exercises.
 
 ## Current completed course areas
 
