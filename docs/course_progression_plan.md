@@ -16,13 +16,13 @@ The project is intentionally maintained as an evolving course project. New cours
 | Feature Engineering and Time Series | lag features, rolling features, growth velocity, time-aware split and residual analysis |
 | Dimensionality Reduction and Manifold Learning | PCA, Kernel PCA, LinDA, Isomap, t-SNE visualization planning, TF-IDF + TruncatedSVD and strengthened Problem 5 component analysis |
 
-## Reserved future course areas
+## Completed Machine Learning Tools step
 
-| Future course area | Planned project direction |
+| Completed course area | Project coverage |
 |---|---|
 | Machine Learning Tools | configurable experiments, model persistence, validation, smoke tests, reports and MLflow-compatible tracking |
 
-Dimensionality Reduction is now implemented and synchronized across the project documentation. MLflow remains reserved until the lecture and exercise are available.
+Dimensionality Reduction is now implemented and synchronized across the project documentation. Machine Learning Tools is completed as Step 21 and is included as part of the final course-aligned submission.
 
 ## Exploratory extension boundary
 
@@ -30,4 +30,4 @@ The image-based work is an additional visual-similarity experiment. It is not th
 
 ## Final presentation layer
 
-A final results-and-figures summary should be created only after the remaining course topics are added. This will allow the final summary to include all course-aligned work in the correct order.
+The final results-and-figures summary includes the completed course-aligned work in the correct order, including Machine Learning Tools as Step 21.

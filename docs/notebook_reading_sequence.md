@@ -17,13 +17,13 @@ This file documents the current notebook order for review. The project starts wi
 11. `notebooks/05_1_practical_growth_assessment_workflow.ipynb`
 12. `notebooks/05_2_feature_engineering_time_series_exercise_project_alignment.ipynb`
 
-## Completed dimensionality reduction and reserved MLflow topic
+## Completed dimensionality reduction and Machine Learning Tools step
 
 13. `notebooks/06_dimensionality_reduction_future_course_topic.ipynb` — implemented in Step 20
 14. `notebooks/06_1_dimensionality_reduction_exercise_project_alignment.ipynb` — strengthened in Step 20.1
 15. `notebooks/07_machine_learning_tools_exercise_alignment.ipynb` — completed as Step 21 Machine Learning Tools
 
-Only MLflow is still reserved. The Dimensionality Reduction notebooks are implemented and can be reviewed as course-aligned evidence.
+The Dimensionality Reduction notebooks and the Machine Learning Tools notebook are implemented and can be reviewed as course-aligned evidence.
 
 ## Exploratory visual-similarity extension
 
