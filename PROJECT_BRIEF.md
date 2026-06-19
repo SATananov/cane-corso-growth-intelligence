@@ -37,7 +37,7 @@ Dimensionality Reduction and Machine Learning Tools are completed course-aligned
 
 The image-based work is included only as an **exploratory extension**. It investigates whether a small public dog-image dataset can support a simple visual-similarity comparison between available large-dog classes. This part should not be presented as a core course requirement, a breed detector, a pedigree tool, or a Cane Corso certification system.
 
-The final results and figures summary should be prepared after the remaining course topics are added, so that the final presentation reflects the complete course-aligned project.
+The final results and figures summary is prepared as part of the completed course-aligned project, including Dimensionality Reduction and Machine Learning Tools.
 
 ---
 
@@ -375,7 +375,7 @@ This helps show that the project is not only model fitting, but also method vali
 
 ---
 
-## Next Planned Stage
+## Completed Stage 4: Unsupervised Learning and Clustering
 
 Course topic:
 
@@ -383,19 +383,19 @@ Course topic:
 Unsupervised Learning, Clustering
 ```
 
-Planned notebook:
+Notebook:
 
 ```text
 notebooks/04_unsupervised_learning_clustering.ipynb
 ```
 
-Planned goal:
+Completed goal:
 
 ```text
 Discover natural growth-pattern groups in the processed public dog growth data.
 ```
 
-Planned methods:
+Covered methods:
 
 - K-Means
 - K-Means++
@@ -417,7 +417,7 @@ The project should emphasize these strengths:
 4. residual analysis and error interpretation;
 5. probability and threshold discussion for classification;
 6. feature engineering based on growth logic;
-7. planned clustering and dimensionality reduction as mathematical structure discovery;
+7. completed clustering and dimensionality reduction as mathematical structure discovery;
 8. responsible interpretation and clear limitations;
 9. reproducible notebooks and documented data sources;
 10. a responsible Computer Vision extension plan that does not confuse visual similarity with breed proof.
