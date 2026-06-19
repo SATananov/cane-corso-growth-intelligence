@@ -316,15 +316,15 @@ The project currently covers five completed core course topics plus one optional
 
 It also includes a Real Data Foundation stage with processed samples from a real public dog growth dataset and a dataset-selection rationale explaining why this source was chosen instead of a generic Kaggle dataset.
 
-The latest completed course-aligned polish is Step 20.1, which strengthens the Dimensionality Reduction exercise Problem 5 component analysis.
+Step 20.1 strengthens the Dimensionality Reduction exercise Problem 5 component analysis.
 
-The next planned core course topic is:
+The latest completed core course topic is:
 
 ```text
 Machine Learning Tools
 ```
 
-Future topics will be added gradually in new notebooks, with separate commits and updated course mapping.
+The Machine Learning Tools workflow is implemented as Step 21 and is documented in this file.
 
 ## 10. Read the geometric interpretation
 

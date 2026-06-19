@@ -23,9 +23,9 @@ Feature Engineering and Time Series
 Dimensionality Reduction and Manifold Learning
 ```
 
-The latest sync step is **Step 20.1**, which strengthens the important Dimensionality Reduction exercise Problem 5 by adding component terms, high-value example records, visualization coordinates and written interpretation.
+Step 20.1 strengthened the important Dimensionality Reduction exercise Problem 5 by adding component terms, high-value example records, visualization coordinates and written interpretation. Step 21 completed the Machine Learning Tools workflow.
 
-The latest course-aligned topic is now implemented:
+The latest completed course-aligned topic is:
 
 ```text
 Machine Learning Tools

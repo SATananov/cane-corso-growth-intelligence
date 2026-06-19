@@ -110,7 +110,7 @@ real-world problem -> mathematical formulation -> data preparation -> model trai
 
 ## Current Course Alignment
 
-The core project follows the machine-learning topics covered so far in the course. At the current stage, the project is aligned with the course sequence through **Dimensionality Reduction and Manifold Learning**:
+The core project follows the machine-learning topics covered in the course. At the current stage, the project is aligned with the course sequence through **Machine Learning Tools**:
 
 ```text
 Linear Regression / Regularization / Testing
@@ -118,9 +118,10 @@ Classification
 Unsupervised Learning and Clustering
 Feature Engineering and Time Series
 Dimensionality Reduction and Manifold Learning
+Machine Learning Tools
 ```
 
-The latest course-aligned addition is **Step 20.1 — Problem 5 Component Analysis**. It strengthens the Dimensionality Reduction exercise by adding SVD component interpretation, example high-value records, visualization coordinates and written analysis.
+Step 20.1 strengthens the Dimensionality Reduction exercise by adding SVD component interpretation, example high-value records, visualization coordinates and written analysis.
 
 The latest completed course topic is:
 
